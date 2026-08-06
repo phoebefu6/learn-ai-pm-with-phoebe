@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Specs, decisions, accountability - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Specs, decisions, <span class="accent">accountability</span></h1>
+    <p class="sub">You will never write a spec again, and you approve them constantly. That is the awkward position this session is written for. A spec is not a document, it is the record of six decisions, and a drafting tool will produce a beautiful version of the document with four of the six decisions never made. You cannot catch that by reading more carefully, because there is nothing on the page to catch. You can catch it with two questions asked before you open the file.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No spec to write</span>
+      <span class="chip audience">Bring one you approved</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-14 · The spec as a decision record</span>
+      <span class="a3" style="flex:4">14-24 · The two that are always missing</span>
+      <span class="a4" style="flex:3">24-33 · Who signs, and what that means</span>
+      <span class="a2" style="flex:3">33-42 · The two-question drill</span>
+      <span class="a1" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The one place your signature actually lands</h2>
+    </div>
+    <p class="lede">a2 was about believing a finding. This session is about approving a commitment, which is the next thing that happens to the same evidence and the point where your name goes on it. Nearly every product decision you fund passes through a document called a spec, a PRD or a one-pager, and almost none of the value of that document is in the writing. It is in six decisions that either got made or did not, and a fluent draft is completely silent about which.</p>
+    <p class="lede">Your PMs run a lab on this in the practitioner track: six checks, five drafts of the same spec, scored 15, 35, 55, 70 and 100 as more input goes in, with only the top rung signable. You do not need the lab. You need to know which two of the six survive almost to the top of that ladder, why those two and not the others, and the two sentences that surface both of them without you reading a line of the document.</p>
+    <p class="lede">When a leader reaches this session they usually want to talk about dates, sequencing and sign-off gates. Those are delivery questions and they belong to <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a>. This page stops at the moment the decision is recorded and somebody puts their name to it.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Discussion exercise - run it in the room</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The six things a spec has to contain, named so you can ask for them by name; the two that are almost always missing and the reason it is always those two; two questions that surface both without reading the document; and a clear answer to what a signature on a spec actually commits somebody to.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: DECISION RECORD ============ -->
+  <section class="section" id="record">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers PRD and spec practice, the spec as a decision record</span>
+      <h2>A spec is a decision record <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">The most useful thing you can do with the word "spec" is stop treating it as a kind of writing. A spec is the place a team writes down what it has already decided so that somebody who was in none of the meetings can act on it without guessing. Everything else in the document - the context, the background, the tidy headings - is packaging around six decisions. Remove the six and you still have a document. You do not have a spec, and nothing about the file will tell you which one you are holding.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A fluent document and a real decision record look identical on the page and prove completely different things">
+        <style>
+          .drT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .drH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .drC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="drH" x="26" y="22">Two objects that arrive in the same file format</text>
+
+        <rect x="26" y="34" width="400" height="40" rx="8" fill="#6B7688"/>
+        <text class="drT" x="46" y="59">A document · reads finished</text>
+        <text class="drC" x="46" y="98">every heading a PRD is meant to have</text>
+        <text class="drC" x="46" y="120">confident prose filling all of them</text>
+        <text class="drC" x="46" y="142">approved in eleven minutes</text>
+        <text class="drC" x="46" y="164">three readers, three readings</text>
+        <text class="drH" x="46" y="196">What it proves: somebody wrote it</text>
+
+        <rect x="454" y="34" width="400" height="40" rx="8" fill="#232935"/>
+        <text class="drT" x="474" y="59">A decision record · settles six things</text>
+        <text class="drC" x="474" y="98">who it is for, and who it is not for</text>
+        <text class="drC" x="474" y="120">what would count as having worked</text>
+        <text class="drC" x="474" y="142">where the work stops, in writing</text>
+        <text class="drC" x="474" y="164">what was given up, and who loses</text>
+        <text class="drH" x="474" y="196">What it proves: somebody decided</text>
+
+        <rect x="26" y="222" width="828" height="100" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="drH" x="46" y="248">The two look identical, and they get approved at the same speed.</text>
+        <text class="drC" x="46" y="272">Sections are where decisions live rather than what they are, so four of the six can be missing without</text>
+        <text class="drC" x="46" y="294">leaving a mark on the page. Length, polish and structure are all evidence of writing, and of nothing else.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the packaging is identical, the contents are not</figcaption>
+    </figure>
+
+    <p class="lede">Here are the six, with the column that matters to you. Not what each one is for - your PMs have that - but who finds out it was missing, and how late. Read the third column as a schedule of costs, because that is what it is.</p>
+
+    <table class="clean">
+      <thead><tr><th>The check</th><th>What it actually decides</th><th>Who notices it is missing, and when</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Problem evidenced</td><td>whether this is worth anybody's quarter, on evidence somebody could disagree with</td><td>you, in the review, if you ask. Otherwise nobody, until the thing ships and the numbers do not move</td></tr>
+        <tr><td>2 · User named</td><td>who this is for, at a grain finer than "our users"</td><td>a designer, in week two, asking which of three users to design for and being told all of them</td></tr>
+        <tr><td>3 · Success measurable</td><td>what would count as this having worked, with a baseline</td><td>everyone, six months later, in an argument about whether it worked that nobody can win</td></tr>
+        <tr><td>4 · Non-goals stated</td><td>where the work stops, and what is explicitly not in it</td><td>the engineering lead, in week four, when scope has grown by three tickets and nobody can point at when</td></tr>
+        <tr><td>5 · Edge cases decided</td><td>what happens on the unhappy path, decided in advance</td><td>an engineer, at four on a Friday, who decides it alone and quite reasonably never mentions it</td></tr>
+        <tr><td>6 · Trade-off explicit</td><td>what was given up to do this, and who loses by it</td><td>the retro, where it surfaces as a disagreement about what was agreed rather than about what to do next</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the absence is invisible rather than sloppy<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The instinct is that a spec missing four decisions must look thin. It does not, and the reason is worth thirty seconds of your attention because it applies to every document that now reaches you:</p>
+        <ul>
+          <li><strong>A drafting tool fills sections, not decisions.</strong> Asked for a spec, it produces the sections a spec has. Where a decision was supplied it writes the decision down. Where none was supplied it writes something reasonable in the right register, and those two outputs are indistinguishable in tone, length and confidence.</li>
+          <li><strong>The unmade decisions come out cleaner than the made ones.</strong> A real trade-off is awkward, because a real person loses something in it. An absent one produces a smooth paragraph in which everything improves. The smoothest section in a spec is the one most likely to contain nothing.</li>
+          <li><strong>Approval rewards the shape.</strong> You have read several thousand documents in your career and you recognise a competent one in seconds. That recognition used to be a decent proxy for care taken, and it is now a proxy for nothing, in exactly the way a2 described for research.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The signable test, in one sentence</strong>
+          Could an engineer who was in none of your meetings build the right thing from this without asking a question or inventing an answer? That is the whole bar. It is not about length, formatting or how confident the prose sounds, and it is answerable by anybody in the room in about a minute.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Six checks is a completeness bar, not a quality bar<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Be precise about what this session gives you, or you will over-trust it in the other direction:</p>
+        <ul>
+          <li><strong>All six present does not mean the decision is right.</strong> A perfectly complete spec for a problem nobody has scores full marks. The checks catch absence, cheaply and reliably. Whether the problem was worth solving is judgement, it is yours, and nothing here can score it.</li>
+          <li><strong>A metric being present does not make it the right metric.</strong> Check 3 is satisfied by a vanity number with a baseline attached. a5 is where the difference between a metric and a number lives.</li>
+          <li><strong>Evidence being present does not make it good evidence.</strong> Check 1 is satisfied by eight interviews with your friendliest customers exactly as easily as by eight representative ones, which is what a2 spent a session on.</li>
+        </ul>
+        <p>So the honest framing: completeness is what a leader can require, in public, uniformly, at no cost. Quality is what you have to think about, one decision at a time. Requiring the first is what buys you the attention to spend on the second.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE TWO MISSING ============ -->
+  <section class="section" id="missing">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the pattern, and the reason behind it</span>
+      <h2>The two that require somebody to give something up <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The six checks do not fail at random. Four of them get written whether or not anybody thought hard, because writing them costs nothing. Two of them are almost always absent, and it is the same two every time, in AI-drafted specs and in hand-written ones. The pattern has a single cause: those two are the only checks where writing the sentence means a named person loses something they wanted.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four of the six checks get written anyway while non-goals and the trade-off are almost always absent because both require somebody to give something up">
+        <style>
+          .twT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .twG { font: 700 12.5px Inter, sans-serif; fill: #33270A; }
+          .twH { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .twY { font: 700 11.5px Inter, sans-serif; fill: #33270A; }
+          .twC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .twA { font: 400 11px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <rect x="26" y="28" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="twT" x="44" y="53">1 · Problem evidenced</text>
+        <text class="twH" x="44" y="88">Gets written anyway</text>
+        <text class="twC" x="44" y="108">Somebody asked and gave a</text>
+        <text class="twC" x="44" y="126">reason. Whether it is evidence</text>
+        <text class="twC" x="44" y="144">was a2's whole session.</text>
+
+        <rect x="306" y="28" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="twT" x="324" y="53">2 · User named</text>
+        <text class="twH" x="324" y="88">Gets written, roughly</text>
+        <text class="twC" x="324" y="108">"Users" passes as a segment</text>
+        <text class="twC" x="324" y="126">until a designer asks which</text>
+        <text class="twC" x="324" y="144">ones, in week two.</text>
+
+        <rect x="588" y="28" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="twT" x="606" y="53">3 · Success measurable</text>
+        <text class="twH" x="606" y="88">Gets written as a mood</text>
+        <text class="twC" x="606" y="108">"Improve engagement" fills</text>
+        <text class="twC" x="606" y="126">the section without setting</text>
+        <text class="twC" x="606" y="144">any bar at all.</text>
+
+        <rect x="26" y="174" width="266" height="38" rx="8" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="twG" x="44" y="199">4 · Non-goals stated</text>
+        <text class="twY" x="44" y="234">Almost always absent</text>
+        <text class="twA" x="44" y="254">Nobody has to give anything</text>
+        <text class="twA" x="44" y="272">up to leave this empty, and</text>
+        <text class="twA" x="44" y="290">somebody does to fill it.</text>
+
+        <rect x="306" y="174" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="twT" x="324" y="199">5 · Edge cases decided</text>
+        <text class="twH" x="324" y="234">Gets written, sometimes</text>
+        <text class="twC" x="324" y="254">If somebody technical reads</text>
+        <text class="twC" x="324" y="272">it early. Otherwise decided</text>
+        <text class="twC" x="324" y="290">on a Friday afternoon.</text>
+
+        <rect x="588" y="174" width="266" height="38" rx="8" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="twG" x="606" y="199">6 · Trade-off explicit</text>
+        <text class="twY" x="606" y="234">Almost always absent</text>
+        <text class="twA" x="606" y="254">Writing it means telling a</text>
+        <text class="twA" x="606" y="272">named person, by name, that</text>
+        <text class="twA" x="606" y="290">they did not get their thing.</text>
+
+        <rect x="26" y="316" width="828" height="88" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="twH" x="46" y="342">Two questions surface both, and you do not have to open the document to ask them.</text>
+        <text class="twC" x="46" y="366">"What are we not doing here?" and "how will we know it worked?" Both are answerable in seconds when the</text>
+        <text class="twC" x="46" y="388">decision was made, and unanswerable when it was not. Neither one requires you to have read a word.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same two, every time, for the same reason</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why it is always these two<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four of the checks are descriptions. Two are concessions. That is the entire explanation, and it holds whoever or whatever wrote the draft:</p>
+        <ul>
+          <li><strong>Non-goals are the scope decision, and a draft cannot make one.</strong> Exclusion is not a writing problem. A drafting tool has no reason to leave anything out, because nothing in the input says what is out, so everything adjacent stays arguably in. If the non-goals section is empty, the team has not finished deciding. It has finished describing, and those two states produce the same document.</li>
+          <li><strong>The trade-off is the sentence with a victim in it.</strong> "We chose this at the cost of that, and we are accepting it" names somebody who loses. Nobody writes that sentence casually, and a tool will not write it unsolicited because it is not in the input unless a person put it there. A spec in which everything wins is a spec in which nothing was chosen.</li>
+          <li><strong>They fall together, which is why the fix is cheap.</strong> Your PMs measured this: adding the non-goals to the draft fixes two checks at once, because you cannot write down what you are not doing without exposing what you gave up. One instruction, two decisions, and it is the difference between the fourth rung of their ladder and the only signable one.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The uncomfortable corollary</strong>
+          If your organisation produces specs with no non-goals, the tooling is not the cause. It is that nobody is willing to be the person who tells sales they are not getting the thing this quarter. That is a leadership problem wearing a documentation costume, and it is yours rather than your PM's.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What each question is really asking for<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two sentences, and they are deliberately plain. Neither reads as a challenge, both are unanswerable when the decision was never made, and both take four seconds to ask:</p>
+        <ul>
+          <li><strong>"What are we not doing here?"</strong> This is check 4, and it drags check 6 out behind it. A team that can answer it has an edge to its scope, and the answer to the follow-up - "and who wanted that?" - is the trade-off, stated out loud by the person who made it. A team that cannot answer it is about to spend a quarter discovering the boundary one ticket at a time.</li>
+          <li><strong>"How will we know it worked?"</strong> This is check 3, and it doubles as a check on check 1, because a measurable success statement forces a baseline and a baseline forces somebody to have looked at the current number. "We will see improved engagement" is the answer that tells you nobody has.</li>
+          <li><strong>Ask them in that order.</strong> Scope first, because it is the harder one and the room is freshest. If you ask the metric question first you will get a good answer, feel satisfied, and forget the other one, which is the one that would have saved you the quarter.</li>
+        </ul>
+        <p>Neither question requires you to have read the document, which is the practical point. You can ask both while the spec is still on somebody's screen, in a corridor, or in the first minute of a review, and you will learn more than you would from twenty minutes of reading.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When "no non-goals" is the honest answer<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Occasionally a PM will say there are no non-goals worth writing, and sometimes they are right. Two cases, and one impostor:</p>
+        <ul>
+          <li><strong>The genuinely small change.</strong> A one-week fix to an existing flow does not need a not-doing list, and demanding one is ceremony. The size test is rough and workable: if being wrong costs less than the meeting to discuss it, stop discussing it.</li>
+          <li><strong>The deliberate exploration.</strong> Sometimes the team is buying information rather than shipping an outcome, and the honest spec says so: this is a two-week probe, here is what we expect to learn, here is the decision it feeds. That is a legitimate document with a different shape, and it should say which decision it is a spec for.</li>
+          <li><strong>The impostor: "everything is in scope for now."</strong> This is not an absence of non-goals, it is an unmade decision described in a reassuring way. It reliably becomes three extra tickets by week four, each individually reasonable, none of which anybody chose.</li>
+        </ul>
+        <p>The useful discipline is not that every spec has non-goals. It is that no spec is <em>silent</em> about them. "We considered and excluded nothing, because the change is a week" is a perfectly good line, and it is a decision.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: ACCOUNTABILITY ============ -->
+  <section class="section" id="accountability">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · who signs, and what signing means</span>
+      <h2>Three approvals, three different products <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Here is the failure that costs the most and looks the most like success. A spec is circulated. Three senior people read it, and every one of them approves, quickly and sincerely. Nobody disagrees. Six weeks later the disagreement arrives anyway, and it turns out that the three of them approved three different products, because the document was fluent enough to support all three readings and specific enough to rule out none of them.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 386" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One approved sentence read three different ways by sales, engineering and design, and the fix of one named signer">
+        <style>
+          .acH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .acT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .acC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .acN { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .acB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+        </style>
+
+        <text class="acH" x="26" y="22">One sentence. Three approvals. Three products.</text>
+
+        <rect x="26" y="30" width="828" height="46" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="acH" x="46" y="59">The line everybody signed off: "Summaries will surface the key outcomes of a meeting."</text>
+
+        <rect x="26" y="94" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="acT" x="44" y="119">Sales read it as</text>
+        <text class="acC" x="44" y="154">something visible during the</text>
+        <text class="acC" x="44" y="174">call, because "surface" sounds</text>
+        <text class="acC" x="44" y="194">like it happens live</text>
+
+        <rect x="306" y="94" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="acT" x="324" y="119">Engineering read it as</text>
+        <text class="acC" x="324" y="154">a paragraph generated after</text>
+        <text class="acC" x="324" y="174">the call, from the transcript</text>
+        <text class="acC" x="324" y="194">we already store</text>
+
+        <rect x="588" y="94" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="acT" x="606" y="119">Design read it as</text>
+        <text class="acC" x="606" y="154">a list of decisions, pinned to</text>
+        <text class="acC" x="606" y="174">the top of the meeting page,</text>
+        <text class="acC" x="606" y="194">editable by the admin</text>
+
+        <rect x="26" y="222" width="828" height="80" rx="9" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="acB" x="46" y="250">Nobody disagreed, because there was nothing specific enough to disagree with.</text>
+        <text class="acN" x="46" y="274">Fluency created the consensus. The document was agreeable precisely where it should have been</text>
+        <text class="acN" x="46" y="296">decisive, and the argument was not avoided - it was moved to week six and made more expensive.</text>
+
+        <rect x="26" y="318" width="828" height="60" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="acH" x="46" y="344">The fix is not a longer document. It is one named signer and one reading.</text>
+        <text class="acN" x="46" y="366">Three approvals distribute comfort. One signature concentrates accountability, which is the point of it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - agreement is not alignment, and fluency manufactures the first</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What a signature on a spec actually means<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most organisations have never said this out loud, which is why approval is cheap and accountability is vague. Four sentences fix it, and they are worth agreeing with your team once rather than relitigating per document:</p>
+        <ul>
+          <li><strong>One name, not a list.</strong> A spec has exactly one owner, and it is the person who will answer the question "why did we build this" in two quarters. Everyone else on the document is a reviewer. Reviewers can object; only the owner decides, and only the owner is accountable.</li>
+          <li><strong>Signing means "I read the six and I agree with them".</strong> Not "I have no objection", not "this looks fine to me". If a signer cannot say what the non-goals and the trade-off are without scrolling, they have not signed anything, they have waved.</li>
+          <li><strong>Signing does not mean the outcome is guaranteed.</strong> This is the part that makes honest specs possible. The owner is accountable for the decision being well made on what was known, not for the world cooperating. Blur those two and the next spec you get will be written to be un-blameable, which is the worst kind of document.</li>
+          <li><strong>Drafted with a tool changes nothing about who is accountable.</strong> Whoever signs, owns it, exactly as if they had typed every word. That principle needs stating once, plainly, before the first time somebody is tempted to explain an error by saying the draft came out that way.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The question that tests all four at once</strong>
+          "If this goes wrong, whose call was it?" Asked in a review, in a neutral voice, it takes about three seconds and it is unanswerable when a document has three approvers and no owner. Ask it early enough and the answer is a name. Ask it late enough and the answer is a silence.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Your own contribution to the problem: the spec by Friday<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the part of the session that is about you rather than about your PMs, and it is short because it does not need decorating. Consider what happens when you ask for a spec by Friday and get one.</p>
+        <ul>
+          <li><strong>You asked for a document, and a document is what a deadline can produce.</strong> Drafting is now fast enough that Friday is always achievable. The six decisions are not faster than they were: the trade-off still needs a conversation with sales, the non-goals still need somebody to accept a smaller scope, the metric still needs a baseline that somebody has to go and pull. None of that fits into the gap between your request and your deadline, and all of the writing does.</li>
+          <li><strong>So the deadline selects for the half that got cheap.</strong> You will reliably receive the packaging on time, with the decisions missing, and it will look like responsiveness. This is not your PM cutting corners. It is you having specified the artifact instead of the decision, and them delivering exactly what you asked for.</li>
+          <li><strong>A spec produced to a deadline is a description. A spec produced to a decision is a spec.</strong> The repair is one sentence in how you ask. Not "can I have a spec by Friday" but "by Friday I want to know what we are not doing and what we gave up - the document can follow".</li>
+        </ul>
+        <p>The same repair works upward. When somebody asks you for a decision by Friday, the useful reply is to ask which decision, and what they will do differently once they have it. Half the time the honest answer moves the date, and the other half it removes the need for the document entirely.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Approving faster is not the same as approving well<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A quiet consequence of cheap drafting is that more documents reach you, each one better formatted than the last, and your available attention did not increase. Three habits keep that manageable without turning you into a bottleneck:</p>
+        <ul>
+          <li><strong>Read the non-goals first, then the trade-off, then stop.</strong> If those two sections are real, the rest of the document was almost certainly written by somebody who had decided things. If they are absent, nothing else in the document can compensate, so there is no point reading on.</li>
+          <li><strong>Approve the decision, not the document.</strong> Say what you are agreeing to, in one sentence, in the thread. "Agreed: summaries for paid-workspace admins this quarter, not live notes, and we accept that sales loses the demo moment." If your sentence and the PM's spec differ, you have found the three-readings problem for free.</li>
+          <li><strong>Let the small ones through without ceremony.</strong> A standard applied to everything at the same intensity gets abandoned within a month. Reserve the two questions for anything sized in weeks, and let the rest go by. Consistency on the things that matter beats thoroughness everywhere.</li>
+        </ul>
+        <p>None of this makes you a better reader of documents. It makes you a person whose approval means something specific, which is a different and considerably more useful thing to be.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Discussion exercise · 9 min · everyone in the room</span>
+      <h2>The two-question drill <span class="tag demo">★ run this on a spec you already approved</span></h2>
+    </div>
+    <p class="lede">The whole point is that it works with the document closed. Everybody brings a spec they approved in the last quarter and did not write, and the first two questions get asked before anybody opens the file. Rehearsing it once in a safe room is what stops it sounding like an accusation the first time you do it for real.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Everyone names one spec they approved in the last quarter.</strong> Approved, not written - the reviewing seat is the one you actually occupy. Ideally something that shipped, so the answers can be checked against what happened.</p></div>
+      <div class="step"><p><strong>Do not open it.</strong> Say the title out loud and nothing else. This is the constraint that makes the exercise honest, because it removes the option of scanning for the answer while somebody is asking the question.</p></div>
+      <div class="step"><p><strong>Ask the two questions, in order, and time the answers.</strong> "What are we not doing here?" then "how will we know it worked?" Say nothing in the gaps. The silence is data and filling it is the most common way leaders destroy their own exercise.</p></div>
+      <div class="step"><p><strong>Now open the document and find where each answer was meant to live.</strong> Write two words on a page: present or absent. Not "sort of present" - the value of the drill is that it produces a binary, and a hedged answer is the same as an absent one.</p></div>
+      <div class="step"><p><strong>Ask the third question and get a name.</strong> "If this had gone wrong, whose call was it?" Then say, out loud and in one sentence, what you will require before you approve the next one. Commit to the wording in the room so it sounds like a standard rather than a reaction.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Prompt 1 · the scope question, word for word<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "Without opening it - what are we not doing here?"
+        </div>
+        <p><strong>What a good answer sounds like.</strong> Immediate, specific, and slightly uncomfortable. "We are not doing live in-meeting notes, we are not touching the enterprise export, and we are not covering meetings with no clear decisions in them - those get an empty state rather than a generated guess." Three exclusions, named, delivered in under ten seconds because they were argued about rather than drafted. Then listen for the sentence that follows unprompted, which is usually the trade-off arriving on its own: "sales knows, and they are not happy about it". That volunteered second half is the strongest signal available to you in this whole session.</p>
+        <p><strong>The failure mode to listen for.</strong> The reframe. "Well, we are focused on summaries" is not a non-goal, it is the goal restated in a way that excludes nothing. Its cousin is "nothing is really out of scope at this stage", which sounds flexible and means the boundary will be discovered by an engineer in week four. And listen for the pause followed by an answer constructed on the spot: that answer is being decided in the meeting rather than recalled, which tells you the decision did not exist until you asked. That is still a win, it is just a more expensive one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Prompt 2 · the success question, word for word<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "How will we know it worked? And what is the number today?"
+        </div>
+        <p><strong>What a good answer sounds like.</strong> A metric, a baseline, and a date, in that order and without hedging. "The share of recorded meetings where somebody opens the summary in the first week. It is 11% for transcripts today and nobody has ever set a target, so we are setting one at the review in four weeks." Note what makes that answer good: it contains a number that exists now. A success criterion with no current value is a wish, because you cannot tell afterwards whether anything moved.</p>
+        <p><strong>The failure mode to listen for.</strong> The directional phrase - "improved engagement", "better retention", "higher satisfaction" - which is what gets written when nobody supplied a metric, formatted to look exactly like a metric. The subtler failure is a real metric with no baseline, which passes a quick read and fails six months later when two people argue about whether 14% was good. Do not accept "we will figure out the measurement during the build", either. That is the same sentence as "nobody will be wrong later", which sounds safe and is the opposite.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Prompt 3 · the signature question<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "If this had gone wrong, whose call was it? And what were the rest of us agreeing to?"
+        </div>
+        <p><strong>What a good answer sounds like.</strong> One name, said without hesitation, followed by a one-line summary of what that person decided. "Mine. I decided summaries over live notes for paid-workspace admins, and the rest of you were agreeing that the evidence supported it." Then everyone else in the room says what they thought they had approved, in one sentence each, and the sentences match. When they match, you have alignment. When they do not, you have just found six weeks of future argument in ninety seconds.</p>
+        <p><strong>The failure mode to listen for.</strong> The plural - "it was a team call", "we all agreed" - which is how a document with three approvers and no owner describes itself. Nobody is lying; the accountability genuinely was never assigned. Watch also for the reverse, where a junior PM is named as the owner of a decision they had no authority to make. If the trade-off cost sales a feature, the person who can absorb that conversation is the signer, and pretending otherwise sets somebody up. Naming the wrong owner is worse than naming none, because it looks resolved.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>One line, three products, and nobody in the wrong.</strong> Cadence's summaries spec was approved by three people on the strength of a sentence that read "summaries will surface the key outcomes of a meeting". Sales approved a thing that appears during the call, because "surface" implied something happening while they were demoing. Engineering approved a paragraph generated afterwards from the transcript already in storage. Design approved a list of decisions pinned to the top of the meeting page and editable by the admin. All three readings are defensible from the sentence, all three people were paying attention, and the disagreement surfaced in week six as a conversation about what had been agreed, which is the most expensive conversation a product team can have.</p>
+      <p><strong>What would have caught it costs one sentence each.</strong> Not a longer document - a longer document supports more readings, not fewer. If each approver had written one line in the thread saying what they were agreeing to, the mismatch would have been visible the same afternoon, for free. That is the whole mechanism: a spec is one reading or it is not a spec, and the cheapest way to test whether three people share a reading is to make them each state it in their own words before anybody starts building.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS TO ASK ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this with you</span>
+      <h2>Questions to ask your PMs <span class="tag concept">the whole point of the session</span></h2>
+    </div>
+    <p class="lede">Seven questions, and the first two carry most of the value. Ask those two about everything sized in weeks, in the same words, until your team writes the answers into the document before the review - which is the actual goal, and takes about a month.</p>
+    <ul>
+      <li><strong>"What are we not doing here?"</strong> Works because it is check 4 and it drags check 6 out behind it. There is no way to answer it with a restatement of the goal, and the follow-up - "and who wanted that?" - produces the trade-off in the words of the person who made it. If you adopt one question from this session, adopt this one.</li>
+      <li><strong>"How will we know it worked, and what is the number today?"</strong> Works because the second half is what makes it real. A success criterion without a current value cannot be checked afterwards, and asking for the baseline forces somebody to have looked. It also quietly tests check 1, since a baseline usually comes with evidence attached.</li>
+      <li><strong>"If this goes wrong, whose call was it?"</strong> Works because it converts a list of approvers into a name, in three seconds, before anything has gone wrong. Asked afterwards it sounds like blame. Asked at approval it sounds like housekeeping, and it is the single cheapest thing you can do to make accountability real.</li>
+      <li><strong>"What were the rest of us agreeing to - one sentence each?"</strong> Works because fluent documents manufacture agreement, and this is the only test for it that costs nothing. Three sentences that match is alignment. Three that do not is six weeks of argument, found early, in public, with nobody having to be brave.</li>
+      <li><strong>"Which parts of this did you decide, and which parts did the draft decide?"</strong> Works because it is asked without accusation and almost always gets an honest answer. It is the same distinction a1 drew between production and commitment, applied to a specific artifact, and PMs generally know exactly which sections they typed past.</li>
+      <li><strong>"What happens when there is nothing to summarise?"</strong> Works because it is check 5 asked as a concrete case rather than a category. Substitute the unhappy path for whatever the spec is about. A team that has decided will answer in one sentence; a team that has not will answer with a design opinion invented on the spot, which is precisely what an engineer will do alone on a Friday.</li>
+      <li><strong>"If I only read the non-goals, could I guess what we are building?"</strong> Works as a quality test on the answer to question one, because vague exclusions pass a careless review. Real non-goals are so specific that the shape of the work is visible in the negative space, and that is the difference between a boundary and a gesture at one.</li>
+    </ul>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">This week</span>
+      <h2>Five things to do before a4 <span class="tag exercise">◐ conversations, not artifacts</span></h2>
+    </div>
+    <ul>
+      <li>Ask "what are we not doing here?" in every product conversation this week, before you open any document. Count how many times you get three named exclusions in under ten seconds, and notice that the count tells you more about your organisation than any spec review would.</li>
+      <li>Change one sentence in how you ask for things. Replace "can I have a spec by Friday" with "by Friday I want to know what we are not doing and what we gave up". Then notice what arrives, and whether it arrives on Friday.</li>
+      <li>Say out loud, once, in a room, what a signature on a spec means here: one owner, who read the six and agrees with them, accountable for the decision being well made rather than for the world cooperating. It has probably never been said, and it takes forty seconds.</li>
+      <li>Take the last spec you approved and write, from memory, the one sentence you thought you were agreeing to. Then ask two other approvers to do the same, separately. Compare. This is the cheapest alignment audit available to you and it is occasionally alarming.</li>
+      <li>Find one decision your team is currently arguing about for the second time, and ask whether the trade-off was ever written down. It was not - that is why it came back - and saying so plainly is more useful than resolving the argument again.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PRD and spec practice - the spec as a decision record, and what makes one signable</span><span class="note">Parts 1 and 2 · the six checks, and who notices when each is missing</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Scope control through explicit non-goals, and the trade-off that follows from them</span><span class="note">Part 2 · why it is always those two, and the two questions that surface both</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work - fluency, automation bias, and where accountability sits</span><span class="note">Parts 1 and 3 · why absence is invisible, and who owns a drafted decision</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research quality and provenance - what evidence a spec must carry</span><span class="note">Check 1 only · a2 was the session on believing a finding</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Prioritisation frameworks - what a trade-off costs and how options get ranked</span><span class="note">Named as check 6 only · a4 owns ranking and the theatre around it</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric definition, baselines and targets</span><span class="note">Check 3 only, as "what is the number today" · a5 owns metrics and readouts</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: estimation, sequencing, sign-off gates, rollout</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Of the six checks, which two are almost always missing, and what do they have in common?</p>
+      <button class="qopt" type="button">A · Problem evidenced and user named - both require research nobody has time for</button>
+      <button class="qopt" type="button">B · Success measurable and edge cases - both require technical detail</button>
+      <button class="qopt" type="button">C · Non-goals and the trade-off - both require somebody to give something up, which is the only kind of decision a draft cannot make for you</button>
+      <p class="qwhy">Four of the six are descriptions and get written whether or not anybody thought hard. Two are concessions: writing them means a named person loses something they wanted. That is why the same two survive to the top of the practitioner ladder, and why writing the non-goals fixes both at once.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Three senior people approve a spec quickly and nobody objects. What have you learned?</p>
+      <button class="qopt" type="button">A · Very little - fluent documents manufacture agreement, and three fast approvals are as consistent with three different readings as with one shared one</button>
+      <button class="qopt" type="button">B · That the spec is well written and the team is aligned</button>
+      <button class="qopt" type="button">C · That the decision is low risk, since experienced people saw no problem</button>
+      <p class="qwhy">"Summaries will surface the key outcomes of a meeting" was approved by sales as a live in-call view, by engineering as a paragraph generated afterwards, and by design as a pinned decisions list. Nobody disagreed because there was nothing specific enough to disagree with. The test is one sentence each on what they were agreeing to, and it costs nothing.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · You ask for a spec by Friday and get a well-structured one on Friday. What is the most likely thing to be missing?</p>
+      <button class="qopt" type="button">A · Nothing much - the deadline worked, which is why you set it</button>
+      <button class="qopt" type="button">B · The decisions. Drafting fits inside a deadline; the conversation with sales about what they are not getting does not, so you receive the packaging on time with the trade-off unmade</button>
+      <button class="qopt" type="button">C · Detail in the requirements section, which the PM can fill in later</button>
+      <p class="qwhy">A deadline selects for the half of the work that got cheap. The repair is one sentence in how you ask: request the decision rather than the document - what are we not doing, and what did we give up - and let the writing follow. A spec produced to a deadline is a description; a spec produced to a decision is a spec.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>A spec is</b><span>The record of six decisions. Sections are where decisions live, not what they are.</span></div>
+      <div class="cheat-item"><b>The six</b><span>Problem evidenced · user named · success measurable · non-goals stated · edges decided · trade-off explicit.</span></div>
+      <div class="cheat-item"><b>The two missing</b><span>Non-goals and the trade-off, every time, because both require somebody to give something up.</span></div>
+      <div class="cheat-item"><b>Your two questions</b><span>"What are we not doing here?" and "how will we know it worked, and what is the number today?"</span></div>
+      <div class="cheat-item"><b>Signable test</b><span>Could an engineer who was in none of your meetings build the right thing without inventing an answer?</span></div>
+      <div class="cheat-item"><b>Signing means</b><span>One name. I read the six and I agree. Accountable for the decision, not for the world cooperating.</span></div>
+      <div class="cheat-item"><b>The fluency trap</b><span>Three approvals, three readings, no disagreement. Fix: one sentence each on what you agreed to.</span></div>
+      <div class="cheat-item"><b>Your own fault line</b><span>A spec to a deadline is a description. Ask for the decision instead. Next: a4, prioritisation without theatre.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a2-the-evidence-standard.html">← Previous: The evidence standard</a> &nbsp;·&nbsp; <a href="a4-prioritisation-without-theatre.html">Next: Prioritisation without theatre →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

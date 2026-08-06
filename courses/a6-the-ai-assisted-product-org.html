@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · The AI-assisted product org - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>The AI-assisted <span class="accent">product org</span></h1>
+    <p class="sub">This is the session with a budget attached. Five sessions of judgement now turn into four spending decisions and one uncomfortable question about what you measure people on. The order of the spend is the whole argument: review capacity first, then research access and provenance, then instrumentation, and tooling last, because tooling is the cheapest line on the page and the one your competitor can match on Tuesday. Then the honest part, which nobody puts in a strategy deck: a PM who never had to write a spec from nothing may not be able to see when a drafted one decides nothing at all.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No code to write</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · What to fund, and in what order</span>
+      <span class="a3" style="flex:4">17-31 · The job shifts, and the craft risk</span>
+      <span class="a4" style="flex:4">31-45 · Discussion + the 30-day plan</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The closing session, and the one with money in it</h2>
+    </div>
+    <p class="lede">a1 drew the line between production and commitment. a2 set the evidence standard, a3 named what a spec must contain before it is signable, a4 showed a ranking collapsing under a second lens, and a5 asked whether your organisation can hear a no. Every one of those was a judgement you make in a room you are already sitting in. This one is different: it asks what you buy, in what order, and what you take off your PMs' performance reviews to make any of it stick.</p>
+    <p class="lede">The reason the order matters more than the total is simple arithmetic about bottlenecks. Documents used to be expensive and judgement was the free part. That has inverted. Your organisation can now produce more specs, more research summaries, more competitive analyses and more roadmap variants than it has ever been able to read properly, and the constraint has moved to the only place it could move: the people who decide whether any of it is true. Fund in the wrong order and you will spend real money making the bottleneck worse.</p>
+    <div class="legend">
+      <span class="pill solid">Live - discussed in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">◆ Discussion exercise - run it with your own team</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A funding order you can defend line by line, the list of things you will stop measuring your PMs on, an interview exercise that tests judgement rather than fluency, and a 30-day plan with a first move that costs nothing.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE FUNDING ORDER ============ -->
+  <section class="section" id="funding">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers AI-assisted knowledge work: where the constraint moves</span>
+      <h2>Fund in this order, and the order is the argument <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Four rungs. Most organisations fund them in exactly the reverse sequence, because tooling is the only one that arrives with an invoice, a vendor, and a slide. The other three are people, habits and unglamorous analyst afternoons, which means nobody proposes them and nothing bad happens for a quarter. Then the readouts stop being useful and nobody can say precisely when that started.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four funding rungs in order: review capacity, research access and provenance, instrumentation, and tooling last">
+        <style>
+          .fnY { font: 700 13px Inter, sans-serif; fill: #33270A; }
+          .fnYc { font: 400 11.5px Inter, sans-serif; fill: #33270A; }
+          .fnT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .fnW { font: 400 11.5px Inter, sans-serif; fill: #C3CAD6; }
+          .fnH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .fnC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="fnH" x="26" y="24">Four rungs. Each one is worthless until the one above it is funded.</text>
+
+        <rect x="26" y="36" width="828" height="64" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="fnY" x="46" y="62">1 · Review capacity</text>
+        <text class="fnYc" x="46" y="86">Drafting got cheap. Judgement did not. Within a month, the bottleneck is who reads and who can send it back.</text>
+
+        <rect x="26" y="112" width="828" height="64" rx="9" fill="#232935"/>
+        <text class="fnT" x="46" y="138">2 · Research access and provenance discipline</text>
+        <text class="fnW" x="46" y="162">A standing route to customers, and every claim labelled measured, estimated or invented at intake.</text>
+
+        <rect x="26" y="188" width="828" height="64" rx="9" fill="#38404E"/>
+        <text class="fnT" x="46" y="214">3 · Instrumentation</text>
+        <text class="fnW" x="46" y="238">An analyst and the event work, so the baseline exists before the build rather than after the argument.</text>
+
+        <rect x="26" y="264" width="828" height="64" rx="9" fill="#6B7688"/>
+        <text class="fnT" x="46" y="290">4 · Tooling</text>
+        <text class="fnW" x="46" y="314">The cheapest line on the page and the least differentiating. Your competitor buys the same seats on Tuesday.</text>
+
+        <rect x="26" y="344" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="fnH" x="46" y="370">Buy rung 4 first and you have funded more documents into an organisation that cannot read the ones it has.</text>
+        <text class="fnC" x="46" y="392">Nobody notices for a quarter, which is exactly why this is the most common way the money gets spent.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the order, and the reason for the order</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Order</th><th>Fund this</th><th>What the money actually buys</th><th>Why it sits at this rung and not lower</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td>Review capacity</td><td>Senior time to read properly, a named reviewer per artifact type, and the explicit authority to send something back without it being an incident</td><td>Because the constraint moved here the moment drafting became free. Every rung below this one increases the volume of material arriving at a review process that is already the limiting factor</td></tr>
+        <tr><td><strong>2</strong></td><td>Research access and provenance discipline</td><td>A standing route to real customers that does not need a favour, plus the habit of labelling every claim measured, estimated by someone who would know, or invented, at intake rather than at review</td><td>Because review is only possible if claims carry their sources. Unlabelled evidence makes a reviewer do the research themselves, which converts your new review capacity back into production capacity</td></tr>
+        <tr><td><strong>3</strong></td><td>Instrumentation</td><td>An analyst, and the event work, so that a baseline and its variance exist before a build starts rather than being reconstructed afterwards</td><td>Because a metric you did not instrument is a metric you will not have at the readout. Cadence's 11% revisit rate with no target ever set is what an unfunded rung 3 looks like from the inside</td></tr>
+        <tr><td><strong>4</strong></td><td>Tooling</td><td>Seats, a workspace whose retention and training settings you can defend to security, and a place to put the material that must not go anywhere else</td><td>Because it is genuinely useful, genuinely cheap, and genuinely not a differentiator. It is also the only rung anyone will proactively ask you for, which is why it needs the discipline of going last</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why review capacity is the first rung and not the fourth<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Run the arithmetic on your own team. If drafting a spec used to cost a PM two days and now costs an afternoon, you have not made the team four times faster. You have made the first draft four times cheaper while leaving the read, the challenge and the sign-off exactly as expensive as they were. Whatever your review throughput was last year, it is your throughput this year, and there is now four times as much arriving at it.</p>
+        <ul>
+          <li><strong>The visible symptom is approval by recognition.</strong> A reviewer reads the shape of a document, recognises the shape, and approves it. That was survivable when producing the shape required making the decisions. It is not survivable now that the shape is free.</li>
+          <li><strong>The measurable symptom is a send-back rate near zero.</strong> Count it. If fewer than one document in five comes back for a named reason, review is being simulated rather than performed, and everyone involved is behaving reasonably given the time they have.</li>
+          <li><strong>The fix is boring and it is a budget line.</strong> Named reviewers, protected time in the week, and a norm that sending something back is the job rather than an escalation. It is headcount or it is hours, and it will not appear from goodwill.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The first question of this session, and it costs nothing to answer</strong>
+          How many documents did your team produce last month, and how many were sent back with a specific reason? Two numbers, from the record rather than from memory. Whatever the ratio is, that is your actual review capacity, and every other line in this budget scales off it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rung 3 is the one that gets cut, every time<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Instrumentation loses budget arguments for a structural reason rather than a bad one. It produces nothing a customer can see, it delivers value three months after it is paid for, and the cost of skipping it is invisible until the exact moment you need the number and it does not exist. Every organisation therefore discovers rung 3 at a readout, which is the most expensive possible place to discover it.</p>
+        <p>The leader move is to fund it out of the build rather than alongside it. When a bet is approved, the baseline pull and the event work are part of that bet's cost, not a separate request that has to compete with features. That single accounting change is worth more than any amount of advocacy, because it stops instrumentation being a thing somebody has to be brave about asking for.</p>
+        <p>The practitioner version of this rung is the PM track's <a href="b7-metrics-and-instrumentation.html">b7</a>, which writes the event spec for a real feature before any engineering starts. It is a useful thing to have read before you next approve a build, because it shows you exactly what you are declining to pay for.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What rung 4 is actually worth, stated honestly<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Nothing on this page argues that tooling does not matter. It matters, it is cheap relative to salaries, and a governed workspace with defensible retention settings is a real requirement rather than a nice-to-have. Buy it. The argument is only about sequence and about expectations.</p>
+        <p>Two things follow from tooling being last. First, the return on it is bounded by the three rungs above: better drafting into an organisation that cannot review, cannot source and cannot measure produces more confident wrong decisions, faster. Second, because every competitor can buy the same capability within a week, none of your advantage will ever live here. Your advantage lives in whether your organisation can tell a good decision from a well-written one, and that is rungs 1 to 3.</p>
+        <p>The uncomfortable corollary for a budget conversation: if the only line you can get approved this year is rung 4, you have not been given an AI budget. You have been given a software purchase, and you should say so out loud rather than let it be counted as a transformation.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE JOB SHIFTS ============ -->
+  <section class="section" id="roles">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the PM role and what performance measurement does to it</span>
+      <h2>Fewer, better decisions - not more documents <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">If you fund the four rungs and change nothing else, the money is wasted, because your PMs are still being measured on the thing that just became free. A PM whose review counts specs written, tickets authored and turnaround time on document requests will respond to cheaper drafting in the only rational way available: by producing more. You will get four times the volume, the same number of decisions, and a review process quietly collapsing under material nobody asked for.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What to stop measuring product managers on and what to measure instead once drafting is cheap">
+        <style>
+          .msB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .msK { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .msC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="msK" x="26" y="24">The performance review is the only lever that makes the budget work</text>
+
+        <rect x="26" y="36" width="400" height="186" rx="9" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="msB" x="46" y="62">Stop measuring PMs on these</text>
+        <text class="msC" x="46" y="90">· specs and PRDs written per quarter</text>
+        <text class="msC" x="46" y="112">· turnaround time on document requests</text>
+        <text class="msC" x="46" y="134">· tickets authored, roadmap items listed</text>
+        <text class="msC" x="46" y="156">· coverage: does every feature have a doc</text>
+        <text class="msC" x="46" y="178">· volume of any artifact, in any form</text>
+
+        <rect x="454" y="36" width="400" height="186" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="msK" x="474" y="62">Measure these instead</text>
+        <text class="msC" x="474" y="90">· decisions with a written trade-off</text>
+        <text class="msC" x="474" y="112">· bets with a baseline before the build</text>
+        <text class="msC" x="474" y="134">· readouts that ended in a stop</text>
+        <text class="msC" x="474" y="156">· cuts with a re-open condition attached</text>
+        <text class="msC" x="474" y="178">· specs signable at the first review</text>
+
+        <rect x="26" y="242" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="msK" x="46" y="268">A PM measured on document volume, in an org where documents are free, is measured on nothing.</text>
+        <text class="msC" x="46" y="290">The right output number is small and goes down over time. Six good decisions beat forty tidy artifacts.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the left column is what most review templates still say</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The five things to take off the review template this quarter<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Removing things is the harder half and the half that works. Each of these was a reasonable proxy when writing was the expensive part, and each is now actively harmful:</p>
+        <ul>
+          <li><strong>Documents shipped.</strong> Once a competent draft is an afternoon, this measures typing speed. Worse, it rewards the PM who never sends anything back, because sending back is somebody else's document count.</li>
+          <li><strong>Responsiveness on document requests.</strong> The fast answer to "can you write me a one-pager on this" is now always yes, so the metric has stopped discriminating between people entirely.</li>
+          <li><strong>Coverage.</strong> "Every feature has a PRD" was a reasonable hygiene goal and is now trivially satisfiable with documents that decide nothing. It is the single easiest metric in this list to hit dishonestly without anyone intending to.</li>
+          <li><strong>Roadmap items delivered.</strong> Counts things shipped, not bets that paid. It quietly penalises the PM who killed their own feature at week three on the pre-agreed rule, which is behaviour you spent all of a5 trying to buy.</li>
+          <li><strong>Anything with the word volume, throughput or velocity attached to a PM rather than to a team.</strong> Delivery throughput is a real thing and it belongs to the delivery function. It has never been a measure of product judgement.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Say what you are removing before you say what you are adding</strong>
+          If you announce the new measures first, your team will hear them as additional, because that is what has always happened. Lead with the deletions, name them specifically, and say that you were the person who put them there. The rest of the change is much cheaper after that sentence.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What a good replacement measure looks like<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The right-hand column of the figure is not a scorecard, and it should not become one with weights and a total. Four of the five entries are counted in single digits per quarter, which is the point: they are small enough to discuss individually in a one-to-one rather than rolled into a number.</p>
+        <ul>
+          <li><strong>Decisions with a written trade-off.</strong> Not decisions made, which is unfalsifiable. Decisions where the document names what was given up and who loses by it. Three per quarter from a senior PM is healthy; zero means they are ranking rather than choosing.</li>
+          <li><strong>Bets with a baseline that existed before the build.</strong> Binary, easy to check, and directly funded by rung 3. This is the single best proxy for whether the whole budget is working.</li>
+          <li><strong>Readouts that ended in a stop.</strong> Over a year, not a quarter. Zero over a year is the finding from a5, and it is about your culture rather than their competence.</li>
+          <li><strong>Specs signable at first review.</strong> The one measure that should improve over time and that maps onto a real cost you are paying. It rewards the PM who made the decisions before writing rather than the one who wrote first and negotiated after.</li>
+        </ul>
+        <p>Notice that all four are checkable by someone other than the PM, in under five minutes, from artifacts that already exist. A measure that requires a new report to produce will not survive two quarters.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What this does to the shape of the team<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two structural effects worth planning for rather than discovering.</p>
+        <p>First, the ratio of PMs to output changes without the headcount changing. A team of six that was producing enough documentation for six can now produce enough for twenty, so the question stops being "do we need another PM" and becomes "who reads what the six produce". That is a different hire, and often a more senior one. Resist the version of this conversation that concludes you need fewer PMs, because you have not made deciding cheaper, only writing.</p>
+        <p>Second, the junior role gets harder to define and easier to get wrong. The tasks that used to be a junior PM's apprenticeship - the first draft, the competitive summary, the notes writeup - are exactly the tasks that are now cheap. If you hand all of them to a tool, you have removed the ladder while keeping the job title, and in three years you will have a shortage of people who can tell a real spec from a fluent one. Part 3 is about that risk specifically, and it is the part of this session with the longest payback.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CRAFT AND HIRING ============ -->
+  <section class="section" id="craft">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers craft erosion and hiring for the shifted job</span>
+      <h2>The craft risk, stated without the euphemism <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Here is the thing that does not appear in strategy decks about AI-assisted teams, and it should. A PM who has never had to write a spec from nothing has never met the blank page, and the blank page is where you learn what a decision costs to make. Without that experience they can read a fluent, well-structured, decision-free document and feel that it is fine, because they have no internal model of the resistance that making those decisions would have produced. The absence has no shape to them.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How product craft erodes when drafting is always delegated, and the practices that keep judgement in the review loop">
+        <style>
+          .crT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .crH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .crC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <rect x="26" y="36" width="400" height="42" rx="8" fill="#232935"/>
+        <text class="crT" x="46" y="63">The erosion, stated honestly</text>
+        <text class="crC" x="46" y="104">a PM who never wrote a spec from nothing</text>
+        <text class="crC" x="46" y="126">has never met the blank page, so they have</text>
+        <text class="crC" x="46" y="148">no model of what a decision costs to make</text>
+        <text class="crC" x="46" y="170">and cannot see one missing from a page</text>
+        <text class="crC" x="46" y="192">that reads as though it is all there</text>
+
+        <rect x="454" y="36" width="400" height="42" rx="8" fill="#38404E"/>
+        <text class="crT" x="474" y="63">Keeping judgement in the loop</text>
+        <text class="crC" x="474" y="104">· the PM reviews out loud against six checks</text>
+        <text class="crC" x="474" y="126">· a draft stays a draft until a person signs</text>
+        <text class="crC" x="474" y="148">· juniors write two specs a quarter unaided</text>
+        <text class="crC" x="474" y="170">· every readout is read by a named person</text>
+        <text class="crC" x="474" y="192">· review capacity funded before headcount</text>
+
+        <rect x="26" y="216" width="828" height="112" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="crH" x="46" y="242">The interview follows directly: hand them a fluent, decision-free spec and ask what is wrong with it.</text>
+        <text class="crC" x="46" y="266">Do not ask them to write one. Anyone can produce a good-looking spec in ninety seconds now, so that exercise</text>
+        <text class="crC" x="46" y="288">tests a skill that stopped being scarce. Ask instead what this document decided, what it left to somebody</text>
+        <text class="crC" x="46" y="310">else, and who that somebody will be. A strong candidate finds the missing non-goals inside a minute.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the risk on the left, the practices that contain it on the right</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why this is a real risk and not nostalgia<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The nostalgic version of this argument is that people should struggle because struggling builds character, and it deserves to be dismissed. The real version is narrower and testable:</p>
+        <ul>
+          <li><strong>Recognising an absence requires having produced the thing that is absent.</strong> A PM who has written non-goals knows that writing them is where the argument happens, so a spec with no non-goals reads as unfinished to them. A PM who has only ever reviewed drafted specs sees a document with all its headings filled in.</li>
+          <li><strong>The failure is silent and slow.</strong> Nobody ever discovers it in a review. It surfaces one or two quarters later as a pattern of builds that went sideways for reasons that were all visible in the spec, and by then it looks like bad luck distributed across several people.</li>
+          <li><strong>It compounds through the review chain.</strong> If the reviewer cannot see the missing decision either, then rung 1 of your budget has bought hours of attention from someone who does not know what to look for, which is the most expensive way to buy nothing.</li>
+        </ul>
+        <p>The containment is not to ban drafting help. It is to make sure judgement is exercised somewhere in every loop: the PM reviews explicitly against a named checklist rather than by feel, drafts are marked as drafts until a person signs them, and every PM writes some real specs unaided so the muscle exists. Two a quarter is enough. The point is not the two documents; it is that they cannot be produced without meeting the decisions.</p>
+        <div class="callout tip">
+          <strong>The cheapest containment on this page</strong>
+          Make the review out loud and against a list. "Which of the six checks does this pass" takes four minutes and converts a vague impression into a specific finding. It also teaches the checks to whoever is watching, which is how the craft actually transmits.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How to interview for the shifted job<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The classic PM take-home is "write us a PRD for X". That exercise now measures almost nothing, because the candidate can produce a well-structured, confident, complete-looking document in the time it takes to read the brief. You are no longer testing what you think you are testing, and the strongest candidates know it, which makes the exercise slightly insulting as well as uninformative.</p>
+        <p>Replace it with a critique. Hand them a two-page spec that is fluent, well-formatted, plausible, and contains no decisions: a problem asserted with no evidence, "users" as the segment, "improve engagement" as success, no non-goals, happy path only, everything winning. Give them ten minutes and one question: <em>what did this document decide, and what did it leave to somebody else?</em></p>
+        <ul>
+          <li><strong>Strong signal:</strong> they find the missing non-goals within a minute and say so plainly. They notice that success is directional rather than measurable and ask what the number is today. They ask what was given up, and who loses. They ask who ends up deciding the edge cases, and answer their own question with "an engineer, on a Friday".</li>
+          <li><strong>Weak signal:</strong> they praise the structure and suggest adding a section. They rewrite it longer. They critique the prose, the formatting, or the tone. They ask for more context before they will comment, which sounds diligent and is usually an inability to see anything wrong with what is in front of them.</li>
+          <li><strong>Excellent signal, and rare:</strong> they ask you where the document came from and what you were hoping they would say. That candidate is reading the exercise as well as the artifact, and they will do that to your roadmap too.</li>
+        </ul>
+        <p>The same exercise works as a development tool on people you already employ, and it is less confronting than it sounds because the document is obviously not theirs. Run it once a quarter with a different fake spec and you will learn more about your team's judgement than any competency framework will tell you.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What this changes about hiring juniors<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The temptation is to stop hiring junior PMs on the grounds that their traditional work is now free. It is a coherent short-term argument and a bad three-year one, because seniors are made out of juniors and nobody else is making them either.</p>
+        <p>The workable version is to change what a junior does rather than whether one exists. Their apprenticeship stops being "produce the first draft" and becomes "verify the draft against the source material" - reading the actual interview transcripts behind a synthesis, checking a claimed number against the dashboard, finding the check a spec fails. That work is genuinely valuable, it is exactly rung 1 and rung 2 of the budget, and it teaches judgement faster than drafting ever did, because it consists entirely of looking for the gap between what a document says and what is true.</p>
+        <p>Then give them the two unaided specs a quarter so they meet the blank page on purpose. A junior who spends a year verifying other people's work and writing eight specs from nothing is a better mid-level PM than the version of them that spent that year producing forty first drafts, and it is not close.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Discussion exercise · 12 min · everyone</span>
+      <h2>Rank your own spend, then find the missing line <span class="tag demo">◆ run this with your leadership team</span></h2>
+    </div>
+    <p class="lede">This exercise takes twelve minutes and it usually ends with one uncomfortable discovery, which is that the first rung is not a line item anywhere in your budget. It is not a trick: review capacity is nearly always paid for out of goodwill and evenings, which is why it silently fails first.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Everyone writes down what the organisation currently spends on the four rungs</strong>, in order of size. Money, headcount or hours - any unit, as long as it is the same unit for all four. Two minutes, in silence, before anybody speaks.</p></div>
+      <div class="step"><p><strong>Now rewrite the same list in the funding order from Part 1.</strong> The gap between the two orderings is the finding, and in most rooms it is close to a reversal.</p></div>
+      <div class="step"><p><strong>Look specifically for review capacity as a line.</strong> If it is not there, it is not funded, and it is your bottleneck. Say the two numbers out loud: documents produced last month, documents sent back with a reason.</p></div>
+      <div class="step"><p><strong>Pick exactly one rung to fund in the next thirty days</strong>, and name what loses that money. A funding decision with no loser is a wish, and everyone in the room already knows it.</p></div>
+      <div class="step"><p><strong>Then say what you will stop measuring your PMs on, before you say what you will start measuring.</strong> Out loud, in this room, with the deletions first. If you cannot name three deletions, the new measures will land as additions and nothing will change.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Prompt 1 · the bottleneck question<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "For every document my team produced last month: who read it properly, and how many were sent back with a specific reason? Two numbers, from the record rather than from memory. I am asking about capacity, not about anyone's diligence."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> two actual numbers, and a send-back count that is not zero. "Roughly thirty documents, I read eleven of them properly, and I sent four back - two for a missing metric, one for no non-goals, one because the evidence was a Slack message." That answer contains a working review process and a person who knows what they are looking for. A very good answer volunteers the ratio without being asked and then tells you which artifact type never gets reviewed at all.</p>
+        <p><strong>The failure mode to listen for:</strong> "everything gets reviewed", with no count. That is the answer that means review is happening as a calendar event rather than as an act, and it is almost never a lie - the meetings genuinely occur. Second tell: the send-back number is zero and nobody finds that surprising. Third and most diagnostic: they answer with how long they spend rather than what they found, because hours are the input and findings are the output, and only one of the two tells you the process is real.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Prompt 2 · what we stop measuring<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Name the three things I currently measure you on that are volume rather than judgement. I am asking so that I can remove them, I will go first with one I know I put there, and nobody is going to be judged on their answer."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> someone names a real one within a few seconds, and it stings slightly. "Coverage. Every feature having a PRD means I write PRDs for things that were decided in a corridor, and everyone knows the document is a formality." That is the answer you want, and the correct response is to remove the thing that week rather than to discuss it. Going first yourself is not a courtesy, it is what makes the second answer possible.</p>
+        <p><strong>The failure mode to listen for:</strong> silence, then somebody offers a measure that is safely somebody else's. Second tell: the three things named are all inconveniences rather than distortions - process overhead, a tedious template - which means the room is answering a question about annoyance instead of about incentives. Third: everyone agrees enthusiastically and nothing is removed within the month, at which point you have taught your team that this kind of question is theatre, and the next one will be answered accordingly.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Prompt 3 · the critique exercise, run on your own team<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Here is a two-page spec. It is well-written and it decides nothing. You have ten minutes and one question to answer: what did this document decide, and what did it leave to somebody else?"
+        </div>
+        <p><strong>What a good answer sounds like:</strong> the missing non-goals get named first, usually within a minute, followed by the observation that success is directional rather than measurable. Then the good ones go one step further and say who ends up making the decisions that are absent - the engineer who hits the edge case, the support lead who inherits the scope, the stakeholder who assumed the thing that is not excluded. That last move is the whole skill, because it converts a document review into a forecast of what will actually happen.</p>
+        <p><strong>The failure mode to listen for:</strong> praise for the structure, followed by a suggestion to add a section. That is a person reading the shape and recognising the shape. Second tell: they rewrite it, at length, and the rewrite is also fluent and also decides nothing. Third: they ask for more context before they will comment. It sounds rigorous and it is usually the sound of someone who cannot see anything wrong with what is in front of them, because everything that should be there appears to be there.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this to your next review</span>
+      <h2>The questions to ask your PMs <span class="tag exercise">◐ 7 questions</span></h2>
+    </div>
+    <p class="lede">Four of these belong in a document review and three belong in a one-to-one. None of them is a trap, and all of them are answerable in a sentence by somebody who did the work. Ask them routinely rather than when you are already suspicious, or they become an audit and the answers become performances.</p>
+    <ul>
+      <li><strong>"Which of the decisions in this document did you make, and which did the draft make for you?"</strong> The single best question on this page. It is answerable in thirty seconds by anyone who wrote the thing properly, it is unanswerable by anyone who did not, and it never reads as an accusation because the premise is that using a draft is normal. A good answer names two or three decisions and points at them.</li>
+      <li><strong>"What did you send back last month, and what for?"</strong> Asked of a senior PM, this measures whether review is happening below you. A named artifact and a named reason is a working process. "Nothing needed sending back" is a finding about capacity, not about quality.</li>
+      <li><strong>"What is the baseline for this, and did it exist before the build started?"</strong> The rung 3 question in the room where it costs the least to fix. A metric with no current value cannot be missed, and a baseline pulled after the fact is a number chosen with the answer already known.</li>
+      <li><strong>"Where did this evidence come from - measured, estimated by someone who would know, or invented?"</strong> Three options, asked in a neutral tone, applied to every claim rather than the suspicious one. It normalises provenance as tidiness rather than as challenge, and the invented cells come out voluntarily once the label exists.</li>
+      <li><strong>"What did we decide not to do here, and who have you told?"</strong> Two questions in one, and the second half is the one that catches things. A non-goal nobody outside the team has heard is not a decision yet; it is an intention that will be relitigated by the first person who assumed otherwise.</li>
+      <li><strong>"When did you last write a spec from nothing, and how long did it take?"</strong> The craft question, asked warmly and infrequently. You are not checking productivity. You are finding out whether the muscle is still there, and the honest answer from a good PM is sometimes "not this year", which is information about how you have set the job up rather than about them.</li>
+      <li><strong>"If I doubled your tooling budget and halved your review time, would you be better off or worse off?"</strong> Ask this once and listen carefully. A PM who says worse off has understood the whole session and you should promote them into the reviewing role. A PM who says better off is telling you something true about where their bottleneck currently is, and it is worth finding out which of the four rungs they are actually short of.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 30-DAY PLAN ============ -->
+  <section class="section" id="plan">
+    <div class="section-kicker">
+      <span class="klabel">Closing artifact · the leader track ends here</span>
+      <h2>Thirty days, and the first move costs nothing <span class="tag demo">◆ take this one away</span></h2>
+    </div>
+    <p class="lede">Everything in this track has been judgement applied to somebody else's work. This is the part where you do something. The plan below fits in a month, needs no budget approval for the first two weeks, and is ordered so that the cheap diagnostic work happens before you spend anything.</p>
+
+    <pre class="lab-sql">30-DAY PLAN  ·  the AI-assisted product org  ·  owner: head of product
+
+WEEK 1     MEASURE THE BOTTLENECK, SPEND NOTHING
+           Count last month's documents and how many were sent back with a
+           named reason. If the send-back rate is under 1 in 5, review is
+           being simulated rather than performed. Write both numbers down
+           where your leadership team can see them.
+           Also this week: name a reviewer for every artifact type. Not a
+           committee, a person, by name, per type. Cost: one hour.
+
+WEEK 2     DELETE BEFORE YOU ADD
+           Take three volume measures off the PM review template. Say which
+           three, say that you put them there, and say it before you mention
+           any replacement. Suggested first cuts: documents shipped,
+           turnaround on document requests, and PRD coverage.
+           Then run the critique exercise once, on your own team, with a
+           fluent decision-free spec. Ten minutes each. Do not grade it.
+
+WEEK 3     FUND ONE RUNG, AND NAME THE LOSER
+           Pick the highest unfunded rung, not the easiest one. In most orgs
+           that is rung 1 or rung 3. Attach an amount and say publicly what
+           is not getting that money, because a funding decision with no
+           loser will be quietly reversed by the first competing request.
+           If you fund rung 3, fund it INSIDE the next approved bet rather
+           than as a separate line, so it stops competing with features.
+
+WEEK 4     MAKE IT STICK IN TWO SENTENCES
+           Add to the approval meeting, permanently: "what is the one number
+           and what is it today", and "what result would make us stop".
+           Both are from a5, both cost eight seconds, and both are unaskable
+           later. Then write one paragraph to the whole org explaining the
+           funding order and why tooling is last. Somebody will forward it
+           to a vendor. That is fine.
+
+NOT IN     Charters, milestones, WBS, critical path, risk registers, status
+THIS PLAN  cadence, rollout mechanics. All of that is the delivery function
+           and it has its own course. This plan stops at the decision.</pre>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The most common version of this budget going wrong does not look like waste, which is why it survives review.</strong> An organisation buys the tooling, runs the enablement, and gets a genuine and measurable increase in output: more competitive analyses, more one-pagers, more research summaries, more roadmap variants than anybody has produced before. The productivity slide is honest. The screenshots are real. Nobody is exaggerating anything.</p>
+      <p>What happens next takes about two quarters to become visible. The review meeting that used to cover four documents now covers eleven, in the same hour, so each one gets a skim and a nod. Two of the eleven contain a metric with no baseline and one contains a research theme that came from a single account, and none of the three gets caught, because catching them requires the kind of reading there is no longer time for. The builds that follow are not obviously wrong. They are ordinary, defensible, and slightly worse than the ones from before, and the retro on each of them finds a different local cause. Nobody ever writes the sentence "we increased our production capacity without increasing our review capacity", because no single quarter provides the evidence for it.</p>
+      <p>The tell is available on day one, and it is free: the ratio of documents produced to documents sent back. Watch that number rather than the output number. If production doubles and send-backs stay flat, your organisation has not got faster at deciding. It has got faster at agreeing.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pull the two numbers: documents produced last month, documents sent back with a named reason. Do not share them yet. The ratio is your real review capacity and every other decision in this session scales off it.</li>
+      <li>Write your current spend against the four rungs, then rewrite it in the funding order. Circle the rung that is missing entirely. In most organisations it is rung 1, and it is missing because nobody has ever had to ask for it.</li>
+      <li>Take three volume measures off your PM review template this week, name them out loud, and say that you were the person who added them. Do the deletions before you announce a single replacement.</li>
+      <li>Run the critique exercise once on your own team: a fluent, decision-free spec, ten minutes, one question. Note who finds the missing non-goals and who suggests adding a section. Do not grade it and do not tell anybody it was a test, because it is a development tool rather than an assessment.</li>
+      <li>Fund exactly one rung in the next thirty days and name publicly what loses that money. Then write the paragraph explaining why tooling is last, and send it to the person most likely to disagree with you.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work - where the constraint moves when production becomes cheap</span><span class="note">Part 1 · the four rungs, and why review capacity is first</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The PM role, decision ownership, and what performance measurement does to it</span><span class="note">Part 2 · five deletions from the review template, four replacements that are checkable in five minutes</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Craft erosion, automation bias, and hiring for judgement rather than fluency</span><span class="note">Part 3 · the critique interview, and the two unaided specs a quarter</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Provenance discipline on evidence and scoring inputs</span><span class="note">Rung 2 only · the full treatment is <a href="a2-the-evidence-standard.html">a2</a> and the PM track's b6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Instrumentation and the baseline that has to exist before the build</span><span class="note">Rung 3 only · <a href="a5-metrics-and-readouts.html">a5</a> for the leader view, <a href="b7-metrics-and-instrumentation.html">b7</a> for the event spec itself</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, WBS, critical path, risk registers, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You have budget for exactly one of the four rungs this year. Which do you fund, and why that one?</p>
+      <button class="qopt" type="button">A · Tooling, because it is cheapest and everyone benefits immediately</button>
+      <button class="qopt" type="button">B · Instrumentation, because metrics are the foundation of everything else</button>
+      <button class="qopt" type="button">C · Review capacity, because production just became cheap and judgement did not, so every other rung increases the volume arriving at the thing that is already the constraint</button>
+      <p class="qwhy">Instrumentation and tooling are both real and both belong in the budget. But funding either one first raises the volume of material flowing into a review process that has not grown, which converts spend into more confident wrong decisions rather than better ones. The order is the argument.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · You fund all four rungs and leave the PM review template unchanged. What happens?</p>
+      <button class="qopt" type="button">A · You get four times the documents and the same number of decisions, because the team is still measured on the thing that just became free</button>
+      <button class="qopt" type="button">B · Nothing much changes either way; review templates are administrative</button>
+      <button class="qopt" type="button">C · Output falls, because the new tooling takes time to learn</button>
+      <p class="qwhy">A PM measured on specs written, tickets authored and turnaround time will respond rationally to cheaper drafting by producing more of all three. The deletions from the review template are not a soft accompaniment to the budget; without them the budget funds volume, and volume is the thing you were already drowning in.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · You are hiring a senior PM. Which exercise tells you most about their judgement?</p>
+      <button class="qopt" type="button">A · Write us a PRD for a feature in our product</button>
+      <button class="qopt" type="button">B · Here is a fluent, well-formatted spec that decides nothing: tell us what it decided and what it left to somebody else</button>
+      <button class="qopt" type="button">C · Present a roadmap for our next two quarters</button>
+      <p class="qwhy">A good-looking PRD is now an afternoon's work at most, so the writing exercise no longer discriminates between candidates. Critique does: seeing an absence requires having produced the thing that is absent, which is exactly the craft at risk when drafting is always delegated.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader track cheat sheet <span>· all six sessions · pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>a1 · The split</b><span>Production (drafting, summarising, restructuring) delegate. Commitment (choosing, cutting, owning) never.</span></div>
+      <div class="cheat-item"><b>a2 · The evidence standard</b><span>Counted, reported or asserted. A number inside an assertion is still an assertion, and it travels further.</span></div>
+      <div class="cheat-item"><b>a3 · Signable</b><span>Six decisions, not six sections. Could an engineer who was in no meeting build the right thing?</span></div>
+      <div class="cheat-item"><b>a4 · Lenses</b><span>Score under two. A ranking that moves is telling you which single input is carrying the whole result.</span></div>
+      <div class="cheat-item"><b>a5 · One number, one date</b><span>One primary per decision, a baseline before the build, a stopping rule asked at approval, not at review.</span></div>
+      <div class="cheat-item"><b>a6 · The funding order</b><span>Review capacity · research and provenance · instrumentation · tooling last. The order is the argument.</span></div>
+      <div class="cheat-item"><b>a6 · Stop measuring volume</b><span>Documents shipped, turnaround, coverage, items delivered. Measure decisions with a trade-off instead.</span></div>
+      <div class="cheat-item"><b>a6 · The craft risk</b><span>You cannot see a missing decision if you never made one. Interview by critique, not by drafting.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a5-metrics-and-readouts.html">← Previous: Metrics and the honest readout</a> &nbsp;·&nbsp; <a href="../index.html">← All sessions</a></span>
+    <span>The leader track is complete. For the practitioner half, start at <a href="b1-the-job-and-setup.html">b1, the job and a governed setup</a>; for everything after the decision, <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a>.</span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

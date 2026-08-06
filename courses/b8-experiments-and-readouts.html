@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 8 · Experiments and honest readouts - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 8 of 10</div>
+    <h1>Experiments, and <span class="accent">the readout that says no</span></h1>
+    <p class="sub">This session is not about statistics. It is about the two documents around the test: the design you write before any data exists, and the readout you write after. Both are decision documents, and both are where teams quietly cheat - the design by writing a hypothesis that cannot lose, the readout by explaining the result instead of reporting it. The worked example on this page is Cadence's summaries rollout, and it comes out mixed, because a course that only shows wins teaches nothing about readouts.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Worked artifact · a real readout</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-16 · What the test is for</span>
+      <span class="a3" style="flex:6">16-40 · Rules before data, then the readout</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why the readout is the real skill</h2>
+    </div>
+    <p class="lede">b7 set the numbers: week-1 transcript revisit rate as the primary metric, 11% today against a 30% target, self-reported in-meeting note-taking as the secondary at 68%, and accuracy complaints as the guardrail at or below 1.4% of meetings. The events are specified. Now something ships, and the organisation has to find out what happened without flattering itself.</p>
+    <p class="lede">Almost every team can design a test. Very few write a readout that is allowed to end in "we are stopping". That document is the one nobody is rewarded for, it is the one that saves the next quarter, and it is most of this session. The statistics side of experiments - power, variance reduction, sequential testing - is <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a>, deliberately not re-taught here.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Worked artifact - the readout, in full</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A decision rule you wrote before the data existed, the three test shapes that beat an A/B test at your size, and a readout template that is structurally capable of saying no.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT THE TEST IS FOR ============ -->
+  <section class="section" id="purpose">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers experiment practice: hypotheses, decision rules</span>
+      <h2>An experiment is for deciding, not for proving <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Start with the cheapest test in this whole course, and it is not a test at all. Write down what you would do if the result came back positive, and what you would do if it came back negative. If the two answers are the same, do not run the experiment. You already decided, and what you are about to buy is not information, it is cover.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The proving posture versus the deciding posture in experiment design, with Cadence's pre-committed decision rule">
+        <style>
+          .exT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .exH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .exC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .exY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <rect x="26" y="30" width="392" height="42" rx="8" fill="#6B7688"/>
+        <text class="exT" x="46" y="57">Proving · what most tests are secretly for</text>
+        <text class="exC" x="46" y="96">the hypothesis is written so it cannot lose</text>
+        <text class="exC" x="46" y="118">success is whatever the data supports</text>
+        <text class="exC" x="46" y="140">you stop looking whenever it looks good</text>
+        <text class="exC" x="46" y="162">the readout argues for what already shipped</text>
+        <text class="exC" x="46" y="184">a null result becomes a learning story</text>
+        <text class="exH" x="46" y="214">Tell: what result would have stopped us?</text>
+
+        <rect x="462" y="30" width="392" height="42" rx="8" fill="#232935"/>
+        <text class="exT" x="482" y="57">Deciding · what a test is actually for</text>
+        <text class="exC" x="482" y="96">the hypothesis names a number that can miss</text>
+        <text class="exC" x="482" y="118">the decision rule is written before the data</text>
+        <text class="exC" x="482" y="140">the stop is a date and a threshold, agreed</text>
+        <text class="exC" x="482" y="162">the readout can end in stop, and sometimes does</text>
+        <text class="exC" x="482" y="184">a null result is a result, and it is cheap</text>
+        <text class="exH" x="482" y="214">Tell: which outcome changes what we do?</text>
+
+        <rect x="26" y="238" width="828" height="86" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="exY" x="46" y="264">Cadence's decision rule, written two weeks before launch and not edited since:</text>
+        <text class="exC" x="46" y="288">"If week-1 transcript revisit rate has not reached 20% by the end of week 3, we stop the phase-2 digest build</text>
+        <text class="exC" x="46" y="310">and spend two weeks on the six highest-revisit accounts instead. Summaries stay on either way."</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same test, two postures, two completely different readouts</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Writing a hypothesis that is allowed to lose<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A hypothesis is falsifiable or it is a slogan. Compare the two versions of the same belief about Cadence:</p>
+        <ul>
+          <li><strong>Cannot lose:</strong> "Post-meeting summaries will improve the experience for team admins and drive engagement." Every observed outcome is consistent with this sentence. It cannot be wrong, so it cannot be informative, and the readout that follows it will be a paragraph of adjectives.</li>
+          <li><strong>Can lose:</strong> "If team admins on paid workspaces of 5 to 50 seats get a summary within 90 seconds of a call ending, week-1 transcript revisit rate rises from 11% to 30% within four weeks, while accuracy complaints stay at or below 1.4% of meetings." Named segment, named number, named baseline, named horizon, named guardrail. It can miss, and this one did.</li>
+        </ul>
+        <p>Then attach the decision rule in the same breath, in the same document, with a date on it. Not "we will review the results" - the actual if-then, including the branch where you stop. If you cannot write the stopping branch, you are not designing a test; you are scheduling a celebration.</p>
+        <div class="callout tip">
+          <strong>The two-answer test, before anything else</strong>
+          Write what you do if it wins and what you do if it loses. Same answer? Do not run it. Different answers? The difference between them is exactly the value of the experiment, and now you know what you are buying.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The decision rule, and where teams put it<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A decision rule has four parts, and a rule missing any one of them is a wish: <strong>the metric</strong>, <strong>the threshold</strong>, <strong>the date</strong>, and <strong>the action on each side</strong>. Cadence's rule in the figure above has all four, which is why it was able to fire without a meeting.</p>
+        <p>Put it somewhere a stakeholder will see it before the result exists. In the spec, in the launch note, in the channel where the launch is announced. A rule that lives only in your head is not a rule; it is a memory that will be revised by whatever the number turns out to be. The only real protection is that other people read the threshold while it was still uncomfortable.</p>
+        <p>And write the action on the losing side concretely enough that it can be executed by someone who is disappointed. "We stop the phase-2 digest build and spend two weeks on the six highest-revisit accounts" survives a bad Monday. "We will reconsider our approach" does not survive lunch.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Three tests that should never have been run<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The already-decided test.</strong> The build is committed, the launch date is public, and the test is running to produce a chart for the launch email. Cost: three weeks of instrumentation and the credibility of every future test.</li>
+          <li><strong>The unpowered test on a small segment.</strong> A change tested on 40 accounts where only a very large effect would be visible, then reported as "no significant difference" and used to kill the idea. You did not learn it does not work. You learned nothing, expensively, and you learned it in a way that sounds like knowledge.</li>
+          <li><strong>The test nobody can act on.</strong> The result arrives four weeks after the planning cycle closed. Whatever it says, the roadmap is set. Run the test that lands before the decision, or move the decision, or do not run it.</li>
+        </ul>
+        <p>All three failures happen before any data exists, which is the pattern of this session: the expensive mistakes in experimentation are design mistakes and readout mistakes, not analysis mistakes.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: RULES BEFORE DATA ============ -->
+  <section class="section" id="rules">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers stopping rules, minimum effect, test shapes</span>
+      <h2>Three things you decide before a single event fires <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The order is the whole lesson. Set the stopping rule, the minimum effect worth shipping and the decision rule while the data does not exist yet, because once it exists you are no longer designing a test. You are negotiating with yourself, and you always win that negotiation.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The three rules set before data exists: the stopping rule, the minimum effect worth shipping, and the decision rule">
+        <style>
+          .rlT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rlH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .rlC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="rlH" x="26" y="26">Written down before launch, read by someone other than you</text>
+
+        <rect x="26" y="40" width="262" height="44" rx="8" fill="#232935"/>
+        <text class="rlT" x="44" y="68">1 · The stopping rule</text>
+        <text class="rlC" x="44" y="106">When you stop looking: a date,</text>
+        <text class="rlC" x="44" y="126">a sample, or both. Decided now.</text>
+        <text class="rlC" x="44" y="146">Because after the data lands</text>
+        <text class="rlC" x="44" y="166">you will find a reason to wait.</text>
+
+        <rect x="308" y="40" width="262" height="44" rx="8" fill="#38404E"/>
+        <text class="rlT" x="326" y="68">2 · Minimum effect worth it</text>
+        <text class="rlC" x="326" y="106">The smallest move that would</text>
+        <text class="rlC" x="326" y="126">make you ship anyway. Here it</text>
+        <text class="rlC" x="326" y="146">is 11% to 20%, not 11% to 12%.</text>
+        <text class="rlC" x="326" y="166">Below it, shipping costs more.</text>
+
+        <rect x="590" y="40" width="264" height="44" rx="8" fill="#6B7688"/>
+        <text class="rlT" x="608" y="68">3 · The decision rule</text>
+        <text class="rlC" x="608" y="106">Metric, threshold, date, and</text>
+        <text class="rlC" x="608" y="126">the action on each side. One</text>
+        <text class="rlC" x="608" y="146">sentence. Including the side</text>
+        <text class="rlC" x="608" y="166">where you stop.</text>
+
+        <rect x="26" y="196" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="rlH" x="46" y="222">Any threshold set after the data exists gets set exactly where the data already is.</text>
+        <text class="rlC" x="46" y="246">That is not analysis, it is narration. The dates and numbers above are worth more than the analysis that follows them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three rules, all of them cheap, all of them worthless if written late</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Four shapes, and three of them are not an A/B test<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A team of Cadence's size, with a segment of paid workspaces of 5 to 50 seats, often cannot run a well-powered A/B test on a metric like week-1 revisit rate inside a useful window. That is not a reason to skip the discipline. It is a reason to pick a shape that fits, and to be honest in the readout about what the shape can and cannot tell you.</p>
+        <table class="clean">
+          <thead><tr><th>Shape</th><th>What it is</th><th>Use it when</th><th>What it cannot tell you</th></tr></thead>
+          <tbody>
+            <tr><td>A/B test</td><td>randomised split, one change, a measured difference</td><td>you have the traffic, the change is isolated, and the decision can wait for the window</td><td>anything about accounts too rare to land in both arms</td></tr>
+            <tr><td>Staged rollout with a guardrail</td><td>20% then 60% then all, with a pre-agreed number that pauses it</td><td>you are fairly confident, the risk is a regression rather than a dud, and speed matters</td><td>a clean causal estimate: the world moved while you rolled out</td></tr>
+            <tr><td>Painted door</td><td>the entry point exists, the feature does not; you measure intent to enter</td><td>the build is expensive and you are unsure anyone wants the door at all</td><td>whether they would keep using it once the room behind the door is real</td></tr>
+            <tr><td>Concierge test</td><td>ten accounts, the outcome delivered by hand, no product built</td><td>you need to know whether the outcome is valued before you automate it</td><td>anything about scale, cost, or self-serve discoverability</td></tr>
+          </tbody>
+        </table>
+        <p>Cadence shipped summaries as a <strong>staged rollout with a guardrail</strong>, and the readout below says so in its first paragraph. That single admission is what keeps the rest of the document honest, because it tells the reader which claims are causal and which are merely observed.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The concierge test nobody runs, and should<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The CEO's agent ask has no evidence behind it. The instinct is to argue about it or to build a prototype, and both are expensive. The concierge shape is neither: pick ten workspaces, and for two weeks have a human do by hand whatever the agent would have done - chase the open action items, send the follow-up, update the tracker. No product. A shared doc and somebody's afternoon.</p>
+        <p>Two weeks later you know something nobody in the argument knew: whether admins let it happen without watching, what they corrected, and what they asked for that was not in the pitch. That is evidence, it cost no engineering, and it is exactly the discovery task b9 converts the CEO's ask into. Ten accounts and a human beats a quarter of building and a debate.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE READOUT ============ -->
+  <section class="section" id="readout">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers honest readouts</span>
+      <h2>The five questions a readout answers <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A readout is not a summary of what happened. It is the document that converts a result into a decision, in front of witnesses, and its structure is the thing that makes honesty the path of least resistance. Answer these five in this order and the awkward parts have nowhere to hide.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The five sections of an honest readout and what each one must contain">
+        <style>
+          .roT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .roH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .roC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="roH" x="26" y="26">Five sections, in this order, whatever the result turns out to be</text>
+
+        <rect x="26" y="40" width="210" height="36" rx="8" fill="#232935"/>
+        <text class="roT" x="42" y="63">1 · What we shipped</text>
+        <text class="roC" x="252" y="63">The change, the population it reached, the shape of the test, the dates.</text>
+
+        <rect x="26" y="84" width="210" height="36" rx="8" fill="#38404E"/>
+        <text class="roT" x="42" y="107">2 · What we predicted</text>
+        <text class="roC" x="252" y="107">The numbers written before the data, unedited, including the wrong ones.</text>
+
+        <rect x="26" y="128" width="210" height="36" rx="8" fill="#6B7688"/>
+        <text class="roT" x="42" y="151">3 · What happened</text>
+        <text class="roC" x="252" y="151">Primary, secondary, guardrail, cost. Each against its prediction.</text>
+
+        <rect x="26" y="172" width="210" height="36" rx="8" fill="#38404E"/>
+        <text class="roT" x="42" y="195">4 · What we now believe</text>
+        <text class="roC" x="252" y="195">The interpretation, plus the confounds you can name and cannot rule out.</text>
+
+        <rect x="26" y="216" width="210" height="36" rx="8" fill="#232935"/>
+        <text class="roT" x="42" y="239">5 · What we are doing</text>
+        <text class="roC" x="252" y="239">The decision rule's consequence, executed. Not a plan invented today.</text>
+
+        <rect x="26" y="268" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="roH" x="46" y="294">A readout that cannot end in "we are stopping" is not a readout.</text>
+        <text class="roC" x="46" y="318">It is a launch announcement with a chart in it, and everyone in the room can tell, including the people nodding.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the order matters: prediction before result, result before interpretation</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why prediction comes before result<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Section 2 exists to make section 4 hard to fake. If the reader sees the prediction first, "8 points of lift in four weeks" cannot be presented as a triumph when the number written down was 19 points. Put the result first and the prediction becomes optional context, then it becomes a footnote, then it disappears, and the readout becomes a highlight reel with a methodology section.</p>
+        <p>The same logic makes section 5 a consequence rather than a proposal. If the decision rule is already in section 2, then the action in section 5 is arithmetic that anyone in the room can check. If it is not, section 5 is a new argument you are making while everybody is emotional about the number, which is the worst possible time to make one.</p>
+        <div class="callout tip">
+          <strong>Say the mixed result in the first two lines</strong>
+          Not at the end, not in an appendix. "Revisit rate improved by 8 points against a target of 19, note-taking did not move, the guardrail held, and the decision rule fired" is the honest opening sentence. Everything after it is detail, and nobody has to hunt.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The organisational problem behind bad readouts<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>People do not write dishonest readouts because they are dishonest. They write them because the last five honest ones were met with silence and the last five launch announcements were met with congratulations. The incentive is doing exactly what incentives do.</p>
+        <p>You cannot fix that alone, but you can do three things that measurably help. Write the decision rule publicly, so a mixed result reads as the system working rather than as your failure. Publish a readout for something that worked and include what you got wrong in it, so the format is not associated only with bad news. And when somebody else publishes a readout that ends in stop, say so out loud in the channel where the launch would have been celebrated. Three quarters of that and the format stops being career risk.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED ARTIFACT ============ -->
+  <section class="section" id="worked">
+    <div class="section-kicker">
+      <span class="klabel">Worked artifact · 12 min · everyone</span>
+      <h2>The actual readout for Cadence's summaries launch <span class="tag demo">★ mixed result, on purpose</span></h2>
+    </div>
+    <p class="lede">This is the whole document, not an excerpt. The results below are this worked example's numbers, consistent with the b7 baselines and targets, and they are mixed: the primary metric improved and missed, the secondary barely moved, the guardrail held, and the decision rule fired. Read section 5 last and notice that nothing in it was decided today.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Read section 1 and find the shape.</strong> Staged rollout, not an A/B test. That admission constrains every claim in section 4, and it is in the first paragraph rather than a footnote.</p></div>
+      <div class="step"><p><strong>Read section 2 before section 3.</strong> Cover the results with your hand if you have to. The prediction was 30%, the minimum worth shipping was 20%, and the decision rule is right there under them.</p></div>
+      <div class="step"><p><strong>Now read section 3.</strong> 17.0% at week 3. The rule fired. Notice the readout says that in four words rather than in a paragraph about momentum.</p></div>
+      <div class="step"><p><strong>Read the confound in section 4 twice.</strong> It is a genuinely good argument that the metric measured the wrong behaviour, and the readout refuses to use it as an excuse. That refusal is the hardest sentence in the document.</p></div>
+      <div class="step"><p><strong>Check section 5 against section 2.</strong> Every action is the pre-committed rule being executed. If you can find one that was invented after the number arrived, the readout has failed.</p></div>
+    </div>
+
+    <pre class="lab-sql">READOUT  ·  Cadence post-meeting summaries  ·  staged rollout, weeks 1 to 4
+Owner: PM        Status: decision rule fired        Shape: staged rollout with a guardrail
+
+1 · WHAT WE SHIPPED
+   Post-meeting summaries, on by default, for paid team workspaces of 5 to 50 seats.
+   Staged: 20% of eligible workspaces in week 1, 60% in week 2, held at 60% to week 4.
+   This was a staged rollout, not an A/B test. Anything below is observed, not causal.
+   Live in-meeting notes did not ship. That trade-off was recorded in b6 and still holds.
+
+2 · WHAT WE PREDICTED   (written 2 weeks before launch, unedited since)
+   Primary    week-1 transcript revisit rate        11%    ->  30% by week 4
+   Secondary  self-reported in-meeting note-taking  68%    ->  58% by week 6
+   Guardrail  accuracy complaints                   1.4%   ->  stays at or below 1.4%
+   Cost       roughly 0.02 per meeting
+   Minimum effect worth shipping: 20% revisit rate. Below that, this is not worth a quarter.
+   Decision rule: if revisit rate has not reached 20% by the end of week 3, we stop the
+   phase-2 digest build and spend two weeks on the six highest-revisit accounts instead.
+
+3 · WHAT HAPPENED
+   Primary    revisit rate     17.0% end of week 3, 19.2% at week 4     MISSED  (target 30%)
+   Secondary  note-taking      66% (n=142), was 68% (n=138)             NO MOVE (inside noise)
+   Guardrail  complaints       1.3% of meetings                         HELD
+   Cost       0.026 per meeting, about 30% over estimate                IMMATERIAL
+   The decision rule fired at the end of week 3. 17.0% is not 20%. The week-6 note-taking
+   read is not in yet; on the week-4 pulse it has not moved.
+
+4 · WHAT WE NOW BELIEVE
+   Summaries help, and they help less than we predicted. 8 points of revisit rate in four
+   weeks is real, and it is not the 19 points we wrote down.
+   Confound we can name: 71% of workspaces that opened a summary did not open the transcript
+   in the same week. Our primary metric counts transcript opens, so it may be measuring the
+   behaviour the feature was built to remove.
+   We are not using that to call this a win. It was our metric, we chose it in b7, and we do
+   not get to reinterpret it after seeing the number. It changes what we instrument next,
+   not what we conclude this quarter.
+   Confounds we cannot rule out: week 2 contained a public holiday in two large markets, and
+   the in-product announcement banner may carry some of the lift on its own.
+   What we did not expect: 9 of the 214 ticket-filing accounts asked for the summary as an
+   email rather than in the app. Not a theme yet. Two sources short of one.
+
+5 · WHAT WE ARE DOING NEXT
+   a. Summaries stay on at 60% and go to 100% next week. The feature is not the problem.
+   b. Phase 2, the digest email, is not funded this quarter. This is the rule firing, not a
+      judgement made in this meeting.
+   c. Two weeks on the six highest-revisit accounts: what did they do that the rest did not.
+   d. Instrument a summary-open event before any new target is set. Next quarter's primary
+      metric gets chosen from instrumented behaviour, not from this argument.</pre>
+
+    <table class="clean">
+      <thead><tr><th>Job around the readout</th><th>Hand it over?</th><th>The line, and why it sits there</th></tr></thead>
+      <tbody>
+        <tr><td>Draft the five-section structure from your rough notes</td><td>yes, immediately</td><td>structure is production work; the numbers stay yours and you paste them in</td></tr>
+        <tr><td>Argue the strongest opposite interpretation of your own data</td><td>yes, and this is the highest-value use on the page</td><td>you asked for the case against your conclusion, then you judged it - the judging is the job</td></tr>
+        <tr><td>List confounds you did not think of</td><td>yes, as a checklist generator</td><td>it is not an authority; you delete the ones that do not apply and check the ones that might</td></tr>
+        <tr><td>Rewrite the readout shorter for an exec audience</td><td>yes</td><td>same substance, fewer words. If the substance changed, that is a rewrite failure, not a style choice</td></tr>
+        <tr><td>Decide what the result means for the roadmap</td><td>never</td><td>that is the decision, and the only thing allowed to make it is the rule you wrote in section 2</td></tr>
+        <tr><td>Pick the threshold now that the data is in</td><td>never</td><td>this is negotiating with yourself, with a fluent tool attached to make it sound like analysis</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The confound in section 4 is the most tempting sentence a PM will write this year.</strong> It is true, it is well-argued, and it would let the launch be a success: if people read the summary instead of the transcript, then a transcript-open metric was always going to understate the feature. Every instinct says lead with it.</p>
+      <p>Leading with it costs you the only thing that makes readouts work. The metric was chosen in b7, in public, before anyone knew which way the number would go, and a metric you are allowed to reinterpret after seeing the result is not a metric - it is a mood with a baseline. So the confound goes where it belongs: as a named limitation, as the reason a new event gets instrumented, and as the reason next quarter's target is not set today. The result stays mixed. The credibility stays intact. In eighteen months, that credibility is the only reason anyone believes your next prediction.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the two-answer test on the next thing you were going to measure: what you do if it wins, what you do if it loses. If the answers match, cancel the measurement and say why in one line.</li>
+      <li>Write the decision rule for your carried backlog item: metric, threshold, date, and the action on each side. Post it where a stakeholder will read it while the threshold is still uncomfortable.</li>
+      <li>Pick the shape honestly. If a well-powered A/B test does not fit your segment size, choose staged rollout, painted door or concierge, and write the sentence about what that shape cannot tell you.</li>
+      <li>Take the last launch you were part of and write its readout retrospectively in the five sections. The gap between what was predicted and what got reported is your team's actual honesty budget.</li>
+      <li>Draft one readout structure with AI, then ask it for the strongest argument against your own conclusion. Keep whatever survives your judgement and delete the rest yourself. Bring the roadmap consequence to b9.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Experiment practice - the falsifiable hypothesis, the decision rule, the stopping rule set in advance</span><span class="note">Parts 1 and 2 · the two-answer test and the four-part rule</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The honest readout - prediction before result, the readout that can end in stop</span><span class="note">Part 3 and the worked artifact · Cadence's mixed result in full</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Test shapes beyond the A/B test - staged rollout, painted door, concierge</span><span class="note">Part 2 · with what each shape cannot tell you</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Minimum detectable effect and the minimum effect worth shipping</span><span class="note">Decision-shaped only · power and variance reduction are <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric definition and instrumentation</span><span class="note">Used here, taught in b7 · driver-tree depth is <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Rollout mechanics, release management, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You write down what you would do if the test wins and what you would do if it loses, and the two answers are identical. What now?</p>
+      <button class="qopt" type="button">A · Run it anyway, since data is always useful</button>
+      <button class="qopt" type="button">B · Run a smaller version to save time</button>
+      <button class="qopt" type="button">C · Do not run it. The decision is already made, so what you would be buying is cover rather than information</button>
+      <p class="qwhy">The value of an experiment is exactly the difference between the two branches. When there is no difference, there is no value, and the instrumentation cost buys a chart for a launch email. Cancel it and say why in one line.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · The revisit rate hit 17.0% at the end of week 3 against a rule that said 20%. The team argues that week 2 had a holiday and asks to extend to week 5 before deciding. What is happening?</p>
+      <button class="qopt" type="button">A · Reasonable data hygiene - the holiday is a real confound</button>
+      <button class="qopt" type="button">B · The threshold is being renegotiated after the data exists, which is the failure the pre-committed rule was written to prevent. Log the holiday as a named confound and let the rule fire</button>
+      <button class="qopt" type="button">C · The rule was badly set and should be replaced now</button>
+      <p class="qwhy">The holiday is genuinely a confound and belongs in section 4. It is not a reason to move a threshold, because every threshold moved after the fact moves to where the data already is. That is narration, not analysis.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which of these is the one job on this page that must never be handed to an AI tool?</p>
+      <button class="qopt" type="button">A · Deciding what the result means for the roadmap</button>
+      <button class="qopt" type="button">B · Drafting the five-section readout structure from your rough notes</button>
+      <button class="qopt" type="button">C · Listing confounds you had not thought of, as a checklist to filter</button>
+      <p class="qwhy">Structure, counter-arguments and confound checklists are production work with a cheap verification step. What the result means for the roadmap is the decision, it belongs to the rule you wrote before the data, and it is the one thing on the page with your name on it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The two-answer test</b><span>Same action whether it wins or loses? Do not run it. You are buying cover, not information.</span></div>
+      <div class="cheat-item"><b>A hypothesis can lose</b><span>Segment, number, baseline, horizon, guardrail. If no result could contradict it, it is a slogan.</span></div>
+      <div class="cheat-item"><b>Decision rule, four parts</b><span>Metric · threshold · date · the action on each side, including the side where you stop.</span></div>
+      <div class="cheat-item"><b>Before the data</b><span>Stopping rule, minimum effect worth shipping, decision rule. Afterwards you negotiate with yourself.</span></div>
+      <div class="cheat-item"><b>Four shapes</b><span>A/B · staged rollout with a guardrail · painted door · concierge on ten accounts. Name what yours cannot tell you.</span></div>
+      <div class="cheat-item"><b>Readout order</b><span>Shipped · predicted · happened · now believe · doing next. Prediction before result, always.</span></div>
+      <div class="cheat-item"><b>The Cadence result</b><span>19.2% against a 30% target, note-taking flat at 66%, guardrail held at 1.3%, rule fired.</span></div>
+      <div class="cheat-item"><b>Never delegate</b><span>What the result means for the roadmap. Next: b9, the roadmap that has to survive three people.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 8 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-metrics-and-instrumentation.html">← Previous: Metrics and instrumentation</a> &nbsp;·&nbsp; <a href="b9-roadmap-narrative.html">Next: Roadmap narrative and alignment →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

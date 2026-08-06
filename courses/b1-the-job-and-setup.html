@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 1 · The job, and a governed setup - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 1 of 10</div>
+    <h1>The job, and a <span class="accent">governed setup</span></h1>
+    <p class="sub">AI is very good at the parts of product management that look like writing and very bad at the part that is actually the job. It will draft a PRD from one sentence, and the PRD will read beautifully and decide nothing. This session sets the line: what you delegate, what you never delegate, and what you must never paste into a chat window. Then you meet the product you will make decisions about for the next nine sessions.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Bring a real backlog item</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · What AI does to the PM job</span>
+      <span class="a3" style="flex:5">18-42 · The governed setup + meet Cadence</span>
+      <span class="a4" style="flex:1">42-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Ten sessions, one decision. You are the PM on <strong>Cadence</strong>, the AI note-taker from the sibling courses - self-serve plus team and enterprise motions, already branded, marketed and financed elsewhere in this series. Nobody has decided what it should build next. That is your job, and this track walks the front half of it: framing an evidenced problem (b2), synthesising research without inventing it (b3), jobs to be done and the opportunity tree (b4), the spec and what makes one signable (b5), prioritisation and trade-offs (b6), metrics and instrumentation before the build (b7), experiments and honest readouts (b8), the roadmap narrative (b9), and one full decision end to end in the capstone (b10).</p>
+    <p class="lede">This course stops where delivery starts. The moment the decision is made, charters, milestones, critical path, risk registers and status reports belong to <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a>. Product management decides what to build and why; project management gets it built. b10 hands over explicitly.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live lab - scores real text</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A written line between what you delegate and what you own, a governed setup you can defend to security and legal, and the Cadence brief that every later session builds on.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT AI DOES TO THE JOB ============ -->
+  <section class="section" id="what-changes">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the PM craft literature, AI-assisted knowledge work</span>
+      <h2>Fluency is not judgement <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The PM job splits into two halves that AI treats completely differently. One half is <strong>production</strong> - drafting, summarising, restructuring, reformatting, first passes. AI is genuinely excellent at it and you should hand nearly all of it over. The other half is <strong>commitment</strong> - choosing, cutting, saying no, being accountable when it was the wrong call. AI cannot do any of that, and the failure mode is that its output <em>looks</em> like it did.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The PM job split into production work AI does well and commitment work only the PM can own, with the trap in the middle">
+        <style>
+          .jbT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .jbH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .jbC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .jbY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+          .jbB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+        </style>
+
+        <rect x="26" y="30" width="392" height="42" rx="8" fill="#38404E"/>
+        <text class="jbT" x="46" y="57">Production · delegate nearly all of it</text>
+        <text class="jbC" x="46" y="96">first-draft PRDs, specs and one-pagers</text>
+        <text class="jbC" x="46" y="118">summarising 30 interviews into themes to check</text>
+        <text class="jbC" x="46" y="140">rewriting the same update for three audiences</text>
+        <text class="jbC" x="46" y="162">turning a decision into a rollout note</text>
+        <text class="jbC" x="46" y="184">finding the counter-argument to your own case</text>
+        <text class="jbH" x="46" y="214">Test: could a competent stranger check it in 5 min?</text>
+
+        <rect x="462" y="30" width="392" height="42" rx="8" fill="#232935"/>
+        <text class="jbT" x="482" y="57">Commitment · never delegate any of it</text>
+        <text class="jbC" x="482" y="96">choosing which problem is worth a quarter</text>
+        <text class="jbC" x="482" y="118">deciding what you are NOT doing</text>
+        <text class="jbC" x="482" y="140">setting the number you will be judged on</text>
+        <text class="jbC" x="482" y="162">telling a stakeholder no, with a reason</text>
+        <text class="jbC" x="482" y="184">owning it publicly when it did not work</text>
+        <text class="jbH" x="482" y="214">Test: whose name is on it if it goes wrong?</text>
+
+        <rect x="26" y="238" width="828" height="86" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="jbY" x="46" y="264">The trap sits between the two columns, not inside either one.</text>
+        <text class="jbC" x="46" y="288">Ask for a spec and you get a document with the SHAPE of a decision and none of the substance -</text>
+        <text class="jbC" x="46" y="310">a problem with no evidence, a metric with no baseline, no non-goals, no trade-off. Session b5 scores exactly that.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two halves, two completely different answers</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four things AI will invent if you let it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every one of these shows up in a drafted spec, and every one is a decision that has silently been made for you by a tool that has no stake in the outcome:</p>
+        <ul>
+          <li><strong>Evidence.</strong> Ask why users churn and you get plausible reasons in confident prose. None of them came from your users. Session b3 makes this failure happen deliberately with real interview snippets.</li>
+          <li><strong>A metric.</strong> "Improve engagement" is what a drafter writes when nobody told it what success means. It is not a metric; it is the absence of one, formatted to look like its presence.</li>
+          <li><strong>Scope.</strong> With no non-goals in the input, everything adjacent stays arguably in scope, because a drafter has no reason to exclude anything.</li>
+          <li><strong>Consensus.</strong> The most dangerous one. AI writes as though the trade-off does not exist, so the document reads like an agreement nobody actually made. You find out in the review, or worse, in the retro.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one-line rule for this whole course</strong>
+          Use AI to produce anything you are willing to check, and never to decide anything you would have to defend. If you cannot check it in five minutes, you are not delegating - you are guessing with extra steps.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What actually got faster, and what did not<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Be precise about the gain, because the vague version of this claim is how teams end up disappointed:</p>
+        <ul>
+          <li><strong>Genuinely faster:</strong> the blank page. First drafts, restructuring, summarising, adapting one message for different audiences, and finding the argument against your own proposal. Hours per week, reliably.</li>
+          <li><strong>Not faster, and never was:</strong> getting five stakeholders to agree, knowing which of two good options is right for this company this quarter, and the conversation where you tell engineering the date moved. These are the job.</li>
+          <li><strong>Actively slower if you are careless:</strong> anything where you have to verify the output more carefully than you would have written it. Research synthesis is the classic - a fabricated theme costs more to catch than the synthesis cost to do.</li>
+        </ul>
+        <p>The honest summary: AI removes most of the typing and none of the deciding. If your week is mostly typing, it will transform your week. If your week is mostly deciding, it will make your documents better and your calendar identical.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: GOVERNED SETUP ============ -->
+  <section class="section" id="setup">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the setup you can defend</span>
+      <h2>What you must never paste <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">PMs handle exactly the material that should not go into a consumer chat window: customer interview recordings, named account details, unreleased roadmaps, pricing under discussion, and anything a sales team said under NDA. The setup below is the minimum that survives a conversation with security, and none of it requires a big tooling purchase.</p>
+
+    <table class="clean">
+      <thead><tr><th>Material</th><th>Rule</th><th>Why this line and not another</th></tr></thead>
+      <tbody>
+        <tr><td>Customer interview transcripts</td><td>de-identify first: no names, employers, or contact details</td><td>you rarely need identity to find a theme, and consent for research almost never covers a third-party tool</td></tr>
+        <tr><td>Named account or deal detail</td><td>never - describe the segment instead</td><td>"a 40-seat agency on the team plan" carries the product signal; the account name carries only risk</td></tr>
+        <tr><td>Unreleased roadmap and dates</td><td>only in a workspace your company controls</td><td>this is the leak that shows up in a competitor's deck, and it is your name on the doc</td></tr>
+        <tr><td>Pricing under discussion</td><td>never, in any tool</td><td>commercially sensitive and often contractually restricted; the upside of drafting it is near zero</td></tr>
+        <tr><td>Your own drafts and frameworks</td><td>fine, and this is most of the value</td><td>the highest-return use is on material you authored, so start there</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three things to fix in your setup this week<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>One place, agreed with security.</strong> Not four tools and a personal account. What matters is that the retention and training settings are known and written down somewhere, not which vendor you picked.</li>
+          <li><strong>A de-identification step in the research flow.</strong> Do it once, at intake, not per prompt - a habit you have to remember is a habit that fails in the week you are busy.</li>
+          <li><strong>A visible marker for AI-drafted docs.</strong> One line at the top: drafted with AI, reviewed by you, on this date. Not ceremony - it tells a reviewer how hard to read, and it means the accountability question never becomes ambiguous.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The disclosure question, answered</strong>
+          You do not owe anyone a footnote for a drafted status update. You do owe it when the artifact is evidence for a decision - a research synthesis, a competitive claim, a metric interpretation. In those cases, say where it came from and what you verified, because someone will act on it as if you checked.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: MEET CADENCE ============ -->
+  <section class="section" id="cadence">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the running project</span>
+      <h2>Meet Cadence, and the decision on your desk <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Cadence records meetings and transcribes them. It sells self-serve to individuals and to teams of 5 to 50 seats, with an enterprise motion above that. It has a brand, a launch campaign and a finance model - built in the sibling courses. What it does not have is a decision about what to build next quarter, and three people have already told you what they think it should be.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The three competing asks on the PM's desk and the signals available to decide between them">
+        <style>
+          .cdT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .cdH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .cdC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .cdY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="cdH" x="26" y="26">Three asks, all reasonable, all from someone senior</text>
+
+        <rect x="26" y="40" width="262" height="44" rx="8" fill="#38404E"/>
+        <text class="cdT" x="44" y="68">Sales wants live notes</text>
+        <text class="cdC" x="44" y="106">"every demo asks for it"</text>
+        <text class="cdC" x="44" y="126">Evidence offered: 3 lost deals</text>
+        <text class="cdC" x="44" y="146">Cost: a streaming pipeline</text>
+        <text class="cdC" x="44" y="166">we do not have</text>
+
+        <rect x="308" y="40" width="262" height="44" rx="8" fill="#6B7688"/>
+        <text class="cdT" x="326" y="68">Support wants summaries</text>
+        <text class="cdC" x="326" y="106">214 tickets in 3 months:</text>
+        <text class="cdC" x="326" y="126">"cannot find what was decided"</text>
+        <text class="cdC" x="326" y="146">Second most common tag</text>
+        <text class="cdC" x="326" y="166">Cost: unknown until b6</text>
+
+        <rect x="590" y="40" width="264" height="44" rx="8" fill="#232935"/>
+        <text class="cdT" x="608" y="68">The CEO wants an agent</text>
+        <text class="cdC" x="608" y="106">"everyone is shipping agents"</text>
+        <text class="cdC" x="608" y="126">Evidence offered: none</text>
+        <text class="cdC" x="608" y="146">Cost: a quarter, at least</text>
+        <text class="cdC" x="608" y="166">Hardest to say no to</text>
+
+        <rect x="26" y="196" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="cdY" x="46" y="222">Your job is not to pick the loudest. It is to make the asks comparable.</text>
+        <text class="cdC" x="46" y="246">By b6 all three carry an evidenced problem, a named segment, a measurable outcome and a cost - and only then</text>
+        <text class="cdC" x="46" y="266">is a decision possible. Two of the three will not survive that process, which is the point of the process.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the real starting state of most product decisions</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What you already know, and what you do not<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The signals available on day one, which is fewer than you would like:</p>
+        <ul>
+          <li><strong>Support tags:</strong> 214 tickets in three months tagged "cannot find what was decided" - the second most common tag.</li>
+          <li><strong>Eight interviews</strong> with team admins on paid workspaces, run last month for a different reason. Six of the eight said they never reopen a transcript once the meeting ends.</li>
+          <li><strong>Product analytics:</strong> the week-1 transcript revisit rate is 11% of recorded meetings. Nobody has ever set a target for it.</li>
+          <li><strong>A survey:</strong> 68% of surveyed admins say they still take their own notes during meetings - in a product whose entire promise is that they would not have to.</li>
+          <li><strong>What you do not have:</strong> any idea what a summary would cost to run, whether the 214 tickets came from the same 12 accounts, or whether live notes actually lost those three deals.</li>
+        </ul>
+        <p>That last line matters more than the first four. Most of the work in b2 and b3 is turning "we have some signals" into "we have a problem statement somebody could disagree with on the evidence".</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Bring your own decision<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every session ends with the same instruction applied to your own work, so pick your case now and keep it for all ten sessions. The best candidate is a backlog item that has been argued about more than twice and decided zero times - the ones where the argument keeps restarting are exactly the ones missing an evidenced problem or an explicit trade-off.</p>
+        <p>Write down, in one line each: who asked for it, what evidence they offered, and what you would have to believe for it to be the right call. Keep that page. In b10 you will run your own item through the same five checkpoints as Cadence, and the difference between the b1 version and the b10 version is the course.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo">
+    <div class="section-kicker">
+      <span class="klabel">Try it now</span>
+      <h2>The thing that made this course exist <span class="tag demo">★ 6 min · everyone</span></h2>
+    </div>
+    <p class="lede">Session b5 is a lab that scores a spec against the six things that predict whether a build goes well. Here is the shortest possible version of why it exists: paste any spec you have written into the box, press Score, and read which of the six it is missing. The scoring runs on the real text, in your browser - nothing is sent anywhere.</p>
+
+    <div id="spec-lab"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Rung 1 is not a strawman.</strong> That first spec - 15 out of 100 - is what a good drafting tool genuinely produces from one sentence, and it is better formatted than most specs that ship. It has a problem section, a solution section, a success section and requirements. It reads like a decision was made. Nothing in it can be checked, nothing is excluded, nothing is measurable, and no alternative was rejected. Teams ship from documents like that every week, and then argue in the retro about what was actually agreed.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 20-30 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your own two-column list: what you delegate, what you never delegate. Keep it to ten lines and put it where your team can see it - the value is that they know the line too.</li>
+      <li>Score one real spec of yours in the lab above. Note which check it fails; that is the session you should read first.</li>
+      <li>Fix the three setup items: one agreed place, a de-identification step at research intake, and a visible marker on AI-drafted docs.</li>
+      <li>Pick the backlog item you will carry through all ten sessions - the one that gets argued about and never decided.</li>
+      <li>For that item, write who asked, what evidence they offered, and what you would have to believe for it to be right. One line each. Bring it to b2.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The PM craft literature on the role - decision ownership, saying no, accountability</span><span class="note">Part 1 · the production / commitment split</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work - where drafting help is real and where verification costs exceed it</span><span class="note">Part 1 self-study · the honest gain, stated narrowly</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research ethics and data handling for user research</span><span class="note">Part 2 · the de-identification rule; consent frameworks are not this course</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, critical path, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Which of these should a PM delegate to AI without hesitation?</p>
+      <button class="qopt" type="button">A · Deciding which of two features gets the quarter</button>
+      <button class="qopt" type="button">B · Setting the metric the team will be judged on</button>
+      <button class="qopt" type="button">C · Producing the first draft of a rollout note, and the counter-argument to your own proposal</button>
+      <p class="qwhy">Production work - drafting, summarising, restructuring, arguing the other side - is what AI is genuinely good at, and the test is whether a competent stranger could check it in five minutes. Choosing and committing stay with the person whose name is on the outcome.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · A drafted spec says success means "improve engagement and increase satisfaction". What has actually happened?</p>
+      <button class="qopt" type="button">A · No metric was supplied, so the drafter wrote the absence of one in a format that looks like its presence</button>
+      <button class="qopt" type="button">B · The metric is fine but needs a target adding later</button>
+      <button class="qopt" type="button">C · The tool is not capable of writing metrics</button>
+      <p class="qwhy">A drafter has to write something in the success section. With no metric definitions in the input it produces a directional phrase - which is why rung 3 of the lab, where the metric definitions are added, is the rung that fixes it.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Sales wants live notes, support has 214 tickets about finding decisions, and the CEO wants an agent. What is the PM's first move?</p>
+      <button class="qopt" type="button">A · Build the CEO's request, since that is the least career risk</button>
+      <button class="qopt" type="button">B · Make the three asks comparable - each with an evidenced problem, a named segment, a measurable outcome and a cost - because you cannot choose between things stated in different units</button>
+      <button class="qopt" type="button">C · Ship the smallest one to buy time</button>
+      <p class="qwhy">Two of the three will not survive being made comparable, and that is the process working rather than the process failing. Sessions b2 to b6 are that work; the decision at the end is almost easy once the asks are in the same units.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The split</b><span>Production (drafting, summarising, restructuring) delegate. Commitment (choosing, cutting, owning) never.</span></div>
+      <div class="cheat-item"><b>The one-line rule</b><span>Produce anything you will check; decide nothing you would have to defend.</span></div>
+      <div class="cheat-item"><b>Two tests</b><span>Could a stranger check it in 5 minutes? Whose name is on it if it goes wrong?</span></div>
+      <div class="cheat-item"><b>What AI invents</b><span>Evidence, a metric, scope, and consensus. The last one is the dangerous one.</span></div>
+      <div class="cheat-item"><b>Never paste</b><span>Named accounts, unreleased dates outside a controlled workspace, pricing under discussion.</span></div>
+      <div class="cheat-item"><b>Setup, 3 items</b><span>One agreed place · de-identify at intake · a visible marker on AI-drafted docs.</span></div>
+      <div class="cheat-item"><b>Cadence day one</b><span>214 tickets, 8 interviews (6 never reopen), 11% revisit rate, 68% still take notes.</span></div>
+      <div class="cheat-item"><b>Where this stops</b><span>At the decision. Delivery is learn-ai-project-management. Next: b2, the evidenced problem.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 1 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-evidenced-problem.html">Next: From a vague ask to an evidenced problem →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · The evidence standard - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>The <span class="accent">evidence standard</span></h1>
+    <p class="sub">This is the session about believing things. For your whole career, a well-written research summary was weak but real evidence that somebody had done research, because writing it cost more than faking it. That is no longer true, and nobody sent a memo. A fluent themes list is now free, which means "there is a document" has stopped being evidence of anything at all. What replaces it is provenance, and requiring provenance costs you one sentence in a review.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No code to write</span>
+      <span class="chip audience">Bring a document you believe</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · The bar moved, and the three grades</span>
+      <span class="a4" style="flex:3">15-27 · Provenance, and the two failures</span>
+      <span class="a3" style="flex:4">27-40 · Group exercise: the provenance drill</span>
+      <span class="a1" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this session exists at all</h2>
+    </div>
+    <p class="lede">a1 drew the line between the half of the job that got cheap and the half that did not. This session takes one consequence of that line and follows it all the way down, because it is the consequence that will cost you a quarter if you miss it. Research summaries are production work. Production work is now free. And research summaries are the input to almost every product decision you approve.</p>
+    <p class="lede">You are not going to learn interviewing technique here, and you are not going to audit anybody's spreadsheet. Your PMs do that work; the practitioner track spends a whole session making an invented theme appear on purpose so they learn to catch it. Your job is narrower and more powerful: to be the person in the room who reliably asks where a claim came from, in the same words, every time, until nobody brings you a claim without its provenance attached. That is a change to one sentence of your behaviour, and it changes what your organisation produces.</p>
+    <p class="lede">Where a leader would expect a delivery question - can we resource the research, when does it land - that is a planning matter and belongs to <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a>. This course stays on whether you should believe the finding.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Discussion exercise - run it in the room</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      Three grades of evidence you can apply to any claim in about four seconds, a three-part provenance requirement you can state in one sentence, the two specific failures that appear in AI-assisted synthesis, and one question you will ask every time from now on.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE BAR MOVED ============ -->
+  <section class="section" id="bar">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the research-quality literature, AI-assisted knowledge work</span>
+      <h2>The bar moved, and nobody announced it <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Think about what a research readout used to tell you before you read a word of it. Somebody had recruited participants, sat through the calls, read the transcripts, argued with a colleague about what the themes were, and then written it up. The document was not the evidence. The document was the <em>receipt</em> for the evidence, and it was a fairly reliable receipt because forging it took nearly as long as doing the work.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What a research document used to prove when writing was expensive, beside what it proves now that writing is free">
+        <style>
+          .e1T { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .e1H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .e1C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .e1Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="e1H" x="26" y="22">What a research document used to prove, and what it proves now</text>
+
+        <rect x="26" y="34" width="400" height="40" rx="8" fill="#6B7688"/>
+        <text class="e1T" x="46" y="59">Before - writing it was expensive</text>
+        <text class="e1C" x="46" y="98">somebody recruited the participants</text>
+        <text class="e1C" x="46" y="120">somebody sat through the calls</text>
+        <text class="e1C" x="46" y="142">somebody argued about the themes</text>
+        <text class="e1C" x="46" y="164">the effort was hard to fake</text>
+        <text class="e1H" x="46" y="196">The document was a proxy for the work</text>
+
+        <rect x="454" y="34" width="400" height="40" rx="8" fill="#232935"/>
+        <text class="e1T" x="474" y="59">Now - writing it is free</text>
+        <text class="e1C" x="474" y="98">a themes list takes forty seconds</text>
+        <text class="e1C" x="474" y="120">it is formatted identically</text>
+        <text class="e1C" x="474" y="142">it is more confident, not less</text>
+        <text class="e1C" x="474" y="164">the effort proves nothing at all</text>
+        <text class="e1H" x="474" y="196">The document is a proxy for nothing</text>
+
+        <rect x="26" y="222" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="e1Y" x="46" y="248">The document was never the evidence. It was the receipt for the evidence.</text>
+        <text class="e1C" x="46" y="272">You have spent a career reading receipts, and receipts are now printable on demand. So ask instead for the</text>
+        <text class="e1C" x="46" y="294">thing the receipt used to imply: how many sources, one verbatim quote you can read, and who collected it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the receipt still prints, and it no longer proves a purchase</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three sentences that should now stop you<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These used to be shorthand for work somebody had done. Now they are shorthand for nothing, and they arrive in beautifully formatted documents:</p>
+        <ul>
+          <li><strong>"Users are telling us..."</strong> Which users, how many, telling whom, when? The construction hides the count, and it hides it whether the count is forty or one. When the count is good, people say it, because a good count is the strongest thing in the sentence.</li>
+          <li><strong>"The research shows..."</strong> Shows is doing a lot of work here. Research does not show things; specific people said or did specific things, and somebody interpreted them. The passive form removes the interpreter, which is exactly the person you need to talk to.</li>
+          <li><strong>"There is a clear theme around..."</strong> Clear to whom, and derived from how many sources? "Clear" is a claim about the reader's confidence rather than about the data, and a fluent summary is extremely good at producing confidence.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Not a rule about AI</strong>
+          None of these are new failures and none of them require a tool. Humans have written vague synthesis forever. What changed is the volume and the polish: it used to take an afternoon to write three pages of confident unfounded synthesis, so people mostly did not bother. Now it takes under a minute, so the base rate went up sharply while the surface quality went up too. Your defence has to be cheap enough to use on everything.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why your own judgement is not the defence<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The tempting response to all this is "I will read more carefully". It does not work, for three reasons worth being honest about:</p>
+        <ul>
+          <li><strong>You cannot detect absence by reading.</strong> A theme with no source behind it does not read differently from a theme with eight. There is nothing on the page to notice, which is why the fix has to be a required field rather than a sharper eye.</li>
+          <li><strong>You audit selectively, and you audit in the wrong direction.</strong> Everyone interrogates findings that contradict what they expected and waves through findings that confirm it. The findings that confirm your view are the expensive ones to get wrong, because they are the ones you act on immediately.</li>
+          <li><strong>Careful reading does not scale and it changes how you are treated.</strong> A leader who sometimes interrogates deeply and sometimes does not teaches their team to guess which mood they are in. A leader who asks the same two questions every single time teaches their team to answer them in advance, which is free.</li>
+        </ul>
+        <p>So the standard has to be a requirement, uniformly applied, boring, and stated the same way every time. Boring is the feature.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THREE GRADES ============ -->
+  <section class="section" id="grades">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the grading you can do in four seconds</span>
+      <h2>Three grades of evidence <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every claim that reaches your desk is one of three things, and telling them apart takes about four seconds once you have the categories. The reason this matters is not tidiness. It is that a document flattens all three into the same typeface, the same bullet shape and the same confident tone, so a belief and a measurement look identical on the page.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 368" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three grades of evidence: counted behaviour, reported behaviour and asserted belief, with what each is worth">
+        <style>
+          .e2T { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .e2S { font: 400 11px Inter, sans-serif; fill: #C3CAD6; }
+          .e2H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .e2C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .e2Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="e2H" x="26" y="22">The three grades of evidence that reach your desk</text>
+
+        <rect x="26" y="36" width="200" height="56" rx="8" fill="#232935"/>
+        <text class="e2T" x="44" y="60">Grade 1</text>
+        <text class="e2S" x="44" y="80">Counted behaviour</text>
+        <text class="e2H" x="246" y="58">what people actually did, measured</text>
+        <text class="e2C" x="246" y="80">Worth: you can act on it, once you know how it was counted</text>
+
+        <rect x="26" y="104" width="200" height="56" rx="8" fill="#38404E"/>
+        <text class="e2T" x="44" y="128">Grade 2</text>
+        <text class="e2S" x="44" y="148">Reported behaviour</text>
+        <text class="e2H" x="246" y="126">what people say they do, or want</text>
+        <text class="e2C" x="246" y="148">Worth: a hypothesis, weighted entirely by how many and who</text>
+
+        <rect x="26" y="172" width="200" height="56" rx="8" fill="#6B7688"/>
+        <text class="e2T" x="44" y="196">Grade 3</text>
+        <text class="e2S" x="44" y="216">Asserted belief</text>
+        <text class="e2H" x="246" y="194">what somebody believes is true</text>
+        <text class="e2C" x="246" y="216">Worth: an agenda item. Never a reason on its own</text>
+
+        <rect x="26" y="250" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="e2Y" x="46" y="276">Most escalations that reach you are grade 3 wearing grade 1 formatting.</text>
+        <text class="e2C" x="46" y="300">"Every demo asks for it" sits in a document next to "214 tickets in three months" and looks like the same kind</text>
+        <text class="e2C" x="46" y="322">of sentence. It is not. Three lost deals is a story about three deals, told by the person who lost them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a belief and a measurement look identical in the same typeface</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Grade</th><th>What it is</th><th>What it is worth</th><th>The one question that tests it</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Counted behaviour</td><td>What people did, measured, re-pullable by somebody else</td><td>You can act on it, once you know what was counted and over what window</td><td>"Where does this number come from, and can somebody re-pull it?"</td></tr>
+        <tr><td>2 · Reported behaviour</td><td>What people said they do, want, or would pay for</td><td>A hypothesis. Weight depends entirely on how many people and who chose them</td><td>"How many people, and were they asked or did they raise it themselves?"</td></tr>
+        <tr><td>3 · Asserted belief</td><td>What somebody thinks is true, including when they are senior and confident</td><td>An agenda item. Legitimate input, never a reason on its own</td><td>"What would we see in the data if this were true?"</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Grading the three Cadence asks, live<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three people want three things from the same product. Grade each ask before you discuss any of them, and notice how much of the argument evaporates:</p>
+        <ul>
+          <li><strong>Support wants post-meeting summaries.</strong> 214 tickets in three months tagged "cannot find what was decided", the second most common tag. That is <strong>grade 1</strong>, and it is re-pullable, which is what makes it grade 1 rather than a good story. The follow-up question is what the tag actually means and whether the 214 came from a handful of accounts. Not a reason to discount it, a reason to ask.</li>
+          <li><strong>Sales wants live in-meeting notes.</strong> "Every demo asks for it" is <strong>grade 3</strong>: an assertion, from someone with an incentive, using an absolute quantifier that is almost certainly not literal. The three lost deals sound like grade 1 because they are a number, but they are three narratives about why a deal was lost, told by the person who lost it. Treat as grade 2 at best, n equals three, non-random.</li>
+          <li><strong>The CEO wants an agent.</strong> <strong>Grade 3</strong>, offered with no evidence, and the hardest of the three to say no to. Grading it does not make it go away and should not: a CEO's belief about where the market is going is a real input. It is just not evidence about your users, and the honest move is to say which one you are treating it as.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The point of grading out loud</strong>
+          Grading is not a way to win an argument with sales. It is a way to make three incomparable claims comparable, which is the only condition under which a decision is possible. Two of the three usually weaken under grading, and that is the process working. Your PMs do this in detail in the practitioner track; you need to be able to insist on it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Grade 1 is not automatically the strongest<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The grades rank how much a claim can be checked, not how much it matters. Three ways grade 1 misleads a leader who has just learned to love numbers:</p>
+        <ul>
+          <li><strong>A number with no target is not a finding.</strong> Cadence's week-1 transcript revisit rate is 11% of recorded meetings, and no target was ever set for it. Is 11% bad? Nobody in the company can answer that, which means the number currently supports any argument that wants it. a5 is where targets and baselines get their own session.</li>
+          <li><strong>A count is a count of what was tagged, not of what happened.</strong> 214 tickets tagged "cannot find what was decided" is a fact about a taxonomy that support staff apply under time pressure. It is still the best evidence in the room. It is not a fact about 214 distinct problems.</li>
+          <li><strong>The strongest grade-2 evidence beats weak grade 1.</strong> Six of eight interviewed admins saying they never reopen a transcript is grade 2 with a tiny sample, and it is more useful than most dashboards, because it tells you <em>why</em> the 11% is 11%. Grades tell you what question to ask next, not which claim wins.</li>
+        </ul>
+        <p>So the honest formulation is: grade 1 can be checked, grade 2 explains, grade 3 sets the agenda. A decision usually needs the first two, and gets presented with the third.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: PROVENANCE ============ -->
+  <section class="section" id="provenance">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the requirement, and what it catches</span>
+      <h2>Provenance, and the two failures <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Grading tells you how much weight a claim can carry. Provenance is what you actually require in order to grade it, and it is three things: <strong>how many sources</strong>, as a number; <strong>at least one verbatim quote</strong> you can read yourself; and <strong>who collected it</strong>, and when. If those three are present, you can grade any claim in seconds. If they are absent, no amount of careful reading will help you, because there is nothing on the page to read.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The three-part provenance requirement beside the two specific failures it catches in an AI-assisted synthesis">
+        <style>
+          .e3H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .e3B { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .e3C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .e3Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="e3H" x="26" y="22">What to require, and the two failures it catches</text>
+
+        <rect x="26" y="34" width="400" height="214" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="e3H" x="46" y="62">Require these three, always</text>
+        <text class="e3C" x="46" y="94">1 · how many sources, as a number</text>
+        <text class="e3C" x="46" y="116">2 · one verbatim quote you can read</text>
+        <text class="e3C" x="46" y="138">3 · who collected it, and when</text>
+        <text class="e3H" x="46" y="176">Cost to you: one sentence in a review</text>
+        <text class="e3C" x="46" y="200">Cost to produce: minutes, if the work exists</text>
+        <text class="e3C" x="46" y="222">Cost to produce: impossible, if it does not</text>
+
+        <rect x="454" y="34" width="400" height="214" rx="9" fill="#FEF2F2"/>
+        <text class="e3B" x="474" y="62">The two failures it catches</text>
+        <text class="e3B" x="474" y="94">A theme with no source behind it</text>
+        <text class="e3C" x="474" y="116">often the best-written line in the</text>
+        <text class="e3C" x="474" y="138">document, cites nothing, survives</text>
+        <text class="e3C" x="474" y="160">review because it sounds true</text>
+        <text class="e3B" x="474" y="194">A theme generalised from one quote</text>
+        <text class="e3C" x="474" y="216">one person said it, the summary</text>
+        <text class="e3C" x="474" y="238">says admins, and n is quietly 1</text>
+
+        <rect x="26" y="272" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="e3Y" x="46" y="298">Ask how many people said that, and can I read one of them. Every single time.</text>
+        <text class="e3C" x="46" y="322">Not when you are suspicious. Always, in the same words, including on findings you were hoping for. After about</text>
+        <text class="e3C" x="46" y="344">a month nobody brings you a themes list without sources, because adding them is easier than being asked.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a required field, not a sharper eye</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Failure one: the theme with nothing behind it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Six themes in a synthesis. Five are drawn from things people actually said. The sixth is a highly plausible statement about note-taking behaviour that no participant made, produced because it fits the shape of the other five and reads well beside them.</p>
+        <ul>
+          <li><strong>It is usually the best-written theme in the document.</strong> Themes grounded in messy real quotes are messy. An ungrounded one has no awkward detail to accommodate, so it comes out clean, general and quotable, and it is often the one that gets repeated in the next meeting.</li>
+          <li><strong>It survives review because it is not wrong.</strong> This is the part leaders find hardest to internalise. It is not a false statement. It is plausible, sensible, probably even true in general. It is simply not <em>your</em> evidence about <em>your</em> users, and a decision built on it is a decision built on a general truth about humans.</li>
+          <li><strong>The only defence is the source count.</strong> Nothing about the sentence gives it away. Ask which participants said it, and there is either an answer or there is not. This is why the count has to be a required field rather than something you ask for when a line feels off.</li>
+        </ul>
+        <p>Your PMs meet this one deliberately in the practitioner track, with real interview snippets and a synthesis that contains a planted invented theme. You do not need to run that exercise. You need to be the reason it never reaches a decision.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Failure two: one quote wearing a plural<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The second failure is more common than the first and much harder to see, because there genuinely is a source. One participant said something vivid and specific. The synthesis promotes it into a general claim about the segment.</p>
+        <ul>
+          <li><strong>What it looks like.</strong> One admin says "I stopped opening transcripts after the first week, I just ask the person". The theme reads: "Admins abandon transcripts within a week and prefer to ask colleagues directly." Every word is defensible. The plural is doing enormous unearned work, and the sample size is one.</li>
+          <li><strong>Why summarisation produces it.</strong> Turning specifics into generalities is exactly what good summarising is. It is the desired behaviour, applied to a place where it is dangerous, which is why the person doing the summarising cannot be relied on to flag it.</li>
+          <li><strong>The tell, when there is one.</strong> A vivid theme with exactly one supporting quote. When six people said something, a synthesis usually offers two or three quotes because they are available and they reinforce each other. One quote for a general claim is worth a question, every time.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Why the verbatim requirement does the work</strong>
+          Requiring one quote per theme does not just prove the theme has a source. It shows you the <em>distance</em> between what one person said and what the theme claims, and that distance is where the over-generalisation lives. It is the cheapest diagnostic on this page, and it costs the author about ninety seconds if the research is real.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What to do when provenance is genuinely thin<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sometimes the honest answer is "two people, and here is one of them". That is not a failure and you should not punish it, or you will teach your team to hide n.</p>
+        <ul>
+          <li><strong>Thin evidence, stated as thin, is usable.</strong> "Two admins said this, both on the team plan, and it matches the revisit rate" is a perfectly good basis for a small cheap experiment. It is a terrible basis for a quarter of engineering, and the difference is size of commitment rather than quality of evidence.</li>
+          <li><strong>Match the size of the bet to the grade of the evidence.</strong> This is the whole practical use of the grading. Grade 3 buys an agenda slot. Grade 2 with small n buys a week of research or a cheap test. Grade 1 with a baseline buys a quarter. a4 and a5 make this concrete.</li>
+          <li><strong>Reward the person who says "we do not know".</strong> If declaring uncertainty is punished, uncertainty stops being declared, and you lose the only signal that tells you when to slow down. This is the same cultural question a5 raises about readouts that admit the bet failed, and it has the same answer: you get what you visibly reward.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Group exercise · 13 min · everyone in the room</span>
+      <h2>The provenance drill <span class="tag demo">★ run this in your next product review</span></h2>
+    </div>
+    <p class="lede">One document, two questions, timed. This works in the room today and it works unchanged in your next product review, which is the point: it is not an exercise, it is the behaviour, rehearsed once so that it does not feel confrontational the first time you do it for real.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Everyone puts one real research document on the table.</strong> A themes list, an insight summary, a customer readout. Ideally the one you brought because you believe it - the confidence is what makes the exercise land.</p></div>
+      <div class="step"><p><strong>Pick the single theme in it that most influenced a decision.</strong> Not the weakest one, the most load-bearing one. Underline it.</p></div>
+      <div class="step"><p><strong>Ask the two questions out loud, in order, and time the answers.</strong> "How many people said that?" then "Can I read one of them, in their own words?" Say nothing else. Do not fill the silence, and do not soften it into three questions.</p></div>
+      <div class="step"><p><strong>Write the grade next to the theme.</strong> Counted, reported, or asserted. Then write the source count. If you cannot write a number, write a question mark, and notice how that feels next to a decision you already approved.</p></div>
+      <div class="step"><p><strong>Say what you will now require by default, in one sentence, out loud.</strong> Commit to the wording in the room so that the first time you use it for real, it sounds like a standard rather than an accusation.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The prompt, word for word<span class="mini">use this exact wording</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "Take the strongest theme in this document. How many people said that, and can I read one of them, in their own words?"
+        </div>
+        <p><strong>What a good answer sounds like.</strong> "Six of the eight admins we interviewed. Here is one: 'I stopped opening them after the first week.' Priya ran the interviews in March, all paid workspaces between 5 and 50 seats." A count, a quote, a collector, a date, and a scope. Delivered in under fifteen seconds, because the person answering has it to hand. Note that a good answer volunteers the sample frame without being asked - who was <em>not</em> in the eight is usually the more interesting half.</p>
+        <p><strong>The failure mode to listen for.</strong> The unquantified plural, then the delay. "Several admins", "users are saying", "it came up a lot" - followed by "let me check and come back to you". That is not dishonesty and you should not treat it as dishonesty; it is what happens when the count was never a required field. The second failure mode is quieter: a single quote produced smoothly for a theme phrased in the plural. Listen for the mismatch between the quote and the claim, and ask who else said it. If the answer is a pause, n is one.</p>
+        <p><strong>Say the framing out loud first.</strong> "I am going to ask this about everything from now on, including things I agree with, so it is not about this document." Skip that sentence and the room learns that provenance questions signal distrust, which is exactly the wrong lesson and it will cost you the next three findings.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Second round: run it on something you agree with<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "Now pick the finding in here you were most pleased to see - the one that confirmed what you already thought. Same two questions."
+        </div>
+        <p><strong>What a good answer sounds like.</strong> The same shape as before, plus a bit of discomfort. The useful outcome is somebody saying "actually I never checked that one, because it matched what I expected". That sentence is the whole exercise, and it is worth more than any framework on this page.</p>
+        <p><strong>The failure mode to listen for.</strong> The reflex defence: "that one is obviously right". Obviousness is a fact about the reader, not about the evidence, and it is precisely the condition under which nobody checks. Watch also for the room grading confirming findings more generously than contradicting ones. Say it out loud when you see it, including when you are the one doing it, which you will be.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Cadence, four claims, four different grades.</strong> On the table: "214 support tickets in three months tagged cannot find what was decided, the second most common tag" - grade 1, re-pullable, and the strongest thing in the room. "Week-1 transcript revisit rate is 11%" - grade 1, and useless on its own until somebody sets a target, because nobody in the company can say whether 11% is bad. "68% of surveyed admins still take their own notes during meetings" - grade 2, and the most interesting line available, because it says the product's central promise is not being trusted by the people paying for it. "Every demo asks for it" - grade 3, from someone with a quota, using an absolute quantifier. All four appeared in the same document, in the same font, as four bullets of apparently equal weight. Nothing in the formatting distinguished the re-pullable count from the sales assertion, and the person who wrote it was not being careless: flattening is what a well-formatted document does.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS TO ASK ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this with you</span>
+      <h2>Questions to ask your PMs <span class="tag concept">the whole point of the session</span></h2>
+    </div>
+    <p class="lede">Seven questions. The first two are the ones that matter and you should ask them until they become a joke about you, because a leader with one predictable question changes behaviour faster than a leader with a policy.</p>
+    <ul>
+      <li><strong>"How many people said that?"</strong> Works because it is unanswerable with a plural. It converts every soft synthesis claim into either a number or a visible gap, and it takes four words. If you only adopt one thing from this session, adopt this.</li>
+      <li><strong>"Can I read one of them, in their own words?"</strong> Works because it proves the source exists <em>and</em> shows you the distance between what one person said and what the theme claims. That distance is where over-generalisation lives, and no other question exposes it as cheaply.</li>
+      <li><strong>"Who collected this, and when?"</strong> Works because it makes the evidence attributable to a person rather than to a document. It also surfaces the stale finding: research from fourteen months ago is being used as though it were current more often than anyone admits.</li>
+      <li><strong>"Is this what they did, or what they said, or what somebody thinks?"</strong> Works because it does the grading out loud without jargon, and it invites an honest answer instead of a defence. Most people know which grade their claim is, and will tell you if asked plainly.</li>
+      <li><strong>"Who was not in the sample?"</strong> Works because sample framing is where friendly-customer bias lives, and nobody volunteers it. Eight interviews with your most engaged admins pass every count-based check and can still point you in the wrong direction.</li>
+      <li><strong>"What would we see in the data if this were true?"</strong> Works on grade 3 specifically, including when grade 3 arrives from the CEO. It converts a belief into a testable claim without contradicting anybody, which is the only way that conversation goes well.</li>
+      <li><strong>"Which of these findings did you check, and which did you accept?"</strong> Works because it acknowledges that nobody checks everything, so it gets an honest answer rather than a defensive one. The findings that were accepted rather than checked are almost always the ones that confirmed the plan.</li>
+    </ul>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">This week</span>
+      <h2>Five things to do before a3 <span class="tag exercise">◐ conversations, not documents</span></h2>
+    </div>
+    <ul>
+      <li>Ask "how many people said that, and can I read one of them" in every review you attend this week, without exception, including when you agree with the finding. Count how many times you get a number in under fifteen seconds.</li>
+      <li>Tell your team, once, in a room, what you will require from now on: a source count, one verbatim, and a collector with a date. Frame it as a standard rather than a response to something. If you frame it as a response, somebody will assume they are in trouble.</li>
+      <li>Take the last significant product decision you approved and grade the evidence behind it: counted, reported, or asserted. Do this alone. If it was grade 3, that is worth knowing before a4 asks you to rank things.</li>
+      <li>Find the oldest research finding your team still repeats as current, and ask when it was collected. There is one, it is older than you think, and the conversation is usually short and useful.</li>
+      <li>Praise somebody publicly for saying "we do not know that yet". Once is enough to be noticed, and it is the cheapest cultural purchase available to you this quarter.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research-quality literature: sampling, representativeness, confirmation bias</span><span class="note">Parts 1 to 3 · the three grades, provenance, and the sample-frame question</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work: verification cost, automation bias, disclosure</span><span class="note">Part 1 · why the receipt stopped proving the purchase</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Continuous-discovery interviewing practice: story-based questions, why "would you use it" is not evidence</span><span class="note">Grade 2 only · interviewing craft belongs to the practitioner track</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric definition, baselines and targets</span><span class="note">Raised as the 11%-with-no-target problem - a5 owns it</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PRD and spec practice: what evidence a signable spec must carry</span><span class="note">Named as check one only - a3 is the session</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: resourcing research, scheduling, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A well-structured six-page research synthesis lands on your desk. What does its existence now tell you about whether research was done?</p>
+      <button class="qopt" type="button">A · It is reasonable evidence, since somebody had to write it</button>
+      <button class="qopt" type="button">B · Nothing at all - the document was always the receipt rather than the evidence, and receipts are now printable on demand</button>
+      <button class="qopt" type="button">C · It depends on how confident the prose is</button>
+      <p class="qwhy">The correlation between polish and effort held for your entire career because writing three fluent pages of synthesis used to cost an afternoon. It now costs under a minute. Nothing about the document distinguishes the two cases, which is why the fix is a required source count rather than a sharper eye.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Sales says "every demo asks for live notes" and offers three lost deals. Support offers 214 tickets in three months tagged "cannot find what was decided". How should you treat them?</p>
+      <button class="qopt" type="button">A · Equally - both are stakeholder input with numbers attached</button>
+      <button class="qopt" type="button">B · Sales first, because lost revenue is the more serious signal</button>
+      <button class="qopt" type="button">C · The 214 tickets as counted behaviour somebody can re-pull; "every demo" as an assertion, and the three deals as three non-random stories told by the person who lost them</button>
+      <p class="qwhy">Grading is not a way to win an argument with sales - it is what makes two incomparable claims comparable, which is the only condition under which choosing is possible. The three deals look like grade 1 because they are a number, but they are narratives with n equal to three and an interested narrator.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A synthesis contains a vivid, well-written theme about admin behaviour with exactly one supporting quote. What is the most useful next question?</p>
+      <button class="qopt" type="button">A · "Who else said this?" - because a general claim resting on one quote is over-generalised until proven otherwise</button>
+      <button class="qopt" type="button">B · "Is the quote accurate?" - the risk is misquotation</button>
+      <button class="qopt" type="button">C · Nothing, since a verbatim quote is provenance and the requirement is met</button>
+      <p class="qwhy">When six people said something, a synthesis usually offers two or three quotes because they are available and reinforce each other. One quote carrying a plural claim is the signature of the second failure mode, and the verbatim requirement earns its keep here by showing you the distance between what one person said and what the theme asserts.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The bar moved</b><span>A fluent research summary is free, so "there is a document" is no longer evidence that research happened.</span></div>
+      <div class="cheat-item"><b>Three grades</b><span>Counted behaviour · reported behaviour · asserted belief. Four seconds to apply, and the document flattens all three.</span></div>
+      <div class="cheat-item"><b>The pattern</b><span>Most escalations are grade 3 formatted as grade 1. Numbers in a sentence do not make it counted.</span></div>
+      <div class="cheat-item"><b>Provenance, 3 parts</b><span>How many sources · one verbatim you can read · who collected it and when.</span></div>
+      <div class="cheat-item"><b>Cost of requiring it</b><span>One sentence in a review. Minutes for the author, if the work exists. Impossible, if it does not.</span></div>
+      <div class="cheat-item"><b>Two failures</b><span>A theme with no source behind it, and a theme generalised from one quote. Neither is visible by reading.</span></div>
+      <div class="cheat-item"><b>The question</b><span>"How many people said that, and can I read one of them?" Every time, including on findings you like.</span></div>
+      <div class="cheat-item"><b>Match bet to grade</b><span>Grade 3 buys an agenda slot. Grade 2 buys a cheap test. Grade 1 with a baseline buys a quarter. Next: a3, what to require before you sign.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-what-ai-changes-in-product.html">← Previous: What AI changes in product</a> &nbsp;·&nbsp; <a href="a3-specs-and-accountability.html">Next: Specs, decisions, accountability →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 5 · The spec, and the scorer - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 5 of 10</div>
+    <h1>The spec, and <span class="accent">the scorer</span></h1>
+    <p class="sub">A drafting tool will write you a PRD from one sentence, and it will be well-structured, confident, and worth almost nothing - because a spec is not a document, it is a set of decisions that happen to be written down. This session names the six decisions a spec has to contain, then scores five real drafts against them: the same tool, the same product, five different amounts of input. The score goes 15, 35, 55, 70, 100 - and the interesting column is not the score, it is which specific failure each new input removed.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Signature lab · scores real text</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-14 · The six decisions</span>
+      <span class="a3" style="flex:6">14-40 · The lab: run the ladder, score your own</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why specs are where AI is most dangerous</h2>
+    </div>
+    <p class="lede">Sessions b2 to b4 did the work: an evidenced problem, verified research, a named job, a chosen branch of the opportunity tree. This session turns that into the artifact someone builds from - and it is the point in the process where AI helps most and hurts most, for the same reason. It writes a document that <em>looks</em> finished. A reviewer reads the shape, recognises the shape, and approves it. Nobody notices that four of the six decisions were never made, because the sections where those decisions should live are full of confident prose.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live lab - scores real text, including yours</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The six checks as a habit, a measured answer to what each input actually buys, and a scored version of one of your own real specs - with the failing check named.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SIX DECISIONS ============ -->
+  <section class="section" id="six">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers PRD practice, the spec-as-decision-record framing</span>
+      <h2>The six decisions a spec must contain <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Not sections - decisions. A spec can have all the right headings and none of these, which is exactly what rung 1 in the lab below demonstrates. Each of the six has a failure mode that is specific, common, and expensive, and each one gets decided by somebody whether or not you decide it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 366" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six checks a spec must pass, each with the failure mode when it is missing and who ends up deciding instead">
+        <style>
+          .sxT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .sxH { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .sxC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .sxY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <rect x="26" y="28" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="sxT" x="44" y="53">1 · Problem evidenced</text>
+        <text class="sxH" x="44" y="88">Missing: asserted, not evidenced</text>
+        <text class="sxC" x="44" y="108">Then: it cannot be ranked against</text>
+        <text class="sxC" x="44" y="126">anything, so loudness decides</text>
+
+        <rect x="306" y="28" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="sxT" x="324" y="53">2 · User named</text>
+        <text class="sxH" x="324" y="88">Missing: "users" as a segment</text>
+        <text class="sxC" x="324" y="108">Then: you cannot say who it is</text>
+        <text class="sxC" x="324" y="126">NOT for, so scope has no edge</text>
+
+        <rect x="588" y="28" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="sxT" x="606" y="53">3 · Success measurable</text>
+        <text class="sxH" x="606" y="88">Missing: "improve engagement"</text>
+        <text class="sxC" x="606" y="108">Then: nobody can be wrong later,</text>
+        <text class="sxC" x="606" y="126">which sounds safe and is not</text>
+
+        <rect x="26" y="156" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="sxT" x="44" y="181">4 · Non-goals stated</text>
+        <text class="sxH" x="44" y="216">Missing: no not-doing list</text>
+        <text class="sxC" x="44" y="236">Then: everything adjacent is</text>
+        <text class="sxC" x="44" y="254">arguably in, one ticket at a time</text>
+
+        <rect x="306" y="156" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="sxT" x="324" y="181">5 · Edge cases decided</text>
+        <text class="sxH" x="324" y="216">Missing: happy path only</text>
+        <text class="sxC" x="324" y="236">Then: an engineer decides at</text>
+        <text class="sxC" x="324" y="254">4pm Friday, and never tells you</text>
+
+        <rect x="588" y="156" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="sxT" x="606" y="181">6 · Trade-off explicit</text>
+        <text class="sxH" x="606" y="216">Missing: everything wins</text>
+        <text class="sxC" x="606" y="236">Then: it was never a decision,</text>
+        <text class="sxC" x="606" y="254">and the retro finds that out</text>
+
+        <rect x="26" y="286" width="828" height="66" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="sxY" x="46" y="312">Every one of the six gets decided either way. The only question is whether you decided it,</text>
+        <text class="sxC" x="46" y="336">in writing, before the build - or whether it was decided later, quietly, by whoever hit it first.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six decisions, six failure modes, and who decides when you do not</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The two that are almost always missing<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In the lab below, non-goals and the trade-off survive four of the five rungs. That is not an accident of the example - it is the pattern, and both have the same cause: they are the two checks that require somebody to give something up.</p>
+        <ul>
+          <li><strong>Non-goals.</strong> A drafting tool has no reason to exclude anything, because exclusion is not a language problem. You have to hand it the scope decision, which means the scope decision has to exist first. If you cannot write the non-goals, you have not finished deciding - you have finished describing.</li>
+          <li><strong>The trade-off.</strong> The hardest line in any spec is "we chose X at the cost of Y, and we are accepting that". AI will not write it unsolicited, because the trade-off is not in the input unless you put it there. A spec where everything wins is a spec where nothing was chosen, and it will read beautifully right up until the review where two people discover they agreed to different things.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The signable test</strong>
+          Would an engineer who has never been in your meetings build the right thing from this, without asking you a question or inventing an answer? If no, it is not a spec yet - regardless of length, formatting, or how confident the prose sounds.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the six checks cannot tell you<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The lab is a completeness check, not a quality check, and the difference matters:</p>
+        <ul>
+          <li><strong>It cannot tell you the metric is the right metric.</strong> A spec targeting a vanity number with a baseline and a target scores full marks on check 3. The scorer sees that a metric exists; it cannot see whether moving it means anything.</li>
+          <li><strong>It cannot tell you the evidence is good evidence.</strong> Eight interviews from your friendliest customers pass check 1 as easily as eight representative ones. Session b3 is where that judgement lives.</li>
+          <li><strong>It cannot tell you the trade-off was the right trade-off.</strong> It only sees that one was stated.</li>
+          <li><strong>And it cannot tell you the problem is worth solving at all.</strong> A perfectly complete spec for the wrong problem scores 100.</li>
+        </ul>
+        <p>Which is the whole reason this is a lab in the middle of a course rather than a tool you install. The six checks catch <em>absence</em>, reliably and cheaply, and absence is what an AI-drafted spec suffers from. Judgement is still yours, and it is the part nobody can score.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ THE LAB ============ -->
+  <section class="section" id="lab">
+    <div class="section-kicker">
+      <span class="klabel">Signature lab · 20 min · everyone</span>
+      <h2>Run the ladder, then score your own <span class="tag demo">★ the scoring is real</span></h2>
+    </div>
+    <p class="lede">Five rungs. Each one is the spec a drafting tool produces from that much input about Cadence's summaries feature and no more. Read the failing checks at each rung before you move up, and read the <strong>gained</strong> column when you run the whole ladder - that column is the actual lesson.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Start at rung 1</strong> - one sentence in. Read the spec: it has every section a PRD should have, and 15 out of 100. Five of the six decisions were never made.</p></div>
+      <div class="step"><p><strong>Add research (rung 2).</strong> The problem becomes checkable and the user gets named - two checks, from one input. Success is still a mood.</p></div>
+      <div class="step"><p><strong>Add the metric definitions (rung 3), then constraints (rung 4).</strong> Watch success become measurable, then watch the edges get decided. Non-goals and the trade-off are still missing at 70 out of 100.</p></div>
+      <div class="step"><p><strong>Add the non-goals (rung 5).</strong> 100 out of 100, signable - and note that one input fixed <em>two</em> checks, because writing down what you are not doing is what forces the trade-off into the open.</p></div>
+      <div class="step"><p><strong>Then press "Score your own spec"</strong> and paste something real. This is the part that matters after today.</p></div>
+    </div>
+
+    <div id="spec-lab"></div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The rung-5 spec is not longer because it is padded.</strong> It is longer because it contains four decisions the rung-1 version left to somebody else: who this is not for, what happens when a meeting has no clear decisions, whether summaries survive the 30-day retention setting, and the fact that this ships without the live-notes feature sales asked for. Those four sentences are the spec. Everything else is context around them - and a drafting tool will produce the context all day without ever producing the four sentences, because they are not writing, they are deciding.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Practice</span>
+      <h2>Your turn: three specs, three verdicts <span class="tag demo">★ 8 min</span></h2>
+    </div>
+    <p class="lede">Use the "Score your own spec" box in the lab above for each of these. Predict the failing check before you press Score.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Q1 · The one-liner everyone has written<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Paste this in and score it:</p>
+        <div class="callout tip">
+          <strong>Paste this</strong>
+          PRD: dark mode. Problem: users want dark mode, it would improve satisfaction. Solution: add a toggle in settings.
+        </div>
+        <p>It scores <strong>0 out of 100</strong> - all six checks fail. Worth sitting with for a second, because most teams have shipped from something very close to this, and the reason it scores zero is not that it is short. It is that there is nothing in it anyone could disagree with on the evidence, no way to know afterwards whether it worked, and no boundary at all.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q2 · Your own worst spec<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Find a spec you wrote when you were busy - ideally one that shipped and went sideways. Score it. Then look only at the failing checks and ask which of them explains what actually went wrong.</p>
+        <p>In practice it is usually one of two: the trade-off was missing, so two stakeholders agreed to different things; or success was not measurable, so the argument afterwards was about whether it worked rather than what to do next. Both are visible in the spec before a line of code exists, which is the uncomfortable part.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q3 · Score a spec you did not write<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>No paste needed if you would rather not - a thought exercise. Take the last spec somebody handed <em>you</em> and run the six checks by eye. Then, and this is the actual skill, work out how to say the failing one out loud without it landing as criticism.</p>
+        <p>"What are we not doing here?" and "how will we know this worked?" are the two most useful questions in product review, and neither reads as an attack. Both are just checks 4 and 3, asked politely. A team that gets asked those two questions every time starts writing them into the spec before the review, which is the entire goal.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Score your carried backlog item's spec, if it has one. If it does not have one, that is the finding - write the four sentences (user, metric with a baseline, non-goals, trade-off) and you have most of a spec.</li>
+      <li>Add the six checks to your team's spec template as a checklist at the top, not the bottom. At the bottom it is a review step; at the top it is a prompt.</li>
+      <li>Take one spec currently in review and ask only the two polite questions: what are we not doing, and how will we know it worked. Note how long the answer takes.</li>
+      <li>Next time you draft with AI, give it the metric definitions <em>before</em> asking for the spec, and see whether check 3 passes first time. This is the cheapest habit change in the course.</li>
+      <li>Write your own non-goals for the Cadence summaries feature before b6 - prioritisation is much easier when the scope already has an edge.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PRD practice - the spec as a decision record rather than a document</span><span class="note">Part 1 + the lab · the six checks, measured across five drafts</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Scope control through explicit non-goals</span><span class="note">Part 1 · why non-goals survive four rungs, and what fixes them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric definition and instrumentation</span><span class="note">Check 3 only · the full treatment is session b7</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research quality and representativeness</span><span class="note">Check 1 sees that evidence exists, not whether it is good - that is b3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Estimation, sequencing and delivery planning</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Rung 1 of the lab scores 15 out of 100 but has a problem section, a solution section, a success section and requirements. What is missing?</p>
+      <button class="qopt" type="button">A · Length - it needs more detail in each section</button>
+      <button class="qopt" type="button">B · The decisions. It has the shape of a spec with five of the six decisions unmade, which is what a drafter produces when given one sentence</button>
+      <button class="qopt" type="button">C · Nothing much; the score is harsh</button>
+      <p class="qwhy">A spec is a set of decisions that happen to be written down. Sections are where decisions live, not the decisions themselves - and a reviewer who reads the shape and recognises the shape will approve a document containing none of them.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Adding the non-goals at rung 5 fixed two checks at once. Which, and why?</p>
+      <button class="qopt" type="button">A · Problem evidenced and user named - the boundary clarifies who it is for</button>
+      <button class="qopt" type="button">B · Success measurable and edge cases - excluding things removes edge cases</button>
+      <button class="qopt" type="button">C · Non-goals and the trade-off - writing down what you are not doing is what forces you to say what you gave up and why</button>
+      <p class="qwhy">The two checks that survive longest are the two that require somebody to give something up. Once the not-doing list exists, the trade-off is one sentence away; without it, no amount of drafting produces one.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A spec scores 100 out of 100. What does that guarantee?</p>
+      <button class="qopt" type="button">A · Only that the six decisions were made and written down - not that the metric is the right metric, the evidence is representative, or the problem is worth solving</button>
+      <button class="qopt" type="button">B · That the feature will succeed</button>
+      <button class="qopt" type="button">C · That the trade-off was the correct one</button>
+      <p class="qwhy">The scorer catches absence, cheaply and reliably, which is what an AI-drafted spec suffers from. Whether the decisions were good ones is judgement, it is yours, and nothing on this page can score it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>A spec is</b><span>A set of decisions that happen to be written down. Sections are where they live, not what they are.</span></div>
+      <div class="cheat-item"><b>The six</b><span>Problem evidenced · user named · success measurable · non-goals stated · edges decided · trade-off explicit.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>15 → 35 → 55 → 70 → 100. Read the gained column, not the score.</span></div>
+      <div class="cheat-item"><b>What each input buys</b><span>Research: evidence + user. Metrics: measurable. Constraints: edges. Non-goals: scope + trade-off.</span></div>
+      <div class="cheat-item"><b>The last two</b><span>Non-goals and the trade-off survive longest, because both require giving something up.</span></div>
+      <div class="cheat-item"><b>Signable test</b><span>Could an engineer who was in none of your meetings build the right thing without inventing an answer?</span></div>
+      <div class="cheat-item"><b>Two polite questions</b><span>"What are we not doing?" and "how will we know it worked?" - checks 4 and 3, asked kindly.</span></div>
+      <div class="cheat-item"><b>What 100 does not mean</b><span>Complete is not correct. A perfect spec for the wrong problem scores 100. Next: b6, prioritisation.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 5 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-jobs-and-opportunity-tree.html">← Previous: Jobs and the opportunity tree</a> &nbsp;·&nbsp; <a href="b6-prioritisation-tradeoffs.html">Next: Prioritisation and trade-offs →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Metrics and the honest readout - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Metrics and the <span class="accent">honest readout</span></h1>
+    <p class="sub">The mechanics take fifteen minutes: one primary metric per decision, a leading number if you want to be able to act, a guardrail as the promise to everyone else, and a baseline you almost certainly do not have. The rest of this session is the part that actually determines whether any of it works, and it is not technical. It is whether your organisation rewards a readout that says the bet did not work. If it does not, your PMs will keep producing metrics, and none of them will ever tell you anything you did not want to hear.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No code to write</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-17 · One metric, leading or lagging</span>
+      <span class="a3" style="flex:4">17-31 · Does your org reward a no?</span>
+      <span class="a4" style="flex:4">31-45 · Discussion + the questions to ask</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this session exists</h2>
+    </div>
+    <p class="lede">Cadence's week-1 transcript revisit rate is 11% of recorded meetings. Nobody has ever set a target for it. That is not a story about a badly run product; it is the normal state of most product metrics in most companies, including yours, and it is why so many quarters end with an argument about whether something worked rather than a decision about what to do next. A number with no baseline cannot be moved. A number with no target cannot be missed. And a number with no date attached will be read whenever the news is good.</p>
+    <p class="lede">Session a1 set the production and commitment split, a2 the evidence standard, a3 what a spec must contain before it is signable, and a4 how to read a ranking without being captured by it. This one covers the number attached to the decision, and then the harder question underneath: what happens in your organisation when that number comes back flat. As always, it ends with the questions to ask your PMs.</p>
+    <div class="legend">
+      <span class="pill solid">Live - discussed in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">◆ Discussion exercise - run it in your own review</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      One primary metric per decision as a rule you enforce, the leading-or-lagging test applied out loud, an audit of your own last four readouts, and a decision about how you will respond to the next honest no.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: ONE PRIMARY ============ -->
+  <section class="section" id="one-primary">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers North Star and guardrail metric practice</span>
+      <h2>One primary metric per decision <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">This is the rule that saves the most arguments, and it is the one most often negotiated away in the meeting where it gets set. Three success metrics feels more rigorous than one. It is the opposite: it is the absence of a commitment, formatted as thoroughness. Measure as many things as you like, and instrument generously. But exactly one of them is the number the decision is judged on, and it is chosen before the build starts.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 316" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One primary metric compared with three metrics of equal weight, and why more than one is the same as none">
+        <style>
+          .m1T { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .m1H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .m1C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="m1H" x="26" y="24">One decision, one primary metric. The alternative is not more rigour.</text>
+
+        <rect x="26" y="36" width="400" height="38" rx="8" fill="#232935"/>
+        <text class="m1T" x="46" y="60">One primary metric</text>
+        <text class="m1C" x="26" y="96">· revisit rate: 11% today, 30% in 90 days</text>
+        <text class="m1C" x="26" y="118">· if it moves, the bet was right</text>
+        <text class="m1C" x="26" y="140">· everything else is context or a guardrail</text>
+        <text class="m1C" x="26" y="162">· one number to be wrong about, agreed early</text>
+        <text class="m1C" x="26" y="184">· the readout more or less writes itself</text>
+
+        <rect x="454" y="36" width="400" height="38" rx="8" fill="#38404E"/>
+        <text class="m1T" x="474" y="60">Three metrics of equal weight</text>
+        <text class="m1C" x="454" y="96">· revisit rate up, activation flat, NPS down</text>
+        <text class="m1C" x="454" y="118">· every outcome is a win for somebody</text>
+        <text class="m1C" x="454" y="140">· the readout becomes a negotiation</text>
+        <text class="m1C" x="454" y="162">· whichever moved gets promoted to primary</text>
+        <text class="m1C" x="454" y="184">· nobody was wrong, which is the problem</text>
+
+        <rect x="26" y="212" width="828" height="86" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="m1H" x="46" y="238">More than one primary is the same as none, and the reason is not that measuring three things is wrong.</text>
+        <text class="m1C" x="46" y="262">Measure twenty. The primary is the one number you agreed in advance to be judged on, and you can be judged on</text>
+        <text class="m1C" x="46" y="284">only one thing at a time. If three rank equally, you will pick whichever moved, and the readout stops being evidence.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - why three co-equal metrics is a commitment nobody made</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The baseline nobody has<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Cadence's revisit rate sits at 11%, with no target ever set. Look at what that single fact makes impossible:</p>
+        <ul>
+          <li><strong>You cannot tell success from noise.</strong> If it reads 13% after the build, was that the build, a seasonal effect, or the weekly variance nobody has ever measured? Without a history, 13% is a number rather than a result.</li>
+          <li><strong>You cannot size the opportunity in advance.</strong> Is 30% ambitious or trivially achievable? Nobody in the room can say, which means the target will be set by whoever sounds most confident.</li>
+          <li><strong>You cannot fail.</strong> This is the one that matters. A metric with no target cannot be missed, so the build cannot be wrong, so the quarter ends with a discussion about interpretation instead of a decision about what to do next.</li>
+        </ul>
+        <p>The fix is not sophisticated. Somebody spends an afternoon pulling the number and its variance over the last few months, before anything gets built. The reason it does not happen is that this work is invisible, unglamorous, and always looks postponable, right up until the readout when it is the only thing anybody needs.</p>
+        <div class="callout tip">
+          <strong>The two-part rule you can enforce from tomorrow</strong>
+          No target without a baseline, and no baseline that arrives after the build. If the number does not exist before you start, you are not running a bet, you are running an activity, and it will be judged by whoever tells the best story about it afterwards. The PM track instruments this before the build in b7, deliberately in that order.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The guardrail as a promise to the rest of the company<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A guardrail is not a secondary success metric. It is the number that says: in pursuing our thing, we promise not to damage yours. That makes it a political instrument as much as a measurement one, and it is the cheapest trust you will ever buy across teams.</p>
+        <p>On Cadence, the guardrail is transcript accuracy complaints, currently 1.4% of meetings, and the promise is that it does not rise. Support owns the consequences of that number, and support did not choose to run this experiment. Naming the guardrail in advance converts a vague worry into a specific commitment, and it means the summaries team can move quickly without the rest of the company having to trust them personally.</p>
+        <p>Three properties a real guardrail has: somebody other than the builder cares about it; it has a threshold rather than a direction, so "must not exceed 1.4%" and not "keep quality high"; and breaching it stops the work rather than triggering a discussion. Guardrails that only trigger a discussion are decoration, and everyone learns that within a quarter.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: LEADING VS LAGGING ============ -->
+  <section class="section" id="leading">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers leading, lagging and guardrail metrics</span>
+      <h2>Can it steer, or only judge? <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Most explanations of leading versus lagging are taxonomy and change nobody's behaviour. Here is the version that does. A metric that moves within a week can change what you build next week. A metric that moves at quarter end can only tell you afterwards whether you were right. Both are legitimate, they are not substitutes, and confusing them is how teams end up flying an entire quarter with no instruments and a verdict waiting at the end.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 306" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Leading, lagging and guardrail metrics drawn against time, showing which can steer a build and which can only judge it">
+        <style>
+          .tlT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .tlD { font: 700 12.5px Inter, sans-serif; fill: #1E232C; }
+          .tlH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .tlC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .tlW { font: 400 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .tlK { font: 400 11.5px Inter, sans-serif; fill: #1E232C; }
+          .tlA { font: 700 10.5px Inter, sans-serif; fill: #6B7688; }
+        </style>
+
+        <text class="tlH" x="26" y="24">Same build, three metrics, three completely different uses</text>
+
+        <line x1="210" y1="50" x2="854" y2="50" stroke="#C3CAD6" stroke-width="1"/>
+        <text class="tlA" x="212" y="42">week 1</text>
+        <text class="tlA" x="330" y="42">week 2</text>
+        <text class="tlA" x="470" y="42">week 4</text>
+        <text class="tlA" x="778" y="42">quarter end</text>
+
+        <rect x="26" y="62" width="170" height="34" rx="7" fill="#38404E"/>
+        <text class="tlT" x="42" y="84">Leading</text>
+        <rect x="210" y="66" width="120" height="26" rx="5" fill="#232935"/>
+        <text class="tlC" x="344" y="84">moves within a week, so it can still change what you build</text>
+
+        <rect x="26" y="108" width="170" height="34" rx="7" fill="#6B7688"/>
+        <text class="tlT" x="42" y="130">Lagging</text>
+        <rect x="210" y="112" width="644" height="26" rx="5" fill="#6B7688"/>
+        <text class="tlW" x="226" y="130">moves at quarter end, so it can only judge the build, never steer it</text>
+
+        <rect x="26" y="154" width="170" height="34" rx="7" fill="#C3CAD6"/>
+        <text class="tlD" x="42" y="176">Guardrail</text>
+        <rect x="210" y="158" width="644" height="26" rx="5" fill="#EFF1F5" stroke="#C3CAD6"/>
+        <text class="tlK" x="226" y="176">watched the whole time; it protects everyone else, it does not prove you right</text>
+
+        <rect x="26" y="206" width="828" height="86" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="tlH" x="46" y="232">On Cadence: transcript revisit rate moves within a week, which makes it steerable. Seat retention moves in a quarter.</text>
+        <text class="tlC" x="46" y="256">The guardrail is accuracy complaints, currently 1.4% of meetings, and the rule is that it must not rise. Pick a leading</text>
+        <text class="tlC" x="46" y="278">primary if you want to be able to act, and expect the board to ask about the lagging one anyway. Both are true at once.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the only distinction that changes behaviour is when the number arrives</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Type</th><th>What it can do</th><th>What it cannot do</th><th>Cadence example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Leading</strong><br>moves within a week</td><td>steer a build mid-flight; kill a bet early and cheaply; give a team feedback while they can still act on it</td><td>prove the business result, or survive as the only number a board wants to talk about</td><td>week-1 transcript revisit rate: 11% today, 30% target in 90 days</td></tr>
+        <tr><td><strong>Lagging</strong><br>moves in a quarter or more</td><td>judge whether the bet paid; anchor the board conversation; settle whether a strategy is working</td><td>tell you anything in time to change the build, or distinguish your work from four other changes</td><td>paid seat retention on workspaces of 5 to 50 seats</td></tr>
+        <tr><td><strong>Guardrail</strong><br>watched continuously</td><td>stop a win that costs another team more than it gains; buy trust across the org in advance</td><td>tell you whether the bet worked; it is a promise, not a result</td><td>transcript accuracy complaints at 1.4% of meetings, must not rise</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What to do when the two disagree<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>They will, and the moment is more common than the textbooks suggest. Revisit rate climbs from 11% to 24% and seat retention does not move at all. Now what?</p>
+        <ul>
+          <li><strong>The leading metric was your bet about causation, and it just failed.</strong> You believed people who revisit transcripts renew. They revisited and did not renew. That is a genuinely valuable finding about your business, and it is worth more than the feature was.</li>
+          <li><strong>Do not quietly swap to the metric that moved.</strong> This is the most common dishonest readout in product work, it is almost never done cynically, and it destroys the value of every future readout in the same organisation.</li>
+          <li><strong>Say both numbers, in that order, with the original target attached.</strong> "We hit the leading metric, we missed the lagging one, so our model of why this mattered was wrong" is a strong readout. It is also the sentence most orgs cannot say out loud, which is the subject of Part 3.</li>
+        </ul>
+        <p>Note the boundary: how much movement counts as movement, and how confident you can be, is statistics rather than product judgement. Deciding the threshold in advance is your job. Power, variance and sequential testing are <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a>, and breaking a metric into its drivers is <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a>.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why AI made this worse, briefly<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two specific effects, both small-sounding and both real.</p>
+        <p>First, "improve engagement" is now free to write, formatted convincingly, in a success section that looks complete. A drafted spec will hand you a directional phrase where a metric should be, and a reviewer skimming for structure will approve it. That is the absence of a metric wearing the shape of one, and it is the failure the PM track's spec scorer catches as check 3.</p>
+        <p>Second, and more subtly, a fluent narrative can now be produced around any set of numbers in about a minute. Post-hoc justification used to cost effort, and that effort was a natural brake. It costs nothing now. So the guard has to move upstream, into the target and the date being fixed before the build, because a well-written explanation of a flat metric is no longer evidence of anything at all.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CULTURE ============ -->
+  <section class="section" id="culture">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers stopping rules and the honest readout</span>
+      <h2>Does your org reward a no? <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Everything above is mechanics, and mechanics are the easy half. A team with perfect metric hygiene inside an organisation that punishes bad news will produce beautifully instrumented readouts that are all, somehow, positive. You will not be lied to. You will simply find that the framing is always generous, the metric that moved is always the one discussed, and losses arrive labelled as learnings with no numbers attached. That pattern is not a character problem in your PMs. It is a reporting line responding to incentives, and the incentives are yours.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The tells that an organisation does not reward an honest no, the moves a leader can make in one quarter, and the moment that sets the culture">
+        <style>
+          .cuB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .cuK { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .cuC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .cuY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="cuK" x="26" y="24">Read the left column honestly. Most organisations have at least three of them.</text>
+
+        <rect x="26" y="36" width="400" height="176" rx="9" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="cuB" x="46" y="62">Tells that a no is not safe here</text>
+        <text class="cuC" x="46" y="90">· readouts appear when results are good, slip when not</text>
+        <text class="cuC" x="46" y="112">· the metric quietly changes between plan and readout</text>
+        <text class="cuC" x="46" y="134">· a loss is written up as learnings, with no number</text>
+        <text class="cuC" x="46" y="156">· nobody can name a bet that was stopped last year</text>
+        <text class="cuC" x="46" y="178">· the PM asks you what you want the answer to be</text>
+
+        <rect x="454" y="36" width="400" height="176" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="cuK" x="474" y="62">Five moves, one quarter, no budget</text>
+        <text class="cuC" x="474" y="90">· ask for the stopping rule before the build starts</text>
+        <text class="cuC" x="474" y="112">· fix the readout date in advance, in writing</text>
+        <text class="cuC" x="474" y="134">· read it on that date even when it looks bad</text>
+        <text class="cuC" x="474" y="156">· say out loud which bets you expect to fail</text>
+        <text class="cuC" x="474" y="178">· promote someone who reported a clean loss</text>
+
+        <rect x="26" y="232" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="cuY" x="46" y="258">The culture is set by what you do with the first honest no, and everybody hears about it within a day.</text>
+        <text class="cuC" x="46" y="282">Not by what is on your wall. Thank the PM, ask what they learned, hand them the next bet, and you have an honest readout culture.</text>
+        <text class="cuC" x="46" y="304">Ask what went wrong with them and you will not get another. The PM track's b8 writes exactly that readout, with a mixed result.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the diagnosis, the five moves, and the one moment that decides it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The stopping rule, and why it has to come first<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A stopping rule is one sentence, written before the build, that says what result would make you abandon this. "If revisit rate is under 18% at four weeks, we stop and do not build phase two." It is the highest-leverage sentence in the whole metrics conversation, for a reason that has nothing to do with measurement.</p>
+        <ul>
+          <li><strong>Written first, it is a technical judgement.</strong> Nobody is invested, nobody has spent a quarter, and a reasonable threshold is easy to agree.</li>
+          <li><strong>Written afterwards, it is a verdict on a person.</strong> By then the team has shipped, the number is known, and any threshold anybody proposes is obviously chosen to produce a particular answer. This is why the rule cannot be added later, no matter how good everyone's intentions are.</li>
+          <li><strong>It converts stopping from a failure into compliance.</strong> A team that stops because the pre-agreed rule fired has followed the process correctly. That distinction is the entire difference between an org that can kill work and an org where everything ships.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Ask for it in the approval meeting, not the review</strong>
+          "What result would make us stop?" costs you eight seconds in the meeting where you approve the work, and it is nearly free to answer at that point. In the review it is an accusation. Same question, completely different instrument, depending entirely on when you ask it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What a good honest readout actually looks like<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Short, numerate, and unembarrassed. Five lines, roughly:</p>
+        <ul>
+          <li><strong>What we believed:</strong> that admins do not revisit transcripts because transcripts are hard to read, and a summary would fix it.</li>
+          <li><strong>What we agreed in advance:</strong> revisit rate from 11% to 30% in 90 days, stopping rule at 18% by week four, guardrail at accuracy complaints not rising above 1.4%.</li>
+          <li><strong>What happened:</strong> revisit rate reached 24%, retention did not move, complaints stayed at 1.3%. Mixed, and stated in that order rather than reordered to lead with the win.</li>
+          <li><strong>What we now believe:</strong> revisiting was a symptom, not a driver. The renewal conversation is somewhere else.</li>
+          <li><strong>What we are doing next:</strong> not phase two. One week of interviews with the accounts that did renew.</li>
+        </ul>
+        <p>Notice that this readout contains a loss and is not apologetic, and notice there is no paragraph explaining why the target was always ambitious. The confidence comes from the numbers having been fixed in advance. That is the whole mechanism: you cannot be accused of moving the goalposts if you wrote them down and left them there.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The learnings tell, and how to close it<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Watch for the sentence "we learned a lot from this" arriving without a single number. It is almost always a loss being reported in a register that cannot be challenged, and it works precisely because nobody wants to be the person who objects to learning.</p>
+        <p>The close is polite and immediate: "Great, what specifically did we learn, and what will we do differently because of it?" A real learning is a changed belief with a consequence attached, and it takes one sentence. A cover story cannot answer the second half, because there is no consequence, because nothing was actually learned other than that the bet did not pay.</p>
+        <p>Ask it warmly and ask it every time, including on the wins. If you only ask it after bad results it becomes a punishment signal, and you have taught your team that the word learnings triggers an interrogation, which is the opposite of what you wanted.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Discussion exercise · 12 min · everyone</span>
+      <h2>Audit your own last four readouts <span class="tag demo">◆ run this in your next review</span></h2>
+    </div>
+    <p class="lede">The first two prompts belong in your next approval meeting and cost nothing. The third one is the real exercise, it is uncomfortable, and it is about your organisation rather than any individual. Run it on yourself before you run it on anybody else.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Everyone in the room finds their last four readouts</strong> from real work, in whatever form they exist. If they do not exist in any form, that is the first finding and the exercise is already worth the time.</p></div>
+      <div class="step"><p><strong>Count how many said the bet did not work.</strong> Just the count. Zero out of four is the most common answer and it is not because the bets were good.</p></div>
+      <div class="step"><p><strong>Check each one for a moved goalpost.</strong> Compare the metric named in the readout with the metric named in the original plan. Any difference is the finding, and it is usually not deliberate.</p></div>
+      <div class="step"><p><strong>Run prompts 1 and 2 on the next thing you approve.</strong> Both live in the approval meeting, not the review. That timing is the whole trick.</p></div>
+      <div class="step"><p><strong>Decide, now, what you will do with the next honest no</strong> and say it out loud in this room. A commitment made in advance is the only kind that survives the meeting where the news is bad.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Prompt 1 · the number, before the build<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Before this starts: what is the one number, what is it today, what will it be in ninety days, and on what date do we read it? Four answers, one line each. If you do not know what it is today, say so and tell me when you will."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> four specific answers, and a PM who knows where the current value came from. "Revisit rate. It is 11% now, I pulled it Monday. Thirty percent at ninety days. We read it on the 14th of next month." An excellent answer adds the guardrail unprompted, and an honest one says "I do not have today's value yet, I will have it Thursday" rather than inventing a plausible baseline on the spot.</p>
+        <p><strong>The failure mode to listen for:</strong> the answer is directional. "We will look at engagement" or "activation should improve" is the absence of a metric, formatted as one. Second tell: no current value, which means the target was set by feel and cannot be missed. Third and most important: the read date is "after launch" or "once it settles". An unfixed date is what allows a readout to appear only when the news is good, and it is the cheapest thing on this list to fix.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Prompt 2 · the stopping rule<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "What result would make us stop this? Give me a number and a date, now, and write it into the spec. I am asking before we start precisely so that stopping is not a failure if it happens."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> a threshold and a date, offered with slight discomfort. "If revisit rate is under 18% at four weeks, we stop and do not build phase two." The discomfort is correct and you should say so, because the PM has just made themselves accountable to a number in front of you. The second sentence of the prompt is the part that makes the answer possible, so do not drop it.</p>
+        <p><strong>The failure mode to listen for:</strong> "we would look at the data and decide." That is not a stopping rule, it is a plan to never stop, and it means the work will continue until it is finished regardless of what happens. Also listen for a threshold set so low it cannot be breached, which is the same thing with better manners. If the rule could not plausibly fire, you do not have one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Prompt 3 · the readout audit, asked of your own team<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Pull our last four readouts. Which of them said the bet did not work? If the answer is none, I want your honest read on why, and I am asking about how I run this team rather than about your work."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> somebody names one, with the number in it. Or, better and rarer, somebody says "none of them, and I think it is because the last person who reported a flat quarter got a lot of questions about their judgement." That answer is a gift and you should treat it as one out loud, immediately, because the room is watching how you take it.</p>
+        <p><strong>The failure mode to listen for:</strong> "all four worked." Four out of four is not a strong team, it is a reporting system with a filter in it. Second tell: the metric in the readout is not the metric in the plan, and nobody noticed. Third: everyone looks at you before answering, which tells you the answer is being calibrated to your face rather than to the record. If that happens, the honest move is to say what you are going to change about your own behaviour, and then do it on the next flat result.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Nobody sets a target on 11%, and everybody has an 11%.</strong> Cadence's transcript revisit rate had been sitting at 11% of recorded meetings for as long as analytics had existed, on a chart nobody looked at, with no target and no owner. It was not hidden and it was not disputed. It was simply never anybody's number, which is the normal condition of most product metrics in most companies. The consequence surfaces at exactly one moment: the readout. Ship a summaries feature, watch revisit rate read 14%, and now the room has to decide whether that is a win, and it cannot, because nobody knows the weekly variance, the seasonal shape, or what the number did the last three times the product changed. The whole quarter of work resolves into a conversation about interpretation. The fix costs one analyst one afternoon, before the build, and the only reason it does not happen is that it looks postponable and nothing bad happens for three months.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this to your next review</span>
+      <h2>The questions to ask your PMs <span class="tag exercise">◐ 7 questions</span></h2>
+    </div>
+    <p class="lede">The first four belong in the meeting where you approve work, where they are cheap and nearly free to answer. The last three belong in the review, and two of them are questions about you rather than about them. Ask those two warmly or do not ask them at all.</p>
+    <ul>
+      <li><strong>"What is the one number, and what is it today?"</strong> A target without a baseline cannot be missed, and a metric that cannot be missed is not a commitment. If the current value does not exist yet, you have found the work that has to happen before the build.</li>
+      <li><strong>"Does it move in a week or in a quarter?"</strong> Settles whether the number can steer the build or only judge it afterwards. A team whose only metric is lagging is flying a quarter with no instruments.</li>
+      <li><strong>"What are we promising not to break?"</strong> The guardrail, asked in the language of a promise to another team, which is what it actually is. If nobody outside the team cares about the answer, it is not a guardrail.</li>
+      <li><strong>"What result would make us stop?"</strong> Eight seconds in the approval meeting, and it converts stopping from a failure into compliance with a rule everybody agreed to. Unaskable later, so ask it now.</li>
+      <li><strong>"On what date do we read this, and who is in the room?"</strong> A date fixed in advance is what stops readouts from appearing only when the news is good. The second half matters: an audience set in advance cannot be quietly narrowed.</li>
+      <li><strong>"Has this metric definition changed since we planned it?"</strong> A swapped metric is the most common way a loss gets reported as a win, and it is almost never deliberate. Asking routinely makes it visible without accusing anybody.</li>
+      <li><strong>"When did you last tell me a bet did not work?"</strong> This is a question about your organisation, not their competence. The pause before the answer is the answer, and how you handle what comes next is the only culture-change lever you actually control.</li>
+    </ul>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pull your last four readouts and count how many reported a loss. Do not tell anyone the number yet. Sit with it, and work out what in your own behaviour produced it.</li>
+      <li>Pick the largest thing your team is currently building and ask for its stopping rule. If it does not have one, agree one this week rather than at the review, while it is still a technical question.</li>
+      <li>Fix a readout date for that build now, in writing, in a calendar invite with the audience already on it. This single step does more than any framework on this page.</li>
+      <li>Find one metric your team reports that has no baseline, and fund the afternoon it takes to build one. Say publicly why you are funding it, so the work stops being invisible.</li>
+      <li>Decide in advance how you will respond to the next honest no, in one sentence, and tell one person what you decided. You will need the witness in the moment.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">North Star and HEART-style metric practice: one primary metric per decision, guardrails</span><span class="note">Parts 1 and 2 · the primary, the baseline, the promise to other teams</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Experiment practice: stopping rules decided in advance, and the honest readout</span><span class="note">Part 3 + the discussion · the PM track's b8 writes one, with a mixed result</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI-assisted knowledge work: directional metrics and free post-hoc narrative</span><span class="note">Part 2 self-study · why the guard has to move upstream of the build</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Instrumentation and event specs written before the build</span><span class="note">Named here, taught in the PM track's b7</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Statistical depth: power, minimum detectable effect, variance, sequential testing</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Breaking a metric into its drivers</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A PM proposes three success metrics of equal weight for one decision. What is the actual problem?</p>
+      <button class="qopt" type="button">A · Nothing, as long as all three are properly instrumented before the build</button>
+      <button class="qopt" type="button">B · After the fact, whichever one moved will be treated as the primary, so nobody can be wrong and the readout stops being evidence</button>
+      <button class="qopt" type="button">C · Three metrics cost too much analyst time to maintain</button>
+      <p class="qwhy">Measure twenty things. The primary is the single number you agreed in advance to be judged on, and you can only be judged on one thing at a time. Three co-equal metrics is not extra rigour, it is the absence of a commitment formatted as thoroughness.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · The only metric attached to a build moves at quarter end. What have you actually got?</p>
+      <button class="qopt" type="button">A · A guardrail, since it protects the business over a longer horizon</button>
+      <button class="qopt" type="button">B · A verdict rather than an instrument: it can judge the bet afterwards and anchor the board conversation, but it cannot tell you anything in time to act</button>
+      <button class="qopt" type="button">C · The strongest possible metric, because it is closest to revenue</button>
+      <p class="qwhy">A metric that moves in a week can change what you build next week. A metric that moves in a quarter can only tell you afterwards whether you were right. Both are legitimate and they are not substitutes, so a team with only a lagging number is flying the quarter with no instruments.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A PM's readout says the bet did not work, with the pre-agreed numbers attached. Which response actually changes your culture?</p>
+      <button class="qopt" type="button">A · Ask what went wrong and request a recovery plan by Friday</button>
+      <button class="qopt" type="button">B · Thank them, ask what they now believe and what changes because of it, hand them the next bet, and make sure the rest of the org hears how it went</button>
+      <button class="qopt" type="button">C · Accept it quietly, reallocate the team, and skip the readout meeting to spare everyone</button>
+      <p class="qwhy">The culture is set by what happens to the first person who says it did not work, and everybody hears about it within a day. Handling it quietly is nearly as damaging as handling it badly, because the org learns that honest results are something to be absorbed rather than rewarded.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>One primary per decision</b><span>More than one is the same as none: you will pick whichever moved, and the readout stops being evidence.</span></div>
+      <div class="cheat-item"><b>Leading or lagging</b><span>A week means it can steer the build. A quarter means it can only judge it. Not substitutes.</span></div>
+      <div class="cheat-item"><b>The baseline nobody has</b><span>Cadence: revisit rate 11%, no target ever set. Normal, and it is why quarters end in interpretation.</span></div>
+      <div class="cheat-item"><b>The guardrail</b><span>A promise to another team, with a threshold, that stops the work. Cadence: complaints at 1.4%, must not rise.</span></div>
+      <div class="cheat-item"><b>The stopping rule</b><span>Written first it is technical. Written afterwards it is a verdict on a person. Ask in the approval meeting.</span></div>
+      <div class="cheat-item"><b>Fix the date and the audience</b><span>A read date set in advance is what stops readouts appearing only when the news is good.</span></div>
+      <div class="cheat-item"><b>The learnings tell</b><span>"We learned a lot" with no number is a loss in an unchallengeable register. Ask what changes because of it.</span></div>
+      <div class="cheat-item"><b>The one moment that matters</b><span>What you do with the first honest no. The PM track's b8 writes one, mixed result. Next: a6, the org and the budget.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-prioritisation-without-theatre.html">← Previous: Prioritisation without theatre</a> &nbsp;·&nbsp; <a href="a6-the-ai-assisted-product-org.html">Next: The AI-assisted product org →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

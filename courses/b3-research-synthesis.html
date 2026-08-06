@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 3 · Research synthesis, and the trap - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 3 of 10</div>
+    <h1>Research synthesis, and <span class="accent">the trap</span></h1>
+    <p class="sub">This is the highest-risk thing a PM does with AI, and it does not feel risky at all - which is the whole problem. Paste in eight interviews, get back six clean themes in seconds, each phrased more confidently than anything you would have written yourself. On this page, two of those six themes do not survive verification: one has zero sources behind it and one is a single person's sentence rewritten in the plural. The material is on the page, the themes are on the page, and the reveal is behind a card. Find them first.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Bring your carried backlog item</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-13 · What synthesis is for</span>
+      <span class="a3" style="flex:8">13-40 · The flow, the trap, the verification discipline</span>
+      <span class="a4" style="flex:2">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this is the dangerous one</h2>
+    </div>
+    <p class="lede">b2 left blanks in the evidence lines on purpose, and blanks are uncomfortable. Synthesis is where the temptation to fill them lives, because a tool that writes fluent themes will fill any blank you point it at, and it will never once tell you which of its themes came from your material and which came from its sense of how products like yours usually work. Both arrive in the same font, in the same confident register, in the same numbered list.</p>
+    <p class="lede">Everything else in this course has a cheap failure mode. A bad spec gets caught in review. A wrong priority gets caught in a quarter. An invented theme does not get caught, because it becomes the reason for the roadmap, and by the time the feature underperforms the theme has been repeated in four decks and nobody remembers that no customer ever said it. That is why this session exists and why it is the one to run live with your team rather than read alone.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Worked artifact - real snippets and real themes</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A four-step synthesis flow where only the last step matters, the two shapes of synthesis failure by name, and Cadence's six themes reduced to four verified ones plus one labelled anecdote plus one that never existed.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: WHAT SYNTHESIS IS FOR ============ -->
+  <section class="section" id="purpose">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers continuous-discovery interviewing practice</span>
+      <h2>Synthesis reduces the number of things <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Most people asked to "synthesise the research" produce a summary of each interview. Eight interviews in, eight tidy paragraphs out. Every paragraph is accurate and the exercise has achieved nothing, because a pattern is not a property of an interview - it is a property of the <em>set</em>. It only appears when you stop looking at accounts one at a time.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Summarising each interview separately produces eight paragraphs and no pattern, while synthesis across the set produces a small number of counted themes">
+        <style>
+          .syT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .syH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .syC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .syY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="syH" x="26" y="26">Eight summaries is eight times the reading and none of the answer</text>
+
+        <rect x="26" y="40" width="400" height="44" rx="8" fill="#6B7688"/>
+        <text class="syT" x="46" y="68">Summarising · one output per input</text>
+        <text class="syC" x="46" y="106">8 tidy paragraphs, one per admin interview</text>
+        <text class="syC" x="46" y="126">every one of them accurate and quotable</text>
+        <text class="syC" x="46" y="146">no pattern anywhere, because a pattern is a</text>
+        <text class="syC" x="46" y="166">property of the set, not of any one account</text>
+        <text class="syC" x="46" y="186">Output: a folder nobody reopens</text>
+
+        <rect x="454" y="40" width="400" height="44" rx="8" fill="#232935"/>
+        <text class="syT" x="474" y="68">Synthesising · fewer outputs than inputs</text>
+        <text class="syC" x="474" y="106">4 themes plus 1 labelled anecdote</text>
+        <text class="syC" x="474" y="126">each carrying a source count and a verbatim</text>
+        <text class="syC" x="474" y="146">each traceable back to who actually said it</text>
+        <text class="syC" x="474" y="166">and the weak one visibly marked as weak</text>
+        <text class="syC" x="474" y="186">Output: something b4 can build a tree from</text>
+
+        <rect x="26" y="212" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="syY" x="46" y="238">The test is arithmetic: if your output has as many items as your input, you summarised.</text>
+        <text class="syC" x="46" y="262">Eight interviews should not produce eight findings. They should produce three to five, one of which is</text>
+        <text class="syC" x="46" y="282">probably an anecdote, and the count beside each one is what makes the next four sessions possible.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the difference is a count, not a writing style</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What a theme has to be, to be worth the name<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A theme is a claim that a pattern exists across independent people. That definition has three consequences that most synthesis output quietly ignores:</p>
+        <ul>
+          <li><strong>It needs a count.</strong> "Admins struggle to find decisions" is not a theme until it reads "6 of 8". The count is not decoration - it is the entire difference between a finding and a phrase, and it is what makes two themes comparable later.</li>
+          <li><strong>It needs independence.</strong> Three quotes from the same account is one source. Two admins who work at the same company and sat in the same meeting are closer to one source than two. This is where small research sets fail most often and least visibly.</li>
+          <li><strong>It needs to be falsifiable by the material.</strong> If you cannot say which snippet would have to be absent for the theme to collapse, the theme is not attached to the material at all. It is attached to your prior beliefs, which are not research.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The shape a theme should be written in</strong>
+          One sentence, then a slash, then the count, then one verbatim. "Admins do not reopen transcripts after a meeting ends / 6 of 8 / 'once the call is over I never open the transcript again'." Everything in that line is checkable in under a minute, which is the standard from b1 doing real work.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where AI is actually useful in synthesis<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The honest answer is that it is useful in three of the four steps, and it is very good at them:</p>
+        <ul>
+          <li><strong>Coding.</strong> Tagging thirty snippets with what each one is about is mechanical, tedious, and exactly the kind of work where a tool beats a tired human at 6pm. Check the codes, not the themes - codes are cheap to verify because each one points at one snippet.</li>
+          <li><strong>Grouping.</strong> Proposing which codes cluster is a genuinely useful second opinion, and it will occasionally group two things you had mentally kept apart for no reason other than that you interviewed them on different days.</li>
+          <li><strong>Arguing against your own theme.</strong> "Here are my four themes and the snippets. Which theme is least supported by this material?" This is the single most valuable prompt on this page, and it works because it asks for a critique of a fixed set rather than the generation of a new one.</li>
+        </ul>
+        <p>What it cannot do is the fourth step. Verification is not a language operation - it is the act of a named person asserting that a pattern is real, and that assertion is what everything downstream rests on. A tool cannot make it, because a tool cannot be accountable when the pattern turns out not to exist.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE FLOW ============ -->
+  <section class="section" id="flow">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the flow, and the step everyone skips</span>
+      <h2>De-identify, code, theme, verify <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Four steps, in this order, every time. Three of them are handling and pattern-matching and can be delegated almost entirely. The fourth is a claim, and a claim needs an owner. The order matters as much as the steps: coding before theming stops you from reading the material through a theme you already had in mind, which is the most common way a synthesis confirms what the PM already believed.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 304" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four-step synthesis flow: de-identify, code, theme, verify, with what each step protects and how often it gets skipped">
+        <style>
+          .flT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .flH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .flC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .flY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="flH" x="26" y="26">Three steps you can hand over, and one you cannot</text>
+
+        <rect x="26" y="40" width="196" height="44" rx="8" fill="#38404E"/>
+        <text class="flT" x="42" y="68">1 · De-identify</text>
+        <text class="flC" x="42" y="106">names, employers, contacts</text>
+        <text class="flC" x="42" y="126">out once, at intake</text>
+        <text class="flC" x="42" y="146">Protects: consent, and you</text>
+        <text class="flC" x="42" y="166">Skipped: never, legally</text>
+
+        <path d="M226 58 L233 62 L226 66" fill="none" stroke="#C3CAD6" stroke-width="2"/>
+
+        <rect x="238" y="40" width="196" height="44" rx="8" fill="#6B7688"/>
+        <text class="flT" x="254" y="68">2 · Code</text>
+        <text class="flC" x="254" y="106">tag what each snippet is</text>
+        <text class="flC" x="254" y="126">actually about</text>
+        <text class="flC" x="254" y="146">Protects: the raw material</text>
+        <text class="flC" x="254" y="166">Skipped: often, quietly</text>
+
+        <path d="M438 58 L445 62 L438 66" fill="none" stroke="#C3CAD6" stroke-width="2"/>
+
+        <rect x="450" y="40" width="196" height="44" rx="8" fill="#6B7688"/>
+        <text class="flT" x="466" y="68">3 · Theme</text>
+        <text class="flC" x="466" y="106">group codes that recur</text>
+        <text class="flC" x="466" y="126">across different people</text>
+        <text class="flC" x="466" y="146">Protects: nothing yet</text>
+        <text class="flC" x="466" y="166">Skipped: rarely, it is easy</text>
+
+        <path d="M650 58 L657 62 L650 66" fill="none" stroke="#C3CAD6" stroke-width="2"/>
+
+        <rect x="662" y="40" width="192" height="44" rx="8" fill="#232935"/>
+        <text class="flT" x="678" y="68">4 · Verify</text>
+        <text class="flC" x="678" y="106">each theme back to 2 or</text>
+        <text class="flC" x="678" y="126">more sources, with a quote</text>
+        <text class="flC" x="678" y="146">Protects: everything after</text>
+        <text class="flC" x="678" y="166">Skipped: almost always</text>
+
+        <rect x="26" y="196" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="flY" x="46" y="222">Step 4 is the only one that cannot be delegated, and it is the only one that gets skipped.</text>
+        <text class="flC" x="46" y="246">Steps 1 to 3 are handling and pattern-matching. Step 4 is the assertion that a pattern is real, made by a</text>
+        <text class="flC" x="46" y="266">named person who will still be here in two quarters when the feature built on it underperforms.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the order is load-bearing, and so is the last box</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Step</th><th>What you actually do</th><th>Delegate?</th><th>What goes wrong if you skip it</th></tr></thead>
+      <tbody>
+        <tr><td>1 · de-identify</td><td>strip names, employers and contact details at intake, once, before anything else touches the material</td><td>the mechanics, yes; the decision to do it, no</td><td>you have put a customer's identity into a tool your research consent almost certainly never covered - see b1's never-paste list</td></tr>
+        <tr><td>2 · code</td><td>tag every snippet with what it is about, in the interviewee's terms rather than your feature names</td><td>yes, then spot-check about a fifth of them</td><td>you skip to themes and read the material through the theme you arrived with, which is confirmation with extra steps</td></tr>
+        <tr><td>3 · theme</td><td>group codes that recur across different people, and name each group in one plain sentence</td><td>yes, and a second opinion here is genuinely useful</td><td>little, on its own - this is the step that feels like the work and carries the least risk</td></tr>
+        <tr><td>4 · verify</td><td>trace every theme back to at least two independent sources and paste one verbatim beside it</td><td>never</td><td>everything. This is the step where the invented theme and the over-generalised theme are caught, and it is the step that gets cut when the readout is tomorrow</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>De-identify at intake, not per prompt<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>b1 put this on the never-paste list; here is the operational version. The rule is that de-identification happens <em>once</em>, when the transcript arrives, and produces the only copy that anybody works from afterwards.</p>
+        <ul>
+          <li><strong>Replace, do not delete.</strong> "Admin 3, 40-seat agency, marketing" carries every bit of product signal you need and none of the identity. Deleting instead of replacing loses the segment information, and the segment is the thing b2 spent a whole session insisting on.</li>
+          <li><strong>Do it at intake because habits fail under deadline.</strong> A step you have to remember before each prompt is a step you will skip in the week the readout is due, which is exactly the week you are pasting the most material.</li>
+          <li><strong>Keep the mapping somewhere else.</strong> You will need to go back to a specific admin for a follow-up. A separate key, held where your company holds customer data, gives you that without the identity ever travelling with the quotes.</li>
+        </ul>
+        <p>This is also the step that makes the rest of the session legitimate at all. Everything below - eight admins, coded, themed, verified - is material that never needed a name.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why coding before theming is not bureaucracy<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The temptation is to go straight from transcripts to themes, and it is a strong one because themes are the deliverable and codes are not. The reason to resist is specific: a code is a claim about <em>one snippet</em>, and a theme is a claim about <em>the set</em>. Claims about one snippet are cheap to check, and claims about the set are not.</p>
+        <ul>
+          <li><strong>Codes are individually verifiable in seconds.</strong> Read the snippet, read the code, agree or disagree. You can check thirty codes in ten minutes, which is why delegating the coding is safe in a way that delegating the theming is not.</li>
+          <li><strong>Codes stay in the interviewee's language.</strong> "Asks a colleague instead of scrolling" is a code. "Retrieval friction" is a theme wearing a code's clothes, and once it is in your notes as a code you will never see the raw behaviour again.</li>
+          <li><strong>Codes make the count honest.</strong> When themes come first, the count is assembled afterwards to support the theme, and that is a different and much weaker activity than counting codes that already exist.</li>
+        </ul>
+        <p>Worth being honest that this is slower. Coding eight interviews properly is an afternoon. Going straight to themes is twenty minutes. The afternoon is the price of a synthesis that survives someone pulling on it in a review.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE TWO SHAPES ============ -->
+  <section class="section" id="shapes">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the research-quality literature</span>
+      <h2>Two shapes of failure, one detector <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Synthesis failures are not random. They come in two shapes, and both are shapes you can look for on purpose. Neither one looks like an error on the page: the invented theme reads as the most insightful item in the list, and the over-generalised theme reads as the most actionable. That is not a coincidence - a theme with nothing holding it down is free to be as clean as the language allows.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The invented theme has zero sources and the over-generalised theme has one source rewritten in the plural, and a source count column catches both">
+        <style>
+          .shT { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .shH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .shC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .shY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="shH" x="26" y="26">Two shapes of failure, and the single column that catches both</text>
+
+        <rect x="26" y="40" width="400" height="44" rx="8" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="shT" x="46" y="68">Shape A · the invented theme</text>
+        <text class="shC" x="46" y="106">Sources: zero</text>
+        <text class="shC" x="46" y="126">Nothing in the material says it. It is simply what</text>
+        <text class="shC" x="46" y="146">this kind of product usually has trouble with, so it</text>
+        <text class="shC" x="46" y="166">arrives sounding like the most insightful item</text>
+        <text class="shC" x="46" y="186">Detector: ask for the verbatim. There is not one</text>
+
+        <rect x="454" y="40" width="400" height="44" rx="8" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="shT" x="474" y="68">Shape B · the over-generalised theme</text>
+        <text class="shC" x="474" y="106">Sources: one</text>
+        <text class="shC" x="474" y="126">One person's sentence, rewritten in the plural as</text>
+        <text class="shC" x="474" y="146">"admins want ...". Real, quotable, and a whole</text>
+        <text class="shC" x="474" y="166">strategy hanging off a single workflow</text>
+        <text class="shC" x="474" y="186">Detector: ask for the second source. There is none</text>
+
+        <rect x="26" y="212" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="shY" x="46" y="238">One column catches both: the source count, printed beside every theme before anyone reads it.</text>
+        <text class="shC" x="46" y="262">Zero sources is fiction. One source is an anecdote and stays labelled as one. Two independent sources is the</text>
+        <text class="shC" x="46" y="282">floor for anything called a theme - and the PM reads the two quotes, not the sentence claiming they exist.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - both failures are invisible in prose and obvious in a count</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The verification discipline, in four rules<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Short enough to remember, and the whole point is that they are mechanical rather than clever:</p>
+        <ul>
+          <li><strong>Every theme carries its source count.</strong> Written as "6 of 8", not "most" and not "many". The count goes in the same line as the theme, in every document the theme ever appears in, including the deck.</li>
+          <li><strong>Every theme carries at least one verbatim.</strong> A real sentence a real person said, in their words. If nobody can produce one, the theme does not exist, and this catches shape A on its own.</li>
+          <li><strong>A theme with one source is labelled an anecdote and never promoted.</strong> Not deleted - anecdotes are useful, and single-source signals are often the earliest sight of something real. Labelled. It can be promoted later by more research, never by being restated more confidently.</li>
+          <li><strong>The PM reads the quotes, not the summary.</strong> This is the one that costs time and the one that cannot be substituted. Reading the quotes is how you notice that two of them are the same person, or that the sentence supporting your best theme is actually about something else.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The two questions that do the work in a review</strong>
+          "How many people said this?" and "can you show me one of them saying it?" Neither is aggressive, both are answerable in seconds when the discipline was followed, and both are unanswerable when it was not. A team asked these twice starts putting the count in the document before the review, which is the actual goal.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the invented theme is always plausible<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It helps to understand where an invented theme comes from, because it stops you from expecting it to look wrong. A drafting tool has seen an enormous amount of writing about products of this general kind: what their users complain about, what their reviews say, what their competitors fix. Asked to produce themes from your material, it produces themes that are consistent with your material <em>and</em> with everything it already knows about products like yours - and it has no mechanism to tell you which of the two produced any given line.</p>
+        <ul>
+          <li><strong>It will be a real problem, somewhere.</strong> The invented theme is usually a genuine issue for this product category. It is simply not one your eight people raised, which makes it a fine hypothesis and a terrible finding.</li>
+          <li><strong>It will fit the seam between two real quotes.</strong> Invented themes tend to appear exactly where your material is thin, and thin patches attract plausible filler the way a gap in a hedge attracts a shortcut.</li>
+          <li><strong>It will often be the one you like best.</strong> Unconstrained by evidence, it can be phrased perfectly. The cleanest sentence in a theme list deserves the most suspicion, which is an uncomfortable heuristic and a reliable one.</li>
+        </ul>
+        <p>And be honest about the cost of catching it. Verification is slower than not verifying, every single time, with no compensating speed-up anywhere. That is the trade you are making: an afternoon now, against a quarter spent on a theme nobody said.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED ARTIFACT: THE TRAP ============ -->
+  <section class="section" id="trap">
+    <div class="section-kicker">
+      <span class="klabel">Worked artifact · 12 min · everyone</span>
+      <h2>Cadence's eight interviews, and six themes <span class="tag demo">★ two do not survive</span></h2>
+    </div>
+    <p class="lede">Below is the de-identified material from Cadence's 8 admin interviews with the codes already assigned, followed by the six themes an assistant produced from exactly this material and nothing else. <strong>Two of the six do not survive verification.</strong> One is invented and one is over-generalised from a single quote. Work out which two before you open the reveal in the practice section - and notice that the theme list, as produced, does not carry a single source count.</p>
+
+    <table class="clean">
+      <thead><tr><th>Source</th><th>Verbatim, de-identified at intake</th><th>Codes assigned</th></tr></thead>
+      <tbody>
+        <tr><td>A1 · 12-seat studio</td><td>"Once the call is over I never open the transcript again. I write three lines into our project channel while it is still fresh."</td><td>no-reopen · writes-own-summary-elsewhere</td></tr>
+        <tr><td>A2 · 40-seat agency</td><td>"The thing I need is what we agreed. It is in there somewhere around minute 34, but I have to go and find it."</td><td>decision-is-the-unit · hard-to-locate</td></tr>
+        <tr><td>A3 · 18-seat consultancy</td><td>"I still take my own notes. I know that is the whole point of the tool. I just do not trust that I will be able to find it later."</td><td>parallel-note · low-trust-in-retrieval</td></tr>
+        <tr><td>A4 · 25-seat product team</td><td>"Monday standup is the problem. I need to arrive knowing what last week's decisions were, and I usually reconstruct that from memory."</td><td>pre-meeting-need · reconstructs-from-memory</td></tr>
+        <tr><td>A5 · 9-seat agency</td><td>"I have reopened a transcript maybe twice, both times because somebody disputed what was said."</td><td>reopen-only-on-dispute</td></tr>
+        <tr><td>A6 · 50-seat services firm</td><td>"Nobody on my team reads them. I share the link and it sits there."</td><td>shared-not-read</td></tr>
+        <tr><td>A7 · 15-seat studio</td><td>"It is faster to ask the person than to scroll back through forty minutes. So I ask."</td><td>asks-a-human-instead · decision-is-the-unit</td></tr>
+        <tr><td>A8 · 30-seat agency</td><td>"I would want it in the channel we already use. If I have to log in somewhere to read a summary, I will not."</td><td>wants-it-where-they-work · login-friction</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout tip">
+      <strong>The six themes, exactly as produced from the material above</strong>
+      <p><strong>T1.</strong> Admins do not reopen a transcript once the meeting has ended.</p>
+      <p><strong>T2.</strong> The unit of value is the decision, not the recording.</p>
+      <p><strong>T3.</strong> Admins keep a parallel manual note because they do not trust they will find things later.</p>
+      <p><strong>T4.</strong> Admins want summaries delivered into the tools they already work in, rather than inside the product.</p>
+      <p><strong>T5.</strong> Transcript accuracy is the main barrier to trust and adoption.</p>
+      <p><strong>T6.</strong> Admins reconstruct last week's decisions from memory before recurring meetings.</p>
+    </div>
+
+    <p class="lede">Read that list on its own and it is genuinely good. Six clear sentences, no hedging, no repetition, in an order that almost tells a story. It took seconds, it is better written than most synthesis produced by hand at the end of a long week, and four of the six are correct. The problem is that nothing on the list distinguishes the four from the two, and there is no way to find out by reading it more carefully. You have to go back to the material.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Take the theme list and add an empty column.</strong> Head it "sources", and do not let yourself fill it from memory. This one mechanical act is what turns a list of sentences into something you can audit, and it is why the count belongs in the template rather than in your good intentions.</p></div>
+      <div class="step"><p><strong>Go theme by theme, not source by source.</strong> For T1, walk all eight rows and write down every source ID that supports it. Then T2. Working the other way round - reading each snippet and deciding which theme it fits - is how you accidentally assign a snippet to a theme it merely rhymes with.</p></div>
+      <div class="step"><p><strong>Paste one verbatim beside each theme.</strong> Not a paraphrase, and not your own sentence that captures the spirit of it. If you find yourself writing the quote rather than copying it, you have found a theme with no quote, which is the finding.</p></div>
+      <div class="step"><p><strong>Check independence, not just count.</strong> Two supporting snippets from the same admin is one source. Two admins at the same 50-seat firm who sat in the same meeting is closer to one than two. Small research sets fail here more often than anywhere else.</p></div>
+      <div class="step"><p><strong>Apply the floor and relabel.</strong> Zero sources: delete it and write down that it was produced, because that is useful information about your process. One source: relabel it as an anecdote with the source ID attached. Two or more independent sources: it is a theme, and it goes to b4 with its count.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The reason this failure survives is that the theme list gets separated from the material almost immediately.</strong> The themes go into a slide. The slide goes into a review. Somebody restates one of the themes in a planning doc, and by then it is a sentence with no count, no quote and no source, in a document whose author was three steps away from the transcripts. Nothing in that chain is anyone's mistake, and by the fourth retelling the theme is simply what the company believes about its users.</p>
+      <p><strong>Which is why the count travels with the sentence or the discipline does not exist.</strong> "6 of 8" is four characters of overhead and it survives being copied into a deck, whereas "we heard consistently that" does not survive anything. When a theme arrives at a planning meeting without a count, the honest response is not to doubt the person presenting it. It is to ask the two questions - how many, and can you show me one - and to notice how quickly a room learns to bring the answer.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="section" id="practice">
+    <div class="section-kicker">
+      <span class="klabel">Practice</span>
+      <h2>Your turn: find the two, then check your own <span class="tag demo">★ 8 min</span></h2>
+    </div>
+    <p class="lede">Do Q1 with the material still on screen and commit to two theme numbers out loud before anybody opens Q2. Guessing in public is the point of the exercise.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Q1 · Build the source column yourself<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do not open Q2 yet. Copy this shell, then fill the middle column from the eight rows above, theme by theme. It takes about four minutes and it is the entire skill this session teaches.</p>
+        <table class="clean">
+          <thead><tr><th>Theme</th><th>Sources you can actually find</th><th>Verbatim you can actually paste</th></tr></thead>
+          <tbody>
+            <tr><td>T1 · do not reopen transcripts</td><td>?</td><td>?</td></tr>
+            <tr><td>T2 · the decision is the unit</td><td>?</td><td>?</td></tr>
+            <tr><td>T3 · parallel manual note</td><td>?</td><td>?</td></tr>
+            <tr><td>T4 · delivered where they work</td><td>?</td><td>?</td></tr>
+            <tr><td>T5 · accuracy is the barrier</td><td>?</td><td>?</td></tr>
+            <tr><td>T6 · reconstruct from memory</td><td>?</td><td>?</td></tr>
+          </tbody>
+        </table>
+        <p>Two rows will resist you, and they will resist in different ways. In one of them you will find a real quote and then fail to find a second one. In the other you will find yourself reaching for a quote that is nearly about it, and then reaching for another one that is also nearly about it. That second sensation - "this is nearly about it" - is the tell, and it is worth learning to notice, because it is what verification actually feels like from the inside.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q2 · The reveal - which two, and why<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Commit to your two before reading on.</p>
+        <table class="clean">
+          <thead><tr><th>Theme</th><th>Sources</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr><td>T1 · do not reopen transcripts</td><td>A1, A5, A7, plus A6 for the team behaviour</td><td><strong>Theme, verified.</strong> Also consistent with the whole set: 6 of the 8 never reopen once the meeting ends. Verbatim: "once the call is over I never open the transcript again"</td></tr>
+            <tr><td>T2 · the decision is the unit</td><td>A2, A4, A7</td><td><strong>Theme, verified.</strong> Three independent admins, three different phrasings of the same thing. Verbatim: "the thing I need is what we agreed"</td></tr>
+            <tr><td>T3 · parallel manual note</td><td>A1, A3</td><td><strong>Theme, verified at the floor.</strong> Exactly two sources, so it goes forward with its count visible and no more weight than that. The 68% survey figure supports it from a different direction</td></tr>
+            <tr><td>T4 · delivered where they work</td><td>A8 only</td><td><strong>Over-generalised.</strong> One admin said it, and the theme is written in the plural as a preference of admins in general. Relabel: anecdote, source A8. It is a good hypothesis and it is not a finding</td></tr>
+            <tr><td>T5 · accuracy is the barrier</td><td>none</td><td><strong>Invented.</strong> No snippet says it. Nothing in the material is about accuracy at all</td></tr>
+            <tr><td>T6 · reconstruct from memory</td><td>A4, A7</td><td><strong>Theme, verified at the floor.</strong> Verbatim: "I usually reconstruct that from memory". Closely related to T2 and worth keeping separate, because it names a moment - before a recurring meeting - that T2 does not</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Why T5 was so easy to believe.</strong> It is a real issue for transcription products in general, and the material has two seams it can hide in: A3 uses the word "trust", and A5 mentions a dispute about what was said. Neither is about accuracy - A3 does not trust that she will <em>find</em> it later, and A5 reopened the transcript to <em>settle</em> a dispute, which is the transcript working. And the one number Cadence has points the other way: accuracy complaints run at 1.4% of meetings, which is the guardrail rather than the problem. A theme with no source can contradict your own instrumentation and still read as the most insightful line in the list.</p>
+        <p><strong>Why T4 is the more dangerous of the two.</strong> T5 dies the moment anybody asks for a quote. T4 has a real quote, from a real admin, and it will survive the first challenge - which means it can travel. And it is not a small claim: "deliver summaries into the tools they already use" is an integration roadmap, sized in engineering quarters, resting on one sentence from one 30-seat agency. Labelled as an anecdote it is genuinely valuable and cheap to test. Promoted to a theme it is a plan.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q3 · Verify a synthesis you already trust<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Take a research summary your team is currently acting on - ideally one that supports your carried backlog item, and ideally one you did not write yourself. Do not re-synthesise it. Just add the source column and try to fill it, theme by theme, from the underlying material.</p>
+        <p>Three outcomes are common and all three are useful. Sometimes every theme checks out, and you now have counts and quotes you can put in the spec in b5. Sometimes a theme turns out to rest on one enthusiastic customer, in which case relabel rather than delete, and notice how much of the current plan was hanging off it. And sometimes the underlying material cannot be found at all - the transcripts are gone, or nobody knows who ran the interviews - which is itself the finding, and it is worth saying plainly, because a theme whose source cannot be located is not evidence any more regardless of how true it once was.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the research behind your carried backlog item and add a source count and one verbatim to every theme. Where you cannot, write "1 source - anecdote" or "no source found" and leave it visible.</li>
+      <li>Add the four verification rules to wherever your team writes research: count in the line, one verbatim, one-source themes labelled anecdotes, and the PM reads the quotes. Four lines at the top of the template.</li>
+      <li>Run the useful prompt on your own material: give the tool your themes plus the snippets and ask which theme is least supported by this material. Then check its answer against the source column, because that critique is a claim too.</li>
+      <li>Fix the intake step: one place where transcripts get de-identified on arrival, with the identity key held wherever your company already holds customer data.</li>
+      <li>Find one theme currently in a deck with no count beside it, trace it, and bring the result to b4 - because the tree you build there is only as good as the themes at its base.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research-quality literature - sampling, independence of sources, confirmation bias, coherence drift</span><span class="note">Part 1 + Part 3 · the two-source floor and the independence check</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Continuous-discovery synthesis practice - coding before theming, verbatim-backed themes</span><span class="note">Part 2 + the worked artifact · four steps, and the one that cannot be delegated</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work - where verification cost exceeds the saving, automation bias</span><span class="note">Part 3 · why the invented theme is always the best-written line</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research ethics and data handling - consent, de-identification at intake</span><span class="note">Part 2 · the operational rule; consent frameworks are not this course</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Interview technique - how to run the eight interviews in the first place</span><span class="note">Touched in b2 · this session starts from transcripts that already exist</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, critical path, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · You feed in 8 interviews and get back 8 paragraphs, one per interview, all accurate. What have you got?</p>
+      <button class="qopt" type="button">A · A synthesis, ready for the opportunity tree</button>
+      <button class="qopt" type="button">B · A summary. Synthesis reduces the number of things, because a pattern is a property of the set rather than of any one account</button>
+      <button class="qopt" type="button">C · Eight themes, each with one source</button>
+      <p class="qwhy">If the output has as many items as the input, no reduction happened. Eight interviews should produce three to five themes, one of which is probably an anecdote, each carrying a count and a verbatim. Accuracy per paragraph is not the goal and never was.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A theme has one real quote from one real customer behind it. What do you do with it?</p>
+      <button class="qopt" type="button">A · Delete it, since one source is not evidence</button>
+      <button class="qopt" type="button">B · Keep it as a theme, since the quote is genuine and specific</button>
+      <button class="qopt" type="button">C · Relabel it as an anecdote with its source ID attached, and never promote it by restating it more confidently</button>
+      <p class="qwhy">Single-source signals are often the earliest sight of something real, so deleting wastes them. But T4 in the worked artifact shows the risk: one sentence from one 30-seat agency, rewritten in the plural, becomes an integration roadmap. Anecdotes get promoted by more research, never by more confidence.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which failure is harder to catch, and why?</p>
+      <button class="qopt" type="button">A · The over-generalised theme - it has a genuine quote, so it survives the first challenge and can travel into decks, while the invented theme dies the moment anyone asks for a verbatim</button>
+      <button class="qopt" type="button">B · The invented theme, because nothing supports it at all</button>
+      <button class="qopt" type="button">C · Neither; both are obvious once you read the themes carefully</button>
+      <p class="qwhy">Reading the themes more carefully catches neither, which is the uncomfortable part - you have to go back to the material. And the one with a real quote is the durable one: it passes the verbatim test and fails only the count test, which is exactly the test that gets dropped when a theme is restated in a document three steps from the transcripts.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Synthesis is</b><span>Finding the pattern across accounts. Fewer outputs than inputs, or you summarised.</span></div>
+      <div class="cheat-item"><b>The flow</b><span>De-identify → code → theme → verify. Only the last one cannot be delegated.</span></div>
+      <div class="cheat-item"><b>Code before theme</b><span>A code is a claim about one snippet and is cheap to check. A theme is a claim about the set.</span></div>
+      <div class="cheat-item"><b>Shape A · invented</b><span>Zero sources. Reads as the most insightful line. Dies when you ask for the verbatim.</span></div>
+      <div class="cheat-item"><b>Shape B · over-generalised</b><span>One source in the plural. Has a real quote, so it travels. Dies only on the count.</span></div>
+      <div class="cheat-item"><b>The four rules</b><span>Count in the line · one verbatim · one source = anecdote · the PM reads the quotes.</span></div>
+      <div class="cheat-item"><b>Two review questions</b><span>"How many people said this?" and "can you show me one saying it?"</span></div>
+      <div class="cheat-item"><b>The honest cost</b><span>Verifying is always slower, with no speed-up anywhere. Next: b4, themes into a tree.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 3 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-evidenced-problem.html">← Previous: From a vague ask to an evidenced problem</a> &nbsp;·&nbsp; <a href="b4-jobs-and-opportunity-tree.html">Next: Jobs to be done, opportunity tree →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

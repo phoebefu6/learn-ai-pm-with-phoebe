@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · What AI changes in product - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>What AI changes, and <span class="accent">what it does not</span></h1>
+    <p class="sub">Half of product management looks like writing. That half just collapsed in cost. The other half is choosing, cutting, and being the name on the outcome, and it has not moved by a single hour. Almost every disappointment leaders are currently having with AI in product work comes from expecting the second half to move because the first one did. This session draws the line precisely, then changes what you ask your PMs for.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No code to write</span>
+      <span class="chip time">45 min</span>
+      <span class="chip time">▶ Leaders start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · The honest split</span>
+      <span class="a4" style="flex:3">15-27 · The fluent artifact, and the new bottleneck</span>
+      <span class="a3" style="flex:4">27-40 · Group exercise: count the decisions</span>
+      <span class="a1" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this track works</h2>
+    </div>
+    <p class="lede">Six sessions, no code, no tool tour, nothing to install. You approve roadmaps, you fund teams, and you referee the meeting where two competent people disagree about what to build. This track is about doing that well now that the documents arriving on your desk cost almost nothing to produce: what AI changes in product work and what it cannot touch (this session), what evidence has to mean when a fluent research summary is free (a2), what a spec must contain before you sign it (a3), prioritisation without theatre (a4), metrics and the readout that admits the bet failed (a5), and what to fund in an AI-assisted product org without hollowing out the craft (a6).</p>
+    <p class="lede">The examples all use <strong>Cadence</strong>, the AI note-taker running through this whole series: self-serve plus team and enterprise, focused on team admins with paid workspaces of 5 to 50 seats. Three people have asked for three different things and nobody has decided. Your PMs work that decision in detail on the practitioner track; you need to be able to referee it, which is a different skill and a shorter course.</p>
+    <p class="lede">This course ends at the decision. Once the call is made, charters, milestones, critical path and status reporting are a different discipline and a different course: <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a>. If your instinct in a product review is to ask when it ships, that instinct is correct and it belongs there.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Discussion exercise - run it in the room</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A written line between the half of your PMs' job that got cheap and the half that did not, one thing you will stop asking for, one thing you will start asking for, and the ability to spot a fluent document containing no decisions in under two minutes.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE SPLIT ============ -->
+  <section class="section" id="split">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers AI-assisted knowledge work, the PM craft literature on decision ownership</span>
+      <h2>The honest split <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Product management divides into <strong>production</strong> and <strong>commitment</strong>. Production is drafting, summarising, restructuring, adapting one message for three audiences, and arguing the other side of your own case. Commitment is choosing, cutting, setting the number you will be judged on, saying no, and owning it publicly when it turns out you were wrong. AI is genuinely excellent at the first and completely absent from the second, and the gap between those two facts is where every current disappointment lives.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The production half of the product management job where cost collapses, beside the commitment half where cost has not changed at all">
+        <style>
+          .s1T { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .s1H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .s1C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .s1Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="s1H" x="26" y="22">Two halves of the same job. AI moved exactly one of them.</text>
+
+        <rect x="26" y="34" width="400" height="40" rx="8" fill="#38404E"/>
+        <text class="s1T" x="46" y="59">Production - the cost collapses</text>
+        <text class="s1C" x="46" y="98">drafting the PRD, the update, the one-pager</text>
+        <text class="s1C" x="46" y="120">summarising 30 interviews into themes</text>
+        <text class="s1C" x="46" y="142">restructuring a messy doc into an argument</text>
+        <text class="s1C" x="46" y="164">one message rewritten for three audiences</text>
+        <text class="s1C" x="46" y="186">arguing the other side of your own case</text>
+        <text class="s1H" x="46" y="216">Was costing: hours of typing per week</text>
+
+        <rect x="454" y="34" width="400" height="40" rx="8" fill="#232935"/>
+        <text class="s1T" x="474" y="59">Commitment - the cost has not moved</text>
+        <text class="s1C" x="474" y="98">choosing which problem gets the quarter</text>
+        <text class="s1C" x="474" y="120">cutting the other two asks, out loud</text>
+        <text class="s1C" x="474" y="142">setting the number you are judged on</text>
+        <text class="s1C" x="474" y="164">saying no to somebody more senior</text>
+        <text class="s1C" x="474" y="186">owning it when the call was wrong</text>
+        <text class="s1H" x="474" y="216">Still costs: the same as it always did</text>
+
+        <rect x="26" y="240" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="s1Y" x="46" y="266">The half that got cheaper was never your bottleneck.</text>
+        <text class="s1C" x="46" y="290">You were not short of documents. You were short of decisions, and the price of a decision did not</text>
+        <text class="s1C" x="46" y="312">change at all. Cheap production beside unchanged commitment does not improve the ratio; it worsens it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one half collapsed, one half did not, and the ratio between them got worse</figcaption>
+    </figure>
+
+    <p class="lede">Which changes what you should be asking for. The instinct when production gets cheap is to ask for more of it: more documents, more options, faster turnaround. That instinct is exactly backwards, because volume was never the constraint and it is now free enough to become a nuisance.</p>
+
+    <table class="clean">
+      <thead><tr><th>The work</th><th>Cost to produce now</th><th>Stop asking for</th><th>Start asking for</th></tr></thead>
+      <tbody>
+        <tr><td>First-draft documents: PRD, update, one-pager</td><td>near zero</td><td>more of them, faster</td><td>one of them, with the decision on page one</td></tr>
+        <tr><td>Research summaries and theme lists</td><td>near zero</td><td>the themes</td><td>the themes with sources, and one verbatim quote</td></tr>
+        <tr><td>Options and alternatives</td><td>near zero</td><td>a longer options list</td><td>the two you rejected, and the reason</td></tr>
+        <tr><td>Choosing which problem gets the quarter</td><td>unchanged</td><td>consensus in the room</td><td>a named choice with a name attached to it</td></tr>
+        <tr><td>Setting what success means</td><td>unchanged</td><td>"improve engagement"</td><td>a baseline, a target, and a date</td></tr>
+        <tr><td>Saying no to a senior ask</td><td>unchanged</td><td>a document that explains it away</td><td>the sentence, said out loud, with a reason</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What actually got faster, stated narrowly<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Vague claims about productivity are how teams end up disappointed, so be precise. Three categories, and only one of them is a real gain:</p>
+        <ul>
+          <li><strong>Genuinely faster.</strong> The blank page. First drafts, restructuring, summarising, adapting one message for three audiences, and producing the strongest argument against your own proposal. That last one is underrated and the cheapest quality upgrade available to a PM: it used to require a colleague with time and courage, and now it requires four minutes.</li>
+          <li><strong>Not faster, and never was.</strong> Getting five stakeholders to agree. Knowing which of two genuinely good options is right for this company this quarter. The conversation where somebody is told no. None of these are writing problems, which is why none of them moved.</li>
+          <li><strong>Actively slower if you are careless.</strong> Anything where verifying the output costs more than writing it would have. Research synthesis is the classic case, and it is a2's whole subject: one invented theme costs more to find than the synthesis saved.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The honest one-line summary</strong>
+          AI removed most of the typing and none of the deciding. If your PMs' weeks were mostly typing, their weeks changed. If their weeks were mostly deciding, their documents got better and their calendars are identical - and if you were hoping for the second thing, that hope was the error, not their performance.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the commitment half cannot move<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is worth understanding why this is structural rather than a limitation that gets fixed next year. Commitment work has three properties that are not language problems:</p>
+        <ul>
+          <li><strong>It requires a stake.</strong> A decision means somebody bears the consequence. A tool bears none, so it has no basis for preferring one option over another and no reason to refuse a bad idea. Ask it to choose and it will produce something that reads like a choice, which is worse than a refusal.</li>
+          <li><strong>It requires knowing what your company cannot afford.</strong> Not the public facts about your market, the private ones: which team is already at capacity, which customer is one bad quarter from leaving, which promise you made in a board meeting. That context lives in people and mostly is not written down anywhere.</li>
+          <li><strong>It requires being wrong in public later.</strong> Accountability is the actual product of the commitment half. A decision nobody can be blamed for is not a decision, it is a description of a preference - and a document is very good at producing exactly that.</li>
+        </ul>
+        <p>Which is the reassuring part of this session, if you want one. The scarce, valuable, hard-to-hire half of the PM job is the half AI does not touch. The threat to your PMs is not that AI does their job; it is that the cheap half of their job becomes the visible half, and they get measured on it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE FLUENT ARTIFACT ============ -->
+  <section class="section" id="fluent">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the failure mode you have to learn to see</span>
+      <h2>A fluent artifact with no decisions in it <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Here is the new thing a leader has to be able to recognise, and it is genuinely new. Six well-structured pages arrive. Problem, solution, success criteria, requirements, all present, all confidently written. It reads like progress. Nothing in it can be checked, nothing is excluded, nothing is measurable, and no alternative was rejected. It is not a bad document. It is a document with the shape of a decision and none of the substance, and the reason you approve it is that you have spent twenty years using fluency as a proxy for thought.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 386" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What a review sees in a fluent document beside what is actually inside it, which is zero decisions">
+        <style>
+          .s2T { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .s2H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .s2B { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .s2C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .s2Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="s2H" x="26" y="22">The same six pages, read two ways</text>
+
+        <rect x="26" y="34" width="400" height="210" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="s2H" x="46" y="62">What the review sees</text>
+        <text class="s2C" x="46" y="92">a Problem section, four paragraphs</text>
+        <text class="s2C" x="46" y="114">a Solution section, well structured</text>
+        <text class="s2C" x="46" y="136">a Success section, confident prose</text>
+        <text class="s2C" x="46" y="158">Requirements, numbered and thorough</text>
+        <text class="s2C" x="46" y="180">six pages, delivered on Thursday</text>
+        <text class="s2H" x="46" y="214">Verdict in the room: looks thorough</text>
+
+        <rect x="454" y="34" width="400" height="210" rx="9" fill="#FEF2F2"/>
+        <text class="s2B" x="474" y="62">What is actually inside it</text>
+        <text class="s2C" x="474" y="92">no evidence anybody could check</text>
+        <text class="s2C" x="474" y="114">no named segment, so no boundary</text>
+        <text class="s2C" x="474" y="136">no baseline, so no way to be wrong</text>
+        <text class="s2C" x="474" y="158">nothing excluded from scope</text>
+        <text class="s2C" x="474" y="180">no trade-off, so nothing was chosen</text>
+        <text class="s2B" x="474" y="214">Decisions contained: zero</text>
+
+        <rect x="26" y="268" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="s2Y" x="46" y="294">Fluency arrives free now. Progress does not.</text>
+        <text class="s2C" x="46" y="318">A well-written six-page document used to be weak evidence that somebody had thought hard about the</text>
+        <text class="s2C" x="46" y="340">problem. It is no longer evidence of anything at all. Count the decisions in it, never the pages.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the shape of a decision, with the decision removed</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three tells, spottable without reading the document<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You are busy and the document is six pages. You do not need to read it to know whether it contains anything. Three tells, in order of reliability:</p>
+        <ul>
+          <li><strong>There is no not-doing list.</strong> Scan for a section that names what is out of scope. If it is absent, no boundary was set, and every adjacent request will arrive later as a small ticket. A document without exclusions has not finished deciding; it has finished describing.</li>
+          <li><strong>Every stakeholder wins.</strong> Read the summary paragraph. If sales, support and engineering all get what they wanted, nothing was chosen and you are looking at a document three people will approve while agreeing to three different things. That specific failure is a3's subject.</li>
+          <li><strong>Success is a direction, not a number.</strong> "Improve engagement", "increase satisfaction", "drive adoption". A direction cannot be wrong in twelve weeks, which sounds safe and is the opposite of safe: it guarantees the argument afterwards is about whether it worked rather than what to do next.</li>
+        </ul>
+        <p>Three tells, roughly ninety seconds, no reading. If all three fire, the honest response is not a comment in the margin. It is handing it back with one sentence: this is a description, come back with the decision.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why this fools good reviewers, including you<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is not a story about careless leaders. Three things conspire:</p>
+        <ul>
+          <li><strong>Fluency used to be costly.</strong> A well-argued document required someone to have argued it with themselves first. The correlation between polish and thought was real for your entire career, and correlations you have relied on for twenty years are not switched off by knowing they broke.</li>
+          <li><strong>Recognition is faster than reading.</strong> A reviewer under time pressure checks that the expected sections are present and that the prose does not stumble. Both pass. Neither has anything to do with whether a decision was made, and both feel like reviewing.</li>
+          <li><strong>Confident prose suppresses questions.</strong> Hedged writing invites challenge. A document that states everything evenly and without qualification reads as settled, and people do not interrogate settled things in a meeting with eleven items on the agenda.</li>
+        </ul>
+        <p>The fix is not more scepticism, which does not scale and makes you tiring to work with. It is a fixed, boring, repeated set of questions asked identically every time, so nobody has to decide whether today is a suspicious day. The last section of this page is that set.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THE BOTTLENECK MOVED ============ -->
+  <section class="section" id="bottleneck">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the org consequence</span>
+      <h2>If documents are cheap, judgement is scarce <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Follow the split to its organisational conclusion. Writing capacity went up several times over. Reviewing capacity is your calendar and your attention, and neither changed. Throughput in any pipeline is set by its narrowest step, and the narrow step just moved from the person writing to the person deciding whether what was written is any good. That person is usually you.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 410" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Production capacity rose, review capacity did not, so decision throughput is now set by review">
+        <style>
+          .s3T { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .s3H { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .s3C { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .s3A { font: 700 20px Inter, sans-serif; fill: #C3CAD6; }
+          .s3Y { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="s3H" x="26" y="22">Writing capacity went up. Review capacity did not.</text>
+
+        <rect x="26" y="36" width="250" height="46" rx="8" fill="#38404E"/>
+        <text class="s3T" x="44" y="64">Production capacity</text>
+        <text class="s3C" x="44" y="106">up several times over</text>
+        <text class="s3C" x="44" y="128">no longer the constraint</text>
+
+        <text class="s3A" x="292" y="68">&#8594;</text>
+
+        <rect x="316" y="36" width="250" height="46" rx="8" fill="#232935"/>
+        <text class="s3T" x="334" y="64">Review capacity</text>
+        <text class="s3C" x="334" y="106">unchanged: your calendar</text>
+        <text class="s3C" x="334" y="128">and your attention</text>
+
+        <text class="s3A" x="582" y="68">&#8594;</text>
+
+        <rect x="606" y="36" width="248" height="46" rx="8" fill="#6B7688"/>
+        <text class="s3T" x="624" y="64">Decision throughput</text>
+        <text class="s3C" x="624" y="106">set by the narrowest step</text>
+        <text class="s3C" x="624" y="128">which is now the middle one</text>
+
+        <rect x="26" y="156" width="828" height="112" rx="9" fill="#EFF1F5"/>
+        <text class="s3H" x="46" y="182">What the new bottleneck looks like on a Monday morning</text>
+        <text class="s3C" x="46" y="206">eleven documents in your review queue, four of which contain a decision</text>
+        <text class="s3C" x="46" y="228">a spec approved because there was no time to read it properly, and it looked fine</text>
+        <text class="s3C" x="46" y="250">the same argument reopened for the third time, because nobody wrote down what was given up</text>
+
+        <rect x="26" y="292" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="s3Y" x="46" y="318">Review capacity is now something you fund, not admin you absorb.</text>
+        <text class="s3C" x="46" y="342">Fewer artifacts per PM, each carrying a decision, costs you less than more artifacts carrying none.</text>
+        <text class="s3C" x="46" y="364">The funding version of this argument is a6. This session is about what you ask for on Monday.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the narrow step moved from writing to deciding</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The two levers you have, and only two<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>If review is the constraint, there are exactly two honest responses, and most organisations reach for a third that does not work.</p>
+        <ul>
+          <li><strong>Reduce what needs reviewing.</strong> Fewer artifacts, each carrying a decision. This is almost entirely in your control and costs nothing: it is a change to what you ask for. One document per decision, not one document per week.</li>
+          <li><strong>Make each review cheaper.</strong> A fixed set of questions asked in the same order every time, and a shared standard for what a document must contain before it is worth your attention. a3 sets that standard; the questions at the bottom of this page are the cheap version you can use on Monday.</li>
+          <li><strong>The one that does not work:</strong> reviewing faster. Skimming a fluent document does not detect a missing decision, because the missing decision is invisible at skim speed. That is the entire mechanism of the failure mode in Part 2. Speed is what causes it.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The uncomfortable implication</strong>
+          If your PMs are producing more documents than you can read properly, some of them are being approved on their formatting. That is a fact about your review process rather than about your PMs, and it is your problem to fix. Nobody will raise it with you, because raising it means volunteering that their work is not being read.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What this means for hiring and levelling<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>a6 handles the org and funding question properly. Two things are worth knowing now, because they affect decisions you might make this quarter:</p>
+        <ul>
+          <li><strong>Writing samples have stopped discriminating.</strong> A take-home document tells you almost nothing about a candidate now. What still discriminates is asking someone to defend a decision they actually made: what they chose, what they gave up, what they would have to have believed for the other option to be right, and what happened. That conversation cannot be produced by a tool because it is about a specific past.</li>
+          <li><strong>The junior rung got stranger, not simpler.</strong> The tasks juniors used to learn on were production tasks, and those are now nearly free. That does not remove the need for juniors; it removes the ladder they used to climb. If you want PMs who can make decisions in three years, they have to be making small ones now, with real consequences, in public.</li>
+        </ul>
+        <p>Neither of these is a reason to slow hiring, and both are reasons to change what you interview for. Do not settle either question from this page; a6 is where the argument is made with numbers.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Group exercise · 13 min · everyone in the room</span>
+      <h2>Count the decisions <span class="tag demo">★ run this in your next product review</span></h2>
+    </div>
+    <p class="lede">No slides, no framework, no artifact to produce. Everybody in the room opens a document they were actually sent in the last two weeks and counts two things. The exercise works because the ratio is always worse than people expect, and because it is impossible to argue with your own count.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Everyone opens the most recent product document they were sent.</strong> A spec, a brief, an update, a research summary. Not a new one, not a good one, the most recent one. No preparation and no selecting.</p></div>
+      <div class="step"><p><strong>Count the pages.</strong> Say the number. This takes four seconds and it is the number everybody currently uses as a proxy for effort.</p></div>
+      <div class="step"><p><strong>Now count the decisions.</strong> A decision is a sentence where something was chosen <em>and</em> something else was given up. "We will build summaries" is not a decision. "We will build summaries and not live notes this quarter" is one. Mark each one you find.</p></div>
+      <div class="step"><p><strong>Say both numbers out loud, around the table.</strong> Pages, then decisions. Do not explain or defend. The room will get quiet on its own, and the silence is the lesson rather than anything you say next.</p></div>
+      <div class="step"><p><strong>For every document that scored zero, write the one question you will ask its author.</strong> One sentence, and you have to actually ask it this week. If you cannot think of a question, the document had no content to question, which is the finding.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The prompt, word for word<span class="mini">use this exact wording</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "Open the most recent product document you were sent. Count the pages. Now count the decisions, where a decision is a sentence in which we chose something and gave something else up. Say both numbers."
+        </div>
+        <p><strong>What a good answer sounds like.</strong> "Four pages, two decisions: we picked the support problem over the sales one, and we cut the enterprise variant to hit the date." Specific, and both decisions have a loser. Somebody with a good document will name the loser without being asked, because they had to argue with that person to write the sentence.</p>
+        <p><strong>The failure mode to listen for.</strong> Padding the count. "Well, deciding to write the spec at all was a decision" and "we decided the scope was right" are not decisions, they are activities with the word decision attached. Also listen for the plural with no loser: "we decided to do summaries, live notes and the agent" is a list, and a list is what you get when nobody wanted to lose an argument. When you hear either, ask what was given up. If the answer is nothing, the count is zero.</p>
+        <p><strong>Do not let it become a performance review.</strong> The point is that this is systemic and mostly your own fault for asking for volume. Say that out loud in the first minute, or people will spend the exercise defending documents instead of counting them.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Second round: one stop, one start<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this</strong>
+          "Name one thing you are going to stop asking your team for, and one thing you are going to start asking for instead. Both have to be things you asked for in the last month."
+        </div>
+        <p><strong>What a good answer sounds like.</strong> "I am going to stop asking for a weekly written update, and start asking for one line on what changed in the decision. And I will stop asking for options and start asking which one you would pick and what you would be giving up." Concrete, recent, and it costs the person saying it something, because they liked the thing they are giving up.</p>
+        <p><strong>The failure mode to listen for.</strong> The stop with no cost: "I will stop asking for documents nobody reads" is not a commitment, because nobody asked for those. Push for a specific artifact with a specific name and a specific author. If the whole room names the same one, you have found a genuine ritual to kill and you should kill it before the meeting ends.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Cadence, three asks, zero decisions.</strong> Sales wants live in-meeting notes, and offers "every demo asks for it" plus three lost deals. Support wants post-meeting summaries, and offers 214 tickets in three months tagged "cannot find what was decided", the second most common tag. The CEO wants an agent, and offers nothing. A drafting tool handed those three asks will produce an excellent document about all three: a roadmap where live notes come first, summaries come second, agents are explored in a discovery spike, and every stakeholder reads their own name and relaxes. It is well structured, it is honest about nothing, and it contains zero decisions because none of the three asks lost. The real decision - summaries over live notes, at the cost of the demo moment sales wanted, because the pain is located after the meeting and live notes need a streaming pipeline that does not exist - is one paragraph, and it took a person with a stake to write it.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS TO ASK ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this with you</span>
+      <h2>Questions to ask your PMs <span class="tag concept">the whole point of the session</span></h2>
+    </div>
+    <p class="lede">Six questions. Ask them in the same words every time, so that nobody has to work out whether today is a day you are paying attention. Within about a month your PMs will start answering them in the document before the review, which is the entire objective.</p>
+    <ul>
+      <li><strong>"What decision does this document make?"</strong> Works because it is answerable in one sentence when a decision exists, and produces a summary of the document's contents when one does not. The tell is the length of the answer: a real decision is short, and an absent one takes ninety seconds to describe.</li>
+      <li><strong>"What are we not doing, because we are doing this?"</strong> Works because it cannot be answered by restating the plan. This is the single highest-yield question in a product review, and it is the one AI-drafted documents are least likely to have anticipated, since exclusion is not a writing task.</li>
+      <li><strong>"Who is worse off if we are right?"</strong> Works because every real decision has a loser, and naming them proves the trade-off happened outside the document. If nobody is worse off, nothing was chosen and you are looking at a list.</li>
+      <li><strong>"How will we know in twelve weeks whether this worked?"</strong> Works because it demands a number with a baseline and a date, and directional phrases collapse immediately under it. If the answer is "we will see improved engagement", the answer is that nobody can be wrong, which means nobody is accountable.</li>
+      <li><strong>"Which part of this did you draft, and which part did you decide?"</strong> Works because it is not an accusation and it gets an honest answer. It also tells your PMs that you distinguish the two, which changes what they bring you far more effectively than a policy about AI use.</li>
+      <li><strong>"What would have to be true for the other option to be right?"</strong> Works because it tests whether the alternative was ever seriously considered. Somebody who chose will answer instantly. Somebody who wrote a document will need to invent an answer while you watch.</li>
+    </ul>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">This week</span>
+      <h2>Five things to do before a2 <span class="tag exercise">◐ conversations, not documents</span></h2>
+    </div>
+    <ul>
+      <li>Run the decisions count on the three most recent documents you were sent, alone, without telling anyone. Write the pages-to-decisions ratio down. You will want that number in a5 and a6.</li>
+      <li>Kill one recurring artifact. Pick a document your team produces on a schedule rather than in response to a decision, and tell them to stop producing it. Watch for a month to see whether anybody misses it.</li>
+      <li>Ask one PM the "which part did you draft and which part did you decide" question, in a one-to-one, in a tone that makes clear you think drafting is fine. Their answer tells you where the line currently sits in your team, and their reaction tells you whether they believe you.</li>
+      <li>Say out loud, in a room with your team in it, that you will stop rewarding volume. Then be specific about one thing you have rewarded that you should not have. This is the part that makes it credible and the part everybody skips.</li>
+      <li>Bring one document to a2 that you believe contains real research. You will be testing whether you can actually tell, and picking one you are confident about is the point.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-assisted knowledge work: where drafting help is real, verification cost, automation bias</span><span class="note">Parts 1 to 3 · the production and commitment split, and the review bottleneck</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The PM craft literature on the role: decision ownership, saying no, accountability</span><span class="note">Part 1 · why the commitment half is structurally immovable</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research quality, representativeness, and provenance</span><span class="note">Named as the second tell only - the full treatment is a2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PRD and spec practice: what a signable spec must contain</span><span class="note">Three tells in Part 2 · the six checks and who signs are a3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Org design, funding, and levelling in an AI-assisted product team</span><span class="note">Part 3 self-study raises it and stops - a6 makes the argument</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, critical path, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your PMs are producing three times as many documents as last year and you are no happier with the decisions. What is the most likely explanation?</p>
+      <button class="qopt" type="button">A · They are using the tools badly and need training</button>
+      <button class="qopt" type="button">B · The documents are worse than they used to be</button>
+      <button class="qopt" type="button">C · Production got cheap and commitment did not, so you are getting more of the half you were never short of</button>
+      <p class="qwhy">Volume was never the constraint. The half that collapsed in cost was drafting; choosing, cutting and owning cost exactly what they always did. More output from the cheap half does not produce more decisions, and asking for it faster makes the ratio worse.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · A six-page spec arrives: every section present, confident prose, sales and support and engineering all satisfied by the summary. What have you most likely been handed?</p>
+      <button class="qopt" type="button">A · A description formatted as a decision - nothing was excluded and nobody lost, so nothing was chosen</button>
+      <button class="qopt" type="button">B · A well-aligned plan, since all three stakeholders are happy</button>
+      <button class="qopt" type="button">C · A good spec that needs a delivery date added</button>
+      <p class="qwhy">Every real decision has a loser. When all three asks survive in the summary, the trade-off was never made, and the document will be approved by three people who each read the version they wanted. The failure surfaces in the retro, or in a3, whichever comes first.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Review is now the narrowest step in your product pipeline. Which response does not work?</p>
+      <button class="qopt" type="button">A · Ask for fewer artifacts, each carrying a decision</button>
+      <button class="qopt" type="button">B · Review faster, skimming for the sections you care about</button>
+      <button class="qopt" type="button">C · Ask the same fixed questions in the same order every time</button>
+      <p class="qwhy">A missing decision is invisible at skim speed - recognising that the expected sections are present is exactly what a fluent empty document passes. Speed is the mechanism of the failure, not a defence against it. The two that work are reducing volume and making each review cheap and repeatable.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The split</b><span>Production (drafting, summarising, adapting, arguing the other side) collapsed in cost. Commitment (choosing, cutting, the number, saying no, owning it) did not move.</span></div>
+      <div class="cheat-item"><b>The error to stop making</b><span>Expecting the commitment half to speed up because the production half did. That hope is the disappointment, not your PMs.</span></div>
+      <div class="cheat-item"><b>Stop asking for</b><span>More documents, faster. Longer options lists. Consensus in the room.</span></div>
+      <div class="cheat-item"><b>Start asking for</b><span>Fewer, better decisions, with the trade-off written down and a loser named.</span></div>
+      <div class="cheat-item"><b>The new failure mode</b><span>A fluent artifact containing no decisions. It reads as progress and is not.</span></div>
+      <div class="cheat-item"><b>Three tells, no reading</b><span>No not-doing list · every stakeholder wins · success is a direction, not a number.</span></div>
+      <div class="cheat-item"><b>The bottleneck moved</b><span>Writing capacity rose, review capacity did not. Judgement is the scarce thing now, and review is what you fund.</span></div>
+      <div class="cheat-item"><b>The two questions</b><span>"What are we not doing?" and "how will we know it worked?" Next: a2, what evidence has to mean now.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-the-evidence-standard.html">Next: The evidence standard →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

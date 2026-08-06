@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn ai product management with phoebe - decide what to build, and why</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(56,64,78,.18); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .prereq-line { margin-top: 1.4rem; font-size: .85rem; color: var(--muted); border-left: 3px solid var(--amber); padding: .5rem .9rem; background: var(--indigo-50); border-radius: 0 var(--radius) var(--radius) 0; }
+  .prereq-line a { color: var(--indigo); font-weight: 700; }
+  .sources-line { margin-top: .8rem; font-size: .8rem; color: var(--muted); }
+
+  .ships { margin-top: 1.6rem; border: 1px solid var(--hairline); border-radius: var(--radius); overflow: hidden; }
+  .ships h3 { font-size: .95rem; font-weight: 800; padding: .7rem 1rem; background: var(--indigo-deep); color: #fff; }
+  .ships-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .8rem; padding: 1rem; background: var(--paper); }
+  .ships-col b { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--indigo); margin-bottom: .3rem; }
+  .ships-col code { display: block; font-size: .78rem; color: var(--ink); line-height: 1.9; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EFF1F5); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe</div>
+    <h1>Decide what to build, and why</h1>
+    <p class="sub">AI is excellent at the parts of product management that look like writing and useless at the part that is actually the job. It will draft a PRD from one sentence, and that PRD will read beautifully and decide nothing. This course is about the difference. A leader track on what AI changes in product work, what evidence has to mean now, and who signs - with no code to write. And a PM track that takes one real decision from a vague stakeholder ask to a signable spec with a metric, a boundary and a stated trade-off. The signature lab scores a spec against the six decisions that predict whether a build goes well - including the spec you paste into it.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="6">6</b><span>checks a spec must pass</span></div>
+      <div class="stat"><b data-count="100">100</b><span>score at the top rung</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for heads of product, founders &amp; stakeholders · 6 x 45 min · no code to write</span></h2>
+      <p class="plede">Thinking mode: what AI actually changes in product work and what it cannot touch, how to tell research from confabulation in your own team's documents, what a spec must contain before anyone signs it, prioritisation without theatre, metrics and the readout that admits it did not work, and how to fund an AI-assisted product org without hollowing out the craft. Each session ends with the questions to ask your PMs.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-what-ai-changes-in-product.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span><span class="cnum">Leader 1 · easy</span>
+        <h3>What AI changes in product</h3>
+        <p>The production half of the job collapses; the commitment half does not move at all. Where that leaves your PMs, and what to stop asking them for.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-the-evidence-standard.html" style="--diff:#34D399">
+        <span class="cicon">🔎</span><span class="cnum">Leader 2 · easy</span>
+        <h3>The evidence standard</h3>
+        <p>Fluent research summaries are free now, so the bar moves to provenance. How to tell a real finding from a plausible one in a document you did not write.</p>
+        <span class="meta"><span class="pill light">Provenance exercise</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-specs-and-accountability.html" style="--diff:#FBBF24">
+        <span class="cicon">✍️</span><span class="cnum">Leader 3 · medium</span>
+        <h3>Specs, decisions, accountability</h3>
+        <p>What a spec must contain before it is signable, and why a drafted document with no trade-off means two people agreed to different things.</p>
+        <span class="meta"><span class="pill light">Review-question drill</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-prioritisation-without-theatre.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span><span class="cnum">Leader 4 · medium</span>
+        <h3>Prioritisation without theatre</h3>
+        <p>Scoring frameworks are lenses, not answers - and AI will happily fill in inputs it does not have. How to spot a ranking built on guesses.</p>
+        <span class="meta"><span class="pill light">Score-the-scores</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-metrics-and-readouts.html" style="--diff:#FBBF24">
+        <span class="cicon">📉</span><span class="cnum">Leader 5 · medium</span>
+        <h3>Metrics and the honest readout</h3>
+        <p>Leading versus lagging, guardrails, and the cultural question underneath: does your org reward a readout that says the bet did not work?</p>
+        <span class="meta"><span class="pill light">Readout audit</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-the-ai-assisted-product-org.html" style="--diff:#FBBF24">
+        <span class="cicon">👥</span><span class="cnum">Leader 6 · medium</span>
+        <h3>The AI-assisted product org</h3>
+        <p>What to fund, what to review, what to leave alone - and how to keep the craft with the PM when the documents get cheap.</p>
+        <span class="meta"><span class="pill light">30-day plan</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The PM track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for practitioners · 10 sessions x 45 min (b10: 60) · bring a real backlog item</span></h2>
+      <p class="plede">One decision, start to finish. You are the PM on <strong>Cadence</strong>, the AI note-taker from this series - already branded, marketed and financed in the sibling courses, with nobody having decided what it builds next. Three people have asked for three different things. By b10 all three are comparable, two have not survived, and the one that did has a spec somebody can build from.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-the-job-and-setup.html" style="--diff:#34D399">
+        <span class="cicon">🚦</span><span class="cnum">PM 1 · easy</span>
+        <h3>The job, and a governed setup</h3>
+        <p>What you delegate, what you never delegate, what you must never paste - then meet Cadence and the three asks on your desk.</p>
+        <span class="meta"><span class="pill amber">▶ PMs start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-evidenced-problem.html" style="--diff:#34D399">
+        <span class="cicon">🎯</span><span class="cnum">PM 2 · easy</span>
+        <h3>From a vague ask to an evidenced problem</h3>
+        <p>Turn "everyone is asking for it" into a problem statement someone could disagree with on the evidence - and watch two of the three asks weaken.</p>
+        <span class="meta"><span class="pill light">opportunity brief</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-research-synthesis.html" style="--diff:#FBBF24">
+        <span class="cicon">🧪</span><span class="cnum">PM 3 · medium</span>
+        <h3>Research synthesis, and the trap</h3>
+        <p>Thirty snippets, clean themes in seconds - one invented, one over-generalised from a single quote. The highest-risk PM use of AI, made visible.</p>
+        <span class="meta"><span class="pill light">verification discipline</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-jobs-and-opportunity-tree.html" style="--diff:#FBBF24">
+        <span class="cicon">🌳</span><span class="cnum">PM 4 · medium</span>
+        <h3>Jobs to be done, opportunity tree</h3>
+        <p>From verified themes to the job, then the tree - and the branch you chose, with the branches you cut written down beside it.</p>
+        <span class="meta"><span class="pill light">the tree</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-the-spec-and-the-scorer.html" style="--diff:#FB923C">
+        <span class="cicon">📋</span><span class="cnum">PM 5 · hands-on</span>
+        <h3>The spec, and the scorer</h3>
+        <p>Six decisions a spec must contain, five real drafts scored against them: 15, 35, 55, 70, 100. Then paste your own in.</p>
+        <span class="meta"><span class="pill peach">★ signature lab</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-prioritisation-tradeoffs.html" style="--diff:#FB923C">
+        <span class="cicon">🔀</span><span class="cnum">PM 6 · hands-on</span>
+        <h3>Prioritisation and trade-offs</h3>
+        <p>Score the three asks under two lenses, watch the ranking move, flag every input the tool guessed. Then choose, and write what you gave up.</p>
+        <span class="meta"><span class="pill light">scored backlog</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-metrics-and-instrumentation.html" style="--diff:#FB923C">
+        <span class="cicon">📐</span><span class="cnum">PM 7 · hands-on</span>
+        <h3>Metrics and instrumentation</h3>
+        <p>The North Star, the guardrail, and the event spec written before the build - because the metric you forgot to instrument is the metric you will not have.</p>
+        <span class="meta"><span class="pill light">event spec</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-experiments-and-readouts.html" style="--diff:#F87171">
+        <span class="cicon">🧫</span><span class="cnum">PM 8 · hardest</span>
+        <h3>Experiments and honest readouts</h3>
+        <p>Design the test, decide the stopping rule in advance, then write the readout that says no - the document most orgs quietly do not reward.</p>
+        <span class="meta"><span class="pill light">the readout</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-roadmap-narrative.html" style="--diff:#F87171">
+        <span class="cicon">🗺️</span><span class="cnum">PM 9 · hardest</span>
+        <h3>Roadmap narrative and alignment</h3>
+        <p>The roadmap as an argument rather than a list of dates, and the three stakeholder conversations it has to survive - including the CEO's agent.</p>
+        <span class="meta"><span class="pill light">the narrative</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone-one-decision.html" style="--diff:#F87171">
+        <span class="cicon">🏁</span><span class="cnum">PM 10 · hardest · 60 min</span>
+        <h3>Capstone: one decision, end to end</h3>
+        <p>Your own backlog item through all five checkpoints - evidenced problem, verified research, signable spec, chosen trade-off, instrumented metric - then the handoff.</p>
+        <span class="meta"><span class="pill light">your item, alone</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <p class="prereq-line">This course owns <strong>discovery to decision</strong> and stops there on purpose. Charters, milestones, critical path, risk registers and status reports are <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management-with-phoebe</a>, and b10 hands over to it explicitly. The two are a pair: product management decides what to build and why, project management gets it built. For the metrics side deeper than b7 and b8 go, see <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a> and <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a>.</p>
+    <p class="sources-line">Built from PRD and discovery practice, jobs-to-be-done, opportunity-solution-tree thinking, and the research-quality literature - full source map and honest out-of-scope list in <code>materials/official-course-map.md</code>. The spec scorer's ladder (15 / 35 / 55 / 70 / 100) is measured rather than asserted: six real checks run over the actual text of five drafts.</p>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one decision. Leaders never write a spec; PMs never sit through theory they have not just applied to their own backlog.</p>
+      <div class="path"><b>🤝 The leader path (judge &amp; fund)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes-in-product.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-the-evidence-standard.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-specs-and-accountability.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-prioritisation-without-theatre.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-metrics-and-readouts.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-the-ai-assisted-product-org.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ The PM path (decide Cadence's quarter)</b>
+        <a class="pstep" href="courses/b1-the-job-and-setup.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-evidenced-problem.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-research-synthesis.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-jobs-and-opportunity-tree.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-the-spec-and-the-scorer.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-prioritisation-tradeoffs.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-metrics-and-instrumentation.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-experiments-and-readouts.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-roadmap-narrative.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone-one-decision.html">b10</a>
+      </div>
+      <div class="path"><b>🚀 The full journey (lead AND decide)</b>
+        <a class="pstep" href="courses/a1-what-ai-changes-in-product.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-the-job-and-setup.html">b1-b10</a>
+      </div>
+      <div class="path"><b>⚡ The one-evening tour</b>
+        <a class="pstep" href="courses/b3-research-synthesis.html">b3 the trap</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-the-spec-and-the-scorer.html">b5 the scorer</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-experiments-and-readouts.html">b8 the honest readout</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · discovery to decision; delivery is learn-ai-project-management</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "AI Product\nManagement",
+  centerColor: "#232935",
+  sessions: [
+    { label: "What AI\nchanges in product", href: "courses/a1-what-ai-changes-in-product.html", color: "#34D399",
+      concepts: [ { label: "Production vs commitment", href: "courses/a1-what-ai-changes-in-product.html" },
+                  { label: "What to stop asking", href: "courses/a1-what-ai-changes-in-product.html" } ] },
+    { label: "The\nevidence standard", href: "courses/a2-the-evidence-standard.html", color: "#34D399",
+      concepts: [ { label: "Provenance", href: "courses/a2-the-evidence-standard.html" },
+                  { label: "Plausible vs real", href: "courses/a2-the-evidence-standard.html" } ] },
+    { label: "Specs\ndecisions accountability", href: "courses/a3-specs-and-accountability.html", color: "#FBBF24",
+      concepts: [ { label: "Signable specs", href: "courses/a3-specs-and-accountability.html" },
+                  { label: "Who signs it", href: "courses/a3-specs-and-accountability.html" } ] },
+    { label: "Prioritisation\nwithout theatre", href: "courses/a4-prioritisation-without-theatre.html", color: "#FBBF24",
+      concepts: [ { label: "Lenses not answers", href: "courses/a4-prioritisation-without-theatre.html" },
+                  { label: "Guessed inputs", href: "courses/a4-prioritisation-without-theatre.html" } ] },
+    { label: "Metrics and\nthe honest readout", href: "courses/a5-metrics-and-readouts.html", color: "#FBBF24",
+      concepts: [ { label: "Leading vs lagging", href: "courses/a5-metrics-and-readouts.html" },
+                  { label: "Rewarding a no", href: "courses/a5-metrics-and-readouts.html" } ] },
+    { label: "The AI-assisted\nproduct org", href: "courses/a6-the-ai-assisted-product-org.html", color: "#FBBF24",
+      concepts: [ { label: "What to fund", href: "courses/a6-the-ai-assisted-product-org.html" },
+                  { label: "Keeping the craft", href: "courses/a6-the-ai-assisted-product-org.html" } ] },
+    { label: "The job and\na governed setup", href: "courses/b1-the-job-and-setup.html", color: "#34D399",
+      concepts: [ { label: "Never delegate", href: "courses/b1-the-job-and-setup.html" },
+                  { label: "Never paste", href: "courses/b1-the-job-and-setup.html" } ] },
+    { label: "From a vague ask\nto an evidenced problem", href: "courses/b2-evidenced-problem.html", color: "#34D399",
+      concepts: [ { label: "Ask to problem", href: "courses/b2-evidenced-problem.html" },
+                  { label: "Comparable asks", href: "courses/b2-evidenced-problem.html" } ] },
+    { label: "Research synthesis\nand the trap", href: "courses/b3-research-synthesis.html", color: "#FBBF24",
+      concepts: [ { label: "The invented theme", href: "courses/b3-research-synthesis.html" },
+                  { label: "Verification", href: "courses/b3-research-synthesis.html" } ] },
+    { label: "Jobs to be\ndone opportunity tree", href: "courses/b4-jobs-and-opportunity-tree.html", color: "#FBBF24",
+      concepts: [ { label: "The job", href: "courses/b4-jobs-and-opportunity-tree.html" },
+                  { label: "Branches cut", href: "courses/b4-jobs-and-opportunity-tree.html" } ] },
+    { label: "The spec\nand the scorer", href: "courses/b5-the-spec-and-the-scorer.html", color: "#FB923C",
+      concepts: [ { label: "Six decisions", href: "courses/b5-the-spec-and-the-scorer.html" },
+                  { label: "15 to 100", href: "courses/b5-the-spec-and-the-scorer.html" } ] },
+    { label: "Prioritisation\nand trade-offs", href: "courses/b6-prioritisation-tradeoffs.html", color: "#FB923C",
+      concepts: [ { label: "Two lenses", href: "courses/b6-prioritisation-tradeoffs.html" },
+                  { label: "What you gave up", href: "courses/b6-prioritisation-tradeoffs.html" } ] },
+    { label: "Metrics\nand instrumentation", href: "courses/b7-metrics-and-instrumentation.html", color: "#FB923C",
+      concepts: [ { label: "North star + guardrail", href: "courses/b7-metrics-and-instrumentation.html" },
+                  { label: "Event spec first", href: "courses/b7-metrics-and-instrumentation.html" } ] },
+    { label: "Experiments and\nhonest readouts", href: "courses/b8-experiments-and-readouts.html", color: "#F87171",
+      concepts: [ { label: "Stopping rule", href: "courses/b8-experiments-and-readouts.html" },
+                  { label: "The readout that says no", href: "courses/b8-experiments-and-readouts.html" } ] },
+    { label: "Roadmap narrative\nand alignment", href: "courses/b9-roadmap-narrative.html", color: "#F87171",
+      concepts: [ { label: "An argument", href: "courses/b9-roadmap-narrative.html" },
+                  { label: "Surviving contact", href: "courses/b9-roadmap-narrative.html" } ] },
+    { label: "Capstone: one decision\nend to end", href: "courses/b10-capstone-one-decision.html", color: "#F87171",
+      concepts: [ { label: "Five checkpoints", href: "courses/b10-capstone-one-decision.html" },
+                  { label: "Handoff to delivery", href: "courses/b10-capstone-one-decision.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

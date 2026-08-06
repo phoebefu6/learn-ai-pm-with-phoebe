@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 2 · From a vague ask to an evidenced problem - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 2 of 10</div>
+    <h1>From a vague ask to an <span class="accent">evidenced problem</span></h1>
+    <p class="sub">Three people have asked Cadence for three different things, and all three asks are stated in different units - one in lost deals, one in ticket counts, one in vibes. You cannot choose between things measured in different units, so nothing about the decision is possible yet. This session turns each ask into a problem statement somebody could disagree with on the evidence, grades the evidence honestly, and leaves the CEO's request sitting on the page with an empty evidence line - which is a far kinder place for it than the meeting where nobody could say so out loud.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Bring your carried backlog item</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-15 · Request, problem, solution</span>
+      <span class="a3" style="flex:8">15-40 · Anatomy, evidence grades, the three asks rewritten</span>
+      <span class="a4" style="flex:2">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why the three asks cannot be compared yet</h2>
+    </div>
+    <p class="lede">Session b1 put three asks on your desk. Sales wants live in-meeting notes, and offers "every demo asks for it" plus three lost deals. Support wants post-meeting summaries, and offers 214 tickets in three months tagged "cannot find what was decided" - the second most common tag in the queue. The CEO wants an agent, and offers nothing at all. Every one of those is a reasonable thing for that person to want, and not one of them is a problem statement.</p>
+    <p class="lede">The gap matters because ranking is impossible across different units. A lost deal is not commensurable with a ticket tag, and neither is commensurable with a strategic feeling. b6 does the prioritisation, but prioritisation is arithmetic on comparable inputs, and this session is where the inputs get made comparable. By the end, all three asks are written in the same six-part shape, and the differences between them are visible instead of rhetorical.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Worked artifact - real text to judge</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The six-part problem statement as a habit, three evidence grades you can name out loud without insulting anybody, and Cadence's three asks rewritten side by side - including the one whose evidence line is empty.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: REQUEST / PROBLEM / SOLUTION ============ -->
+  <section class="section" id="three-things">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers continuous-discovery interviewing practice</span>
+      <h2>A request is not a problem <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Nobody brings you a problem. People bring you <strong>requests</strong>, and a request is the output of somebody else's private thinking: they noticed something, formed a theory about the cause, picked a fix, and handed you the fix. The problem is the middle step, and it never survives the journey. That is not a criticism of your stakeholders - it is what being helpful looks like. It does mean the first thing you receive is always the least useful of the three.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three different things often confused: the request that arrives, the problem underneath it, and the solution already smuggled inside the request">
+        <style>
+          .rqT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rqH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .rqC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .rqY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="rqH" x="26" y="26">An ask arrives at the end of somebody's thinking, not the start of yours</text>
+
+        <rect x="26" y="40" width="262" height="44" rx="8" fill="#38404E"/>
+        <text class="rqT" x="44" y="68">Request · what they said</text>
+        <text class="rqC" x="44" y="106">"Add live notes to the meeting"</text>
+        <text class="rqC" x="44" y="126">arrives as one sentence</text>
+        <text class="rqC" x="44" y="146">with a solution already inside it</text>
+        <text class="rqC" x="44" y="166">and their credibility attached</text>
+
+        <rect x="308" y="40" width="262" height="44" rx="8" fill="#232935"/>
+        <text class="rqT" x="326" y="68">Problem · what breaks</text>
+        <text class="rqC" x="326" y="106">who, doing what, what breaks</text>
+        <text class="rqC" x="326" y="126">how often, what it costs</text>
+        <text class="rqC" x="326" y="146">and how we know all of that</text>
+        <text class="rqC" x="326" y="166">someone could disagree with it</text>
+
+        <rect x="590" y="40" width="264" height="44" rx="8" fill="#6B7688"/>
+        <text class="rqT" x="608" y="68">Solution · one way to fix it</text>
+        <text class="rqC" x="608" y="106">one of several ways to do it</text>
+        <text class="rqC" x="608" y="126">cheap to argue about</text>
+        <text class="rqC" x="608" y="146">expensive to be wrong about</text>
+        <text class="rqC" x="608" y="166">and the only part they can see</text>
+
+        <rect x="26" y="196" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="rqY" x="46" y="222">Asks arrive right to left. The work is walking them back to the middle column.</text>
+        <text class="rqC" x="46" y="246">Interrogate the request and you get an argument about the solution. Interrogate the problem and you get a</text>
+        <text class="rqC" x="46" y="266">conversation about evidence - the one conversation that can actually change somebody's mind, including yours.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three different things, routinely treated as one</figcaption>
+    </figure>
+
+    <p class="lede">Written out for Cadence's three asks, the smuggled solution is easy to see once you look for it. The third column is deliberately hedged: at this point in the session it is a <em>hypothesis</em> about what the request might be pointing at, not a finding. Turning column three into something checkable is the rest of the page.</p>
+
+    <table class="clean">
+      <thead><tr><th>The ask, as it arrived</th><th>The solution smuggled inside it</th><th>The problem it might be pointing at</th></tr></thead>
+      <tbody>
+        <tr><td>Sales: "we need live notes in the meeting"</td><td>a streaming transcription pipeline and an in-call UI</td><td>something in the demo fails to land, and the prospect cannot picture the value while watching</td></tr>
+        <tr><td>Support: "we need post-meeting summaries"</td><td>generated summaries, one per meeting, delivered somewhere</td><td>after a meeting ends, admins cannot locate the decision inside what was recorded</td></tr>
+        <tr><td>CEO: "we should have an agent"</td><td>an autonomous system acting on meetings on a user's behalf</td><td>unknown - no user, no moment, no failure and no frequency were named in the ask</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why every ask arrives pre-shaped as a solution<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>There are three reasons, and knowing which one you are looking at changes how you respond:</p>
+        <ul>
+          <li><strong>A solution is concrete and a problem is abstract.</strong> "Add live notes" is a sentence anybody can picture. "Prospects cannot evaluate asynchronous value during a synchronous demo" is a sentence that gets you asked to speak plainly. People bring the version that communicates.</li>
+          <li><strong>They have already done the thinking, just privately.</strong> The salesperson watched a prospect's face change. That observation is the most valuable thing in the room and it is not in the ask - it got compressed out on the way to you.</li>
+          <li><strong>Naming a solution is how influence works in most companies.</strong> A request for a feature can be tracked, escalated and won. A description of a problem cannot. If your org only rewards feature requests, you will only receive feature requests, and that is an org design fact rather than a personal failing.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one question that unpacks all three</strong>
+          "What did you see that made you think of this?" It is not a challenge, it costs nothing socially, and it reliably returns the observation that got compressed out. Note that it asks about something that happened, not about what they believe would work.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where AI genuinely helps at this stage<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is a drafting problem with a judgement problem hiding inside it, so the split from b1 applies cleanly. Three uses that are worth the time:</p>
+        <ul>
+          <li><strong>Draft the problem statement six ways.</strong> Same evidence, six framings, from narrow to broad. You are not looking for the best prose - you are looking for the framing whose implications you disagree with, because that disagreement is where your real belief about the problem is hiding.</li>
+          <li><strong>Ask for the counter-argument.</strong> "Argue that this is not a problem worth solving this quarter, using only the numbers above." A tool with no stake in the outcome writes this far more honestly than you will, and it takes about a minute.</li>
+          <li><strong>Ask what would have to be true.</strong> "List everything that must hold for this statement to be correct." You get back a list of assumptions, some of which you can check today and had not thought to check.</li>
+        </ul>
+        <p>And the hard line: it must never supply the evidence. Ask why admins lose decisions and you will get five fluent, plausible reasons, none of which came from an admin. That failure has its own session, because it is the expensive one - b3 stages it deliberately.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: ANATOMY ============ -->
+  <section class="section" id="anatomy">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the six-part shape</span>
+      <h2>A problem statement someone could disagree with <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The bar is not "true". Almost anything vague is true. The bar is <strong>disagreeable</strong>: a colleague who knows the product should be able to read your statement and say "I think the frequency is wrong" or "that is not the segment where this bites". If the only available response is agreement, you have written something nobody can argue with because there is nothing in it to argue about.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 372" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The six parts of a problem statement, each with the vague version it replaces and the Cadence version filled in">
+        <style>
+          .anT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .anH { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .anC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .anY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <rect x="26" y="28" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="anT" x="44" y="53">1 · Who exactly</text>
+        <text class="anH" x="44" y="88">Not: "our users"</text>
+        <text class="anC" x="44" y="108">Team admins on paid workspaces</text>
+        <text class="anC" x="44" y="126">of 5 to 50 seats. Not solo users.</text>
+
+        <rect x="306" y="28" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="anT" x="324" y="53">2 · What they are doing</text>
+        <text class="anH" x="324" y="88">Not: "using the product"</text>
+        <text class="anC" x="324" y="108">Arriving at Monday's meeting</text>
+        <text class="anC" x="324" y="126">knowing what was agreed before.</text>
+
+        <rect x="588" y="28" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="anT" x="606" y="53">3 · What breaks</text>
+        <text class="anH" x="606" y="88">Not: "it is hard to use"</text>
+        <text class="anC" x="606" y="108">The decision is 3 lines inside</text>
+        <text class="anC" x="606" y="126">a 40-minute transcript.</text>
+
+        <rect x="26" y="156" width="266" height="38" rx="8" fill="#6B7688"/>
+        <text class="anT" x="44" y="181">4 · How often</text>
+        <text class="anH" x="44" y="216">Not: "sometimes"</text>
+        <text class="anC" x="44" y="236">6 of 8 admins interviewed, on</text>
+        <text class="anC" x="44" y="254">every meeting. Not an edge case.</text>
+
+        <rect x="306" y="156" width="266" height="38" rx="8" fill="#232935"/>
+        <text class="anT" x="324" y="181">5 · What it costs</text>
+        <text class="anH" x="324" y="216">Not: "frustration"</text>
+        <text class="anC" x="324" y="236">A manual re-read, a retyped note,</text>
+        <text class="anC" x="324" y="254">or the decision simply lost.</text>
+
+        <rect x="588" y="156" width="266" height="38" rx="8" fill="#38404E"/>
+        <text class="anT" x="606" y="181">6 · How we know</text>
+        <text class="anH" x="606" y="216">Not: "everyone says so"</text>
+        <text class="anC" x="606" y="236">214 tickets, 8 interviews, 11%</text>
+        <text class="anC" x="606" y="254">revisit, 68% still take own notes.</text>
+
+        <rect x="26" y="286" width="828" height="66" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="anY" x="46" y="312">The test is not whether it sounds true. It is whether a colleague could disagree with it on the evidence.</text>
+        <text class="anC" x="46" y="336">If the only available reply is "sure, sounds about right", you have written a mood in the shape of a problem.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six parts, and the vague phrase each one replaces</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Part 6 is the one that changes the room<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Parts 1 to 5 make the statement specific. Part 6 - how we know - is the one that changes what happens in the meeting, for a slightly uncomfortable reason: it is the part that can be <em>empty</em>, and an empty box on a shared page is a fact rather than an accusation.</p>
+        <ul>
+          <li><strong>It moves the argument off the person.</strong> "I do not think we should build an agent" is a position that has an opponent. "The evidence line for the agent is blank" is a description of a document, and the person who brought the ask can fill it in.</li>
+          <li><strong>It makes the next step obvious.</strong> A blank evidence line is not a rejection - it is a research task with a named owner and a size. Sometimes it takes a day to fill.</li>
+          <li><strong>It protects you later.</strong> When the quarter goes badly, the question is always "why did we build that". A written evidence line answers it, and so does a written blank one, in a different and more useful way.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Write the frequency before you write the cost</strong>
+          A rare, expensive problem and a constant, cheap one look identical in prose and behave completely differently in a roadmap. Frequency is also usually the number you can get today from data you already have, which makes it the cheapest part of the statement to fill honestly.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Interrogating an ask without making an enemy<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The whole technique is one substitution: <strong>ask for the instance, not the opinion</strong>. Opinions have to be defended, so asking about one starts a contest. Instances just get recounted, and recounting is a friendly act.</p>
+        <table class="clean">
+          <thead><tr><th>Do not ask</th><th>Ask instead</th><th>What you get back</th></tr></thead>
+          <tbody>
+            <tr><td>"Do you really think that would have won those deals?"</td><td>"Which deals, and what did the buyer actually say?"</td><td>three names and some quotes, or an honest "let me check"</td></tr>
+            <tr><td>"Is every demo really asking for it?"</td><td>"Can you send me the last five demos where it came up?"</td><td>a countable set, which converts an assertion into data</td></tr>
+            <tr><td>"Why do you want an agent?"</td><td>"Who would use it, and what would they stop doing?"</td><td>either a real user and moment, or a visible gap</td></tr>
+            <tr><td>"Do we have evidence for this?"</td><td>"What did you see that made you think of this?"</td><td>the observation that got compressed out of the ask</td></tr>
+          </tbody>
+        </table>
+        <p>Two habits make this land rather than sting. First, ask the same questions of your own favourite idea, out loud, in the same meeting - the questions read as a standard rather than a challenge once people have watched you fail them. Second, when someone cannot produce the instance, do not win. Write "to be checked" in the evidence line and offer to check it with them. You want the practice to survive the meeting, not the point.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: EVIDENCE GRADES ============ -->
+  <section class="section" id="grades">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the research-quality literature</span>
+      <h2>The three grades of evidence a PM actually gets <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Product decisions almost never run on one clean kind of evidence. They run on a mixture of three, and the mixture is fine - what is not fine is a mixture presented as though it were all one grade. Naming the grade takes four words and removes most of the disagreement in a product review, because a surprising amount of that disagreement is two people arguing at different grades without noticing.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three grades of evidence: counted behaviour, reported behaviour and asserted belief, with what each can and cannot settle">
+        <style>
+          .grT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .grH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .grC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .grY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="grH" x="26" y="26">All three are legitimate. Only one of them is usually labelled honestly.</text>
+
+        <rect x="26" y="40" width="262" height="44" rx="8" fill="#232935"/>
+        <text class="grT" x="44" y="68">Grade 1 · Counted</text>
+        <text class="grC" x="44" y="106">analytics, ticket tags, logs</text>
+        <text class="grC" x="44" y="126">11% revisit rate. 214 tickets.</text>
+        <text class="grC" x="44" y="146">Strong: it definitely happened</text>
+        <text class="grC" x="44" y="166">Blind: it cannot tell you why</text>
+
+        <rect x="308" y="40" width="262" height="44" rx="8" fill="#38404E"/>
+        <text class="grT" x="326" y="68">Grade 2 · Reported</text>
+        <text class="grC" x="326" y="106">interviews, surveys, diaries</text>
+        <text class="grC" x="326" y="126">6 of 8 never reopen a transcript</text>
+        <text class="grC" x="326" y="146">Strong: it tells you why</text>
+        <text class="grC" x="326" y="166">Blind: people misremember</text>
+
+        <rect x="590" y="40" width="264" height="44" rx="8" fill="#6B7688"/>
+        <text class="grT" x="608" y="68">Grade 3 · Asserted</text>
+        <text class="grC" x="608" y="106">"everyone is asking for it"</text>
+        <text class="grC" x="608" y="126">"every demo asks for it"</text>
+        <text class="grC" x="608" y="146">Strong: fast, and often correct</text>
+        <text class="grC" x="608" y="166">Blind: no instance behind it</text>
+
+        <rect x="26" y="196" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="grY" x="46" y="222">Most escalations are grade 3 wearing grade 1's clothes.</text>
+        <text class="grC" x="46" y="246">"Every demo asks for it" sounds counted. Ask which demos and you get three deal names, and nobody has yet</text>
+        <text class="grC" x="46" y="266">checked what the buyer actually said. The fix is not to argue - it is to ask for the instance, not the opinion.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three grades, and the disguise that causes most of the trouble</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Grade</th><th>What it is</th><th>Cadence example</th><th>What it can and cannot settle</th></tr></thead>
+      <tbody>
+        <tr><td>1 · counted behaviour</td><td>something a system recorded happening, countable without asking anyone</td><td>214 tickets in 3 months; week-1 revisit rate of 11%; accuracy complaints on 1.4% of meetings</td><td>settles <em>whether</em> and <em>how often</em>. Cannot settle why, and cannot see anything you never instrumented</td></tr>
+        <tr><td>2 · reported behaviour</td><td>what people say they did, in their own words, about a specific past occasion</td><td>6 of 8 interviewed admins never reopen a transcript; 68% of surveyed admins still take their own notes</td><td>settles <em>why</em> and <em>what it costs them</em>. Cannot settle scale, and drifts toward the tidier story</td></tr>
+        <tr><td>3 · asserted belief</td><td>a confident claim with no instance attached, often from someone with good instincts</td><td>"every demo asks for it"; "everyone is shipping agents"; three lost deals offered but not yet examined</td><td>settles nothing on its own. Useful as a pointer to where to go looking, dangerous as a reason to build</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Grade 3 is not the enemy - unlabelled grade 3 is<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A senior person's instinct is genuinely informative. They have seen hundreds of customer conversations and their pattern-matching is often right, which is exactly why the unlabelled version is dangerous rather than merely wrong.</p>
+        <ul>
+          <li><strong>Labelled, it is a hypothesis with a sponsor.</strong> "My read, no data yet, is that live notes are what closes the demo" is a useful sentence. It says what it is, and it tells you what to go and count.</li>
+          <li><strong>Unlabelled, it outranks everything else in the room.</strong> Confidence plus seniority reads as evidence, and 214 counted tickets quietly lose to a strongly stated feeling. Nobody in the room did anything wrong; the units were simply never compared.</li>
+          <li><strong>Escalation launders the grade.</strong> An assertion that travels through three retellings arrives sounding like a finding. "Sales says every demo asks for it" becomes "demos are asking for it" becomes "there is demand for live notes". Each step drops a hedge.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Four words that do most of the work</strong>
+          Put "evidence grade" in your problem-statement template and fill it with one of: counted, reported, asserted, or none yet. It is not bureaucracy - it is the smallest possible change that lets a room compare two claims without anyone having to be the person who doubts a colleague.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Two traps inside grade 1 and grade 2<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Grading is not a ladder where higher always wins. Both of the upper grades have failure modes that a confident number happily hides:</p>
+        <ul>
+          <li><strong>Counted behaviour only counts what you instrumented.</strong> Cadence's 11% revisit rate is a real number about a real event, and it says nothing about admins who solved the problem outside the product entirely - the ones who retype three lines into a chat channel and never come back. The most important behaviour in a product is often the behaviour that leaves no event.</li>
+          <li><strong>A ticket tag is a taxonomy decision, not a fact.</strong> "Cannot find what was decided" being the second most common tag partly reflects how the support team labels things. Before that number carries a quarter, someone should read thirty of the tickets. That is a two-hour job and it has changed the meaning of a headline number more than once.</li>
+          <li><strong>Reported behaviour drifts toward coherence.</strong> People are not lying; they are constructing a tidy narrative from a messy week. This is why story-based interviewing asks "walk me through the last time" rather than "what do you usually do", and why "would you use this?" is not evidence of anything at all.</li>
+        </ul>
+        <p>Which is the honest summary of the whole grading exercise: it tells you what a claim can carry, not whether the claim is correct. b3 takes the grade 2 pile - eight interviews - and shows how it fails when a synthesis is trusted without verification.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED ARTIFACT ============ -->
+  <section class="section" id="artifact">
+    <div class="section-kicker">
+      <span class="klabel">Worked artifact · 8 min · everyone</span>
+      <h2>The three asks, rewritten <span class="tag demo">★ real text to judge</span></h2>
+    </div>
+    <p class="lede">This is the output of the session: an opportunity brief with one entry per ask, each in the same six-part shape and each carrying its evidence grade. Read all three, then notice what the layout does on its own - nobody had to say the awkward thing, because the awkward thing is now a blank field on a shared page.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Take the ask verbatim first.</strong> Write it in the requester's words, with their name on it, before you touch anything. This is a courtesy that pays for itself: they will read the brief, and the first thing they look for is whether you heard them.</p></div>
+      <div class="step"><p><strong>Extract the smuggled solution and set it aside.</strong> Name it explicitly on a separate line. Not to reject it, but so that it stops being the thing under discussion. It becomes a candidate again in b4, alongside alternatives the ask did not mention.</p></div>
+      <div class="step"><p><strong>Fill the six parts, leaving blanks blank.</strong> Who, what they are trying to do, what breaks, how often, what it costs, how we know. Resist the urge to make a thin line sound thicker - the whole value of the brief is that thin lines look thin.</p></div>
+      <div class="step"><p><strong>Grade the evidence in one word.</strong> Counted, reported, asserted, or none yet. Where grades are mixed, list each source with its own grade rather than averaging them into a vague "strong signal".</p></div>
+      <div class="step"><p><strong>Write the cheapest next check.</strong> For every blank and every grade 3, one line: what would settle this, and roughly how long it takes. A brief that ends in three cheap checks is a brief that survives the meeting.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Brief 1 · Support's ask · evidence grade: counted plus reported</strong>
+      <p><strong>Ask, verbatim:</strong> "We need post-meeting summaries." (Support lead) &nbsp;·&nbsp; <strong>Solution set aside:</strong> generated summaries, one per meeting.</p>
+      <p><strong>Problem statement.</strong> Team admins on paid workspaces of 5 to 50 seats are trying to arrive at their next meeting knowing what was agreed in the last one. What breaks is that the decision exists as roughly three lines inside a 40-minute transcript, and the product offers no way to get to those lines without re-reading. This happens on effectively every recurring meeting: 6 of the 8 admins interviewed never reopen a transcript once the meeting ends, and the week-1 revisit rate across all recorded meetings is 11%. It costs them a manual re-read, a retyped note somewhere else, or the decision itself, quietly lost. We know this from 214 support tickets in 3 months tagged "cannot find what was decided" (the second most common tag), 8 interviews with paid-workspace admins, the 11% revisit rate, and a survey in which 68% of admins say they still take their own notes during meetings.</p>
+      <p><strong>Cheapest next check:</strong> read 30 of the 214 tickets and confirm they are not concentrated in a handful of accounts. Half a day.</p>
+    </div>
+
+    <div class="callout tip">
+      <strong>Brief 2 · Sales' ask · evidence grade: asserted, with three unexamined instances</strong>
+      <p><strong>Ask, verbatim:</strong> "Every demo asks for it - we need live notes in the meeting." (Sales) &nbsp;·&nbsp; <strong>Solution set aside:</strong> streaming transcription with an in-call view.</p>
+      <p><strong>Problem statement.</strong> Prospects evaluating Cadence in a live demo are trying to judge whether it will change their meetings. What breaks is unclear: the claim is that seeing nothing happen during the call weakens the demo, but no instance of that has been examined. Frequency is stated as "every demo" and is not counted. Cost is offered as three lost deals. We know this from a sales assertion plus three deal names; we do not know which deals, what the buyer actually said, or whether live notes were a factor in any of them.</p>
+      <p><strong>Cheapest next check:</strong> read the notes on those three deals and ask the account owner what the buyer said, in their words. Under two hours, and it either upgrades this brief to grade 2 or it does not.</p>
+    </div>
+
+    <div class="callout tip">
+      <strong>Brief 3 · The CEO's ask · evidence grade: none offered</strong>
+      <p><strong>Ask, verbatim:</strong> "We should have an agent." (CEO) &nbsp;·&nbsp; <strong>Solution set aside:</strong> an autonomous system acting on meetings on a user's behalf.</p>
+      <p><strong>Problem statement.</strong> Who: not specified. What they are trying to do: not specified. What breaks today: not specified. How often: not specified. What it costs: not specified. <strong>How we know: no evidence offered.</strong></p>
+      <p><strong>Cheapest next check:</strong> one 20-minute conversation, asking a single question - what did you see that made you think of this? Strategic instinct from a founder is a real signal about the market, and it is grade 3 until somebody names a user and a moment. That is a research task, not a verdict.</p>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The empty field does the work that no human in the room wanted to do.</strong> In the meeting, "there is no evidence for the agent" is a sentence with a target, and most people will simply not say it to a founder. The same content, rendered as a row where five fields read "not specified" and the sixth reads "no evidence offered", is not an attack on anyone - it is a description of a document, sitting next to two other rows in the same format. Nobody has to be brave.</p>
+      <p><strong>And notice what it does not say.</strong> It does not say do not build an agent. It says that as written, the ask cannot be ranked against a brief carrying 214 tickets and eight interviews, because there is nothing in it to rank. The next move is a research task with an owner and a size, which is a real answer and a much better outcome for the person who brought the ask than a polite yes followed by two quarters of nothing. The ranking itself is b6's job, and by then all three of these will be in the same units.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="section" id="practice">
+    <div class="section-kicker">
+      <span class="klabel">Practice</span>
+      <h2>Your turn: grade, unpack, rewrite <span class="tag demo">★ 8 min</span></h2>
+    </div>
+    <p class="lede">Three exercises on real-sounding material. Do the first two in session, out loud, with disagreement encouraged.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Q1 · Grade these four claims<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One word each: counted, reported, asserted, or none yet. Say your answer before you read the verdict.</p>
+        <table class="clean">
+          <thead><tr><th>Claim</th><th>Grade</th><th>Why, and what it is worth</th></tr></thead>
+          <tbody>
+            <tr><td>"Week-1 transcript revisit rate is 11% of recorded meetings."</td><td>counted</td><td>a real event count. Note there is no target and never has been, so 11% is a fact with no verdict attached. Whether 11% is bad is a judgement, not a measurement</td></tr>
+            <tr><td>"68% of surveyed admins still take their own notes during meetings."</td><td>reported</td><td>a survey is self-report, so it carries why-ish information and unreliable scale. Strong here because it contradicts the product's core promise, which is a hard thing for a survey to produce by accident</td></tr>
+            <tr><td>"Enterprise buyers will not adopt this without live notes."</td><td>asserted</td><td>confident, plausible, no instance. Worth exactly one question: which buyer said that, and when?</td></tr>
+            <tr><td>"Admins would prefer a summary in their chat tool."</td><td>asserted, disguised as reported</td><td>the trap. "Would prefer" is a prediction about the future, and no amount of asking makes it evidence. If one admin said it, that is one anecdote about one workflow. b3 takes this exact failure apart</td></tr>
+          </tbody>
+        </table>
+        <p>The fourth is the one worth arguing about. "Would you use it" and "would you prefer" produce answers that sound like reported behaviour and are actually asserted belief - the interviewee's, not the stakeholder's, but asserted all the same.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q2 · Unpack an ask without the fight<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An engineering lead says: "we should let admins export everything to CSV, people keep asking." Write the three questions you would actually ask, then compare.</p>
+        <ul>
+          <li><strong>"Which people, and where did they ask?"</strong> - converts "keep asking" into a countable set, or reveals there is not one. Neutral, because it sounds like you are going to go and read them.</li>
+          <li><strong>"What did the last person say they were going to do with the file?"</strong> - the instance question. Export is almost always a workaround for something the product does not do, and the workaround tells you the job. This is the question that most often changes what gets built.</li>
+          <li><strong>"What made you think of this now?"</strong> - the compressed observation. Something happened this week.</li>
+        </ul>
+        <p>Notice that none of the three contains the word "why", and none of them requires the other person to defend a position. Also notice what you did not do: you did not say no, and you did not say yes. You collected the instance, and the ask either gets stronger or quietly stops being urgent.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q3 · Your carried item, in six parts<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Take the backlog item you picked in b1 - the one that gets argued about and never decided - and write it in the six-part shape. Fill what you can, leave the rest genuinely blank, and grade each source in one word.</p>
+        <p>Then read the blanks, because they are the finding. In most cases the reason the argument keeps restarting is visible in exactly one place: either the frequency is unknown, so nobody can size it, or the whole thing rests on grade 3 that everybody has been treating as grade 1. If you can fill the blank in under a day, you have found the cheapest useful piece of work on your desk this week. If it would take a month, that is a real answer too, and it belongs in the brief.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 20-30 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write your carried backlog item as a six-part problem statement, blanks left blank, and one word of evidence grade per source. One page, no more.</li>
+      <li>Add an "evidence grade" line to your team's problem or brief template, with the four allowed values: counted, reported, asserted, none yet. Nothing else about the template needs to change.</li>
+      <li>Take the loudest ask currently on your desk and ask only for the instance: which one, and what did they say. Write down what came back, including "let me check".</li>
+      <li>Draft your problem statement six ways with an AI tool, from narrow to broad, then keep the one whose implications you disagree with. That disagreement is your actual belief about the problem, and it is worth more than the prose.</li>
+      <li>For every blank and every grade 3 in your statement, write the cheapest next check and how long it takes. Bring the blanks to b3 - that session is about not filling them with plausible fiction.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Continuous-discovery interviewing practice - story-based questions, why "would you use it" is not evidence</span><span class="note">Part 1 + Part 2 · ask for the instance, not the opinion</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The evidence standard - counted, reported and asserted claims, and what each can carry</span><span class="note">Part 3 · the three grades, and the grade-3 disguise</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Opportunity-solution-tree thinking - the request as one solution among several</span><span class="note">Part 1 · the smuggled solution; the tree itself is b4</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Research-quality literature - sampling, instrumentation blind spots, coherence drift</span><span class="note">Part 3 self-study · the full synthesis treatment is b3</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PRD practice - problem evidenced, the first of the six spec checks</span><span class="note">Named here, taught and scored in b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, critical path, status reporting</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A stakeholder says "we need live notes in the meeting". What have you actually received?</p>
+      <button class="qopt" type="button">A · A problem, stated in the user's language</button>
+      <button class="qopt" type="button">B · A requirement, which you should now write into a spec</button>
+      <button class="qopt" type="button">C · A solution, with the problem and the observation behind it compressed out on the way to you</button>
+      <p class="qwhy">Requests are the end of somebody else's thinking. The valuable part - what they saw that made them think of this - got dropped, because a solution is concrete and communicates, and a problem is abstract and does not. Your first move is to go and get the observation back.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · "Every demo asks for it, and we lost three deals over it." What grade is this, and what is the next move?</p>
+      <button class="qopt" type="button">A · Counted, because there is a number in it - three</button>
+      <button class="qopt" type="button">B · Asserted with three unexamined instances - so ask which deals and what the buyer actually said, which either upgrades it to reported or does not</button>
+      <button class="qopt" type="button">C · Reported, because a salesperson is reporting on their own meetings</button>
+      <p class="qwhy">Most escalations are grade 3 wearing grade 1's clothes. A number inside an assertion does not make it counted; "every" is uncounted and the three deals have not been read. The whole move costs under two hours and it is a favour to the person who brought the ask, not a challenge to them.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · In the opportunity brief, the CEO's agent has "no evidence offered" written in its evidence line. What has that achieved?</p>
+      <button class="qopt" type="button">A · It turned an unsayable thing into a visible field, so the gap is a description of a document rather than a challenge to a person - and the next step is a research task, not a rejection</button>
+      <button class="qopt" type="button">B · It has killed the idea, which was the point</button>
+      <button class="qopt" type="button">C · It proves the CEO is wrong about the market</button>
+      <p class="qwhy">A blank evidence line is not a verdict. Founder instinct is often right and is genuinely informative about the market - it is simply grade 3 until somebody names a user and a moment. Written down beside two other briefs in the same format, it becomes comparable and cheaply checkable, and nobody in the room had to be the one to doubt a colleague out loud.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three different things</b><span>Request (what they said) · problem (what breaks) · solution (one way to fix it). Asks arrive as the third.</span></div>
+      <div class="cheat-item"><b>The six parts</b><span>Who exactly · what they are trying to do · what breaks · how often · what it costs · how we know.</span></div>
+      <div class="cheat-item"><b>The bar</b><span>Not "true" - disagreeable. If the only reply is "sounds right", you wrote a mood.</span></div>
+      <div class="cheat-item"><b>Three grades</b><span>Counted (analytics, tickets) · reported (interviews, surveys) · asserted ("everyone is asking").</span></div>
+      <div class="cheat-item"><b>The disguise</b><span>Most escalations are grade 3 wearing grade 1's clothes. A number inside an assertion is still an assertion.</span></div>
+      <div class="cheat-item"><b>The one substitution</b><span>Ask for the instance, not the opinion: "which deal, and what did they say?"</span></div>
+      <div class="cheat-item"><b>AI here</b><span>Six framings, the counter-argument, what would have to be true. Never the evidence itself.</span></div>
+      <div class="cheat-item"><b>The empty field</b><span>A blank evidence line is a research task with a size, not a rejection. Next: b3, and how synthesis invents.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 2 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-the-job-and-setup.html">← Previous: The job, and a governed setup</a> &nbsp;·&nbsp; <a href="b3-research-synthesis.html">Next: Research synthesis, and the trap →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

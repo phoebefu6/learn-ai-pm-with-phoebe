@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 7 · Metrics and instrumentation - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 7 of 10</div>
+    <h1>Metrics, and <span class="accent">the event spec</span></h1>
+    <p class="sub">This is the session that has to happen before the build, and the reason is unglamorous: a metric you did not instrument is a metric you will not have when the readout is due. So we pick one primary number for the decision b6 made, run every candidate through the vanity test, go and find the baseline nobody has ever set a target on, write the guardrail as a promise to another team, and then do the part most courses skip entirely. We write the event spec: the names, the properties, when each one fires, and the question each one answers. On the page, in full, before a line of code exists.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Worked artifact · the event spec</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-16 · One primary, and the set around it</span>
+      <span class="a3" style="flex:6">16-40 · The vanity test, then the event spec</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Before the build, or not at all</h2>
+    </div>
+    <p class="lede">b6 made the call: post-meeting summaries for team admins on paid workspaces of 5 to 50 seats, at the cost of the live in-meeting notes sales wanted. The spec from b5 is signable. Engineering could start on Monday. This session is the reason they should not start until Wednesday, and the two days are the cheapest insurance in the whole course.</p>
+    <p class="lede">Everything here is reversible for about a week and irreversible after that. You can choose a different primary metric while the feature is a document. Once it has shipped without the events that produce the metric, your options are to guess, to wait a quarter for the next instrumentation cycle, or to reinterpret whatever numbers you happen to have, which is the readout failure <a href="b8-experiments-and-readouts.html">b8</a> spends a whole session on. Two of those three options are bad and the third is worse.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Worked artifact - the event spec, in full</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      One primary metric with a real baseline and a target, a guardrail written as a promise to another team, and an event spec for your own carried item: names, properties, firing conditions, and the question each event answers.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: THE METRIC SET ============ -->
+  <section class="section" id="metric-set">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers North Star and guardrail metric practice</span>
+      <h2>One primary, and the set around it <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The leader track argues the rule in <a href="a5-metrics-and-readouts.html">a5</a>: one primary per decision, because you can only be judged on one thing at a time. Here we spend it. Below is the actual metric set for Cadence's summaries build, with the rejects named, because the rejects are where the learning is. Measure everything you like. Exactly one of these numbers is the one the team agreed to be wrong about.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadence's metric set for the summaries build: the primary metric with its target, the secondary, the guardrail, the lagging context metric, and the rejected candidates">
+        <style>
+          .mtY { font: 700 13px Inter, sans-serif; fill: #33270A; }
+          .mtYc { font: 400 11.5px Inter, sans-serif; fill: #33270A; }
+          .mtT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .mtW { font: 400 11.5px Inter, sans-serif; fill: #C3CAD6; }
+          .mtH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .mtC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="mtH" x="26" y="24">One decision, one primary. Everything else is context, protection, or a reject.</text>
+
+        <rect x="26" y="36" width="828" height="86" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="mtY" x="46" y="62">PRIMARY · week-1 transcript revisit rate · 11% today, 30% by week 4</text>
+        <text class="mtYc" x="46" y="88">Moves within a week, so it can still change what we build. This is the number we agreed to be judged on,</text>
+        <text class="mtYc" x="46" y="110">chosen now, in public, before anybody knows which way it will go.</text>
+
+        <rect x="26" y="134" width="268" height="100" rx="8" fill="#38404E"/>
+        <text class="mtT" x="46" y="158">SECONDARY</text>
+        <text class="mtW" x="46" y="182">in-meeting note-taking</text>
+        <text class="mtW" x="46" y="202">68% today, 58% by week 6</text>
+        <text class="mtW" x="46" y="222">self-reported, and we say so</text>
+
+        <rect x="306" y="134" width="268" height="100" rx="8" fill="#232935"/>
+        <text class="mtT" x="326" y="158">GUARDRAIL</text>
+        <text class="mtW" x="326" y="182">accuracy complaints</text>
+        <text class="mtW" x="326" y="202">at or below 1.4% of meetings</text>
+        <text class="mtW" x="326" y="222">a breach pauses the rollout</text>
+
+        <rect x="586" y="134" width="268" height="100" rx="8" fill="#6B7688"/>
+        <text class="mtT" x="606" y="158">LAGGING · context only</text>
+        <text class="mtW" x="606" y="182">paid seat retention, 5 to 50</text>
+        <text class="mtW" x="606" y="202">moves in a quarter, so it</text>
+        <text class="mtW" x="606" y="222">judges and cannot steer</text>
+
+        <rect x="26" y="254" width="828" height="100" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="mtH" x="46" y="280">Rejected, and worth naming: summaries generated per week, summary open rate, and NPS.</text>
+        <text class="mtC" x="46" y="304">The first two go up because we shipped, which is what the vanity test is for. NPS moves in a quarter and twelve</text>
+        <text class="mtC" x="46" y="326">other things move it. The one we actually want, time to find a decision, has no instrument, so we did not pick it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four numbers kept, three rejected, and the reason for each</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Leading or lagging, in the only version that changes what you do<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Forget the taxonomy. There is one question, and it is about time: <strong>if this number moves, when do I find out, and can I still act on it?</strong></p>
+        <ul>
+          <li><strong>Revisit rate moves in a week.</strong> Ship on Monday, read it the following Monday, and if it has not budged you can change the trigger, the surface, the copy, or stop entirely. That is a metric that steers.</li>
+          <li><strong>Seat retention moves in a quarter.</strong> By the time it says anything, the quarter is over, four other things have shipped, and you cannot separate your effect from theirs. That is a metric that judges.</li>
+          <li><strong>Only one of the two can be primary for this build,</strong> because the primary is the number you act on. Retention is the thing the company actually cares about, and it is still the wrong choice here, which is the part that feels wrong and is not.</li>
+        </ul>
+        <p>The honest way to hold both is to say so explicitly in the spec: revisit rate is the primary because it is the only one that can steer, retention is the outcome we believe it feeds, and the link between them is a belief rather than a measurement. Write that sentence down. It is what makes the b8 readout possible to have without anybody looking foolish, because you predicted the structure of the argument before you had the data.</p>
+        <div class="callout tip">
+          <strong>The sentence to put in every spec</strong>
+          "We are steering on X, which moves in a week. We believe X drives Y, which moves in a quarter. If X moves and Y does not, our belief was wrong and that is a more valuable finding than the feature." Nobody can accuse you of moving goalposts you wrote down in advance.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The guardrail, and the property that stops it blaming you<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The guardrail is the promise you make to the rest of the company: in pursuing our number, we will not damage yours. On Cadence it is transcript accuracy complaints, currently 1.4% of meetings, and the promise is that it does not rise. Support owns the consequences of that number and support did not choose to run this experiment, which is exactly why the promise has value.</p>
+        <p>The practical part, and the part that only shows up when you write the events: a guardrail needs to be instrumented at least as carefully as the primary, and usually more carefully, because it will be used against you. If your complaint event does not record <em>what</em> the complaint was about, then every pre-existing transcription grumble in the product lands in your guardrail the week you ship. You will spend the readout arguing about attribution instead of about the result, and you will lose, because the number is real and you cannot break it down.</p>
+        <p>So the complaint event carries an <code>object</code> property with two values, transcript or summary. One property, decided in an afternoon, and it is the difference between "complaints rose to 1.6%" and "transcript complaints held at 1.3% and summary complaints added 0.3%". Those are completely different conversations and the second one is true.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why three co-equal metrics is the same as none<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is worth being concrete about the failure, because "one primary metric" sounds like a stylistic preference until you watch it break.</p>
+        <p>Suppose Cadence had named revisit rate, activation and NPS as three co-equal success metrics. Four weeks later revisit rate is up 8 points, activation is flat, and NPS has drifted down by a point. Every person in the room now has a defensible reading. The team that built it leads with revisit rate. The sceptic leads with NPS. The readout becomes a negotiation about which chart goes first, the decision rule cannot fire because it does not know which number it applies to, and the eventual conclusion is that the result was mixed and we should keep going, which is the conclusion that every set of numbers produces when nobody committed in advance.</p>
+        <p>Instrument all three. Report all three. But name one of them, before the build, as the one the decision hangs on, and let the other two be context. The cost of doing that is that you might be wrong in public, and that cost is the entire product.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE VANITY TEST AND THE BASELINE ============ -->
+  <section class="section" id="vanity">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers metric selection, baselines and vanity numbers</span>
+      <h2>The vanity test, and the baseline nobody pulled <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">One question separates a metric from a number that will make everyone feel good for a quarter: <strong>if this goes up and nothing else does, do we care?</strong> Ask it out loud about every candidate before you choose. It takes ten seconds per metric and it removes most of them, including the ones a drafting tool will hand you first, because the numbers that are easiest to write about are usually the ones that only move in one direction.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four candidate metrics run through the vanity test, and the belief the chosen metric encodes">
+        <style>
+          .vnH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .vnL { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .vnY { font: 700 11.5px Inter, sans-serif; fill: #33270A; }
+          .vnC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="vnH" x="26" y="24">The vanity test: if this number goes up and nothing else does, do we care?</text>
+
+        <rect x="26" y="36" width="300" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="vnL" x="46" y="58">Summaries generated per week</text>
+        <text class="vnC" x="346" y="58">No. It goes up the day we ship, even if nobody reads one.</text>
+
+        <rect x="26" y="80" width="300" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="vnL" x="46" y="102">Summary open rate</text>
+        <text class="vnC" x="346" y="102">Mostly no. A new thing gets opened once, so it can barely fall.</text>
+
+        <rect x="26" y="124" width="300" height="34" rx="7" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="vnY" x="46" y="146">Week-1 transcript revisit rate</text>
+        <text class="vnC" x="346" y="146">Yes. It is the behaviour the 214 tickets describe. Chosen.</text>
+
+        <rect x="26" y="168" width="300" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="vnL" x="46" y="190">Paid seat retention</text>
+        <text class="vnC" x="346" y="190">Yes, and it moves in a quarter. Real, and useless for steering.</text>
+
+        <rect x="26" y="212" width="828" height="100" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="vnH" x="46" y="238">Every metric encodes a belief. Ours: that going back to the record is the behaviour worth buying.</text>
+        <text class="vnC" x="46" y="262">If that belief is wrong, and a good summary means an admin never needs the transcript again, then this number</text>
+        <text class="vnC" x="46" y="284">will understate the feature and we will not find out until the readout. We wrote the belief down on purpose,</text>
+        <text class="vnC" x="46" y="306">so that being wrong about it is a finding rather than an argument about what we meant all along.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four candidates, ten seconds each, and the belief hiding inside the winner</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The baseline is three numbers, not one<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Cadence's revisit rate is 11% and nobody has ever set a target for it. That is not a story about a badly run product; it is the normal state of most product metrics in most companies, and the leader track spends a whole section on why nobody funds the afternoon it takes to fix. Your job here is the afternoon itself, and the thing to know is that pulling "the baseline" means pulling three things:</p>
+        <ul>
+          <li><strong>The level.</strong> 11.0% of recorded meetings, on paid workspaces of 5 to 50 seats. Note the segment. A number pulled across all workspaces would include solo users whose calls are short enough to skim, and it would be a different number measuring a different thing.</li>
+          <li><strong>The variance.</strong> Twelve weekly readings gave a mean of 11.0% and a range of 9.4% to 12.8%. This is the part everybody skips, and it is what tells you that a post-launch reading of 12.5% is nothing at all. Without it, every small movement is arguable in both directions, forever.</li>
+          <li><strong>The shape.</strong> Does it dip in the last week of a quarter, rise in January, move when a big account onboards? Twelve readings will not tell you everything, and they will tell you whether you are about to attribute a seasonal pattern to your feature.</li>
+        </ul>
+        <p>Then, and only then, set the target. 30% by week 4 is a real target because there is a real 11% under it and a known band of noise around that. The same 30% with no baseline is a wish that cannot be missed, and a number that cannot be missed will never make anybody change their mind.</p>
+        <div class="callout tip">
+          <strong>The rule of thumb that stops the argument at the readout</strong>
+          If the target is inside the historical range of the baseline, you have not set a target, you have described a normal week. 30% against a 9.4% to 12.8% band is comfortably outside it. Check that before you commit, because it is embarrassing to discover afterwards and it takes two minutes now.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Three vanity numbers you will be offered this quarter<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>All three are legitimate operational numbers and all three fail as a primary metric, for the same structural reason: they measure that the feature exists rather than that the problem got smaller.</p>
+        <ul>
+          <li><strong>Volume of the thing you shipped.</strong> Summaries generated per week. It goes from zero to thousands on launch day and the chart is beautiful. It would look identical if every summary were wrong and nobody ever opened one.</li>
+          <li><strong>First-touch usage of the thing you shipped.</strong> Summary open rate. New things get opened once out of curiosity, so the number is high in week one, decays, and the decay gets read as a problem with the rollout rather than as the shape of novelty. It also cannot really fall below its floor, which means it cannot deliver bad news.</li>
+          <li><strong>A composite satisfaction score.</strong> NPS or a CSAT average. Moves in a quarter, moves for twelve reasons, and is the single easiest number in the company for a well-written narrative to explain in whichever direction is convenient.</li>
+        </ul>
+        <p>The tell they share: none of them can go down as a result of your feature being bad. A metric that cannot deliver bad news is not an instrument, it is a decoration, and choosing one is how a team spends a quarter and ends it without learning anything about whether the problem moved.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What to do when the number you want does not exist<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The metric Cadence actually wants is time to find a decision: how long it takes a team admin, two days after a call, to answer "what did we agree". That is the real job, it is what the 214 tickets are about, and there is no way to measure it from product events. You cannot instrument a question somebody asks themselves at their desk.</p>
+        <p>There are three honest responses and one dishonest one. The dishonest one is to pick a proxy and then talk about it as though it were the real thing, which is how a team ends up defending revisit rate as if it were the goal rather than a stand-in for it.</p>
+        <ul>
+          <li><strong>Pick the closest observable proxy and label it as a proxy, in writing.</strong> Revisit rate is the proxy here, and the spec says so in the same sentence that names it. Then the confound is a known limitation rather than a surprise.</li>
+          <li><strong>Add a cheap direct instrument alongside it.</strong> The in-product pulse question that produces the 68% note-taking number is exactly this: self-reported, weak, and the only direct read available. Weak evidence that you have labelled weak beats strong evidence about the wrong thing.</li>
+          <li><strong>Accept that some outcomes are measured by research rather than by analytics,</strong> and put the research on the calendar next to the readout. Five interviews at week 6 will tell you things no event ever will, and they cost a fortnight of somebody's attention rather than an engineering cycle.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: METRIC TO EVENT ============ -->
+  <section class="section" id="chain">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers instrumentation and the event spec</span>
+      <h2>From the decision down to a property name <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Here is the whole discipline in one chain. A decision needs a metric; a metric is really a question about behaviour; a question about behaviour needs an event; and an event is only useful if it carries the properties that let you slice it. Engineering can build from the bottom of that chain and cannot build from the top, and nobody tells you which rung you stopped at until the readout, when it is a quarter too late.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The chain from the product decision down to the event properties, worked through for Cadence's primary metric">
+        <style>
+          .chT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .chH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .chC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="chH" x="26" y="24">A metric you did not instrument is a metric you will not have</text>
+
+        <rect x="26" y="36" width="200" height="36" rx="8" fill="#232935"/>
+        <text class="chT" x="44" y="59">1 · The decision</text>
+        <text class="chC" x="242" y="59">Ship post-meeting summaries, not live notes. Decided in b6.</text>
+
+        <rect x="26" y="80" width="200" height="36" rx="8" fill="#38404E"/>
+        <text class="chT" x="44" y="103">2 · The metric</text>
+        <text class="chC" x="242" y="103">Week-1 transcript revisit rate. 11% today, 30% by week 4.</text>
+
+        <rect x="26" y="124" width="200" height="36" rx="8" fill="#6B7688"/>
+        <text class="chT" x="44" y="147">3 · The question</text>
+        <text class="chC" x="242" y="147">In week 1, did somebody go back to a meeting we summarised?</text>
+
+        <rect x="26" y="168" width="200" height="36" rx="8" fill="#38404E"/>
+        <text class="chT" x="44" y="191">4 · The event</text>
+        <text class="chC" x="242" y="191">transcript_opened, fired when the transcript view loads.</text>
+
+        <rect x="26" y="212" width="200" height="36" rx="8" fill="#232935"/>
+        <text class="chT" x="44" y="235">5 · The properties</text>
+        <text class="chC" x="242" y="235">meeting_id · workspace_id · seat_band · days_since_meeting · entry_point</text>
+
+        <rect x="26" y="258" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="chH" x="46" y="284">Engineering can build from row 5. They cannot build from row 2, and nobody says so out loud.</text>
+        <text class="chC" x="46" y="306">A missing property is a question you cannot answer for a quarter, and it costs one line to add today.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five rungs, and the two days between rung 2 and rung 5</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Properties are where the readout is won or lost<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The event names are the easy part and almost everybody gets them roughly right. The properties are where the difference lives, because a property is the only way to ask a follow-up question, and the readout is entirely made of follow-up questions.</p>
+        <p>Take one property from the spec below: <code>entry_point</code> on <code>transcript_opened</code>, with values search, meeting list, summary link, shared link, notification. It costs an engineer about ten minutes. Now look at what it buys at the readout:</p>
+        <ul>
+          <li><strong>Did the summary cause the revisit?</strong> If revisit rate rose and the growth is all in the summary-link entry point, that is a genuinely different story from the same rise spread evenly across search and the meeting list.</li>
+          <li><strong>Is the feature discoverable?</strong> If almost nobody arrives via the summary link, the summary might be fine and the link might be invisible, which is a copy and placement fix rather than a strategy change.</li>
+          <li><strong>Should phase two exist?</strong> If the notification entry point does nothing, the digest email you were planning is a much weaker bet, and you learned that for free.</li>
+        </ul>
+        <p>Without the property, all three of those questions get answered with an opinion. The general rule: for every number you will report, write down the first three questions somebody will ask when they see it, then check that a property exists for each one. That takes five minutes and it is the highest-return five minutes in this session.</p>
+        <div class="callout tip">
+          <strong>The denominator is a property problem too</strong>
+          Revisit rate is a fraction, and the fight at the readout is nearly always about the bottom half of it. Decide now: recorded meetings, or meetings that got a summary, or eligible workspaces. Write it into the definition. A rate whose denominator is unstated is two different numbers being compared by people who both think they are right.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What AI does well here, and the one thing it must not do<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This session has an unusually clean split, and it is worth naming precisely because the useful half is genuinely useful.</p>
+        <ul>
+          <li><strong>Drafting the event spec from the metric definition.</strong> Give it the metric, the segment and the denominator, and ask for the candidate events and properties that would produce it. This is real work, it takes fifteen minutes off the task, and every line of the output is checkable against the metric you wrote. Hand it over without hesitation.</li>
+          <li><strong>The coverage check, which is the best use on this page.</strong> Paste your event list and ask: what questions about this feature could a stakeholder ask that these events cannot answer? It is very good at this, because it is a mechanical comparison rather than a judgement, and it routinely finds the missing property while the spec is still free to change.</li>
+          <li><strong>Naming consistency.</strong> Whether you are using <code>summary_viewed</code> or <code>view_summary</code>, whether ids are <code>workspace_id</code> everywhere, whether one event uses minutes and another uses seconds. Tedious, mechanical, and worth doing before engineering rather than after.</li>
+          <li><strong>Never: deciding which number the team is judged on.</strong> Ask what the primary metric should be and you will get a fluent answer with a plausible target attached, and it has not seen your baseline, your segment, your company's tolerance for a flat quarter, or the argument you are about to have with sales. The choice of primary metric is a commitment about what you will be wrong about in public. It is the definition of the thing that cannot be delegated.</li>
+        </ul>
+        <p>The second bullet is the one worth building a habit around. It found the gap in the spec below, the team decided to accept it anyway, and <a href="b8-experiments-and-readouts.html">b8</a> shows exactly what accepting it cost.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED ARTIFACT: THE EVENT SPEC ============ -->
+  <section class="section" id="event-spec">
+    <div class="section-kicker">
+      <span class="klabel">Worked artifact · 14 min · everyone</span>
+      <h2>The event spec for Cadence summaries <span class="tag demo">★ the whole thing, before the build</span></h2>
+    </div>
+    <p class="lede">Five events, written before engineering started. Read the last column first: every event exists because a specific question needed answering, and any event that cannot name its question should not be in the spec. Then read the gap at the end, because the interesting part of this artifact is the thing it deliberately does not do.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Start from the metric, not from the feature.</strong> Write the metric definition first, with its numerator, denominator and segment. Every event below exists to produce one of those three parts, and an event that produces none of them is telemetry rather than instrumentation.</p></div>
+      <div class="step"><p><strong>Name the firing condition precisely enough to be wrong.</strong> "When the user views the summary" is not a firing condition. "Client-side, on first render of the summary panel for a given meeting, once per workspace per meeting" is, and an engineer can disagree with it, which is the point.</p></div>
+      <div class="step"><p><strong>For each event, write the question it answers.</strong> One sentence. If you cannot write it, delete the event. This single rule keeps event specs from turning into the 40-event tracking plans that nobody maintains and everybody distrusts.</p></div>
+      <div class="step"><p><strong>Run the coverage check before you send it.</strong> List the first three questions each stakeholder will ask at the readout, then find the property that answers each one. What you cannot answer becomes a named gap, written down, rather than a surprise.</p></div>
+      <div class="step"><p><strong>Then send it to engineering with the metric definitions attached,</strong> not separately and not later. The definitions are what let an engineer catch the mistake you made, and they will, roughly a third of the time.</p></div>
+    </div>
+
+    <table class="clean">
+      <thead><tr><th>Event</th><th>Fires when</th><th>Properties</th><th>The question it answers</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>summary_generated</strong><br><em>server-side</em></td>
+          <td>a post-meeting summary finishes generating, once per meeting, whether or not anybody ever opens it</td>
+          <td><code>meeting_id</code> · <code>workspace_id</code> · <code>seat_band</code> (under_5 / 5_to_50 / over_50) · <code>plan</code> · <code>meeting_minutes</code> · <code>generation_seconds</code> · <code>outcome</code> (ok / no_decisions_found / failed) · <code>cost_cents</code></td>
+          <td>Did the thing we shipped actually run, on which meetings, and at what cost? This is the denominator for everything below, and <code>cost_cents</code> is what tests the 0.02 per meeting estimate against reality. <code>outcome</code> matters more than it looks: a meeting with no decisions in it is not a failure, and if we do not separate the two we will read our own success rate wrong.</td>
+        </tr>
+        <tr>
+          <td><strong>summary_viewed</strong><br><em>client-side</em></td>
+          <td>first render of the summary panel for a given meeting, once per workspace per meeting</td>
+          <td><code>meeting_id</code> · <code>workspace_id</code> · <code>seat_band</code> · <code>hours_since_meeting_end</code></td>
+          <td>Is anyone looking at it at all, and how soon after the call? Note what is deliberately absent: no <code>user_id</code> and no <code>surface</code>. This event answers "did this workspace open the summary", and it cannot answer "which person" or "from where". That is a known gap and it is recorded below rather than discovered later.</td>
+        </tr>
+        <tr>
+          <td><strong>transcript_opened</strong><br><em>client-side</em><br><strong>· primary metric</strong></td>
+          <td>the full transcript view finishes loading for a meeting, every time, not deduplicated</td>
+          <td><code>meeting_id</code> · <code>workspace_id</code> · <code>seat_band</code> · <code>user_role</code> (admin / member) · <code>days_since_meeting</code> · <code>entry_point</code> (search / meeting_list / summary_link / shared_link / notification)</td>
+          <td>In week 1, did somebody go back to a meeting we summarised, and how did they get there? This is the numerator of the primary metric. <code>days_since_meeting</code> defines week 1 as 0 to 6 inclusive; <code>entry_point</code> is what tells us whether the summary is the doorway or an unrelated bystander.</td>
+        </tr>
+        <tr>
+          <td><strong>accuracy_complaint_raised</strong><br><em>mixed</em><br><strong>· guardrail</strong></td>
+          <td>a user flags an inaccuracy in product, or support tags a ticket as an accuracy issue; one event per distinct complaint</td>
+          <td><code>meeting_id</code> · <code>workspace_id</code> · <code>seat_band</code> · <code>source</code> (in_product_flag / support_ticket) · <code>object</code> (transcript / summary) · <code>kind</code> (wrong_fact / missing_decision / garbled)</td>
+          <td>Are we keeping the promise to support? The guardrail is complaints as a share of meetings, at or below 1.4%. <code>object</code> is the property that stops pre-existing transcription complaints being attributed to summaries, and <code>kind</code> is what turns a breach into a fix instead of an argument.</td>
+        </tr>
+        <tr>
+          <td><strong>note_taking_survey_answered</strong><br><em>in-product pulse</em><br><strong>· secondary</strong></td>
+          <td>an admin answers the sampled one-question pulse shown after a meeting; sampled, not shown to everyone</td>
+          <td><code>workspace_id</code> · <code>seat_band</code> · <code>user_role</code> · <code>answer</code> (yes / no / sometimes) · <code>wave</code> (pre_launch / week_2 / week_6)</td>
+          <td>Are admins still taking their own notes during meetings? 68% today, target 58% by week 6. This is self-report and therefore weak, and the <code>wave</code> property is what makes it comparable at all: the pre-launch wave is the baseline, and without it the week-6 number is a number rather than a change.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <pre class="lab-sql">METRIC DEFINITIONS  ·  Cadence post-meeting summaries  ·  agreed before the build
+Owner: PM      Read date: fixed in the launch note      Segment: paid, seat_band = 5_to_50
+
+PRIMARY      week-1 transcript revisit rate
+  numerator    distinct meeting_id with >= 1 transcript_opened where days_since_meeting <= 6
+  denominator  distinct meeting_id with a summary_generated outcome of ok, same ISO week
+  baseline     11.0%   ·  12 weekly readings, range 9.4% to 12.8%
+  target       30.0% by week 4
+  belief       going back to the record is the behaviour worth buying. Stated so that
+               being wrong about it is a finding rather than a reinterpretation.
+
+SECONDARY    self-reported in-meeting note-taking
+  measure      share of note_taking_survey_answered with answer = yes, by wave
+  baseline     68%  (pre_launch wave)          target  58% by week 6
+  caveat       self-report. Reported as self-report, every time, including in the good case.
+
+GUARDRAIL    transcript and summary accuracy complaints
+  measure      distinct accuracy_complaint_raised / distinct meetings recorded, weekly
+  threshold    at or below 1.4% of meetings, split by object
+  consequence  a breach pauses the rollout. It does not trigger a discussion.
+
+COST         run cost per meeting
+  measure      sum(cost_cents) / count(summary_generated), weekly
+  estimate     roughly 0.02 per meeting. Tracked, not a guardrail, unless it is 5x out.
+
+KNOWN GAP    We cannot answer: "did the person who read the summary decide not to open the
+             transcript?" summary_viewed is workspace-grained with no user_id and no surface,
+             and there is no event for a deliberate non-open. Accepted knowingly: the primary
+             metric does not need it, and adding it would delay the build by a week.
+             Consequence if the confound bites: we can say "71% of WORKSPACES that opened a
+             summary did not open the transcript", and we cannot say it about people. If that
+             sentence ends up mattering at the readout, this line is why.</pre>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The most instructive line in this artifact is the last one, and it is a line about something the team chose not to build.</strong> The coverage check found it in about a minute: with these five events you cannot tell whether a person who read the summary then decided they did not need the transcript. Answering that would have meant adding a <code>user_id</code> and a <code>surface</code> to <code>summary_viewed</code>, which meant a client-side change, which meant a week. The team was three weeks into a three-week build. They wrote the gap down and shipped.</p>
+      <p>That was a defensible call and it was still a call, with a price attached, and the price arrives in <a href="b8-experiments-and-readouts.html">b8</a>. When the readout comes in mixed, the single strongest argument in the team's favour is exactly the question this event cannot answer, and because the instrumentation is workspace-grained, the sentence they can write is "71% of workspaces that opened a summary did not open the transcript in the same week" rather than anything about people. It is suggestive, it is not conclusive, and it is not enough to change a conclusion. The next quarter's first instrumentation task is the event they skipped.</p>
+      <p>The lesson is not that they should have built it. Three weeks is three weeks and the gap was survivable. The lesson is that the difference between a team that writes the gap down and a team that discovers it at the readout is about ninety seconds of coverage checking, and the second team will spend that readout arguing about whether the metric was ever the right one, which is an argument nobody wins.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the vanity test out loud on every metric currently on your team's dashboard: if this goes up and nothing else does, do we care? Count how many fail. The count is the finding, and it is usually more than half.</li>
+      <li>Pull a real baseline for your carried backlog item: the level, the variance over at least eight readings, and the segment it is scoped to. Then check that your target sits outside the historical range, because if it does not, you have described a normal week.</li>
+      <li>Write the guardrail as a sentence addressed to another team, with a threshold rather than a direction, and check that it has the one property that stops it blaming you for something that predates your feature.</li>
+      <li>Write the event spec for your item before engineering starts: names, firing conditions, properties, and the question each event answers. Delete every event whose question you cannot write in one sentence.</li>
+      <li>Run the coverage check: list the first three questions each stakeholder will ask at the readout, find the property that answers each, and write down the gaps you are choosing to accept. Bring the decision rule for that metric to b8.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">North Star and HEART-style metric practice - one primary per decision, secondary, guardrail</span><span class="note">Part 1 · the Cadence metric set with the rejects named</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Leading versus lagging, and the vanity test as a selection filter</span><span class="note">Parts 1 and 2 · the only question that changes behaviour is when the number arrives</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Baselines and targets - the level, the variance and the shape, pulled before the build</span><span class="note">Part 2 · 11.0% with a 9.4% to 12.8% band, and why the target has to sit outside it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Instrumentation: the event spec written before engineering starts</span><span class="note">Part 3 and the worked artifact · five events, their properties, and the gap accepted on purpose</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Stopping rules, decision rules and the readout</span><span class="note">Set up here, taught in <a href="b8-experiments-and-readouts.html">b8</a> · this page produces exactly what b8 reports on</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Statistical depth: power, minimum detectable effect, variance reduction, sequential testing</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Breaking a metric into its drivers</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Seat retention is what the business actually cares about. Why is week-1 revisit rate the primary metric for this build instead?</p>
+      <button class="qopt" type="button">A · Revisit rate is a more accurate measure of value than retention</button>
+      <button class="qopt" type="button">B · Revisit rate moves within a week, so it can still change what you build; retention moves in a quarter and can only judge the bet afterwards, by which point four other things have shipped</button>
+      <button class="qopt" type="button">C · Retention is too hard to instrument on a small segment</button>
+      <p class="qwhy">The primary is the number you act on, and you can only act on a number that arrives while there is still something to change. Retention stays in the spec as the lagging outcome you believe revisit rate feeds, and the link between them is written down as a belief so that being wrong about it is a finding rather than an argument.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · "Summaries generated per week" is proposed as the success metric. What is wrong with it?</p>
+      <button class="qopt" type="button">A · Nothing, provided a target is set for it in advance</button>
+      <button class="qopt" type="button">B · It is a lagging metric, so it cannot steer the build</button>
+      <button class="qopt" type="button">C · It fails the vanity test: it goes up the day you ship, it would look identical if every summary were wrong and unread, and it cannot deliver bad news</button>
+      <p class="qwhy">A metric that cannot go down as a result of your feature being bad is a decoration rather than an instrument. Volume of the thing you shipped, and first-touch usage of the thing you shipped, both measure that the feature exists rather than that the problem got smaller.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which of these is the one job in this session that must never be handed over?</p>
+      <button class="qopt" type="button">A · Deciding which number the team is judged on</button>
+      <button class="qopt" type="button">B · Drafting a candidate event list and property set from the metric definition</button>
+      <button class="qopt" type="button">C · Checking which stakeholder questions your event list cannot answer</button>
+      <p class="qwhy">Drafting the events from a metric you wrote, and mechanically checking the list for coverage gaps, are both production work with a cheap verification step - and the coverage check is the single best use on the page. Choosing the primary metric is a commitment about what you will be wrong about in public, and it has never been anything else.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The order</b><span>Metric before build. Two days now, or a quarter of guessing later. Nothing here is fixable after launch.</span></div>
+      <div class="cheat-item"><b>The Cadence set</b><span>Primary revisit rate 11% to 30% · secondary note-taking 68% to 58% · guardrail complaints at or below 1.4%.</span></div>
+      <div class="cheat-item"><b>Leading or lagging</b><span>Moves in a week means it can steer. Moves in a quarter means it can only judge. Only one can be primary.</span></div>
+      <div class="cheat-item"><b>The vanity test</b><span>If this goes up and nothing else does, do we care? A metric that cannot deliver bad news is decoration.</span></div>
+      <div class="cheat-item"><b>A baseline is three things</b><span>The level, the variance, the shape. 11.0%, range 9.4% to 12.8%. Targets inside the range are not targets.</span></div>
+      <div class="cheat-item"><b>The guardrail</b><span>A promise to another team, with a threshold and a consequence - and a property that stops it blaming you.</span></div>
+      <div class="cheat-item"><b>Every event names its question</b><span>Cannot write the question in one sentence? Delete the event. Properties are where the readout is won.</span></div>
+      <div class="cheat-item"><b>The AI line</b><span>Draft the events, run the coverage check. Never pick the number you are judged on. Next: b8, the readout.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 7 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-prioritisation-tradeoffs.html">← Previous: Prioritisation and trade-offs</a> &nbsp;·&nbsp; <a href="b8-experiments-and-readouts.html">Next: Experiments and honest readouts →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

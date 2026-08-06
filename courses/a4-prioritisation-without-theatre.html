@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Prioritisation without theatre - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Prioritisation <span class="accent">without theatre</span></h1>
+    <p class="sub">Rank three options one way and summaries win. Rank the same three another way and live notes win. Nothing about the options changed, which tells you the framework never decided anything. It made a decision legible, and the deciding happened when somebody chose the lens. This session is about the inputs those frameworks quietly require, the fact that a drafting tool will supply every one of them as a confident number with no basis, and what you should require instead of a spreadsheet with two decimal places.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Heads of product · founders · stakeholders</span>
+      <span class="chip audience">No code to write</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-16 · Frameworks are lenses</span>
+      <span class="a3" style="flex:4">16-30 · Provenance and confidence</span>
+      <span class="a4" style="flex:4">30-45 · Discussion + the questions to ask</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this session exists</h2>
+    </div>
+    <p class="lede">You have sat in the meeting. A PM presents a scored backlog, the scores run to two decimal places, the top item wins by a fraction, and everybody nods because the process was followed. Then somebody asks where the reach number came from and the room goes quiet. That silence is the subject of this session, and it got louder the moment drafting became free: a tool will now fill in reach, confidence, effort and cost of delay for you, instantly, in the same confident register as the numbers that came out of your warehouse.</p>
+    <p class="lede">Session a1 set the production and commitment split, a2 set the evidence standard, and a3 covered what a spec has to contain before anyone signs it. This session is the ranking meeting: how to read a score without being captured by it, what to demand about where each input came from, and what to accept as the record of the decision. It ends where every session in this track ends, with the questions to ask your PMs.</p>
+    <div class="legend">
+      <span class="pill solid">Live - discussed in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">◆ Discussion exercise - run it in your own review</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A provenance rule you can impose on the next ranked backlog you are shown, one question that grades a score in three words, and the three lines you will accept instead of a spreadsheet.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: LENSES ============ -->
+  <section class="section" id="lenses">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers prioritisation frameworks as lenses</span>
+      <h2>The same options, ranked twice <span class="tag concept">11 min live</span></h2>
+    </div>
+    <p class="lede">Cadence has three asks on the table: live in-meeting notes, which sales wants because every demo asks for it and three deals were lost; post-meeting summaries, which support wants because 214 tickets in three months are tagged "cannot find what was decided"; and an agent, which the CEO wants and for which no evidence has been offered. Below, one PM ranks those three twice in an afternoon. Both rankings are competent. Both are arithmetically correct. They disagree about what to build.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The three Cadence asks ranked under two different prioritisation lenses, producing two different orders">
+        <style>
+          .prT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .prH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .prR { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .prC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .prN { font: 700 11px Inter, sans-serif; fill: #38404E; }
+          .prY { font: 700 12px Inter, sans-serif; fill: #33270A; }
+        </style>
+
+        <text class="prH" x="26" y="24">The same three Cadence asks, ranked twice, by the same PM on the same day</text>
+
+        <rect x="26" y="36" width="400" height="38" rx="8" fill="#38404E"/>
+        <text class="prT" x="44" y="60">Lens A: reach x impact x confidence / effort</text>
+        <rect x="26" y="82" width="400" height="28" rx="6" fill="#EFF1F5"/>
+        <text class="prR" x="44" y="101">1 · Post-meeting summaries</text>
+        <text class="prN" x="376" y="101">8.4</text>
+        <rect x="26" y="114" width="400" height="28" rx="6" fill="#F7F8FA"/>
+        <text class="prR" x="44" y="133">2 · Live in-meeting notes</text>
+        <text class="prN" x="376" y="133">6.1</text>
+        <rect x="26" y="146" width="400" height="28" rx="6" fill="#F7F8FA"/>
+        <text class="prR" x="44" y="165">3 · An agent</text>
+        <text class="prN" x="376" y="165">2.0</text>
+        <text class="prC" x="26" y="196">Effort sits in the denominator, so the known,</text>
+        <text class="prC" x="26" y="216">cheap build wins. Nothing prices the 3 lost deals.</text>
+
+        <rect x="454" y="36" width="400" height="38" rx="8" fill="#232935"/>
+        <text class="prT" x="472" y="60">Lens B: cost of delay / duration</text>
+        <rect x="454" y="82" width="400" height="28" rx="6" fill="#EFF1F5"/>
+        <text class="prR" x="472" y="101">1 · Live in-meeting notes</text>
+        <text class="prN" x="804" y="101">9.0</text>
+        <rect x="454" y="114" width="400" height="28" rx="6" fill="#F7F8FA"/>
+        <text class="prR" x="472" y="133">2 · Post-meeting summaries</text>
+        <text class="prN" x="804" y="133">7.5</text>
+        <rect x="454" y="146" width="400" height="28" rx="6" fill="#F7F8FA"/>
+        <text class="prR" x="472" y="165">3 · An agent</text>
+        <text class="prN" x="804" y="165">3.0</text>
+        <text class="prC" x="454" y="196">Cost of delay sits in the numerator, so the revenue</text>
+        <text class="prC" x="454" y="216">story wins. Nothing prices the 214 tickets.</text>
+
+        <rect x="26" y="240" width="828" height="88" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="prY" x="46" y="266">Same three options, same evidence, two orders. The framework did not decide anything.</text>
+        <text class="prC" x="46" y="290">It made a decision legible, which is worth doing and is not the same as being objective. Choosing the lens IS the</text>
+        <text class="prC" x="46" y="312">decision, and a person makes it before any number is entered. The PM track makes exactly this call on Cadence in b6.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two lenses, two orders, one decision that was made before the arithmetic</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What a framework is actually for<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>None of this makes scoring useless. It makes scoring a different thing than most teams present it as, and the difference matters to you specifically, because you are the one being asked to approve the output.</p>
+        <ul>
+          <li><strong>A framework makes a decision legible.</strong> It forces every option into the same units, so the comparison can be argued with. That is genuinely valuable and it is most of the value.</li>
+          <li><strong>A framework encodes a strategy.</strong> Effort in the denominator says "we are capacity-constrained this quarter". Cost of delay in the numerator says "we are revenue-constrained". Both are legitimate. Neither is neutral, and whichever one your team defaults to is a strategy nobody said out loud.</li>
+          <li><strong>A framework does not choose.</strong> It cannot, because the weights are yours and the inputs are yours. When a ranking flips under a second lens, the correct reaction is not to refine the inputs until the two agree. It is to say which lens fits this quarter, and why.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one question that settles it</strong>
+          If the spreadsheet had come out the other way, would we have shipped the other thing? If the answer is no, the spreadsheet was decoration, and you can stop paying for the meeting that produces it. If the answer is yes, then the choice of lens deserved more discussion than the weights did.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the flip happens so reliably<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is not a quirk of these three asks. Any small option set will reorder under two framings whenever the options differ on the dimension the framing weights, which is nearly always. Watch what each lens is structurally blind to:</p>
+        <ul>
+          <li><strong>Effort-in-the-denominator lenses punish anything expensive</strong>, regardless of value. Live notes need a streaming pipeline Cadence does not have, so it loses on cost even when the revenue story is the strongest one in the room.</li>
+          <li><strong>Cost-of-delay lenses punish anything slow to pay back.</strong> The 214 support tickets are a real, evidenced, cheap-to-address problem that does not obviously close a deal this quarter, so it drops.</li>
+          <li><strong>Both lenses handle the agent identically.</strong> It ranks last under either, because there is no evidence to enter for reach and no engineering estimate for effort. This is the useful part: an unevidenced ask loses under every lens, which is a much better argument to a CEO than your opinion.</li>
+        </ul>
+        <p>The honest summary: frameworks are excellent at killing the unevidenced ask and poor at choosing between two good ones. For the second job you need a stated strategy, which is a leadership artefact and not a spreadsheet output.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: PROVENANCE ============ -->
+  <section class="section" id="provenance">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the inputs frameworks require, and automation bias</span>
+      <h2>Four inputs, and where they came from <span class="tag concept">10 min live</span></h2>
+    </div>
+    <p class="lede">Every scoring framework needs the same four things: how many people this touches, how sure you are, what it costs to build, and what it costs to wait. Before drafting was free, missing inputs showed up as blanks, and a blank is an honest signal. Now they show up filled in, formatted, and phrased with exactly the same confidence as the one number somebody actually measured. Nothing in the arithmetic distinguishes them, and nothing in the document does either, unless you require it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 358" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four inputs every prioritisation framework requires, what a drafting tool supplies for each, and what a real version would take">
+        <style>
+          .inT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .inD { font: 700 12.5px Inter, sans-serif; fill: #1E232C; }
+          .inK { font: 700 11px Inter, sans-serif; fill: #1E232C; }
+          .inH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .inC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="inH" x="26" y="24">Every framework quietly requires these four, and a drafting tool will supply all four</text>
+        <text class="inK" x="224" y="48">What a drafter hands you</text>
+        <text class="inK" x="540" y="48">What it would take to be real</text>
+
+        <rect x="26" y="58" width="186" height="40" rx="7" fill="#232935"/>
+        <text class="inT" x="42" y="83">Reach</text>
+        <text class="inC" x="224" y="76">a round percentage, with no</text>
+        <text class="inC" x="224" y="94">query behind it</text>
+        <text class="inC" x="540" y="76">a query someone ran, with the</text>
+        <text class="inC" x="540" y="94">date and the filter beside it</text>
+
+        <rect x="26" y="106" width="186" height="40" rx="7" fill="#38404E"/>
+        <text class="inT" x="42" y="131">Confidence</text>
+        <text class="inC" x="224" y="124">80%, on every row, always,</text>
+        <text class="inC" x="224" y="142">and never with a reason</text>
+        <text class="inC" x="540" y="124">named evidence per claim, or</text>
+        <text class="inC" x="540" y="142">an honestly lower number</text>
+
+        <rect x="26" y="154" width="186" height="40" rx="7" fill="#6B7688"/>
+        <text class="inT" x="42" y="179">Effort</text>
+        <text class="inC" x="224" y="172">2 weeks, with no engineer</text>
+        <text class="inC" x="224" y="190">having seen the ask</text>
+        <text class="inC" x="540" y="172">the engineer who would build</text>
+        <text class="inC" x="540" y="190">it, saying it out loud</text>
+
+        <rect x="26" y="202" width="186" height="40" rx="7" fill="#C3CAD6"/>
+        <text class="inD" x="42" y="227">Cost of delay</text>
+        <text class="inC" x="224" y="220">high / medium / low, which</text>
+        <text class="inC" x="224" y="238">is not a number at all</text>
+        <text class="inC" x="540" y="220">what a month of waiting costs,</text>
+        <text class="inC" x="540" y="238">in churn, deals or ticket load</text>
+
+        <rect x="26" y="254" width="828" height="88" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="inH" x="46" y="280">None of the four is a lie. Each is a plausible number with no source, and arithmetic cannot tell the difference.</text>
+        <text class="inC" x="46" y="304">So ask for the source, not the number. One provenance column beside every input: measured, estimated by someone</text>
+        <text class="inC" x="46" y="326">who would know, or invented. Invented inputs are fine to keep. They are not fine to average with measured ones.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the same four inputs, arriving with wildly different amounts of truth behind them</figcaption>
+    </figure>
+
+    <p class="lede">The rule is one column, and it costs a PM about four minutes to fill in. Grade every input on this scale, in public, before anything gets averaged.</p>
+
+    <table class="clean">
+      <thead><tr><th>Provenance grade</th><th>What it means</th><th>What it is worth in a ranking</th><th>Cadence example</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Measured</strong></td><td>somebody pulled it from a system, and can tell you the date and the filter</td><td>can carry a decision on its own; other inputs should be read against it</td><td>week-1 transcript revisit rate at 11% of recorded meetings</td></tr>
+        <tr><td><strong>Estimated by someone who would know</strong></td><td>a named person with the relevant scars said it out loud, with a range</td><td>good enough to rank with, as long as the name stays attached to it</td><td>an engineer's estimate for summaries, given after seeing the ask</td></tr>
+        <tr><td><strong>Asserted by the requester</strong></td><td>the person who wants it says it is big, and may well be right</td><td>worth a follow-up question, never worth a number in a cell</td><td>"every demo asks for it", offered for live in-meeting notes</td></tr>
+        <tr><td><strong>Invented</strong></td><td>a plausible figure with no source, usually supplied to fill a gap</td><td>worth nothing arithmetically; keep it as an open question, not a value</td><td>the agent's reach, which nobody has ever tried to size</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Confidence is the input that carries all the risk<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Of the four, confidence is the one to interrogate, and it is the one nobody interrogates. Two reasons.</p>
+        <ul>
+          <li><strong>It multiplies everything else.</strong> Reach and impact are guesses about the world; confidence is a guess about your guesses. Set it at 80% across the board and you have quietly declared that the ask with 214 tickets behind it and the ask with nothing behind it are equally believable. That single decision usually matters more than the weights the room spent forty minutes arguing about.</li>
+          <li><strong>It is the cheapest input to fake and the hardest to challenge.</strong> Nobody can prove your confidence was wrong until afterwards, and by then the conversation has moved on. So it drifts to whatever number keeps the favoured item at the top, and it does so without anybody being dishonest.</li>
+        </ul>
+        <p>The fix is small and works immediately. Confidence has to be justified in one clause, per row, in words: "80%, because eight interviews and 214 tickets point the same way" versus "80%, because the CEO is sure". Written next to each other, those two do not survive being read aloud, and nobody has to accuse anybody of anything.</p>
+        <div class="callout tip">
+          <strong>The version of this that fails</strong>
+          Do not ask for more precision. A request for better numbers gets you the same invented numbers with more decimal places, faster than before, because producing them is now free. Ask for sources. Precision is cheap and provenance is not, so provenance is the thing worth requiring.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Automation bias, in one paragraph you will recognise<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>People trust a number more once it has been through a system, and they trust it more again once it has been formatted. This is well documented, it applies to you as much as to your PMs, and drafting tools sit exactly where it does the most damage: they produce output that is well structured, internally consistent, confident in tone, and completely uncoupled from whether anything in it is true.</p>
+        <p>The practical consequence for a leader is that your instinct is now a bad detector. A ranked table with sourced inputs and a ranked table with invented ones look identical, and the invented one often looks better, because nothing in it is hedged. This is why the provenance column exists as a structural requirement rather than a piece of advice: you cannot rely on noticing, so you make not-noticing impossible.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: THEATRE ============ -->
+  <section class="section" id="theatre">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you reward, and what you should ask for</span>
+      <h2>Stop rewarding the spreadsheet <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Here is the uncomfortable part. Prioritisation theatre exists because leaders reward it. A PM who arrives with a scored table and two decimal places looks rigorous, gets approved, and is not asked where the inputs came from. A PM who arrives with three sentences and an honest "we guessed the effort" looks underprepared. As long as that asymmetry holds, your team will keep producing the spreadsheet, and they are responding correctly to what you actually measure.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 252" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prioritisation theatre on the left and the three-line decision record to require instead on the right">
+        <style>
+          .thB { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .thK { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .thC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .thH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+        </style>
+
+        <text class="thH" x="26" y="24">What to stop rewarding, and what to ask for instead</text>
+
+        <rect x="26" y="36" width="400" height="196" rx="9" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="thB" x="46" y="62">Theatre: a score to two decimals</text>
+        <text class="thC" x="46" y="90">· inputs nobody sourced, averaged into a rank</text>
+        <text class="thC" x="46" y="112">· confidence at 80% on every row, guesses too</text>
+        <text class="thC" x="46" y="134">· effort estimated by a tool, not by a builder</text>
+        <text class="thC" x="46" y="156">· forty minutes spent arguing about weights</text>
+        <text class="thC" x="46" y="178">· the loudest ask re-entered until it wins</text>
+        <text class="thC" x="46" y="200">· nobody can name what the exercise ruled out</text>
+
+        <rect x="454" y="36" width="400" height="196" rx="9" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="thK" x="474" y="62">What to require instead: three lines</text>
+        <text class="thC" x="474" y="90">· the option we chose, and for which segment</text>
+        <text class="thC" x="474" y="112">· the option we rejected, and why it lost</text>
+        <text class="thC" x="474" y="134">· one sentence on what we gave up</text>
+        <text class="thC" x="474" y="156">· plus the date, and whose name is on it</text>
+        <text class="thK" x="474" y="186">Three lines beat a table you cannot audit.</text>
+        <text class="thC" x="474" y="208">a3 covers who signs, and what signing means.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the artefact to stop approving, and the one to start asking for</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three lines, on Cadence<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is what the PM track lands on in b6, written the way you should expect to receive it:</p>
+        <ul>
+          <li><strong>Chosen:</strong> post-meeting summaries, for team admins on paid workspaces of 5 to 50 seats.</li>
+          <li><strong>Rejected:</strong> live in-meeting notes. The research locates the pain after the meeting rather than during it, and live notes need a streaming pipeline that does not exist. The agent is rejected too, for having no evidence at all.</li>
+          <li><strong>Given up:</strong> the demo moment sales wanted. Three lost deals were named as evidence and we are choosing not to address them this quarter, knowing sales will raise it again.</li>
+        </ul>
+        <p>Notice what is not there. No score, no weights, no decimal places. Notice also that the third line is the only one that hurts, and it is the line that makes the document a decision rather than a description. If a ranked backlog arrives without an equivalent of that third line, nothing has been decided yet regardless of how much arithmetic is attached.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When a scoring exercise is worth running anyway<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three cases where the spreadsheet earns its keep, so this does not become a blanket ban:</p>
+        <ul>
+          <li><strong>Twenty-plus options and no shape.</strong> Scoring is a good coarse filter for cutting a long list to five. It is a bad instrument for choosing among the final three, which is the exact opposite of how most teams use it.</li>
+          <li><strong>Killing an unevidenced ask.</strong> An option with nothing behind it ranks last under every lens, and that is a far better argument in front of a CEO than a personal opinion. The framework's real political value is here.</li>
+          <li><strong>Making a strategy visible.</strong> If effort keeps ending up in the denominator, your team believes you are capacity-constrained. Worth knowing, and worth confirming or correcting out loud.</li>
+        </ul>
+        <p>What it is never worth: a 0.3-point margin between two good options on inputs nobody sourced. At that point the score is noise dressed as arithmetic, and someone should just decide and say what they gave up.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DISCUSSION EXERCISE ============ -->
+  <section class="section" id="discussion">
+    <div class="section-kicker">
+      <span class="klabel">Discussion exercise · 12 min · everyone</span>
+      <h2>Score the scores <span class="tag demo">◆ run this in your next review</span></h2>
+    </div>
+    <p class="lede">Nothing to write and nothing to install. Three prompts, in escalating order of discomfort, each usable in a real product review this week. Run the first one out loud in the room now, on whatever ranked list somebody in this session brought with them.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Somebody produces a real ranked backlog</strong> from their own team, from the last month. Not a Cadence example. The exercise only works on a list somebody in the room approved.</p></div>
+      <div class="step"><p><strong>Read prompt 1 word for word</strong> and grade the top three rows. Time it. Under two minutes means the provenance was already known; over five means it was not.</p></div>
+      <div class="step"><p><strong>Count the invented inputs.</strong> Not to embarrass anybody: the count is the finding. Most real backlogs come in at half or more, and the number is roughly the same in every company.</p></div>
+      <div class="step"><p><strong>Run prompt 2</strong> and see whether the order survives a second lens. If it flips, the room has just watched the framework fail to decide anything.</p></div>
+      <div class="step"><p><strong>Close with prompt 3.</strong> Whoever brought the list writes the three lines on the spot, out loud. If the third line is hard to say, that is the session working.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Prompt 1 · the three-word grading<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Take the top three items on this list. For each input in the score - reach, confidence, effort, cost of delay - give me one of three words: measured, estimated, or invented. You do not need to defend the numbers, and nothing bad happens to an invented one. I just want the twelve words."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> a mix, delivered without defensiveness. "Reach is measured, I pulled it Tuesday. Effort is estimated, Priya gave me three weeks after seeing the ticket sample. Cost of delay is invented, I have no idea what a month of waiting costs us." A strong PM will volunteer the invented ones first, because they already knew, and will often tell you what it would take to upgrade one.</p>
+        <p><strong>The failure mode to listen for:</strong> everything comes back "measured". That is not a rigorous team, it is a team that has not looked. Second failure: the PM starts defending the ranking instead of grading the inputs, which means the question landed as a challenge to their judgement rather than a question about sources, so say the last sentence of the prompt again. Third: confidence is 80% on every row and nobody can say why, which is the single most common finding in this exercise.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Prompt 2 · the second lens<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Which lens is this, and why does that lens fit this quarter? Then rank the same three under one that weights the opposite thing, and tell me whether the order changes."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> the PM names the framing and connects it to a real constraint. "Effort is in the denominator because we lost two engineers and everything expensive is off the table until March." Then, when the order flips, they say which lens they trust and why, rather than trying to reconcile the two. Best possible answer: "it flips, and I think the second lens is the honest one, which means I have been recommending the wrong thing."</p>
+        <p><strong>The failure mode to listen for:</strong> "we always use RICE." That is a strategy nobody chose, inherited from a blog post, and it is quietly deciding your roadmap. Also listen for an attempt to tune the inputs until both lenses agree. That is not analysis, it is fitting the numbers to a conclusion, and it usually happens in good faith, which is what makes it hard to spot.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Prompt 3 · the three lines, from memory<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout tip">
+          <strong>Say this, word for word</strong>
+          "Forget the spreadsheet for a second. Three lines: what we are doing and for whom, what we are not doing and why it lost, and one sentence on what we gave up. If the third line is blank, we have not decided yet."
+        </div>
+        <p><strong>What a good answer sounds like:</strong> specific on all three, and slightly painful on the third. "We are doing summaries for paid team admins. We are not doing live notes, because the pain is after the meeting and we have no streaming pipeline. We are giving up the demo moment sales asked for, and three lost deals stay unaddressed this quarter." The third line names a person who will be unhappy. That is what makes it a real trade-off rather than a summary.</p>
+        <p><strong>The failure mode to listen for:</strong> the third line comes back as a benefit in disguise. "We gave up scope creep" and "we gave up complexity" are not trade-offs, they are compliments. If nothing was surrendered and nobody is worse off, no choice was made: the options were not really in competition, or the answer was obvious and did not need a meeting. Both are worth knowing.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The tell is always confidence, and it is always 80%.</strong> Run prompt 1 on any real scored backlog and you will find the same artefact: five rows, five different reach numbers, five different effort estimates, and confidence sitting at 80% on every single line including the one with no evidence behind it at all. Nobody chose that. It happens because confidence is the only input that feels like an opinion rather than a fact, so it gets set once, early, at a number that sounds appropriately humble, and then never revisited. The consequence is that the input carrying the most risk in the whole calculation is the one input that was never actually filled in, and the ranking silently treats a well-evidenced ask and a CEO's hunch as equally believable. You can find this in ten seconds by scanning one column, which makes it the best value question a leader can ask in a prioritisation review.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="section" id="questions">
+    <div class="section-kicker">
+      <span class="klabel">Take this to your next review</span>
+      <h2>The questions to ask your PMs <span class="tag exercise">◐ 7 questions</span></h2>
+    </div>
+    <p class="lede">Each of these is short, none of them reads as an attack, and every one of them is answerable in under a minute by a PM who did the work. That last property is what makes them useful: the cost of asking is trivial, and the information in a hesitation is high.</p>
+    <ul>
+      <li><strong>"Which of these inputs is measured, which is estimated, and which is invented?"</strong> Grades the score without disputing it. The answer tells you exactly how much weight the ranking can carry, and it is the only question on this list you should ask every single time.</li>
+      <li><strong>"Why 80% and not 40%?"</strong> Confidence multiplies everything and is the input most often set by habit. You will get either a sentence of evidence or a pause, and both are useful.</li>
+      <li><strong>"Who gave you the effort number, and had they seen the ask?"</strong> An estimate with no builder behind it is a wish. A name makes it checkable, and the person named usually revises it downward or upward within a day.</li>
+      <li><strong>"What would have to be true for the second-ranked option to win?"</strong> Tests whether the gap is real. If a small change to one unsourced input reorders the list, the margin is noise and the decision needs an argument rather than arithmetic.</li>
+      <li><strong>"Which lens is this, and why that lens this quarter?"</strong> Makes the framing visible as a choice, which is where the deciding actually happened. Teams that cannot answer are running a strategy they inherited rather than chose.</li>
+      <li><strong>"What did we give up by choosing this?"</strong> The single most useful question in a prioritisation review, and the same test a3 applied to specs. A blank answer means the options were never really in competition.</li>
+      <li><strong>"If the numbers had come out the other way, would we ship the other thing?"</strong> Ask this once a quarter. A no tells you the exercise is ceremony, and you can spend the meeting on the argument instead.</li>
+    </ul>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Take the last ranked backlog you approved and add the provenance column yourself, from memory. Count the invented rows before you ask anyone else to. If you cannot grade your own approved decision, that is the finding.</li>
+      <li>Ask one PM the three-word question in your next review, and note how long the answer takes. Time is the measure here, not the answer.</li>
+      <li>Choose the lens your team will default to this quarter, say why in one sentence, and tell them it was your choice rather than a property of the universe.</li>
+      <li>Find one decision from last quarter with no rejected option written down anywhere, and write it now from memory, while you still have it. Next quarter you will not.</li>
+      <li>Cancel one weight-tuning meeting and replace it with the three lines. Watch whether decision quality drops. It will not, and the hour is worth having back.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Prioritisation frameworks (RICE, WSJF, cost of delay) as lenses rather than answers</span><span class="note">Part 1 · the same three asks, ranked twice, two orders</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The inputs every framework quietly requires, and the provenance grades</span><span class="note">Part 2 · the four inputs and the one column that fixes them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI-assisted knowledge work: automation bias and confident unsourced numbers</span><span class="note">Part 2 self-study · why your instinct is now a bad detector</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Spec practice: the explicit trade-off as the line that makes a document a decision</span><span class="note">Part 3 · taught in full in a3, and scored in the PM track's b5</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric trees and driver decomposition behind a reach or impact number</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Estimation technique, sequencing and capacity planning</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The same three options rank in two different orders under two different frameworks. What should you conclude?</p>
+      <button class="qopt" type="button">A · One of the two frameworks is wrong and should be dropped</button>
+      <button class="qopt" type="button">B · The framework never decided anything. It made a decision legible, and the deciding happened when someone chose the lens</button>
+      <button class="qopt" type="button">C · The inputs need refining until both frameworks agree</button>
+      <p class="qwhy">Refining inputs until two lenses agree is fitting numbers to a conclusion. The productive move is to say which lens fits this quarter and why, because that framing choice is the actual decision and it is made by a person before any arithmetic runs.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A PM brings a scored backlog with confidence at 80% on all five rows, including one ask with no evidence behind it. What is your best first move?</p>
+      <button class="qopt" type="button">A · Approve the top row, since the process was followed consistently</button>
+      <button class="qopt" type="button">B · Ask for more precise effort estimates so the margins are trustworthy</button>
+      <button class="qopt" type="button">C · Ask where each input came from, in one of three words: measured, estimated, or invented</button>
+      <p class="qwhy">More precision gets you the same invented numbers with more decimal places, because producing them is free. Provenance is the expensive thing, so provenance is what to require. A uniform confidence column means the input carrying all the risk was never actually filled in.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your team's ranking puts option A ahead of option B by 0.3 points, on inputs that are mostly estimates. What do you require before it becomes a plan?</p>
+      <button class="qopt" type="button">A · The chosen option and segment, the rejected option and why it lost, and one sentence on what you gave up</button>
+      <button class="qopt" type="button">B · A second scoring pass with more carefully tuned weights</button>
+      <button class="qopt" type="button">C · A longer spreadsheet covering more options for comparison</button>
+      <p class="qwhy">A 0.3-point margin on unsourced inputs is noise wearing arithmetic. Three lines can be audited a year later, name who is worse off, and force somebody to have actually chosen. The spreadsheet is optional; those lines are not.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Frameworks are lenses</b><span>Same three options, two framings, two orders. The framework made a decision legible; it did not make one.</span></div>
+      <div class="cheat-item"><b>Choosing the lens is the decision</b><span>Effort in the denominator says capacity-constrained. Cost of delay in the numerator says revenue-constrained. Neither is neutral.</span></div>
+      <div class="cheat-item"><b>Four inputs, always</b><span>Reach, confidence, effort, cost of delay. A drafting tool supplies all four in the same confident register.</span></div>
+      <div class="cheat-item"><b>The provenance column</b><span>Measured · estimated by someone who would know · asserted by the requester · invented. Four minutes to fill in.</span></div>
+      <div class="cheat-item"><b>Confidence carries the risk</b><span>It multiplies everything and gets faked most. 80% on every row means it was never filled in.</span></div>
+      <div class="cheat-item"><b>Ask for sources, not precision</b><span>Precision is free now. Provenance is not, so provenance is the thing worth requiring.</span></div>
+      <div class="cheat-item"><b>The three lines</b><span>Chosen and for whom · rejected and why · what we gave up. The third one is the only one that hurts.</span></div>
+      <div class="cheat-item"><b>Where this goes next</b><span>The PM track's b6 makes this exact call on Cadence: summaries, at the cost of the demo moment sales wanted. Next: a5, metrics.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a3-specs-and-accountability.html">← Previous: Specs, decisions, accountability</a> &nbsp;·&nbsp; <a href="a5-metrics-and-readouts.html">Next: Metrics and the honest readout →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

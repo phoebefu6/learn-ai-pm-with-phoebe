@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 6 · Prioritisation and trade-offs - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 6 of 10</div>
+    <h1>Prioritisation and <span class="accent">trade-offs</span></h1>
+    <p class="sub">This is the session where the decision actually gets made. We score Cadence's three asks under two standard framings, and the top does not move but the margin collapses from 31x to 1.4x and second place flips to the ask with no evidence behind it. A ranking that changes with the lens was never an answer. So we do the other work instead: mark where every input came from, notice that confidence is both the riskiest input and the one people fake most, then make the call on the page, write what it cost, and record the branches we cut so the argument does not restart next quarter.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">The session where you choose</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-15 · Lenses, and the inputs they need</span>
+      <span class="a3" style="flex:6">15-40 · Score twice, then choose</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Frameworks do not decide anything</h2>
+    </div>
+    <p class="lede">By now the three asks are comparable. b2 gave each one an evidenced problem, b3 verified the research behind them, b4 named the job and wrote down the branches we cut, and b5 turned the leading candidate into something signable. Everything since b1 has been about making the asks sit in the same units. This session spends that work: two scoring lenses, one decision, and the sentence that says what the decision cost.</p>
+    <p class="lede">The reason prioritisation goes wrong is not that teams pick the wrong framework. It is that a framework returns a number, a number looks like an answer, and nobody asks where the inputs came from. AI makes this worse in a very specific way: ask it to score a backlog and it will fill in reach, impact, confidence and effort for all three items, in seconds, with two decimal places and no basis whatsoever. The output is arithmetic on guesses, and arithmetic is extremely convincing.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">◆ Worked artifacts - real material to judge</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The three asks scored under two lenses with a provenance column on every input, the decision made and written down, the trade-off in one sentence you could say out loud to the person who loses, and a cut record with re-open conditions.
+    </div>
+  </section>
+
+  <!-- ============ PART 1: LENSES ============ -->
+  <section class="section" id="lenses">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers prioritisation frameworks: RICE, WSJF, cost of delay</span>
+      <h2>A framework is a lens, not an answer <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Two lenses, same three asks, same evidence, no cheating: RICE, which divides expected value by effort, and WSJF, which divides cost of delay by how long the job takes. Both are respectable. Both are used by serious teams. And they disagree, which is the useful part, because the disagreement tells you exactly what each lens is willing to ignore.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 368" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadence's three asks ranked under RICE and under WSJF, showing the same winner but a collapsed margin and a flipped second place">
+        <style>
+          .lnH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .lnT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .lnR { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .lnS { font: 700 11.5px Inter, sans-serif; fill: #232935; }
+          .lnC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .lnN { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="lnH" x="26" y="24">Same three asks. Same evidence. Two standard framings.</text>
+
+        <rect x="26" y="36" width="404" height="40" rx="8" fill="#38404E"/>
+        <text class="lnT" x="44" y="61">Lens A · RICE = R x I x C ÷ E</text>
+        <rect x="26" y="86" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="44" y="108">1 · Post-meeting summaries</text>
+        <text class="lnS" x="412" y="108" text-anchor="end">53.3</text>
+        <rect x="26" y="126" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="44" y="148">2 · Live in-meeting notes</text>
+        <text class="lnS" x="412" y="148" text-anchor="end">9.3</text>
+        <rect x="26" y="166" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="44" y="188">3 · The agent</text>
+        <text class="lnS" x="412" y="188" text-anchor="end">1.7</text>
+        <text class="lnC" x="44" y="222">Effort sits in the denominator, so the 3-week</text>
+        <text class="lnC" x="44" y="240">estimate does most of the ranking. Confidence</text>
+        <text class="lnC" x="44" y="258">is an input, so weak evidence costs you points.</text>
+
+        <rect x="450" y="36" width="404" height="40" rx="8" fill="#232935"/>
+        <text class="lnT" x="468" y="61">Lens B · WSJF = (BV + TC + OE) ÷ weeks</text>
+        <rect x="450" y="86" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="468" y="108">1 · Post-meeting summaries</text>
+        <text class="lnS" x="836" y="108" text-anchor="end">6.3</text>
+        <rect x="450" y="126" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="468" y="148">2 · The agent</text>
+        <text class="lnS" x="836" y="148" text-anchor="end">4.6</text>
+        <rect x="450" y="166" width="404" height="34" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="lnR" x="468" y="188">3 · Live in-meeting notes</text>
+        <text class="lnS" x="836" y="188" text-anchor="end">4.4</text>
+        <text class="lnC" x="468" y="222">There is no slot for confidence anywhere in</text>
+        <text class="lnC" x="468" y="240">this formula, so an ask with no evidence at all</text>
+        <text class="lnC" x="468" y="258">scores on asserted value and urgency alone.</text>
+
+        <rect x="26" y="282" width="828" height="68" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="lnH" x="46" y="308">The winner held. The margin did not: 31x clear under RICE, 1.4x under WSJF.</text>
+        <text class="lnN" x="46" y="330">And second place flipped to the only ask with no evidence behind it, because one lens has nowhere to record that.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - two respectable lenses, two different stories about the same three asks</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What each lens is willing to ignore<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Read the two formulas as statements of belief, because that is what they are:</p>
+        <ul>
+          <li><strong>RICE believes cheap reach wins.</strong> Effort is a divisor, so a 3-week job with broad reach beats an 11-week job almost regardless of how valuable the 11-week job is. It also has an explicit confidence term, which means it is the only one of the two that can express "we are not sure". That single term is why the agent finishes 31x behind rather than second.</li>
+          <li><strong>WSJF believes urgency wins.</strong> Cost of delay rewards anything framed as time-critical or strategically enabling. It has no confidence input at all. So an ask with zero evidence and a strong narrative scores exactly as well as an ask with 214 tickets behind it, provided somebody says the words "market window".</li>
+          <li><strong>Which is why lens choice is a decision, not a preliminary.</strong> Whoever picks the framework has already narrowed the answer. If someone arrives at a review with a ranking, the first question is not "what did it score" but "which lens, and who chose it".</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The rule that comes out of this page</strong>
+          Score under two lenses, always. If the ranking is stable, the frameworks have told you something. If it moves, they have told you nothing except which input is carrying the whole result, and that input is now the thing to go and check.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the score is not the artifact<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three things a score does well, and one it cannot do at all.</p>
+        <ul>
+          <li><strong>It forces the inputs into the open.</strong> You cannot score an ask without stating how many people it reaches and how long it takes, and half the value of the exercise is watching somebody discover they cannot state either.</li>
+          <li><strong>It makes disagreement specific.</strong> "I think this is more important" becomes "I think your confidence of 0.5 should be 0.8, and here is why", which is a conversation that can actually finish.</li>
+          <li><strong>It kills the bottom of the list cheaply.</strong> Items that lose under every lens are genuinely dead, and that is worth knowing early.</li>
+          <li><strong>It cannot choose.</strong> A number ranks; a person commits. The gap between the two is the entire second half of this session, and no amount of scoring closes it.</li>
+        </ul>
+        <p>The leader-track version of this is <a href="a4-prioritisation-without-theatre.html">a4, prioritisation without theatre</a>, which is about spotting a ranking built on guesses in somebody else's deck rather than building one yourself.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2: THE INPUTS ============ -->
+  <section class="section" id="inputs">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the inputs frameworks quietly require</span>
+      <h2>Every score needs a provenance column <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Both formulas above quietly demand four things: reach, confidence, effort, and some notion of what waiting costs. None of the four arrives with the ask. All four have to be produced by somebody, and if you do not produce them, a drafting tool will, in a tone of complete assurance. The fix is small and it changes everything: one extra column that says whether each number was measured, estimated by someone who would know, or invented.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four inputs every prioritisation framework requires, and the three provenance classes each input must be labelled with">
+        <style>
+          .inH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .inT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .inC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .inW { font: 700 11.5px Inter, sans-serif; fill: #991B1B; }
+          .inL { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .inD { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .inR { font: 700 11.5px Inter, sans-serif; fill: #991B1B; }
+        </style>
+
+        <text class="inH" x="26" y="24">Four inputs. No framework tells you where any of them came from.</text>
+
+        <rect x="26" y="36" width="196" height="32" rx="7" fill="#38404E"/>
+        <text class="inT" x="42" y="57">Reach</text>
+        <text class="inC" x="42" y="88">How many, in which</text>
+        <text class="inC" x="42" y="106">segment, over what</text>
+        <text class="inC" x="42" y="124">window. Needs a</text>
+        <text class="inC" x="42" y="142">countable denominator.</text>
+
+        <rect x="236" y="36" width="196" height="32" rx="7" fill="#232935"/>
+        <text class="inT" x="252" y="57">Confidence</text>
+        <text class="inC" x="252" y="88">How sure you are the</text>
+        <text class="inC" x="252" y="106">impact is real. Carries</text>
+        <text class="inC" x="252" y="124">all the risk, and gets</text>
+        <text class="inC" x="252" y="142">faked more than any.</text>
+
+        <rect x="446" y="36" width="196" height="32" rx="7" fill="#6B7688"/>
+        <text class="inT" x="462" y="57">Effort</text>
+        <text class="inC" x="462" y="88">Weeks, from the people</text>
+        <text class="inC" x="462" y="106">who would build it. An</text>
+        <text class="inC" x="462" y="124">estimate, always. Never</text>
+        <text class="inC" x="462" y="142">a measurement.</text>
+
+        <rect x="656" y="36" width="198" height="32" rx="7" fill="#6B7688"/>
+        <text class="inT" x="672" y="57">Cost of delay</text>
+        <text class="inC" x="672" y="88">What a quarter of</text>
+        <text class="inC" x="672" y="106">waiting costs. Least</text>
+        <text class="inC" x="672" y="124">checkable of the four,</text>
+        <text class="inC" x="672" y="142">so the most argued.</text>
+
+        <rect x="26" y="158" width="828" height="34" rx="7" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="inW" x="46" y="180">Leave any of the four blank and it still gets filled in, to two decimal places, by something with no stake in the outcome.</text>
+
+        <text class="inH" x="26" y="216">Three classes, and only three. Every number on the board gets one.</text>
+
+        <rect x="26" y="228" width="828" height="32" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="inL" x="46" y="249">Measured</text>
+        <text class="inD" x="160" y="249">a system counted it. 214 tickets. 11% revisit rate. 0.02 per meeting.</text>
+
+        <rect x="26" y="266" width="828" height="32" rx="7" fill="#EFF1F5" stroke="#E4E7EC"/>
+        <text class="inL" x="46" y="287">Estimated</text>
+        <text class="inD" x="160" y="287">by a named person who would know. "3 engineer-weeks, from the tech lead who would build it."</text>
+
+        <rect x="26" y="304" width="828" height="32" rx="7" fill="#FEF2F2" stroke="#991B1B"/>
+        <text class="inR" x="46" y="325">Invented</text>
+        <text class="inD" x="160" y="325">nobody knows. Keep the number if you must, write the word, and stop reading that row as a score.</text>
+
+        <rect x="26" y="352" width="828" height="52" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="inH" x="46" y="378">An ask whose inputs are all invented has not been deprioritised by the maths. It has been excused by it.</text>
+        <text class="inD" x="46" y="396">The provenance column is what stops a guess from graduating into a plan just because it went through a formula.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four required inputs, three honest labels</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Input, as used on this page</th><th>Value</th><th>Class</th><th>What would move it up a class</th></tr></thead>
+      <tbody>
+        <tr><td>Reach · summaries</td><td>100 of 100 recorded meetings</td><td>Measured</td><td>nothing needed: every recorded meeting on a paid workspace gets one, and analytics counts recorded meetings already</td></tr>
+        <tr><td>Reach · live notes</td><td>68 of 100 meetings</td><td>Measured, self-reported</td><td>the 68% comes from a survey answer, not observed behaviour; instrument whether notes are taken elsewhere during a call</td></tr>
+        <tr><td>Reach · the agent</td><td>30 of 100 meetings</td><td>Invented</td><td>one interview in which an admin says what an agent would do for them, and how often</td></tr>
+        <tr><td>Impact · summaries</td><td>2 of 3</td><td>Estimated by someone who would know</td><td>the support lead scored it against 214 tickets and 6 of 8 interviews; a ticket-to-account rollup would tighten it</td></tr>
+        <tr><td>Impact · live notes</td><td>3 of 3</td><td>Invented</td><td>pull the loss reasons on the 3 lost deals and check whether live notes was actually named; until then this is an assertion by an interested party</td></tr>
+        <tr><td>Confidence · summaries</td><td>0.8</td><td>Estimated by someone who would know</td><td>two independent signals agreeing (tickets and interviews) is what buys the 0.8; a third would not add much</td></tr>
+        <tr><td>Confidence · live notes</td><td>0.5</td><td>Estimated by someone who would know</td><td>one unverified signal, so half. Verify the deals and this moves in either direction, which is the point</td></tr>
+        <tr><td>Confidence · the agent</td><td>0.25</td><td>Estimated against nothing</td><td>the number a drafting tool writes here is 0.8, and the number the room says out loud is 0.8, and neither has anything under it</td></tr>
+        <tr><td>Effort · all three</td><td>3 / 11 / 13 weeks</td><td>Estimated by someone who would know</td><td>all three are engineering estimates and labelled as estimates on this page; the 11 includes a streaming pipeline that does not exist</td></tr>
+        <tr><td>Run cost · summaries</td><td>0.02 per meeting</td><td>Measured</td><td>nothing needed, and worth noticing that it is the only cost number on the board with a real basis</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Confidence is where the risk lives, and where the lying happens<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Of the four inputs, confidence is the strange one. Reach and effort are wrong by a factor of two at worst. Confidence is a multiplier on your entire belief that the thing works at all, and unlike the others it has no natural units, which makes it the easiest number in the whole exercise to move without anyone noticing.</p>
+        <ul>
+          <li><strong>It absorbs every unresolved question.</strong> Did the research cover the right segment? Was the sample friendly? Is the mechanism plausible? All of it lands in one decimal, and then the decimal gets multiplied by a big reach number and disappears.</li>
+          <li><strong>It moves to fit the answer people want.</strong> Nobody writes 0.25 next to the CEO's request. Watch what happens to a confidence value between the draft and the review, and who was in the room when it changed.</li>
+          <li><strong>A drafting tool always writes it high.</strong> Asked to score a backlog it produces confidence values in the 0.7 to 0.9 band across the board, because high confidence is what confident prose sounds like. It has not seen your research. It has not seen anything.</li>
+          <li><strong>So state the basis, not the number.</strong> "0.8, two independent signals" and "0.8, because it feels likely" are the same cell and completely different claims. The provenance column is what makes them look different on the page.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to hand a drafting tool, and what to never let it touch<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>There is real work for AI in this session, and it is all on one side of the line.</p>
+        <ul>
+          <li><strong>Genuinely useful:</strong> converting your inputs into both scorings without arithmetic slips, generating the sensitivity table (which single input, changed by how much, flips the ranking), writing the strongest possible case for the option you are about to cut, and drafting the note to sales once you have decided what it says.</li>
+          <li><strong>Actively harmful:</strong> supplying any of the four inputs. Ask for a scored backlog and you get one, complete, plausible and untraceable, and the provenance column comes back full of numbers that belong in the invented row without saying so.</li>
+          <li><strong>The tell:</strong> if every confidence value in a scored backlog sits between 0.7 and 0.9, nobody scored anything. Real confidence values are lumpy, because real evidence is lumpy.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The prompt shape that works</strong>
+          Give it the inputs and the provenance labels you have already written, and ask for the arithmetic, the sensitivity analysis, and the argument against your own preference. Never ask it what the inputs are. The first is checking work; the second is outsourcing the judgement you are paid for.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3: CHOOSING ============ -->
+  <section class="section" id="choosing">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the part no framework does</span>
+      <h2>Then somebody has to choose <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">The two lenses agree on the winner and disagree on everything else, so the honest reading is: summaries survived both framings, and the ordering below it is noise. That is as far as arithmetic goes. What follows is a choice, made by a person, on evidence, with a cost attached. Here it is, made on the page rather than left as an exercise.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 370" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The decision: post-meeting summaries chosen, live notes and the agent cut, with the trade-off written out and the cut branches recorded">
+        <style>
+          .chH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .chY { font: 700 12.5px Inter, sans-serif; fill: #33270A; }
+          .chYb { font: 700 12px Inter, sans-serif; fill: #33270A; }
+          .chYc { font: 400 11.5px Inter, sans-serif; fill: #33270A; }
+          .chYs { font: 400 11px Inter, sans-serif; fill: #33270A; }
+          .chT { font: 700 12.5px Inter, sans-serif; fill: #1E232C; }
+          .chC { font: 400 11px Inter, sans-serif; fill: #66707F; }
+          .chN { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="chH" x="26" y="24">The ranking narrowed it to a shortlist. Choosing is not a calculation.</text>
+
+        <rect x="26" y="36" width="266" height="118" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="chY" x="44" y="62">CHOSEN · Summaries</text>
+        <text class="chYs" x="44" y="86">3 weeks. 0.02 a meeting.</text>
+        <text class="chYs" x="44" y="104">214 tickets and 6 of 8 admins</text>
+        <text class="chYs" x="44" y="122">point at the same moment:</text>
+        <text class="chYs" x="44" y="140">after the meeting, not during.</text>
+
+        <rect x="306" y="36" width="266" height="118" rx="9" fill="#EFF1F5" stroke="#C3CAD6"/>
+        <text class="chT" x="324" y="62">CUT · Live notes</text>
+        <text class="chC" x="324" y="86">11 weeks, and the streaming</text>
+        <text class="chC" x="324" y="104">pipeline does not exist yet.</text>
+        <text class="chC" x="324" y="122">Impact rests on 3 lost deals</text>
+        <text class="chC" x="324" y="140">nobody has checked.</text>
+
+        <rect x="588" y="36" width="266" height="118" rx="9" fill="#EFF1F5" stroke="#C3CAD6"/>
+        <text class="chT" x="606" y="62">CUT · The agent</text>
+        <text class="chC" x="606" y="86">13 weeks at the low end, and</text>
+        <text class="chC" x="606" y="104">no evidence was offered.</text>
+        <text class="chC" x="606" y="122">Not a no forever: a no until</text>
+        <text class="chC" x="606" y="140">somebody names the job.</text>
+
+        <rect x="26" y="172" width="828" height="100" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="chYb" x="46" y="198">The trade-off, written into the spec rather than the appendix:</text>
+        <text class="chYc" x="46" y="222">We are building post-meeting summaries and NOT live in-meeting notes this quarter.</text>
+        <text class="chYc" x="46" y="242">The pain the evidence describes happens after the meeting, and summaries take 3 weeks</text>
+        <text class="chYc" x="46" y="262">against 11. Sales loses the demo moment, and I am the one who says that to them.</text>
+
+        <rect x="26" y="288" width="828" height="64" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="chH" x="46" y="314">Then record the branches you cut, and the condition that would re-open each one.</text>
+        <text class="chN" x="46" y="336">A cut with a reason and a re-open condition is a decision. A cut with neither is an argument that restarts in 12 weeks.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the decision, the cost of it, and the record that stops the re-litigation</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why summaries, in the four sentences that actually did the work<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Neither score is the reason. These are:</p>
+        <ul>
+          <li><strong>The evidence locates the pain after the meeting.</strong> 214 tickets tagged "cannot find what was decided" and 6 of 8 interviewed admins who never reopen a transcript describe the same moment, and it is not the moment live notes serves. This is the argument. Everything else is supporting detail.</li>
+          <li><strong>The two strongest signals are independent.</strong> Support tags and research interviews are different instruments pointed at different people, and they agree. That is what a confidence of 0.8 is actually made of.</li>
+          <li><strong>It is the only option we can be wrong about cheaply.</strong> 3 weeks and 0.02 a meeting means being wrong costs a month. 11 weeks plus a pipeline that does not exist means being wrong costs the quarter and leaves infrastructure nobody asked for.</li>
+          <li><strong>And it makes the live-notes question answerable sooner.</strong> Shipping summaries first buys eight weeks in which sales can pull the loss reasons on those three deals. If live notes is genuinely deal-blocking, that argument comes back stronger next cycle with a number in it.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The test for a real decision</strong>
+          Can you name what you gave up, who loses by it, and what you will say to them? If the answer to any of the three is no, you have not decided. You have ranked, which is a different and much more comfortable activity.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Saying no to the CEO's agent without saying no to the CEO<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The agent is the hardest of the three to cut, and not because it scores badly. It scores badly under both lenses. It is hard to cut because of who asked, which is a political problem wearing a prioritisation costume.</p>
+        <p>What does not work: presenting the score. A number that says the CEO's idea ranks third reads as a rebuttal, and the reply is that the framework is wrong, which is a debate you will lose because the framework <em>is</em> partly wrong, as this page just demonstrated.</p>
+        <p>What does work: convert the no into a missing input. "There is no version of this I can size, because nobody has told me which job it does for which admin. Give me one customer conversation where an agent is the obvious answer, and I will bring it back scored." That is not a refusal, it is a request, and the request is genuinely the blocker. If the conversation never happens, the ask dies of natural causes and nobody had to fight about it. If it does happen, you were wrong and now you have the input you were missing.</p>
+        <p>The stakeholder-facing version of this conversation, including the three questions the CEO will ask next, is <a href="b9-roadmap-narrative.html">b9</a>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ WORKED ARTIFACT ============ -->
+  <section class="section" id="worked">
+    <div class="section-kicker">
+      <span class="klabel">Worked artifact · 12 min · everyone</span>
+      <h2>The scored board and the decision record <span class="tag demo">◆ real material to judge</span></h2>
+    </div>
+    <p class="lede">Both scorings on one board, with the provenance of the weakest input in the last column, because that column is the one that decides how much of the row you are allowed to believe. Read the rank-move column before the score columns.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the inputs down before you score anything.</strong> Reach with its denominator, impact on a stated scale, confidence as a decimal, effort in weeks from the people who would do the work. If a cell is empty, leave it empty and see who volunteers a number.</p></div>
+      <div class="step"><p><strong>Label every cell: measured, estimated by someone who would know, or invented.</strong> Do this before the arithmetic, not after, or the labels will drift towards whatever justifies the ranking you already have.</p></div>
+      <div class="step"><p><strong>Score under two lenses.</strong> Then compare the rankings, and more importantly compare the margins. A winner that holds under both lenses but goes from 31x clear to 1.4x clear is telling you the gap is a modelling artifact.</p></div>
+      <div class="step"><p><strong>Find the single input carrying the result.</strong> Change one cell at a time and watch the order. Here it is effort: move the summaries estimate from 3 weeks to 9 and the RICE score falls from 53.3 to 17.8, still first. Move it to 30 and it loses. So the decision survives a 3x estimation error and not a 10x one, which is worth knowing.</p></div>
+      <div class="step"><p><strong>Then stop scoring and write the record.</strong> The decision, the reason, what it cost, what you will say to the person who lost, the cut branches, and the condition that re-opens each one. This artifact outlives the spreadsheet by about a year.</p></div>
+    </div>
+
+    <table class="clean">
+      <thead><tr><th>Ask</th><th>RICE inputs<br>R · I · C ÷ E</th><th>RICE</th><th>WSJF inputs<br>BV + TC + OE ÷ weeks</th><th>WSJF</th><th>Rank move</th><th>Weakest input, and where that number came from</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Post-meeting summaries</strong></td><td>100 · 2 · 0.8 ÷ 3</td><td><strong>53.3</strong></td><td>13 + 3 + 3 ÷ 3</td><td><strong>6.3</strong></td><td>1 → 1</td><td>Effort, 3 weeks: <em>estimated</em> by the tech lead who would build it. The 0.02 per meeting run cost is <em>measured</em>, which makes this the best-sourced row on the board</td></tr>
+        <tr><td><strong>Live in-meeting notes</strong></td><td>68 · 3 · 0.5 ÷ 11</td><td>9.3</td><td>20 + 20 + 8 ÷ 11</td><td>4.4</td><td>2 → 3</td><td>Impact, scored a generous 3 of 3: <em>invented</em>. It rests entirely on 3 lost deals that nobody has checked against the loss reasons, asserted by the team that wants the feature</td></tr>
+        <tr><td><strong>The agent</strong></td><td>30 · 3 · 0.25 ÷ 13</td><td>1.7</td><td>20 + 20 + 20 ÷ 13</td><td>4.6</td><td>3 → 2</td><td>Reach, 30 of 100: <em>invented</em>, and so are impact and all three cost-of-delay components. Five invented cells producing a second-place finish under lens B</td></tr>
+      </tbody>
+    </table>
+
+    <p class="lede">Note what the WSJF column did to the bottom of the board. The ask with the most invented inputs finished second, ahead of the ask with one unverified signal, because the lens has no confidence term and rewards asserted urgency. Nothing dishonest happened. Somebody just chose a framework.</p>
+
+    <pre class="lab-sql">DECISION RECORD  ·  Cadence  ·  next quarter  ·  owner: PM  ·  reviewed with: eng lead, support lead, sales lead
+
+WE ARE BUILDING    Post-meeting summaries, for team admins on paid workspaces of
+                   5 to 50 seats. Signable spec: see b5, scored 100 of 100.
+
+BECAUSE            The evidence locates the pain AFTER the meeting rather than during
+                   it. 214 support tickets in 3 months tagged "cannot find what was
+                   decided", the second most common tag; and 6 of 8 interviewed admins
+                   never reopen a transcript at all. Two independent instruments,
+                   same finding.
+
+AT THE COST OF     Live in-meeting notes. This ships without the demo moment sales
+                   asked for, and we are accepting that for at least one quarter.
+
+WHAT I WILL SAY    "Your three lost deals are the strongest thing anybody brought me,
+TO SALES           and I could not check a single one of them. So here is the deal:
+                   pull the loss reasons on those three, and flag any deal this quarter
+                   where live notes gets named, and I will re-score it next cycle with
+                   your number instead of my guess. Meanwhile the thing 214 tickets are
+                   about takes 3 weeks rather than 11, which means your argument gets
+                   its hearing sooner this way than if I started live notes today."
+
+CUT, AND WHY       Live in-meeting notes  ·  impact rests on 3 unverified deals, and it
+                   needs a streaming pipeline that does not exist. 11 weeks.
+                   The agent  ·  no evidence was offered, and no job has been named.
+                   13 weeks at the low end.
+
+RE-OPEN IF         The loss-reason pull names live notes in 3 or more deals; or an admin
+                   conversation names a specific job an agent does; or the summaries
+                   metric set in b7 does not move.
+
+WHAT WOULD HAVE    A verified deal-loss number for live notes. Reach and impact for the
+CHANGED THIS       agent that are not invented. A summaries effort estimate above
+                   30 weeks.</pre>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Lens shopping is the most common form of prioritisation theatre, and it never looks like cheating.</strong> A team runs RICE, does not like the answer, and someone points out that RICE undervalues strategic bets. Which is true. So they run WSJF, and the strategic bet comes second instead of last, and the deck says "scored under two frameworks" as though that were rigour rather than the opposite. The countermeasure is not banning frameworks. It is fixing the lens and the provenance labels <em>before</em> anybody sees a ranking, and writing down which lens you chose and why in the same document as the score. A ranking is only evidence if the method was picked before the answer was known.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICE ============ -->
+  <section class="section" id="practice">
+    <div class="section-kicker">
+      <span class="klabel">Practice</span>
+      <h2>Your turn: three passes over the board <span class="tag demo">◆ 8 min</span></h2>
+    </div>
+    <p class="lede">No tool needed. A pen and the table above.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Q1 · Re-score the agent with honest confidence<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The agent's WSJF row is 20 + 20 + 20 ÷ 13 = 4.6, second place. Every one of those three 20s is invented, and WSJF has no confidence term to catch that. So add one by hand: multiply the cost of delay by the confidence you would actually defend, which for an ask with no evidence at all is 0.25.</p>
+        <p>60 x 0.25 = 15, over 13 weeks, gives <strong>1.2</strong>. Now it is last under both lenses, by a wide margin, and it got there without anyone arguing about whether agents matter. That is the move: when a framework has no slot for how much you believe the inputs, add the slot rather than accepting the ranking. Then say so in the document, because you have just modified the method and that is a thing reviewers are entitled to know.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Q2 · Find the input doing all the work<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Take the summaries row and change one input at a time until the ranking breaks. Then do the same for live notes.</p>
+        <p>You will find two things. First, the summaries decision is robust to reach and impact being wrong by a lot, and fragile to the effort estimate being wrong by a factor of ten, which is unlikely for a 3-week job and very likely for an 11-week one. Second, live notes flips ahead of summaries under RICE if its confidence goes from 0.5 to 0.9 <em>and</em> its effort comes in at 4 weeks rather than 11. So the whole live-notes case reduces to two claims: the deals are real, and the pipeline is easier than we think. Both are checkable, neither has been checked, and now they are written down as the two things that would change the decision.</p>
+        <p>This is the sensitivity pass, and it is the one part of the session worth handing to a tool: give it your inputs and ask which single cell, changed by how much, flips the order. It is arithmetic on numbers you supplied, which is exactly the safe half of the line.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Q3 · Audit a ranking you did not build<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Find the most recent prioritised backlog in your company that you did not personally score. Add one column: measured, estimated by someone who would know, or invented. Do not change any numbers and do not tell anyone yet.</p>
+        <p>Two patterns show up almost every time. The confidence column is uniformly high, which means nobody scored confidence, they scored enthusiasm. And the items at the top with the smallest effort estimates were estimated by the person who wanted them built, not by the person who would build them. Neither finding requires a confrontation. Both can be raised as one question in the next planning meeting: "can we mark which of these numbers we measured?" It reads as tidiness, it is answerable, and the answer reorders the list.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Score your carried backlog item under two lenses, not one. Use RICE and either WSJF or a plain cost-of-delay reading, and write both rankings down even when they agree.</li>
+      <li>Add the provenance column and fill it in honestly: measured, estimated by someone who would know, or invented. Count the invented cells. That count is the finding, not the score.</li>
+      <li>Run the sensitivity pass. Name the single input that, if wrong, changes your answer, and write one line on how you would check it and what it would cost to check.</li>
+      <li>Write the trade-off sentence: what you are building, what you are therefore not building, who loses, and the words you will say to them. If you cannot write the last part, the decision is not made.</li>
+      <li>Write the cut record: each rejected option, why, and the condition that re-opens it. Put it where the argument will happen again, which is usually the top of the planning doc rather than a folder nobody opens.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Prioritisation frameworks: RICE, WSJF, cost of delay, as lenses rather than answers</span><span class="note">Part 1 + the worked board · same asks, two framings, the margin and the ordering both move</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The inputs frameworks quietly require, and the provenance discipline that keeps them honest</span><span class="note">Part 2 · three classes only, with confidence called out as the one that carries the risk</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Writing down the branch you cut, from opportunity-tree practice</span><span class="note">Part 3 + the decision record · every cut gets a reason and a re-open condition</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Metric definition, baselines and targets</span><span class="note">Named here as the thing the re-open condition points at - the full treatment is <a href="b7-metrics-and-instrumentation.html">b7</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The six spec checks</span><span class="note">Referenced, not re-taught - <a href="b5-the-spec-and-the-scorer.html">b5</a> owns them, and the trade-off is check 6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Estimation practice, sequencing, and anything after the decision</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The agent finishes third under RICE (1.7) and second under WSJF (4.6). What changed?</p>
+      <button class="qopt" type="button">A · The agent's inputs improved between the two scorings</button>
+      <button class="qopt" type="button">B · WSJF has no confidence term, so an ask with no evidence scores on asserted business value, urgency and enablement alone</button>
+      <button class="qopt" type="button">C · WSJF is the more rigorous framework, so the second result is the right one</button>
+      <p class="qwhy">RICE multiplies by confidence, which is the only place either formula can record "we have nothing behind this". Remove that term and five invented cells produce a second-place finish. Neither framework is wrong; they disagree about what is allowed to be ignored, and that disagreement is the finding.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · You need a reach number for an ask and nobody has one. What do you do?</p>
+      <button class="qopt" type="button">A · Ask a drafting tool for a reasonable estimate, since every framework needs a number</button>
+      <button class="qopt" type="button">B · Write the number you would guess, label the cell invented, and stop treating that row's score as a score until somebody produces a real input</button>
+      <button class="qopt" type="button">C · Leave the ask out of the ranking entirely</button>
+      <p class="qwhy">The problem is never that a number is missing, it is that a missing number gets replaced silently and then survives into a plan. Labelling it invented keeps the row on the board, keeps the gap visible, and turns the next step into a small research task rather than an argument about priorities.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">3 · Summaries win under both lenses. Has the framework made the decision?</p>
+      <button class="qopt" type="button">A · Yes - agreement across two lenses is what a decision is</button>
+      <button class="qopt" type="button">B · Yes, provided the arithmetic was checked</button>
+      <button class="qopt" type="button">C · No - the lenses narrowed the field. The choice, the sentence naming what it cost, what you say to sales, and the cut record with re-open conditions are all yours</button>
+      <p class="qwhy">A number ranks; a person commits. The test for whether you decided rather than ranked is whether you can name what you gave up, who loses by it, and what you will say to them. Nothing in either formula produces any of those three.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Lenses, not answers</b><span>Score under two. Stable ranking = a finding. Moving ranking = one input is carrying everything.</span></div>
+      <div class="cheat-item"><b>The Cadence board</b><span>RICE: 53.3 / 9.3 / 1.7. WSJF: 6.3 / 4.6 / 4.4. Same winner, 31x margin down to 1.4x.</span></div>
+      <div class="cheat-item"><b>Four required inputs</b><span>Reach, confidence, effort, cost of delay. None arrives with the ask. All four get invented if you leave them blank.</span></div>
+      <div class="cheat-item"><b>Three provenance classes</b><span>Measured · estimated by someone who would know · invented. Only three, and every cell gets one.</span></div>
+      <div class="cheat-item"><b>Confidence is the risk</b><span>No natural units, absorbs every unresolved question, moves to fit the answer people want. State the basis, not the decimal.</span></div>
+      <div class="cheat-item"><b>The AI line</b><span>Give it your inputs, get arithmetic, sensitivity and the counter-argument. Never ask it what the inputs are.</span></div>
+      <div class="cheat-item"><b>Test for a real decision</b><span>Name what you gave up, who loses, and what you will say to them. Three noes means you ranked, not decided.</span></div>
+      <div class="cheat-item"><b>The cut record</b><span>Reason plus re-open condition, or the argument restarts in 12 weeks. Next: b7, the metric before the build.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 6 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-the-spec-and-the-scorer.html">← Previous: The spec, and the scorer</a> &nbsp;·&nbsp; <a href="b7-metrics-and-instrumentation.html">Next: Metrics and instrumentation →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

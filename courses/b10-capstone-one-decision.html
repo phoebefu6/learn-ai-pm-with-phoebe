@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM session 10 · Capstone, one decision end to end - learn ai product management with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-pm-with-phoebe</a> / PM session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Product Management with Phoebe · PM track · Session 10 of 10</div>
+    <h1>Capstone: <span class="accent">one decision, end to end</span></h1>
+    <p class="sub">Nine sessions on Cadence. This one is on your own backlog item, the one you picked in b1 and have been carrying since - the one that gets argued about and never decided. Sixty minutes, five checkpoints, each with a deliverable, a time box and a specific way to fail. You mark yourself against the acceptance criteria, which are stated up front so you cannot move them afterwards. Then five minutes on the handoff: exactly what a delivery team receives from you, and exactly where your job stops.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 PM track</span>
+      <span class="chip audience">PMs · founders · product leads</span>
+      <span class="chip audience">Your own item · worked alone</span>
+      <span class="chip time">60 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:4">0-20 · Checkpoints 1-2 · problem and research</span>
+      <span class="a2" style="flex:3">20-35 · Checkpoint 3 · the signable spec</span>
+      <span class="a3" style="flex:4">35-55 · Checkpoints 4-5 · decision and metric</span>
+      <span class="a4" style="flex:1">55-60 · Handoff</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>How this hour works</h2>
+    </div>
+    <p class="lede">Everything before this was a demonstration. b2 to b9 took one product through one decision with the answers visible on the page, which is the right way to learn a craft and a completely useless way to find out whether you can do it. This session removes the answers. Your item, your evidence, your call, your metric, and nobody to check the work but you.</p>
+    <p class="lede">Two things make that possible in sixty minutes. First, the time boxes are real: a checkpoint you spend twenty minutes on is a checkpoint you were avoiding finishing, so mark it failed and move on. A failed checkpoint you can name is worth more than a finished one you fudged. Second, the acceptance criteria are written below, before you start, so the bar cannot drift towards whatever you happen to produce. That is the same discipline as a stopping rule written before the data, applied to yourself.</p>
+    <div class="legend">
+      <span class="pill solid">Live - worked in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live lab - scores your own spec at checkpoint 3</span>
+      <span class="pill inkpill">Sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ The acceptance criteria, stated before you start</strong>
+      You pass this capstone if, at the end of sixty minutes, you have all five of these on paper: (1) a problem statement a reasonable colleague could disagree with on the evidence; (2) every research claim carrying a source count and a provenance label; (3) a spec that scores 100 of 100 on the six checks; (4) one sentence naming what you gave up, who loses by it, and what you will say to them; (5) a primary metric with a real baseline and at least one event that would produce it. Five artifacts. Four out of five does not pass, and how well any of it reads counts for nothing.
+    </div>
+  </section>
+
+  <!-- ============ CONCEPT 1: THE FIVE CHECKPOINTS ============ -->
+  <section class="section" id="checkpoints">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the shape of the hour</span>
+      <h2>Five checkpoints, five traps <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Each checkpoint has one deliverable, one time box and one trap, and the traps are not generic. Each is the specific mistake that a competent, well-intentioned PM makes at that exact stage, usually because it is the version of the work that feels finished soonest. Read all five before you start checkpoint 1, because knowing which failure is coming is most of the defence against it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 446" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The five capstone checkpoints, each with its deliverable, its time box and the specific trap at that stage">
+        <style>
+          .cpT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .cpM { font: 400 11px Inter, sans-serif; fill: #C3CAD6; }
+          .cpD { font: 700 11.5px Inter, sans-serif; fill: #1E232C; }
+          .cpC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+          .cpH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+        </style>
+
+        <text class="cpH" x="26" y="24">Sixty minutes, your own item, and one way to fail at each stage</text>
+
+        <rect x="26" y="36" width="214" height="48" rx="8" fill="#232935"/>
+        <text class="cpT" x="44" y="58">1 · Evidenced problem</text>
+        <text class="cpM" x="44" y="76">10 min</text>
+        <text class="cpD" x="256" y="56">A problem statement with a named segment, one countable signal, its source.</text>
+        <text class="cpC" x="256" y="76">Trap: a solution wearing a problem's clothes. Strike out every noun you could build.</text>
+
+        <rect x="26" y="102" width="214" height="48" rx="8" fill="#38404E"/>
+        <text class="cpT" x="44" y="124">2 · Verified research</text>
+        <text class="cpM" x="44" y="142">10 min</text>
+        <text class="cpD" x="256" y="122">Your themes, each with a source count and a provenance label per claim.</text>
+        <text class="cpC" x="256" y="142">Trap: promoting a single vivid anecdote to a theme because it is quotable.</text>
+
+        <rect x="26" y="168" width="214" height="48" rx="8" fill="#6B7688"/>
+        <text class="cpT" x="44" y="190">3 · Signable spec</text>
+        <text class="cpM" x="44" y="208">15 min</text>
+        <text class="cpD" x="256" y="188">A spec scoring 100 of 100 on the six checks, with the failures actually fixed.</text>
+        <text class="cpC" x="256" y="208">Trap: stopping at 70. The last two checks are the ones that cost you something.</text>
+
+        <rect x="26" y="234" width="214" height="48" rx="8" fill="#38404E"/>
+        <text class="cpT" x="44" y="256">4 · The decision</text>
+        <text class="cpM" x="44" y="274">10 min</text>
+        <text class="cpD" x="256" y="254">The call, what it cost, who loses, and the cut record with re-open conditions.</text>
+        <text class="cpC" x="256" y="274">Trap: a ranking built on confidence values nobody in the room can source.</text>
+
+        <rect x="26" y="300" width="214" height="48" rx="8" fill="#232935"/>
+        <text class="cpT" x="44" y="322">5 · Metric and events</text>
+        <text class="cpM" x="44" y="340">10 min</text>
+        <text class="cpD" x="256" y="320">One primary metric with a baseline, a guardrail, and the events behind them.</text>
+        <text class="cpC" x="256" y="340">Trap: a metric you cannot instrument before the build starts.</text>
+
+        <rect x="26" y="364" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="cpH" x="46" y="390">The time boxes are part of the exercise, not a suggestion about pacing.</text>
+        <text class="cpC" x="46" y="412">A checkpoint you spend twenty minutes on is one you were avoiding finishing. Mark it failed and move on.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the deliverable, the box, and the failure that arrives on schedule</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Set up before the clock starts<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two minutes of setup saves ten minutes of hesitating, and both of these are decisions you should make now rather than at minute forty when you are invested:</p>
+        <ul>
+          <li><strong>Pick the item, and pick the hard one.</strong> The best candidate is the backlog item that has been argued about more than twice and decided zero times, which is exactly the one you wrote down in b1. If you have drifted to an easier item since then, drift back. An item that has never been argued about will pass all five checkpoints and teach you nothing, because nothing about it was ever contested.</li>
+          <li><strong>Get the evidence in front of you before you start.</strong> Whatever exists: the ticket counts, the interview notes, the dashboard, the email where somebody asked for it. You are not going to gather new evidence in the next hour. Checkpoint 1 and checkpoint 2 are largely about finding out how little you actually have, and that finding is one of the more valuable outputs of the session.</li>
+          <li><strong>Decide now what you will do with an empty field.</strong> The answer is: write "unknown" and size the work to find out. Do not fill it in with something plausible, and specifically do not fill it in with a drafting tool. An empty field is a research task with a size; a plausible field is a decision you did not know you made.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Where AI belongs in this hour, and where it does not</strong>
+          Use it to draft, to restructure, to argue the case against your own conclusion, and to check your event list for coverage gaps. Do not use it to supply evidence, to supply a confidence value, to pick the metric, or to write the trade-off sentence. Everything on the never list is a commitment; everything on the use list is production you will check in under five minutes.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why these five, and in this order<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The order is not arbitrary and it is not just the order of the sessions. Each checkpoint produces the input the next one silently requires, which is why skipping one does not save time so much as move the failure later:</p>
+        <ul>
+          <li><strong>Without checkpoint 1</strong>, checkpoint 4 has nothing to rank. You cannot compare two asks stated in different units, and "what should we build" without an evidenced problem underneath is a conversation about who is most senior.</li>
+          <li><strong>Without checkpoint 2</strong>, checkpoint 1 is an assertion with a number in it, which travels further than an assertion without one and is not better.</li>
+          <li><strong>Without checkpoint 3</strong>, checkpoint 4 has nothing to decide about. A spec is where the scope, the exclusions and the trade-off actually live, and you cannot cost a decision whose boundary is undefined.</li>
+          <li><strong>Without checkpoint 5</strong>, everything above it is unfalsifiable. A decision with no metric cannot be wrong, so nothing you learn this quarter feeds the next one.</li>
+        </ul>
+        <p>The order also matches the order in which things get expensive. Fixing a problem statement costs ten minutes. Fixing a missing metric after the build costs a quarter. Everything in this hour is arranged so that the cheap corrections happen first.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CONCEPT 2: THE BAR ============ -->
+  <section class="section" id="bar">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · marking yourself</span>
+      <h2>The acceptance bar, and how to be honest about it <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Self-marking is the weakest form of assessment ever invented, and it is the only one available here, so the checklist is built to remove as much wriggle room as possible. Every row is answerable yes or no by looking at a piece of paper. None of them asks whether you thought about something, because everybody thinks about everything and nobody can mark that.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The five capstone artifacts and the acceptance bar of all five, marked by the learner">
+        <style>
+          .baT { font: 700 11.5px Inter, sans-serif; fill: #FFFFFF; }
+          .baS { font: 400 11px Inter, sans-serif; fill: #C3CAD6; }
+          .baY { font: 700 12.5px Inter, sans-serif; fill: #33270A; }
+          .baYc { font: 400 11.5px Inter, sans-serif; fill: #33270A; }
+          .baH { font: 700 12px Inter, sans-serif; fill: #1E232C; }
+          .baC { font: 400 11.5px Inter, sans-serif; fill: #66707F; }
+        </style>
+
+        <text class="baH" x="26" y="24">Five artifacts. Partial credit is what makes a decision unsignable.</text>
+
+        <rect x="26" y="40" width="150" height="54" rx="8" fill="#232935"/>
+        <text class="baT" x="44" y="64">1 · Problem</text>
+        <text class="baS" x="44" y="82">evidenced</text>
+
+        <rect x="192" y="40" width="150" height="54" rx="8" fill="#38404E"/>
+        <text class="baT" x="210" y="64">2 · Research</text>
+        <text class="baS" x="210" y="82">verified</text>
+
+        <rect x="358" y="40" width="150" height="54" rx="8" fill="#6B7688"/>
+        <text class="baT" x="376" y="64">3 · Spec</text>
+        <text class="baS" x="376" y="82">100 of 100</text>
+
+        <rect x="524" y="40" width="150" height="54" rx="8" fill="#38404E"/>
+        <text class="baT" x="542" y="64">4 · Decision</text>
+        <text class="baS" x="542" y="82">cost named</text>
+
+        <rect x="690" y="40" width="150" height="54" rx="8" fill="#232935"/>
+        <text class="baT" x="708" y="64">5 · Metric</text>
+        <text class="baS" x="708" y="82">instrumented</text>
+
+        <rect x="26" y="120" width="828" height="76" rx="9" fill="#FDF6E0" stroke="#E8B004"/>
+        <text class="baY" x="46" y="146">THE BAR · all five, marked by you, in sixty minutes. Four out of five is not eighty percent.</text>
+        <text class="baYc" x="46" y="170">It is a decision somebody else finishes for you later, quietly, in whichever direction is convenient then.</text>
+
+        <rect x="26" y="212" width="828" height="66" rx="9" fill="#F7F8FA" stroke="#E4E7EC"/>
+        <text class="baH" x="46" y="238">Mark yourself against the artifact, never against the effort.</text>
+        <text class="baC" x="46" y="260">The question is not whether you worked hard on it. It is whether a colleague could read it and disagree on the evidence.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the bar is all five, and it is deliberately unforgiving</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>#</th><th>The artifact</th><th>It passes only if</th><th>Your mark</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td>The evidenced problem</td><td>It names a segment more specific than "users", it carries at least one countable signal with its source, and a reasonable colleague could disagree with it on the evidence rather than on taste. No noun in it is a thing you could build.</td><td>☐ pass<br>☐ fail</td></tr>
+        <tr><td><strong>2</strong></td><td>The verified research</td><td>Every theme has a count in the line, at least one verbatim you have read yourself, and no theme rests on one source. Every claim is labelled counted, reported or asserted.</td><td>☐ pass<br>☐ fail</td></tr>
+        <tr><td><strong>3</strong></td><td>The signable spec</td><td>It scores 100 of 100 on the six checks, and the non-goals and trade-off are real rather than sentences added to satisfy the scorer. An engineer who was in none of your meetings could build the right thing from it without inventing an answer.</td><td>☐ pass<br>☐ fail</td></tr>
+        <tr><td><strong>4</strong></td><td>The decision and its cost</td><td>You can name what you gave up, who loses by it, and the words you will say to them. Every input in the ranking is labelled measured, estimated by someone who would know, or invented, and no invented input is carrying the result.</td><td>☐ pass<br>☐ fail</td></tr>
+        <tr><td><strong>5</strong></td><td>The metric and its events</td><td>One primary metric, a baseline you actually pulled rather than remembered, a target outside the historical range, a guardrail with a threshold, and at least one event with the properties that produce the metric.</td><td>☐ pass<br>☐ fail</td></tr>
+        <tr><td><strong>6</strong></td><td>The handoff packet</td><td>Everything a delivery team needs to start, and nothing that belongs to them. If your packet contains a milestone plan, a WBS or a status cadence, you have crossed the line and the mark is a fail.</td><td>☐ pass<br>☐ fail</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Common wrong turns, and what each one actually is<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Six failures that show up every single time this session is run. None of them is carelessness. Each is a reasonable instinct arriving at the wrong moment:</p>
+        <ul>
+          <li><strong>The comfortable item.</strong> Halfway through checkpoint 1 you notice the item you chose is genuinely contested and swap to a cleaner one. That is not a change of subject, it is the exercise working, and swapping is how you spend an hour confirming something you already knew.</li>
+          <li><strong>Filling the empty field.</strong> A reach number is missing, so you put a plausible one in. Ten minutes later it is a score, twenty minutes later it is a ranking, and by checkpoint 4 an invented number is carrying your decision. Write unknown. Size the work.</li>
+          <li><strong>The 70-point spec.</strong> Four checks pass, you feel good, and the remaining two need you to give something up. Almost everybody stops here on the first pass. Stopping at 70 is not a partial success, it is the specific failure b5 exists to name.</li>
+          <li><strong>Marking effort instead of artifact.</strong> "I thought hard about the segment" is not a named segment. The checklist asks what is on the page, and you will be tempted to answer with what is in your head.</li>
+          <li><strong>Drifting into delivery.</strong> Around checkpoint 5 the hands start reaching for a plan: phases, sequencing, who does what by when. It feels like progress because it is progress on a different job, and it will eat your last fifteen minutes.</li>
+          <li><strong>Polishing.</strong> The written thing gets better and the decisions in it do not change. Fluency is the easiest thing to add in this hour and the only thing that is worth nothing at all, which is the whole argument of the course applied to your own afternoon.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What a failed checkpoint is worth<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Most people fail at least one of the five on the first run, and the most common is checkpoint 2, because most backlog items are carrying either no research or one memorable conversation that has been quoted so often it feels like several.</p>
+        <p>A failed checkpoint you can name is a research task with a size attached, which is a genuinely useful output. "Checkpoint 2 failed: my only evidence is one call with our largest account, and I have been treating it as a theme for four months" is a better result from this hour than five soft passes. It tells you what to do on Monday, it takes one sentence to explain to your team, and it converts a stuck argument into a piece of work.</p>
+        <p>What is not useful is a generous pass. The bar exists because the alternative to marking yourself honestly is not a slightly kinder mark; it is a decision that gets finished later by whoever hits the gap first, in whichever direction suits them, without telling you.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CHECKPOINT 1 ============ -->
+  <section class="section" id="cp1">
+    <div class="section-kicker">
+      <span class="klabel">Checkpoint 1 · 10 minutes · alone</span>
+      <h2>The evidenced problem <span class="tag demo">◆ deliverable: one paragraph</span></h2>
+    </div>
+    <p class="lede">Deliverable: a problem statement with a named segment, one countable signal and its source, written so that a reasonable colleague could disagree with it on the evidence. <strong>The trap: a solution wearing a problem's clothes.</strong> Most backlog items arrive as solutions, and a solution rewritten in the grammar of a problem is the single most common thing that passes for discovery.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the ask exactly as it was given to you</strong>, in the asker's words, including the bits that annoy you. Two minutes. You are capturing the request, not improving it, and the annoying phrasing often contains the real constraint.</p></div>
+      <div class="step"><p><strong>Strike out every noun that is a thing you could build.</strong> Dashboard, export, integration, notification, filter, agent. What survives is either a problem or nothing at all, and finding nothing at this step is a legitimate and very useful result.</p></div>
+      <div class="step"><p><strong>Name the segment.</strong> Not "users", not "customers", not "enterprise". Cadence's segment is team admins on paid workspaces of 5 to 50 seats, and the specificity is what makes it possible to say who the thing is <em>not</em> for. If you cannot name the segment, you have not got a problem statement, you have got a market.</p></div>
+      <div class="step"><p><strong>Attach one countable signal, with where it came from.</strong> A ticket count, a funnel drop, a support tag, a churn reason. Then grade it honestly using b2's three grades: counted, reported, or asserted. A number that lives inside somebody's assertion is still an assertion, and it travels further than one without a number.</p></div>
+      <div class="step"><p><strong>Read it back and apply the bar: could a reasonable colleague disagree with this on the evidence?</strong> If the only available response is "sounds right", you have written a mood. Rewrite until there is something in it that a well-informed person could take issue with.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The trap in detail, and how to catch it in ten seconds<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A solution wearing a problem's clothes reads exactly like a problem statement. It has a who, it has a pain verb, it sounds like discovery. "Team admins need a way to export their meeting summaries to the CRM" is the shape of a problem and the content of a solution, and the giveaway is that it contains the answer.</p>
+        <p>Two tests, both fast:</p>
+        <ul>
+          <li><strong>The alternatives test.</strong> Can you name three genuinely different ways to address this statement? If the statement only admits one solution, it <em>is</em> that solution. "Admins cannot tell their account team what was agreed without retyping it" admits at least four approaches. "Admins need a CRM export" admits one.</li>
+          <li><strong>The noun test from the steps above.</strong> Strike the buildable nouns and see what is left standing. If the sentence collapses, you were describing a feature.</li>
+        </ul>
+        <p>The reason this matters at checkpoint 1 rather than later: a solution stated as a problem will pass every subsequent checkpoint. You will find evidence for it, spec it beautifully, decide in its favour and instrument it properly, and at no point will anything in the process tell you that the alternatives were never considered, because they were excluded in the first sentence before anybody was paying attention.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to do when the evidence field is empty<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This happens more often than the neat version of product management admits, and it is not a failure of this checkpoint. Roughly a third of carried backlog items turn out to have no countable signal behind them at all, which is itself the most decision-relevant thing you will learn in this hour.</p>
+        <p>Write the field as unknown, then write one line on how you would fill it and what that would cost. "Unknown. Support could tag this for two weeks and tell me whether it is 5 tickets or 200, which is an afternoon of their time." That sentence turns a stalled argument into a small, cheap, assignable task, and it is a far stronger position than a plausible number nobody can source.</p>
+        <p>What you must not do is let a drafting tool supply the number. It will, immediately, with confidence and a plausible order of magnitude, and from that moment the item is indistinguishable from a well-evidenced one anywhere downstream.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CHECKPOINT 2 ============ -->
+  <section class="section" id="cp2">
+    <div class="section-kicker">
+      <span class="klabel">Checkpoint 2 · 10 minutes · alone</span>
+      <h2>Verified research <span class="tag demo">◆ deliverable: themes with counts</span></h2>
+    </div>
+    <p class="lede">Deliverable: your themes, each with a source count in the line, at least one verbatim you have personally read, and a provenance label on every claim. <strong>The trap: promoting a single-source anecdote to a theme,</strong> which happens because the best-remembered conversation is nearly always the most vivid one rather than the most representative one.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>List every source you actually have</strong>, by name and type: three interviews, a support tag, one sales call, a survey question. Two minutes, and be strict about what counts as a source. A conversation you were told about second hand is not a source, it is a rumour with a job title attached.</p></div>
+      <div class="step"><p><strong>Write each theme with the count inside the line.</strong> Not "admins find the current flow confusing" but "4 of 7 admins described the current flow as confusing". The count in the line is b3's first rule and it is the one that does most of the work, because a theme with a count cannot quietly grow.</p></div>
+      <div class="step"><p><strong>Attach one verbatim per theme, and read it.</strong> Yourself, in full, not a summary of it. If you cannot produce a verbatim for a theme, the theme is a conclusion you reached rather than a pattern you found.</p></div>
+      <div class="step"><p><strong>Apply the one-source rule.</strong> Any theme resting on a single source gets relabelled as an anecdote, in writing, in the document. Not deleted - anecdotes are useful and often turn out to be right. Relabelled, so that it cannot be cited later as though it were a pattern.</p></div>
+      <div class="step"><p><strong>Then label every claim: counted, reported, or asserted.</strong> Counted came out of a system. Reported came out of a person's mouth. Asserted came out of an argument. Count how many of your claims are in the third bucket before you go anywhere near checkpoint 3.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the vivid anecdote wins, and what to do about it<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The anecdote that gets promoted is never the weakest evidence you have. It is usually the most emotionally legible: a named customer, a specific moment, a sentence you can quote in a meeting and watch land. It travels because it is good communication, and it survives because nobody ever asks the second question.</p>
+        <p>Two review questions kill it politely, and they are the two from b3 that you should be running on yourself here:</p>
+        <ul>
+          <li><strong>"How many people said this?"</strong> A theme has a number. If the honest answer is one, you have an anecdote, and saying so costs you nothing because anecdotes are allowed to exist.</li>
+          <li><strong>"Can you show me one of them saying it?"</strong> Applied to yourself, this catches the theme that emerged from your own synthesis rather than from anybody's mouth. Those are the ones that read as the most insightful lines in the document, and they are the ones with no verbatim underneath.</li>
+        </ul>
+        <p>The specific hazard when a tool did the synthesis: an over-generalised theme has a real quote attached, so it survives the second question and dies only on the count. That is why the count goes in the line rather than in a footnote. It is the only one of the four rules that a fluent restatement cannot survive.</p>
+        <div class="callout tip">
+          <strong>Two sources short of a theme is a sentence you are allowed to write</strong>
+          It is precise, it is honest, and it tells a reader exactly what would change your mind. It is also much easier to say than people expect, because it comes with a next step attached rather than an apology.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The ten minutes will not be enough, and that is the finding<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Verifying is slower than synthesising, always, with no speed-up available anywhere. Ten minutes is deliberately not enough time to verify a real body of research, and the purpose of the box is to make you find out how much verification your carried item has never had.</p>
+        <p>So spend the ten minutes on the strongest theme rather than spreading it across all of them. Verify one properly: count it, find the verbatim, read the verbatim, label the claim. Then mark the rest as unverified, which is accurate. A document with one verified theme and three honestly flagged as unverified is more useful to a reader than four themes of unknown provenance, and it is the version you can defend in a review without preparing.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CHECKPOINT 3 ============ -->
+  <section class="section" id="cp3">
+    <div class="section-kicker">
+      <span class="klabel">Checkpoint 3 · 15 minutes · alone</span>
+      <h2>The signable spec <span class="tag demo">★ the scoring is real</span></h2>
+    </div>
+    <p class="lede">Deliverable: a spec for your item that scores 100 of 100 on the six checks, with the failures fixed rather than papered over. This is the longest box because it is the one where the actual decisions get made. <strong>The trap: stopping at 70,</strong> which is where nearly everyone lands on the first pass, because the last two checks are the only two that require you to give something up.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write the spec first, then score it.</strong> Not the other way round. A spec written to satisfy a scorer contains six sentences aimed at six checks and no decisions, which is exactly the failure mode the scorer exists to catch, achieved by a different route.</p></div>
+      <div class="step"><p><strong>Paste it into the lab below and press Score your own spec.</strong> Read the failing checks before you read the number. The number is a summary; the failing checks are the instruction.</p></div>
+      <div class="step"><p><strong>Fix the failures in order of cheapness.</strong> Problem evidenced and user named come straight from checkpoints 1 and 2, so they should already pass. Success measurable needs the number from checkpoint 5, so write a placeholder and come back to it. Edge cases decided is usually twenty minutes of thinking you have been avoiding.</p></div>
+      <div class="step"><p><strong>Then write the non-goals, which is the hard part and fixes two checks at once.</strong> What is this explicitly not for, and what are we not building even though it is adjacent and somebody will ask? Once that list exists the trade-off is one sentence away, and until it exists no amount of writing produces one.</p></div>
+      <div class="step"><p><strong>Re-score, and apply the signable test rather than the number.</strong> Could an engineer who was in none of your meetings build the right thing from this without asking you a question or inventing an answer? A 100 that fails that test means you wrote sentences at the checks.</p></div>
+    </div>
+
+    <div id="spec-lab"></div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why 70 is the natural stopping point, and how to get past it<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The ladder in b5 goes 15, 35, 55, 70, 100, and the gap between 70 and 100 is not a gap in effort. Rungs 1 to 4 are all fixed by supplying <em>information</em>: research, metric definitions, constraints. Every one of them makes the document more complete without asking anybody to lose anything. The last rung is different. Non-goals and the explicit trade-off are the two checks that require somebody to give something up, which is why they survive four rungs of a very capable drafting process and why they survive your first pass too.</p>
+        <p>Three prompts that get you over it, in ascending order of discomfort:</p>
+        <ul>
+          <li><strong>"What will somebody assume is included that is not?"</strong> The gentlest entry into non-goals, because it is a question about other people's expectations rather than about your ambition. Whatever comes to mind first is a non-goal, and it should be written in the words the person would use.</li>
+          <li><strong>"What am I choosing this over?"</strong> Not what am I not doing in general, but what specific alternative is losing. There is always one, even when the item looks uncontested, because the alternative is at minimum the next item on the list.</li>
+          <li><strong>"Who is worse off if this ships, and what will I say to them?"</strong> The one that finishes the trade-off. If you cannot answer the second half in the words you would actually use, the decision is not made yet. This is b6's test for a real decision and it is unforgiving on purpose.</li>
+        </ul>
+        <p>And a warning about the score itself: 100 out of 100 certifies that six decisions were made and written down. It does not certify that they were good ones. A perfectly complete spec for the wrong problem scores 100, which is why checkpoints 1 and 2 come first and why the signable test is the real bar.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>If your item has no spec at all<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Common, and not a problem for this checkpoint. You do not need a document; you need four sentences, and four sentences is fifteen minutes of work rather than an afternoon:</p>
+        <ul>
+          <li><strong>Who this is for</strong>, in the segment language from checkpoint 1.</li>
+          <li><strong>What success is</strong>, as a number with a baseline, even if the baseline is a placeholder until checkpoint 5.</li>
+          <li><strong>What we are not doing</strong>, as a list of at least three things somebody would otherwise assume.</li>
+          <li><strong>What we chose this over, and who loses by it.</strong></li>
+        </ul>
+        <p>Those four sentences are most of a spec, and they are the four that a drafting tool will not produce for you because none of them is a writing problem. Everything else in a PRD is context arranged around them, and it can be produced in a minute once these exist.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CHECKPOINT 4 ============ -->
+  <section class="section" id="cp4">
+    <div class="section-kicker">
+      <span class="klabel">Checkpoint 4 · 10 minutes · alone</span>
+      <h2>The decision and its trade-off <span class="tag demo">◆ deliverable: the record</span></h2>
+    </div>
+    <p class="lede">Deliverable: the call, the sentence naming what it cost and who loses, the words you will say to that person, and the cut record with a re-open condition per cut. <strong>The trap: a ranking built on invented confidence inputs,</strong> which is the most convincing bad artifact in product management because arithmetic on guesses looks exactly like arithmetic on measurements.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Write your inputs down before you score anything.</strong> Reach with its denominator, impact on a stated scale, confidence as a decimal, effort in weeks from the person who would actually do the work. Leave the blanks blank and notice who wants to fill them.</p></div>
+      <div class="step"><p><strong>Label every cell: measured, estimated by someone who would know, or invented.</strong> Three classes, no fourth. Do this before the arithmetic, because labels applied afterwards drift towards whatever justifies the answer you already have.</p></div>
+      <div class="step"><p><strong>Score under two lenses, and compare the margins rather than the ranks.</strong> A winner that survives both lenses with the margin collapsing is telling you the gap is a modelling artifact and the ordering below the top is noise.</p></div>
+      <div class="step"><p><strong>Find the single input carrying the result.</strong> Change one cell at a time until the order breaks. Whatever cell that is, its provenance label is now the most important thing on the page, and if it says invented you do not have a ranking, you have a formula applied to an opinion.</p></div>
+      <div class="step"><p><strong>Then stop scoring and write the record.</strong> The decision, the reason, what it cost, who loses, the words you will say to them, the cuts, and the condition that re-opens each cut. This artifact outlives the spreadsheet by about a year and it is the thing that stops the argument restarting next quarter.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The confidence column, checked on your own numbers<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Run one diagnostic on your own scoring before you trust it. Look at every confidence value you wrote. If they all sit between 0.7 and 0.9, nobody scored confidence - somebody scored enthusiasm, and that somebody was probably you, and it is a completely normal thing to have done.</p>
+        <p>Real confidence values are lumpy, because real evidence is lumpy. Two independent signals agreeing buys you a high number. One unverified signal from an interested party buys you a middling one. No evidence at all buys you a low one, and writing 0.25 next to something a senior person asked for is one of the more uncomfortable things in this hour and one of the more valuable.</p>
+        <p>The fix is not to argue about the decimal, it is to state the basis instead of the number. "0.8, two independent signals" and "0.8, it feels likely" occupy the same cell and are entirely different claims, and only one of them survives being read out loud in a review. Write the basis in the cell next to it, and the conversation about whether the number is right becomes a conversation about what would raise it, which is a much shorter conversation with an action at the end.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The re-open condition is what makes a no survivable<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every cut you make in this checkpoint needs a condition attached, stated concretely enough that the person who lost could go and satisfy it. A no with a condition is a deal. A no without one is a door, and people spend entire quarters pushing on doors.</p>
+        <p>The condition has to be checkable by somebody other than you, and it has to be something they can actually do. "If we see more demand" is not a condition; it is a way of ending the conversation. "Three logged losses on workspaces over twenty seats, with the competitor named, and it comes back into the next planning cycle" is a condition, and it converts an argument about priorities into a small piece of work that either happens or does not.</p>
+        <p>Write yours down now, while you still remember why you cut the thing. In eight weeks you will remember the decision and not the reasoning, and a cut whose reasoning has evaporated is functionally the same as no decision at all.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ CHECKPOINT 5 ============ -->
+  <section class="section" id="cp5">
+    <div class="section-kicker">
+      <span class="klabel">Checkpoint 5 · 10 minutes · alone</span>
+      <h2>The metric and the event spec <span class="tag demo">◆ deliverable: one metric, one event</span></h2>
+    </div>
+    <p class="lede">Deliverable: one primary metric with a baseline you pulled and a target outside its historical range, a guardrail with a threshold, and at least one event with the properties that would produce the metric. <strong>The trap: a metric you cannot instrument before the build,</strong> which is a metric you will not have at the readout, no matter how right it is in principle.</p>
+
+    <div class="steps">
+      <div class="step"><p><strong>Run the vanity test on every candidate.</strong> If this number goes up and nothing else does, do we care? Ten seconds each. It removes most of the list, including everything that measures the existence of your feature rather than the shrinking of the problem.</p></div>
+      <div class="step"><p><strong>Pick the one that moves in a week.</strong> Not the one closest to revenue. The primary is the number you can act on, and a number that arrives at quarter end can only judge you. Name the lagging outcome you believe it feeds, in the same sentence, as a belief rather than a fact.</p></div>
+      <div class="step"><p><strong>Pull the baseline: the level, the variance, the segment.</strong> If you cannot pull it in this ten minutes, write down who can and how long it takes - that is the finding, and it is the same finding most teams get. Then check your target sits outside the historical range, or it is not a target.</p></div>
+      <div class="step"><p><strong>Write the guardrail as a promise to a named team,</strong> with a threshold rather than a direction and a consequence rather than a discussion. Then check it has the property that stops it blaming you for something that was already true before you shipped.</p></div>
+      <div class="step"><p><strong>Write one event: name, firing condition, properties, and the question it answers.</strong> Then run the coverage check - list the first three questions somebody will ask when they see the metric, and confirm a property exists for each. Write down the gaps you are choosing to accept.</p></div>
+    </div>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The instrumentability test, applied honestly<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The trap here is subtle because the metric that fails it is usually the best metric. The thing you actually want to measure is often something that happens in a person's head or on their desk: how long it took them to find an answer, whether they trusted the output, whether they stopped doing the manual workaround. None of that is a product event.</p>
+        <p>Three honest responses, and one dishonest one that you should watch yourself for:</p>
+        <ul>
+          <li><strong>Pick the closest observable proxy and label it a proxy, in the spec.</strong> Then the gap between the proxy and the thing is a known limitation rather than an ambush at the readout.</li>
+          <li><strong>Add a cheap direct instrument alongside it.</strong> A one-question in-product pulse, or five interviews booked for the week of the readout. Weak evidence you have labelled weak beats strong evidence about the wrong thing.</li>
+          <li><strong>Accept that some outcomes are measured by research rather than analytics,</strong> and put that research on the calendar next to the read date rather than hoping for it.</li>
+          <li><strong>The dishonest one:</strong> pick the proxy and then talk about it as though it were the real thing. That is how a team ends up defending a number instead of a goal, and it is almost never done deliberately.</li>
+        </ul>
+        <p>Then ask the question that closes this checkpoint: could an engineer start building the instrumentation tomorrow from what I have written? If the answer is no, you have a metric in principle, which is a metric you will not have.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Add the decision rule while you are here<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is thirty seconds of extra work and it is the highest-leverage sentence in the entire hour: the metric, the threshold, the date, and the action on each side including the side where you stop.</p>
+        <p>"If the number has not reached X by date Y, we stop and do Z instead." Write it now, while nobody knows which way the number will go, and put it somewhere a stakeholder will read it while the threshold is still uncomfortable. A rule that lives only in your head is not a rule, it is a memory that will be revised by whatever the number turns out to be.</p>
+        <p>Then write the action on the losing side concretely enough that a disappointed person could execute it without a meeting. "We reallocate the two weeks to interviewing the accounts that did adopt it" survives a bad Monday. "We will reconsider our approach" does not survive lunch.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ THE HANDOFF ============ -->
+  <section class="section" id="handoff">
+    <div class="section-kicker">
+      <span class="klabel">Minutes 55 to 60 · where this course stops</span>
+      <h2>The handoff, and the line you do not cross <span class="tag demo">★ the packet, in full</span></h2>
+    </div>
+    <p class="lede">Five checkpoints produced five artifacts, and together they are the handoff packet. What follows is the whole thing, and the most important part of it is the last block, which lists what is deliberately absent. A product manager who hands over a milestone plan has not been more helpful. They have taken over somebody else's job while doing their own less well, and the delivery team now has two plans to reconcile.</p>
+
+    <pre class="lab-sql">HANDOFF PACKET  ·  &lt;your item&gt;  ·  from: PM  ·  to: the delivery team
+
+WHAT THEY RECEIVE FROM YOU
+
+  1  THE DECISION AND WHY
+     The call, in one paragraph, with the evidence under it. Segment named.
+     Countable signal with its source and its grade: counted / reported / asserted.
+     From checkpoints 1 and 2.
+
+  2  THE SIGNABLE SPEC
+     Scored 100 of 100 on the six checks. Problem evidenced · user named ·
+     success measurable · non-goals stated · edge cases decided · trade-off
+     explicit. An engineer who was in none of your meetings can build from it.
+     From checkpoint 3.
+
+  3  THE TRADE-OFF AND THE CUT RECORD
+     What you gave up, who loses by it, the words you will say to them, and
+     every cut with the condition that re-opens it. This is the document that
+     stops the argument restarting in twelve weeks.
+     From checkpoint 4.
+
+  4  THE METRIC DEFINITIONS AND THE EVENT SPEC
+     Primary metric: numerator, denominator, segment, baseline, target.
+     Guardrail: threshold and consequence. Events: names, firing conditions,
+     properties, and the question each one answers. Plus the gaps you
+     knowingly accepted, written down rather than discovered later.
+     From checkpoint 5.
+
+  5  THE DECISION RULE AND THE READ DATE
+     Metric, threshold, date, and the action on each side including the stop.
+     Fixed in advance, in writing, where a stakeholder can see it.
+
+  6  THE STAKEHOLDER ANSWERS
+     One sentence per stakeholder that they can repeat to their own team on
+     Monday without you in the room. Not the roadmap document. The sentence.
+
+WHAT IS NOT IN THIS PACKET, AND IS NOT YOURS TO WRITE
+
+     the project charter          the milestone plan
+     the work breakdown           the critical path and dependencies
+     the risk register            the status reporting cadence
+     the release runbook          the rollout mechanics
+
+     All of it belongs to the delivery function and it has a course of its
+     own: learn-ai-project-management. Product management decides what to
+     build and why. Project management gets it built. Handing over a
+     milestone plan is not generosity, it is two plans that now disagree.</pre>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The boundary, and why it is drawn exactly here<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The line sits at the decision because that is where accountability changes hands, not because of any organisational chart. Everything before it answers "is this the right thing to build, and how will we know". Everything after it answers "how do we get it built on time". Those are different questions, they are answered with different evidence, and the people who are good at one are frequently mediocre at the other.</p>
+        <p>Three practical consequences of holding the line:</p>
+        <ul>
+          <li><strong>You stop being the bottleneck on sequencing.</strong> If the delivery team owns the plan, they can resequence when reality changes without asking you, provided they have your trade-off and your cut order. That is the actual output they need from you, and it fits on a page.</li>
+          <li><strong>Your artifacts stay checkable.</strong> A spec and a metric definition are things somebody can disagree with on the evidence. A milestone plan produced by a PM who is not doing the work is a set of estimates with no basis, and it will be treated accordingly and then quietly replaced.</li>
+          <li><strong>The handover has a receipt.</strong> The packet is a real thing that either exists or does not, which means the conversation about whether product did its job stops being about impressions.</li>
+        </ul>
+        <p>If your organisation genuinely expects you to do both jobs - and plenty do - then do them both, and know which one you are doing at any given moment. The failure is not the combination. It is doing the delivery half in product's language, where estimates get treated as commitments and a Gantt chart gets read as a decision.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The most common way this hour goes wrong is that it goes well, and then nothing happens.</strong> The five artifacts get produced, they are genuinely better than what the team had before, and they go into a folder. Six weeks later the same item is being argued about in the same meeting, with the same two people holding the same positions, and nobody in the room has read the decision record, because nobody knew it existed.</p>
+      <p>The fix is unglamorous and it is the difference between an exercise and a change in how your team works: the artifacts have to live where the argument happens. The trade-off sentence goes at the top of the planning document, not in an appendix. The cut record with its re-open conditions goes wherever the backlog is reviewed, so that the person who wants to reopen it reads the condition first. The metric definitions go in the same place as the spec, so an engineer who is about to build the instrumentation can check them. And the decision rule goes in the channel where the launch will be announced, while the threshold is still uncomfortable.</p>
+      <p>None of that is extra work. It is the same documents, filed where the failure occurs rather than where documents usually go. A decision record nobody can find is not a decision record; it is a diary entry, and diaries do not stop arguments.</p>
+    </div>
+  </section>
+
+  <!-- ============ FIRST WEEK BACK ============ -->
+  <section class="section" id="first-week">
+    <div class="section-kicker">
+      <span class="klabel">Closing · after the hour</span>
+      <h2>The first week back at work <span class="tag concept">3 min live</span></h2>
+    </div>
+    <p class="lede">Ten sessions produce a lot of intentions, and intentions decay at a predictable rate. The realistic goal for your first week back is not to change how your team works. It is to change three specific moments, each of which costs under ten minutes and each of which is visible to somebody other than you, because a change nobody notices is a change that does not survive a busy fortnight.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three changes, in the order they cost least<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Day one: put the six checks at the top of your spec template, not the bottom.</strong> At the bottom they are a review step that gets skipped when you are busy. At the top they are a prompt, and they change what gets written rather than what gets caught. This takes four minutes and it is the single highest-return thing on the list.</li>
+          <li><strong>This week: ask the two polite questions in one review that is not yours.</strong> "What are we not doing here?" and "how will we know it worked?" Neither reads as an attack, both are just checks 4 and 3 asked kindly, and a team that gets asked them twice starts writing the answers into the spec beforehand. That is the whole mechanism of the change, and it does not require any authority.</li>
+          <li><strong>Before the next thing gets approved: fix the read date and the baseline.</strong> One calendar invite, with the audience already on it, on the date the number gets read. Then find out what the number is today. Those two acts together are what convert a build into a bet, and they cost an afternoon of somebody's time exactly once.</li>
+        </ul>
+        <p>Notice what is not on this list: a new framework, a template rollout, a process proposal, or a document explaining the course to your team. All four are things people do in week one and none of them survives to week six, because they ask for a decision from somebody who has not felt the problem. The three above ask for nothing from anybody and are visible immediately.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What to do with the checkpoint you failed<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Whichever checkpoint you marked as a fail is the most useful output of this hour, because it is specific, it is yours, and it comes with a next action already attached.</p>
+        <p>If it was checkpoint 1, your item is a solution and the whole argument has been about implementations of an answer nobody agreed on. Take it back to the alternatives test with the person who asked for it, which is a fifteen-minute conversation and usually a surprising one.</p>
+        <p>If it was checkpoint 2, you have a research task with a size. Say the size out loud: two weeks of tagging, or five calls, or one afternoon with the dashboard. A named, sized task competes for time. "We should do more research" does not.</p>
+        <p>If it was checkpoint 3, write the four sentences. Who it is for, what success is as a number, what you are not doing, and what you chose it over. Fifteen minutes, and you will have most of a spec plus the two decisions you had been deferring.</p>
+        <p>If it was checkpoint 4 or 5, the fix is a conversation rather than a document: one with the person who owns the estimate you invented, or one with whoever can pull the baseline. Both are short, both are cheap, and both are much easier to have before the build than after it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish whichever checkpoint you marked as a fail, properly, at full length rather than in the time box. Then re-mark it against the same acceptance criteria, which you are not allowed to soften now that you know what they cost.</li>
+      <li>File the five artifacts where the argument actually happens: the trade-off at the top of the planning doc, the cut record wherever the backlog gets reviewed, the metric definitions next to the spec, the decision rule in the launch channel.</li>
+      <li>Put the six checks at the top of your team's spec template and tell one person you did it and why. Announcing it to one person is what stops it being reverted by the next person who edits the template.</li>
+      <li>Run the capstone once more, next month, on a second item and without re-reading this page. The second run is where you find out which of the five checkpoints you actually internalised and which one you were reading off the screen.</li>
+      <li>Then go and get the other half of the job: <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a> starts exactly where this packet ends, with the charter that turns your decision into a plan.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Sources covered</h2>
+    </div>
+    <p class="lede">Full source map in <code>materials/official-course-map.md</code>. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The full discovery-to-decision arc, applied by the learner to their own item</span><span class="note">Five checkpoints · every source in the course, exercised once, with the answers removed</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Continuous-discovery practice: the problem statement, the alternatives test, the one-source rule</span><span class="note">Checkpoints 1 and 2 · the traps, and what a failed checkpoint is worth</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PRD practice and the six checks, scored on the learner's own text</span><span class="note">Checkpoint 3 · why 70 is the natural stopping point and what gets you past it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The handoff artifact: what a delivery team receives, and what is deliberately absent</span><span class="note">The handoff packet · the explicit boundary, with the not-yours list written out</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Prioritisation lenses, metric selection and instrumentation</span><span class="note">Exercised, not re-taught - <a href="b6-prioritisation-tradeoffs.html">b6</a> and <a href="b7-metrics-and-instrumentation.html">b7</a> own them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Delivery: charters, milestones, WBS, critical path, risk registers, status reporting, rollout</span><span class="note">Out of scope by design, and named in the packet - <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a></span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Statistical depth and metric decomposition</span><span class="note">Out of scope by design - <a href="https://phoebefu6.github.io/learn-experimentation-with-phoebe/">learn-experimentation</a> and <a href="https://phoebefu6.github.io/learn-metric-decomposition-with-phoebe/">learn-metric-decomposition</a></span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your problem statement reads: "team admins need a way to export meeting summaries to the CRM". What is wrong with it?</p>
+      <button class="qopt" type="button">A · Nothing, provided the segment is right and there is evidence behind it</button>
+      <button class="qopt" type="button">B · It is too narrow; the segment should be broader</button>
+      <button class="qopt" type="button">C · It is a solution wearing a problem's clothes. It admits exactly one answer, so the alternatives were excluded in the first sentence, and it will pass every later checkpoint anyway</button>
+      <p class="qwhy">The alternatives test settles it: name three genuinely different ways to address the statement. "Admins cannot tell their account team what was agreed without retyping it" admits several; "admins need a CRM export" admits one. A solution stated as a problem is dangerous precisely because nothing downstream will catch it.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Your spec scores 70 of 100. Problem, user, success and edge cases pass; non-goals and the trade-off fail. What does that pattern mean?</p>
+      <button class="qopt" type="button">A · The spec is nearly finished and needs a light editing pass</button>
+      <button class="qopt" type="button">B · You have supplied all the information and made none of the sacrifices. The last two checks are the only ones that require giving something up, which is why they survive longest</button>
+      <button class="qopt" type="button">C · The scorer weights the last two checks too heavily</button>
+      <p class="qwhy">Rungs 1 to 4 of the ladder are fixed by supplying information: research, metric definitions, constraints. Non-goals and the trade-off cannot be fixed that way, because exclusion is not a language problem. Writing the non-goals fixes both at once, which is why it is the last thing anybody does.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your handoff packet contains the decision, the spec, the trade-off, the metric definitions, a milestone plan and a status reporting cadence. What is the problem?</p>
+      <button class="qopt" type="button">A · The last two are not yours. Handing over a plan produced by someone who is not doing the work gives the delivery team two plans to reconcile, and yours has no basis</button>
+      <button class="qopt" type="button">B · Nothing; a complete handover is always better</button>
+      <button class="qopt" type="button">C · The packet is missing the risk register, which should be added</button>
+      <p class="qwhy">The line sits at the decision because that is where accountability changes hands. Product management decides what to build and why; project management gets it built. Crossing the line is not generosity, and it makes your own half worse by turning estimates with no basis into commitments.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>PM track cheat sheet <span>· all ten sessions · pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>b1 · The line</b><span>Produce anything you will check. Decide nothing you would have to defend. Never paste named accounts or live pricing.</span></div>
+      <div class="cheat-item"><b>b2 · The bar</b><span>Not true - disagreeable. Grade every signal counted, reported or asserted. A number inside an assertion is an assertion.</span></div>
+      <div class="cheat-item"><b>b3 · Four rules</b><span>Count in the line · one verbatim · one source is an anecdote · the PM reads the quotes. Verifying is always slower.</span></div>
+      <div class="cheat-item"><b>b4 · The job and the tree</b><span>The job is the unit of demand. Write down the branch you cut, or it comes back as a new idea in ten weeks.</span></div>
+      <div class="cheat-item"><b>b5 · The six checks</b><span>Problem · user · success · non-goals · edges · trade-off. 15 to 100, and 70 is where everyone stops.</span></div>
+      <div class="cheat-item"><b>b6 · Two lenses, one choice</b><span>Provenance on every input. Name what you gave up, who loses, and what you will say to them, or you ranked.</span></div>
+      <div class="cheat-item"><b>b7 · Before the build</b><span>One primary that moves in a week, a real baseline, a guardrail with a consequence, and the event spec first.</span></div>
+      <div class="cheat-item"><b>b8 to b10 · Then stop</b><span>Rule before data · roadmap as an argument · five artifacts in the packet, and delivery is somebody else's course.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>PM session 10 of 10 · learn-ai-pm-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-roadmap-narrative.html">← Previous: Roadmap narrative and alignment</a> &nbsp;·&nbsp; <a href="../index.html">← All sessions</a></span>
+    <span>The PM track is complete. Your packet ends where delivery begins: <a href="https://phoebefu6.github.io/learn-ai-project-management-with-phoebe/">learn-ai-project-management</a> picks it up at the charter.</span>
+  </footer>
+
+</main>
+
+<script src="../assets/spec-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
